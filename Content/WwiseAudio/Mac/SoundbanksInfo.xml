@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/z:/Users/wararyo/Git/Eclair3/Content/WwiseAudio/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2141035435" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\EclairAkAudioBank</ObjectPath>
+			<ShortName>EclairAkAudioBank</ShortName>
+			<Path>EclairAkAudioBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
+				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
+				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="77356971" Language="SFX">
+					<ShortName>1-haikou-1.wav</ShortName>
+					<Path>SFX/1-haikou-1_8956FC97.wem</Path>
+				</File>
+				<File Id="105590707" Language="SFX">
+					<ShortName>1-boss.wav</ShortName>
+					<Path>SFX/1-boss_8956FC97.wem</Path>
+				</File>
+				<File Id="347520258" Language="SFX">
+					<ShortName>1-default-1.wav</ShortName>
+					<Path>SFX/1-default-1_8956FC97.wem</Path>
+				</File>
+				<File Id="1051978060" Language="SFX">
+					<ShortName>Title.wav</ShortName>
+					<Path>SFX/Title_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

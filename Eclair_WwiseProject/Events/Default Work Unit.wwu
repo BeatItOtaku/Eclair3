@@ -33,6 +33,44 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Title" ID="{DF97F116-23BC-4621-887E-A21B3B183BF7}">
+							<ChildrenList>
+								<Action Name="" ID="{E126E08A-1DF8-47E5-BA6F-987641FE5C00}" ShortID="371480180">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Title" ID="{F159FA59-84E9-4108-88A7-601BFD9E8D2B}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fade" ID="{1746706D-BF8B-4211-9B50-903DB9E8C026}">
+							<ChildrenList>
+								<Action Name="" ID="{FAAF6F35-CB41-43E3-B5B2-8062EEB12B62}" ShortID="964188086">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Title" ID="{F159FA59-84E9-4108-88A7-601BFD9E8D2B}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{48E68745-E942-4283-BB09-0C1DAC6F76E5}" ShortID="547349936">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="ResumeStateTransition" Type="bool" Value="False"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

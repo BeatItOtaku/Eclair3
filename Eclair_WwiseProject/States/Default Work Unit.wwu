@@ -8,6 +8,7 @@
 						<State Name="None" ID="{2E43FAF3-AC0B-436E-B9A3-50F9CF90F565}"/>
 						<State Name="Default" ID="{5E955331-9115-4503-BA1F-377F63759B5C}"/>
 						<State Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
+						<State Name="Sub1" ID="{F6707CA2-EDAC-4726-B6FD-26273A1C9867}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}">

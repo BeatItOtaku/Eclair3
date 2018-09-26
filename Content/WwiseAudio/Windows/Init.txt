@@ -9,6 +9,7 @@ State	ID	Name	State Group			Notes
 	0	None	Pausing			
 	3856304344	Pausing	Pausing			
 	0	None	BGMStates			
+	67594018	Sub1	BGMStates			
 	168610243	Fighting	BGMStates			
 	782826392	Default	BGMStates			
 

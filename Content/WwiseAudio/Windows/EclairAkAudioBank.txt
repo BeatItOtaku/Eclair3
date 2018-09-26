@@ -1,8 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	514358619	Field			\Default Work Unit\Chapter1\Field	
 	1560169506	Boss			\Default Work Unit\Chapter1\Boss	
+	3705726509	Title			\Default Work Unit\Chapter1\Title	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	512563676	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\2Master_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Field\Haikou\Haikou		22226468
-	962908156	Boss	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Boss\Intro\Boss		10118168
+	77356971	Intro	Y:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Field\Haikou\Intro1\Intro		7347636
+	105590707	Boss	Y:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Boss\Intro\Boss		10118168
+	347520258	Intro	Y:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-default-1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Field\Default\Intro1\Intro		7347636
+	1051978060	Title	Y:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Title_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Title		10581468
 

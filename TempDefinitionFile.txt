@@ -1,2 +1,3 @@
 EclairAkAudioBank	"Boss"
+EclairAkAudioBank	"Title"
 EclairAkAudioBank	"Field"
