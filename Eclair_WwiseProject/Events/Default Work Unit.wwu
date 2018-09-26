@@ -13,7 +13,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Field" ID="{C83723E5-FE7D-46DF-943C-1BC79A8A6BC7}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
+											<ObjectRef Name="Field" ID="{58F4FBE8-9BBA-4A84-A889-C71BF4E1E1A3}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -41,7 +41,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Title" ID="{F159FA59-84E9-4108-88A7-601BFD9E8D2B}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
+											<ObjectRef Name="Title" ID="{E36F137C-92C2-48A4-B467-F50880C70259}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -55,7 +55,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Title" ID="{F159FA59-84E9-4108-88A7-601BFD9E8D2B}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
+											<ObjectRef Name="Empty" ID="{AA463686-15F9-4C4F-87CF-577E451BBD6A}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
