@@ -28,6 +28,13 @@
 						<State Name="Etoile" ID="{4DF6A55B-DCD9-45BE-8E5E-C63C35C83FC5}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="GroundType" ID="{4845AAE3-D8C4-42DB-BB9A-0F8A139973E0}">
+					<ChildrenList>
+						<State Name="None" ID="{3996D0A7-B642-4BA6-B591-FDEAC80EED0C}"/>
+						<State Name="Puddle" ID="{75BF2A21-CB15-4D00-8AC1-E7BF5DF56D8D}"/>
+						<State Name="Metal" ID="{573570FB-6D43-43F1-9CAA-889EF73B3285}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -1,11 +1,15 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	1087692520	CharacterStates			\Default Work Unit\CharacterStates	
+	2835351336	GroundType			\Default Work Unit\GroundType	
 	3856304344	Pausing			\Default Work Unit\Pausing	
 	4146872587	BGMStates			\Default Work Unit\BGMStates	
 
 State	ID	Name	State Group			Notes
 	0	None	CharacterStates			
 	2999290755	Etoile	CharacterStates			
+	0	None	GroundType			
+	2003927601	Puddle	GroundType			
+	2473969246	Metal	GroundType			
 	0	None	Pausing			
 	3856304344	Pausing	Pausing			
 	0	None	BGMStates			
@@ -13,16 +17,17 @@ State	ID	Name	State Group			Notes
 	168610243	Fighting	BGMStates			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	726338649	Pausing	Pausing	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Game Audio Bus		
-	955672844	Etoile	CharacterStates	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Game Audio Bus		
+	726338649	Pausing	Pausing	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM Audio Bus		
+	955672844	Etoile	CharacterStates	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM Audio Bus		
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	13664167	Game Audio Bus			\Default Work Unit\Master Audio Bus\Game Audio Bus	
+	957100585	BGM Audio Bus			\Default Work Unit\Master Audio Bus\BGM Audio Bus	
+	2306887053	SE Audio Bus			\Default Work Unit\Master Audio Bus\SE Audio Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	4141518855	UI Audio Bus			\Default Work Unit\Master Audio Bus\UI Audio Bus	
 
 Effect plug-ins	ID	Name	Type				Notes
-	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
+	373286653	Extreme_Limiting_1 (Custom)	Wwise Peak Limiter			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

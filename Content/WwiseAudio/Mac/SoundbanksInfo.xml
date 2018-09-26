@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/z:/Users/wararyo/Git/Eclair3/Content/WwiseAudio/Mac/</SoundBanksRoot>
+		<ProjectRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\data\Documents\Unreal Projects\Eclair\Content\WwiseAudio\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/wararyo/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Git/Eclair3/Eclair_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -22,25 +22,97 @@
 			<Path>EclairAkAudioBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
+				<Event Id="2646605403" Name="Fade" ObjectPath="\Events\Default Work Unit\Chapter1\Fade"/>
 				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
+				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\FootSteps"/>
+				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\HittingBolt"/>
+				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\ThrowingBolt"/>
 				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="30164968" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_13.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_13_56D34C19.wem</Path>
+				</File>
 				<File Id="77356971" Language="SFX">
 					<ShortName>1-haikou-1.wav</ShortName>
-					<Path>SFX/1-haikou-1_8956FC97.wem</Path>
+					<Path>SFX\1-haikou-1_8956FC97.wem</Path>
 				</File>
 				<File Id="105590707" Language="SFX">
 					<ShortName>1-boss.wav</ShortName>
-					<Path>SFX/1-boss_8956FC97.wem</Path>
+					<Path>SFX\1-boss_8956FC97.wem</Path>
+				</File>
+				<File Id="135831222" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_03_56D34C19.wem</Path>
+				</File>
+				<File Id="282001838" Language="SFX">
+					<ShortName>BoltLaunch.wav</ShortName>
+					<Path>SFX\BoltLaunch_56D34C19.wem</Path>
+				</File>
+				<File Id="337206732" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_00.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_00_56D34C19.wem</Path>
 				</File>
 				<File Id="347520258" Language="SFX">
 					<ShortName>1-default-1.wav</ShortName>
-					<Path>SFX/1-default-1_8956FC97.wem</Path>
+					<Path>SFX\1-default-1_8956FC97.wem</Path>
+				</File>
+				<File Id="486635016" Language="SFX">
+					<ShortName>Empty.wav</ShortName>
+					<Path>SFX\Empty_8956FC97.wem</Path>
+				</File>
+				<File Id="536735455" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_09_56D34C19.wem</Path>
+				</File>
+				<File Id="537634196" Language="SFX">
+					<ShortName>BoltLand.wav</ShortName>
+					<Path>SFX\BoltLand_56D34C19.wem</Path>
+				</File>
+				<File Id="548352836" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_01.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_01_56D34C19.wem</Path>
+				</File>
+				<File Id="612193268" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_06.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_06_56D34C19.wem</Path>
+				</File>
+				<File Id="728078664" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_10.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_10_56D34C19.wem</Path>
+				</File>
+				<File Id="729731780" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_05.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_05_56D34C19.wem</Path>
+				</File>
+				<File Id="800222909" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_04_56D34C19.wem</Path>
+				</File>
+				<File Id="857880999" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_02.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_02_56D34C19.wem</Path>
+				</File>
+				<File Id="901914076" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_08.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_08_56D34C19.wem</Path>
+				</File>
+				<File Id="922976991" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_11.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_11_56D34C19.wem</Path>
+				</File>
+				<File Id="942762787" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_07.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_07_56D34C19.wem</Path>
 				</File>
 				<File Id="1051978060" Language="SFX">
 					<ShortName>Title.wav</ShortName>
-					<Path>SFX/Title_8956FC97.wem</Path>
+					<Path>SFX\Title_8956FC97.wem</Path>
+				</File>
+				<File Id="1065652545" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_12.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_12_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

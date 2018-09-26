@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BBC0EE69-AF6D-46E6-9708-FED5D4FD6998}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="SE" ID="{BBC0EE69-AF6D-46E6-9708-FED5D4FD6998}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="ThrowingBolt" ID="{BA8B0BAC-3BEC-43FF-800D-40E2B9FD0178}">
+					<ChildrenList>
+						<Action Name="" ID="{D52206D6-1444-4119-BA18-CE30CDD5E704}" ShortID="105045733">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BoltLaunch" ID="{C1DBB8E0-737A-4A0A-A0D6-ED9AEBF0DBE2}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="HittingBolt" ID="{F7D35896-E7AF-4640-87F1-44D912BCDFA7}">
+					<ChildrenList>
+						<Action Name="" ID="{F529C8E7-BADD-4B55-8C89-B5ED2F68927E}" ShortID="275141427">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BoltLand" ID="{13488B15-6F3B-42CC-8615-F03290FE3285}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1993F128-5927-4533-A188-269A64323001}" ShortID="718313046">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BoltLaunch" ID="{C1DBB8E0-737A-4A0A-A0D6-ED9AEBF0DBE2}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FootSteps" ID="{F1F53C8E-E709-4CBD-9E59-74BF12EDF87E}">
+					<ChildrenList>
+						<Action Name="" ID="{6E2732CB-4D74-4CD1-B04B-223A79326E85}" ShortID="470331043">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps" ID="{911E9C7B-297D-4901-9DA9-CF57FE0FC982}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

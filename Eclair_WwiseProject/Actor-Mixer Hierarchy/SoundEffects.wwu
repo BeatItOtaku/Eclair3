@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}" SchemaVersion="89">
+	<AudioObjects>
+		<WorkUnit Name="SoundEffects" ID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="BoltLand" ID="{13488B15-6F3B-42CC-8615-F03290FE3285}" ShortID="174371390">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Bolt" ID="{537014C9-A9F8-4793-8CA8-4A9CFDC4624A}" WorkUnitID="{733FE1EF-A123-45D2-91FA-F46C960FE725}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BoltLand" ID="{92ECA035-32B9-4C42-B3B7-A4D00F80F9FA}" ShortID="537634196">
+							<Language>SFX</Language>
+							<AudioFile>BoltLand.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BoltLand" ID="{92ECA035-32B9-4C42-B3B7-A4D00F80F9FA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BoltLaunch" ID="{C1DBB8E0-737A-4A0A-A0D6-ED9AEBF0DBE2}" ShortID="684404436">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BoltLaunch" ID="{C22CF8DF-196C-4E57-946C-1814DAFFDF5B}" ShortID="282001838">
+							<Language>SFX</Language>
+							<AudioFile>BoltLaunch.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BoltLaunch" ID="{C22CF8DF-196C-4E57-946C-1814DAFFDF5B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<SwitchContainer Name="FootSteps" ID="{911E9C7B-297D-4901-9DA9-CF57FE0FC982}" ShortID="66063730">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{3996D0A7-B642-4BA6-B591-FDEAC80EED0C}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="GroundType" ID="{4845AAE3-D8C4-42DB-BB9A-0F8A139973E0}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Default" ID="{F07BFF80-BB47-4F1D-9316-5CDC140F7D12}" ShortID="1013042622">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FootSteps_Eclair_Default_00" ID="{CB19BADF-6183-46C2-8D7C-D4319DA3695A}" ShortID="987395197">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_00" ID="{62A0E10F-4FFC-4EA5-B7CB-5B486BA2BC7F}" ShortID="337206732">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_00.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_00" ID="{62A0E10F-4FFC-4EA5-B7CB-5B486BA2BC7F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_01" ID="{DD35C049-B40B-4E31-B2F8-E71EA334A55F}" ShortID="250738949">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_01" ID="{2285F554-2493-4D1F-8E6A-9B25ED9CCB48}" ShortID="548352836">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_01" ID="{2285F554-2493-4D1F-8E6A-9B25ED9CCB48}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_02" ID="{A9DB6261-2D81-44DD-9E78-1B2B162D31F5}" ShortID="668425435">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_02" ID="{5407EFE5-2054-4EF1-B3FC-0299EDE7486F}" ShortID="857880999">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_02" ID="{5407EFE5-2054-4EF1-B3FC-0299EDE7486F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_03" ID="{A5DBD1CF-C2DF-4E2C-9327-C325E1EC0A70}" ShortID="942284159">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_03" ID="{B55EB515-E7A0-4A82-880C-1D186D04623B}" ShortID="135831222">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_03" ID="{B55EB515-E7A0-4A82-880C-1D186D04623B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_04" ID="{C6E06E3F-6301-42B3-8F90-FD7D1AD2185F}" ShortID="359703918">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_04" ID="{C907884F-D010-4B01-B034-1B3934105628}" ShortID="800222909">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_04" ID="{C907884F-D010-4B01-B034-1B3934105628}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_05" ID="{B1017179-14F5-48F8-8D47-171352FD5C80}" ShortID="106270020">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_05" ID="{CFC56879-FFB2-463D-ADCA-305EE0B7CDA8}" ShortID="729731780">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_05" ID="{CFC56879-FFB2-463D-ADCA-305EE0B7CDA8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_06" ID="{C73FAFFE-DECB-4EA3-ADBC-2B8F57697BC7}" ShortID="803608097">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_06" ID="{64EE1846-05CF-44F2-8341-F44758744903}" ShortID="612193268">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_06" ID="{64EE1846-05CF-44F2-8341-F44758744903}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_07" ID="{BD0A58A8-4A42-41A0-B398-45B20449DDCF}" ShortID="773446259">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_07" ID="{766FE663-A04B-4C44-868D-CE67D7A2F78F}" ShortID="942762787">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_07.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_07" ID="{766FE663-A04B-4C44-868D-CE67D7A2F78F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_08" ID="{D0E5347D-B591-4281-92E4-3858F7A82AF1}" ShortID="756484189">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_08" ID="{11FFE529-D8AD-4F06-86DD-749FC31566C8}" ShortID="901914076">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_08.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_08" ID="{11FFE529-D8AD-4F06-86DD-749FC31566C8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_09" ID="{38947467-AE6E-4C0F-A061-7E3C4A17DE94}" ShortID="914565882">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_09" ID="{2395A929-8976-4526-A300-A11BD0419FB3}" ShortID="536735455">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_09" ID="{2395A929-8976-4526-A300-A11BD0419FB3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_10" ID="{24A93C53-C9B8-4863-A7F0-7F6715C16C52}" ShortID="925506517">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_10" ID="{6ADD7F8F-1080-42C2-BA33-607BC0460463}" ShortID="728078664">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_10" ID="{6ADD7F8F-1080-42C2-BA33-607BC0460463}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_11" ID="{50D06384-0D37-438E-8588-0294EF1FCFD5}" ShortID="605686749">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_11" ID="{264BDA0C-AD66-4C7B-9E6C-17C9AEC22D44}" ShortID="922976991">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_11" ID="{264BDA0C-AD66-4C7B-9E6C-17C9AEC22D44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_12" ID="{3AE5354F-BE5A-4BAA-ACE2-E455BF727FE4}" ShortID="600198412">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_12" ID="{313A4797-1D67-4306-BB46-2F0A76AF461B}" ShortID="1065652545">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_12" ID="{313A4797-1D67-4306-BB46-2F0A76AF461B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FootSteps_Eclair_Default_13" ID="{E41C58CB-5D3B-4F19-B5B5-C6B2D7B432FA}" ShortID="164728137">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FootSteps_Eclair_Default_13" ID="{A2AAF9B7-B0D0-47A7-A1FA-3C3108E9B75D}" ShortID="30164968">
+											<Language>SFX</Language>
+											<AudioFile>FootSteps_Eclair_Default_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FootSteps_Eclair_Default_13" ID="{A2AAF9B7-B0D0-47A7-A1FA-3C3108E9B75D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Default" ID="{F07BFF80-BB47-4F1D-9316-5CDC140F7D12}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Puddle" ID="{75BF2A21-CB15-4D00-8AC1-E7BF5DF56D8D}"/>
+								<ItemList>
+									<ItemRef Name="Default" ID="{F07BFF80-BB47-4F1D-9316-5CDC140F7D12}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="None" ID="{3996D0A7-B642-4BA6-B591-FDEAC80EED0C}"/>
+								<ItemList>
+									<ItemRef Name="Default" ID="{F07BFF80-BB47-4F1D-9316-5CDC140F7D12}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{573570FB-6D43-43F1-9CAA-889EF73B3285}"/>
+								<ItemList>
+									<ItemRef Name="Default" ID="{F07BFF80-BB47-4F1D-9316-5CDC140F7D12}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
