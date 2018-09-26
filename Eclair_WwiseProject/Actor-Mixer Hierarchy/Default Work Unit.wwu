@@ -3,153 +3,30 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Title" ID="{F159FA59-84E9-4108-88A7-601BFD9E8D2B}" ShortID="960427812">
+				<Sound Name="Empty" ID="{AA463686-15F9-4C4F-87CF-577E451BBD6A}" ShortID="968467096">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-11</Value>
-							</ValueList>
-						</Property>
+						<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+						<Property Name="LoopCount" Type="int32" Value="20"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Title" ID="{2A558454-2C68-41E8-A375-646A880B0709}" ShortID="737949908">
-							<Language>SFX</Language>
-							<AudioFile>Title.wav</AudioFile>
-							<ConvertedFileIDList>
-								<File ID="1051978060"/>
-							</ConvertedFileIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Title" ID="{2A558454-2C68-41E8-A375-646A880B0709}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<SwitchContainer Name="Chapter1" ID="{6C1FECFD-5640-4897-AABF-524D6E92E02D}" ShortID="170371653">
-					<PropertyList>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-						</Reference>
-						<Reference Name="DefaultSwitchOrState">
-							<ObjectRef Name="None" ID="{2E43FAF3-AC0B-436E-B9A3-50F9CF90F565}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Game Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 						</Reference>
-						<Reference Name="SwitchGroupOrStateGroup">
-							<ObjectRef Name="BGMStates" ID="{61AB3450-2959-44A6-B40E-0425A1BD56C8}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
-						</Reference>
-					</ReferenceList>
-					<GroupingInfo/>
-				</SwitchContainer>
-				<BlendContainer Name="Chapter1-a" ID="{5E0FB974-A723-4028-8691-4ED6E3AEC41E}" ShortID="854057745">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="1-default-1" ID="{B6566628-5F83-4864-B000-687B5D986AEA}" ShortID="886161476">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Game Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="1-default-1" ID="{CA1391B8-2928-4803-A009-B70498AA42C3}" ShortID="952172444">
-									<Language>SFX</Language>
-									<AudioFile>1-default-1.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="347520258"/>
-									</ConvertedFileIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="1-default-1" ID="{CA1391B8-2928-4803-A009-B70498AA42C3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="1-haikou-1" ID="{81C5C5DC-7D9C-40DA-8FB0-97B85E8B3AE9}" ShortID="435980449">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Game Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="1-haikou-1" ID="{3BA542F8-DEDC-45DF-84FB-EA4C8522EB08}" ShortID="508572872">
-									<Language>SFX</Language>
-									<AudioFile>1-haikou-1.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="77356971"/>
-									</ConvertedFileIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="1-haikou-1" ID="{3BA542F8-DEDC-45DF-84FB-EA4C8522EB08}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						<AudioFileSource Name="Empty" ID="{E28A52E6-BF43-4176-9FF8-D1EB47A1F1DB}" ShortID="486635016">
+							<Language>SFX</Language>
+							<AudioFile>Empty.wav</AudioFile>
+						</AudioFileSource>
 					</ChildrenList>
-					<BlendTrackList>
-						<BlendTrack Name="New Blend Track" ID="{C2353718-D58B-4E70-827B-2FF1F81F84D7}" ShortID="895252060">
-							<PropertyList>
-								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="LayerCrossFadeControlInput">
-									<ObjectRef Name="Pausing" ID="{9269DB51-521A-470D-A5DE-05C40E57F925}" WorkUnitID="{95E9B43B-8A0E-4F65-B7DB-1C2109C231D1}"/>
-								</Reference>
-							</ReferenceList>
-							<BlendTrackAssocList>
-								<BlendTrackAssoc>
-									<ItemRef Name="1-default-1" ID="{B6566628-5F83-4864-B000-687B5D986AEA}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>0</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>0.9995</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="1-haikou-1" ID="{81C5C5DC-7D9C-40DA-8FB0-97B85E8B3AE9}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>0.0005</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>1</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-							</BlendTrackAssocList>
-						</BlendTrack>
-					</BlendTrackList>
-				</BlendContainer>
+					<ActiveSourceList>
+						<ActiveSource Name="Empty" ID="{E28A52E6-BF43-4176-9FF8-D1EB47A1F1DB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
