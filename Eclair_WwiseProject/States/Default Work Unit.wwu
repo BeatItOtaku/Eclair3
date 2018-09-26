@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{38DD344C-A16E-48FC-8E06-0701A776246D}" SchemaVersion="89">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{38DD344C-A16E-48FC-8E06-0701A776246D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{38DD344C-A16E-48FC-8E06-0701A776246D}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="BGMStates" ID="{61AB3450-2959-44A6-B40E-0425A1BD56C8}">
+					<ChildrenList>
+						<State Name="None" ID="{2E43FAF3-AC0B-436E-B9A3-50F9CF90F565}"/>
+						<State Name="Default" ID="{5E955331-9115-4503-BA1F-377F63759B5C}"/>
+						<State Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{E48388CD-FDD8-4BBF-B88B-C02A5752CA54}"/>
+						<State Name="Pausing" ID="{7E0D7C6A-FF9C-4C02-892A-83205C1434BE}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="CharacterStates" ID="{E7718CB3-3A79-4F38-82A5-EDDFF41D95B7}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{2446C016-09D4-4E5C-945B-A77C3F508862}"/>
+						<State Name="Etoile" ID="{4DF6A55B-DCD9-45BE-8E5E-C63C35C83FC5}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

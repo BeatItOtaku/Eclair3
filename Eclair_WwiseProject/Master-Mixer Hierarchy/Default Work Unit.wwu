@@ -9,6 +9,51 @@
 							<ObjectRef Name="System" ID="{D3E1376A-CB2F-4C4E-8B4D-4A56DF6AEF92}" WorkUnitID="{A75F6C10-BD46-492B-A1DA-C24251563C3F}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Game Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}">
+							<PropertyList>
+								<Property Name="BypassEffect0" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="CharacterStates" ID="{E7718CB3-3A79-4F38-82A5-EDDFF41D95B7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Etoile" ID="{4DF6A55B-DCD9-45BE-8E5E-C63C35C83FC5}"/>
+										<State Name="" ID="{3B44AB5C-7602-4A96-BE15-F5D3E02BE48C}" ShortID="955672844">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Pausing" ID="{7E0D7C6A-FF9C-4C02-892A-83205C1434BE}"/>
+										<State Name="" ID="{BE17BB01-07DA-4D93-9107-3294E67D3B44}" ShortID="726338649">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
+						<Bus Name="UI Audio Bus" ID="{569C0182-E842-4C69-9B1C-0EDAFF81272E}"/>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

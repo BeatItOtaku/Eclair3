@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{308220B9-24C6-40EF-A1BE-C7D443B2A281}" SchemaVersion="89">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{308220B9-24C6-40EF-A1BE-C7D443B2A281}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{308220B9-24C6-40EF-A1BE-C7D443B2A281}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Chapter1" ID="{2C28E56A-9C86-496E-A59C-0F04B54A041B}" ShortID="848143431">
+					<ChildrenList>
+						<Event Name="Field" ID="{05E59A82-5B12-407F-901A-70207564162B}">
+							<ChildrenList>
+								<Action Name="" ID="{391E2E24-E9FA-4D84-BE2A-E37B4613A756}" ShortID="497188096">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Field" ID="{C83723E5-FE7D-46DF-943C-1BC79A8A6BC7}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Boss" ID="{88905EBC-C17C-4A29-ABD8-B31C02E54992}">
+							<ChildrenList>
+								<Action Name="" ID="{60C73E78-432B-4445-9484-BD4D1582CF6D}" ShortID="1011612470">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss" ID="{9C7DF4CB-E63B-4ADF-B07D-565C2BC89EAF}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
