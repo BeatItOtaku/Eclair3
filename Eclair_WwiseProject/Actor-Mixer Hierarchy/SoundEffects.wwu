@@ -62,6 +62,8 @@
 				</Sound>
 				<SwitchContainer Name="FootSteps" ID="{911E9C7B-297D-4901-9DA9-CF57FE0FC982}" ShortID="66063730">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ModifierList>
 								<ModifierInfo>
