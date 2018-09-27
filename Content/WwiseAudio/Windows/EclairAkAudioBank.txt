@@ -15,6 +15,9 @@ State	ID	Name	State Group			Notes
 	2003927601	Puddle	GroundType			
 	2473969246	Metal	GroundType			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1086842483	MoveSpeed			\Default Work Unit\MoveSpeed	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30164968	FootSteps_Eclair_Default_13	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_13_56D34C19.wem		\Actor-Mixer Hierarchy\SoundEffects\FootSteps\Default\FootSteps_Eclair_Default_13		47524
 	77356971	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Field\Intro\Haikou		7347636
