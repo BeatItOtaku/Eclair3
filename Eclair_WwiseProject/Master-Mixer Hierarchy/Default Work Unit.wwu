@@ -61,7 +61,6 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}"/>
