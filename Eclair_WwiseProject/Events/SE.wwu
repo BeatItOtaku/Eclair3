@@ -188,6 +188,38 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Chapter1" ID="{9DD299E4-6B50-448B-9912-06A0281DD501}" ShortID="1025804275">
+					<ChildrenList>
+						<Event Name="Door" ID="{ED53752E-A742-4DD8-BF2D-9765DFDE7CCD}">
+							<ChildrenList>
+								<Action Name="" ID="{D67D3ACA-6B57-4489-B731-9B803240CBB1}" ShortID="220616499">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Door" ID="{DF66467E-6FC5-4C43-B1FC-E97837796D99}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Door_Big" ID="{AEE16548-A0F7-4DC3-B356-772DE4E03702}">
+							<ChildrenList>
+								<Action Name="" ID="{CEBC9606-EEB2-484B-8B40-2ED1301BD343}" ShortID="268889033">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Door-Big" ID="{E3887F14-1AB3-459E-ABDC-4D1B07A2C94C}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
