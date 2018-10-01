@@ -432,6 +432,9 @@
 				<Folder Name="Brioche" ID="{D53935F5-2018-4FFD-A013-BBC4526D2287}" ShortID="609506398">
 					<ChildrenList>
 						<Sound Name="BeforeFrameThrower" ID="{3AA9349D-7137-4301-88A4-3AD9164ADD9A}" ShortID="612517549">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -451,6 +454,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Down" ID="{007F07EE-3940-4867-A894-ED5E8FD59D93}" ShortID="563897483">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -471,6 +477,7 @@
 						</Sound>
 						<Sound Name="FootSteps_BB" ID="{2F01C466-6AD1-43CF-AC84-41A721126837}" ShortID="420345011">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-660</Value>
@@ -496,6 +503,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="FrameThrower" ID="{025731F2-025E-4F13-A6FB-626BA91590C0}" ShortID="507041848">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -515,6 +525,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="PillarOfFire" ID="{8D41A6FB-B7C2-45B6-80A5-C4C56CEE8FC0}" ShortID="260456928">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -534,6 +547,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Punch" ID="{1255289B-08B6-4536-95B6-AC132183B51D}" ShortID="400694425">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -553,6 +569,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Rush" ID="{A78CDE03-A1EA-4ABE-9FEA-890A17899D68}" ShortID="304703486">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -572,6 +591,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Rush2" ID="{F460397C-6067-4AFD-A40F-1BF2747CA06B}" ShortID="126440814">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -591,6 +613,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="StrikingGround" ID="{BED2526E-4757-4BFD-8A8B-D7A8F61D4445}" ShortID="445267633">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
