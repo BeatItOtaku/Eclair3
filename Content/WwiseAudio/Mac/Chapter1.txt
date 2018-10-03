@@ -10,8 +10,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2275039111	Rush			\SE\Brioche\Rush	
 	2280510569	Down			\SE\Brioche\Down	
 	2646605403	Fade			\Default Work Unit\Chapter1\Fade	
+	2691847895	FlameThrower			\SE\Brioche\FlameThrower	
 	2901268394	PillarOfFire			\SE\Brioche\PillarOfFire	
-	3333494329	FrameThrower			\SE\Brioche\FrameThrower	
+	3748276840	FlameGrenade			\SE\Brioche\FlameGrenade	
 	4277651895	Rush2			\SE\Brioche\Rush2	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -38,5 +39,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	706389692	FootSteps_BB	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_BB_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FootSteps_BB		7344
 	817075413	Door-Big	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door-Big_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		120920
 	889719873	Door	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		80658
-	902868209	FrameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FrameThrower		66624
+	902868209	FlameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		66624
 
