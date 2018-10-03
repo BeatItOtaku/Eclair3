@@ -9,10 +9,12 @@
 			<LanguageList>
 				<Language Name="English(US)" ID="{7B5434DC-9FF4-4685-8EEA-9B7561165122}"/>
 				<Language Name="External" ID="{F7D41F38-995C-484E-B97C-6C75E7EE0707}"/>
+				<Language Name="Japanese" ID="{A60AC0D8-B9D5-4688-88F4-5196AAC064FF}"/>
 				<Language Name="Mixed" ID="{4E33EA7F-4FE8-4A2F-957B-BCAE98704DFC}"/>
 				<Language Name="SFX" ID="{A8F28D93-35B3-41FD-A524-5632ADF4DB5A}"/>
 			</LanguageList>
 			<PropertyList>
+				<Property Name="DefaultLanguage" Type="string" Value="Japanese"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>

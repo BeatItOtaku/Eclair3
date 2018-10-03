@@ -220,6 +220,38 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="System" ID="{42014909-D3B2-47EC-A2FF-2E370F9F4D8F}" ShortID="9523057">
+					<ChildrenList>
+						<Event Name="Cancel" ID="{0D137A2C-91EE-487A-B3CF-6AF8EEBEFE10}">
+							<ChildrenList>
+								<Action Name="" ID="{E2B54BB8-15A0-4EE0-A259-0C7498D859CF}" ShortID="802282020">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cancel" ID="{DB3CFEE0-61F3-4024-BBCD-4D76E723CC42}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Choice" ID="{BA3F144A-2CCB-48FF-87F3-1A4A0908A91A}">
+							<ChildrenList>
+								<Action Name="" ID="{B422177B-8AAE-482F-9155-58A820DDEA2D}" ShortID="675707377">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choice" ID="{D0363FCD-93DE-47F7-81FB-40DCC51DE862}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

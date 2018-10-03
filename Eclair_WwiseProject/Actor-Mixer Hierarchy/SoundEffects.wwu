@@ -690,6 +690,62 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="System" ID="{854E005B-5FCC-4B2C-A469-9666309CF46A}" ShortID="1049005532">
+					<ChildrenList>
+						<Sound Name="Cancel" ID="{DB3CFEE0-61F3-4024-BBCD-4D76E723CC42}" ShortID="584013118">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cancel" ID="{161DBD72-5BD4-4C87-8A39-10777BE2D219}" ShortID="60845689">
+									<Language>SFX</Language>
+									<AudioFile>Cancel.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cancel" ID="{161DBD72-5BD4-4C87-8A39-10777BE2D219}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Choice" ID="{D0363FCD-93DE-47F7-81FB-40DCC51DE862}" ShortID="923707544">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Choice" ID="{B3AAD8EC-F77A-4AA0-8DCE-60BD28756509}" ShortID="302433291">
+									<Language>SFX</Language>
+									<AudioFile>Choice.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Choice" ID="{B3AAD8EC-F77A-4AA0-8DCE-60BD28756509}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
