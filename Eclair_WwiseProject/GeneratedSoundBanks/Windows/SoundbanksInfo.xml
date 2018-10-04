@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2141035435" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\EclairAkAudioBank</ObjectPath>
+			<ShortName>EclairAkAudioBank</ShortName>
+			<Path>EclairAkAudioBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
+				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="512563676" Language="SFX">
+					<ShortName>2Master.wav</ShortName>
+					<Path>SFX\2Master_8956FC97.wem</Path>
+				</File>
+				<File Id="962908156" Language="SFX">
+					<ShortName>1.wav</ShortName>
+					<Path>SFX\1_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

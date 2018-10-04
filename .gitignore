@@ -76,3 +76,6 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 ._Eclair.uproject
+*.chm
+Eclair_WwiseProject/.cache/
+Eclair_WwiseProject/Originals/
