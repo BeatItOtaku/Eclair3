@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	514358619	Field			\Default Work Unit\Chapter1\Field	
+	1560169506	Boss			\Default Work Unit\Chapter1\Boss	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	512563676	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\2Master_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Field\Haikou\Haikou		22226468
+	962908156	Boss	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Chapter1\Boss\Intro\Boss		10118168
+

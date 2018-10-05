@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A7CCD591-4E59-4565-BCD0-04B52A48A573}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Ambient" ID="{A7CCD591-4E59-4565-BCD0-04B52A48A573}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Steam" ID="{4F5699BD-A0E6-4D5E-BEC4-B1A978BB0F00}">
+					<ChildrenList>
+						<Action Name="" ID="{E7F149A7-67D5-4B97-B5BD-61B5849EF4A4}" ShortID="188790817">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Steam" ID="{BEDA40BF-E78F-45D0-9175-B59729BA4336}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SteelFrame" ID="{B5A207EE-4849-49B9-83D7-B849B2BBF464}">
+					<ChildrenList>
+						<Action Name="" ID="{257833C5-D125-4272-A3AC-8482C057D54C}" ShortID="942854830">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SteelFrame" ID="{05505E87-4F00-42A7-8A30-D6101E4CC61E}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wind" ID="{78B28107-71E0-4112-98AF-EEE61DBC8636}">
+					<ChildrenList>
+						<Action Name="" ID="{622AD0BB-2F1C-4AF2-A5A1-C5502559E797}" ShortID="843736188">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind" ID="{5275FDB2-A240-48BF-B0DA-72CCCACB5CCC}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

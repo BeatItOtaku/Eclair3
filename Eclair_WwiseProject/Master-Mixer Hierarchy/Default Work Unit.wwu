@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}" SchemaVersion="89">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{D3E1376A-CB2F-4C4E-8B4D-4A56DF6AEF92}" WorkUnitID="{A75F6C10-BD46-492B-A1DA-C24251563C3F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom CreatedFrom="{8F08A8A7-3313-4E5D-9EBD-2B1B564DE411}">
+										<Effect Name="Extreme_Limiting_1 (Custom)" ID="{6126681B-639F-47C8-9C0E-40D3A12AE5F4}" ShortID="373286653" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3"/>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="CharacterStates" ID="{E7718CB3-3A79-4F38-82A5-EDDFF41D95B7}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Etoile" ID="{4DF6A55B-DCD9-45BE-8E5E-C63C35C83FC5}"/>
+										<State Name="" ID="{3B44AB5C-7602-4A96-BE15-F5D3E02BE48C}" ShortID="955672844">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Pausing" ID="{7E0D7C6A-FF9C-4C02-892A-83205C1434BE}"/>
+										<State Name="" ID="{BE17BB01-07DA-4D93-9107-3294E67D3B44}" ShortID="726338649">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
+						<Bus Name="UI Audio Bus" ID="{569C0182-E842-4C69-9B1C-0EDAFF81272E}"/>
+						<Bus Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>2</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeSCurve</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
+						<AuxBus Name="Reverb" ID="{401F9527-2193-47A0-B403-245779ADB273}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom CreatedFrom="{B35D266A-CE6E-40A1-B197-14C12F9C21B1}">
+										<Effect Name="Hall_Guns (Custom)" ID="{2F550362-52CD-4B0A-A923-06C45011DC44}" ShortID="1069874549" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<PropertyList>
+												<Property Name="DecayTime" Type="Real32" Value="4.8"/>
+												<Property Name="Density" Type="Real32" Value="70"/>
+												<Property Name="ERLevel" Type="Real32" Value="-12"/>
+												<Property Name="ERPattern" Type="int32" Value="12"/>
+												<Property Name="Filter1Freq" Type="Real32" Value="590"/>
+												<Property Name="Filter1Gain" Type="Real32" Value="1"/>
+												<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+												<Property Name="Filter2Freq" Type="Real32" Value="9860"/>
+												<Property Name="Filter2Gain" Type="Real32" Value="-2.5"/>
+												<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
+												<Property Name="Filter3Gain" Type="Real32" Value="1"/>
+												<Property Name="HFDamping" Type="Real32" Value="3"/>
+												<Property Name="PreDelay" Type="Real32" Value="0"/>
+												<Property Name="Quality" Type="int32" Value="10"/>
+												<Property Name="ReverbLevel" Type="Real32" Value="-18"/>
+												<Property Name="RoomShape" Type="Real32" Value="55"/>
+												<Property Name="RoomSize" Type="Real32" Value="45"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

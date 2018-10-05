@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C2DA8D4E-87D3-4832-B68A-01C1CC615966}" SchemaVersion="89">
+	<Modulators>
+		<WorkUnit Name="Default Work Unit" ID="{C2DA8D4E-87D3-4832-B68A-01C1CC615966}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="Random" ID="{6DD33BAB-1F56-4163-A0CF-9801036458DA}" ShortID="455758129"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>
