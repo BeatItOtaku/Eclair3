@@ -30,8 +30,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	150500008	Punch	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Punch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8228
 	182787609	StrikingGround	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\StrikingGround_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		10247
 	220151601	BeforeFrameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BeforeFrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		8771
-	238159724	Down	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Down_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		8709
-	263033532	PillarOfFire	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		154359
+	238159724	Down	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Down_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		50682
+	263033532	PillarOfFire	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		25347
 	347520258	Default	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1-default-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		702709
 	396469845	Rush2	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Rush2_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		41922
 	430322998	Rush	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Rush_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		24016
