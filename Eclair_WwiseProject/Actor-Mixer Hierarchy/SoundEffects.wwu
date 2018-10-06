@@ -405,6 +405,7 @@
 						</Sound>
 						<Sound Name="Notify" ID="{C12A349C-8397-474B-9BF7-ACAB3CD2F1F0}" ShortID="807129452">
 							<PropertyList>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-4</Value>

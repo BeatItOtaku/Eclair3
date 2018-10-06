@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2760337059	Cancel			\SE\System\Cancel	
 	2999290755	Etoile			\SE\Eclair\Etoile	
 	3004330733	Decide			\SE\System\Decide	
+	3065411006	Notify			\SE\System\Notify	
 	3099787076	Choice			\SE\System\Choice	
 	3705726509	Title			\Default Work Unit\Chapter1\Title	
 
@@ -39,6 +40,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	536735455	FootSteps_Eclair_Default_09	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_09_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		5170
 	537634196	BoltLand	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BoltLand_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		25144
 	548352836	FootSteps_Eclair_Default_01	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_01_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		5576
+	575486927	Notify	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Notify_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Notify		24258
 	612193268	FootSteps_Eclair_Default_06	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_06_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_06		6151
 	633214849	SteelFrame	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\SteelFrame_A1793BE9.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		165915
 	728078664	FootSteps_Eclair_Default_10	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_10_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		6053
