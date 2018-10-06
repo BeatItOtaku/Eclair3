@@ -138,7 +138,7 @@
 							<ChildrenList>
 								<MusicPlaylistItem Name="" ID="{57201E61-A004-47F6-BB59-8C08F8F109A6}" ShortID="563302257">
 									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="2"/>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
 									<SegmentRef Name="Title" ID="{D375EFF7-5CCB-4D59-A5D3-BE6636A704C1}"/>
