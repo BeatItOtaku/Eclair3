@@ -92,6 +92,11 @@
 						<Sound Name="FlameThrower" ID="{025731F2-025E-4F13-A6FB-626BA91590C0}" ShortID="507041848">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -127,7 +132,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -238,6 +243,32 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="StrikingGround" ID="{698CCE15-FC1A-4579-8764-CF73CAC8A4E1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="HitGrenade" ID="{7E395B25-EBF1-4B1F-8E30-EE4AF7AD79A7}" ShortID="706213790">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="HitGrenade" ID="{53F29A44-E16E-40FD-B319-86CA29BA8251}" ShortID="68335184">
+									<Language>SFX</Language>
+									<AudioFile>HitGrenade.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="HitGrenade" ID="{53F29A44-E16E-40FD-B319-86CA29BA8251}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -370,6 +401,32 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Choice" ID="{B3AAD8EC-F77A-4AA0-8DCE-60BD28756509}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Notify" ID="{C12A349C-8397-474B-9BF7-ACAB3CD2F1F0}" ShortID="807129452">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Notify" ID="{4D829CAC-A20F-4849-B025-DAF4E51D7398}" ShortID="575486927">
+									<Language>SFX</Language>
+									<AudioFile>Notify.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Notify" ID="{4D829CAC-A20F-4849-B025-DAF4E51D7398}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -863,6 +920,32 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Etoile_end" ID="{0127875D-1FF2-4587-BB1B-42B7C378CF3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Hacking" ID="{58E34241-4B91-4D62-B460-03497E9EEDED}" ShortID="560474595">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hacking" ID="{9D1F1068-101F-490D-8C15-7BE3D196D63F}" ShortID="2744495">
+									<Language>SFX</Language>
+									<AudioFile>Hacking.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hacking" ID="{9D1F1068-101F-490D-8C15-7BE3D196D63F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
