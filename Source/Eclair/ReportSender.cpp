@@ -48,8 +48,13 @@ void AReportSender::SendReport(FString URL)
 
 	//PCスペックを取得
 	RequestParameters.Add("platform", UGameplayStatics::GetPlatformName());
+#if PLATFORM_WINDOWS
 	RequestParameters.Add("cpu", FWindowsPlatformMisc::GetCPUBrand());
 	RequestParameters.Add("gpu", FWindowsPlatformMisc::GetPrimaryGPUBrand());
+#else
+    RequestParameters.Add("cpu", FGenericPlatformMisc::GetCPUBrand());
+    RequestParameters.Add("gpu", FGenericPlatformMisc::GetPrimaryGPUBrand());
+#endif
 
 	//JSONを生成
 	TSharedRef<FJsonObject> JsonObject = MakeShareable(new FJsonObject());
