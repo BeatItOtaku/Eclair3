@@ -70,11 +70,7 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 				//ConstructObject<UAssetImportData>(UAssetImportData::StaticClass(), NewEclairConversation);
 		}
 
-		NewEclairConversation->AssetImportData->SourceFilePath =
-			FReimportManager::SanitizeImportFilename(CurrentFilename, NewEclairConversation);
-		NewEclairConversation->AssetImportData->SourceFileTimestamp =
-			IFileManager::Get().GetTimeStamp(*CurrentFilename).ToString();
-		NewEclairConversation->AssetImportData->bDirty = false;
+		NewEclairConversation->AssetImportData->Update(CurrentFilename);
 	}
 
 	return NewEclairConversation;
@@ -85,8 +81,7 @@ bool UEclairConversationFactory::CanReimport(UObject* Obj, TArray<FString>& OutF
 	UEclairConversation* EclairConversation = Cast<UEclairConversation>(Obj);
 	if (EclairConversation && EclairConversation->AssetImportData)
 	{
-		OutFilenames.Add(FReimportManager::ResolveImportFilename(
-			EclairConversation->AssetImportData->SourceFilePath, EclairConversation));
+		EclairConversation->AssetImportData->ExtractFilenames(OutFilenames);
 		return true;
 	}
 	return false;
@@ -96,8 +91,7 @@ void UEclairConversationFactory::SetReimportPaths(UObject* Obj, const TArray<FSt
 	UEclairConversation* EclairConversation = Cast<UEclairConversation>(Obj);
 	if (EclairConversation && ensure(NewReimportPaths.Num() == 1))
 	{
-		EclairConversation->AssetImportData->SourceFilePath =
-			FReimportManager::ResolveImportFilename(NewReimportPaths[0], EclairConversation);
+		EclairConversation->AssetImportData->UpdateFilenameOnly(NewReimportPaths[0]);
 	}
 }
 EReimportResult::Type UEclairConversationFactory::Reimport(UObject* Obj)
@@ -108,8 +102,7 @@ EReimportResult::Type UEclairConversationFactory::Reimport(UObject* Obj)
 		return EReimportResult::Failed;
 	}
 
-	const FString Filename = FReimportManager::ResolveImportFilename(
-		EclairConversation->AssetImportData->SourceFilePath, EclairConversation);
+	const FString Filename = IFileManager::Get().ConvertToRelativePath(*(EclairConversation->AssetImportData->GetFirstFilename()));
 	if (!Filename.Len() || IFileManager::Get().FileSize(*Filename) == INDEX_NONE)
 	{
 		return EReimportResult::Failed;
