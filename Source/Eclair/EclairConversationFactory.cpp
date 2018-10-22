@@ -62,7 +62,7 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 	{
 		NewEclairConversation->Description = Values[0];
 		NewEclairConversation->Type = EConversationType::CT_Auto;
-		NewEclairConversation->Items.Add(NewObject<UEclairConversationItem>());
+		NewEclairConversation->Items.Add(FEclairConversationItem());
 
 		if (!NewEclairConversation->AssetImportData)
 		{

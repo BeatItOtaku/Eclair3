@@ -9,13 +9,17 @@
 /**
  * 
  */
-UCLASS()
-class ECLAIR_API UEclairConversationItem : public UObject
+USTRUCT(BlueprintType)
+struct FEclairConversationItem
 {
 	GENERATED_BODY()
 	
-public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
 		FString content;
+
+	FEclairConversationItem()
+	{
+		content = "";
+	}
 	
 };

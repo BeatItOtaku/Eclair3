@@ -26,7 +26,7 @@ public:
 		EConversationType Type;
 
 	UPROPERTY(EditAnywhere)
-		TArray<UEclairConversationItem*> Items;
+		TArray<FEclairConversationItem> Items;
 	
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Instanced, Category = Reimport)
