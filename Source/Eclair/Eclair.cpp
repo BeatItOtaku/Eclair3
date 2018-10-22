@@ -11,7 +11,7 @@ class FEclair : public FDefaultGameModuleImpl
 	TSharedPtr<FAssetTypeActions_EclairConv> EclairConv_AssetTypeActions;
 };
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Eclair, "Eclair" );
+IMPLEMENT_PRIMARY_GAME_MODULE( FEclair, "Eclair", "Eclair" );
 
 void FEclair::StartupModule()
 {

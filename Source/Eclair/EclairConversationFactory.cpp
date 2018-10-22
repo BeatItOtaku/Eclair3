@@ -60,9 +60,9 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 
 	if (NewEclairConversation && (3 <= Values.Num()))
 	{
-		NewEclairConversation->ValueA = FCString::Atoi(*Values[0]);
-		NewEclairConversation->ValueB = FCString::Atoi(*Values[1]);
-		NewEclairConversation->ValueC = FCString::Atoi(*Values[2]);
+		NewEclairConversation->Description = Values[0];
+		NewEclairConversation->Type = EConversationType::CT_Auto;
+		NewEclairConversation->Items.Add(NewObject<UEclairConversationItem>());
 
 		if (!NewEclairConversation->AssetImportData)
 		{

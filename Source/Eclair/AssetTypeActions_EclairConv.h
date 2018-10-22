@@ -14,9 +14,11 @@ class ECLAIR_API FAssetTypeActions_EclairConv : public FAssetTypeActions_Base
 public:
 	virtual FText GetName() const override
 	{
-		return NSLOCTEXT("AssetTypeActions", "AssetTypeActions_EclairConv", "EclairConversation");
+		//return FText::FromString("");
+		return NSLOCTEXT("AssetTypeActions", "AssetTypeActions_EclairConv", "Eclair\nConversation");
 	}
-	virtual FColor GetTypeColor() const override { return FColor::White; }
+	virtual TSharedPtr<SWidget> GetThumbnailOverlay(const FAssetData& AssetData) const override;
+	virtual FColor GetTypeColor() const override { return FColor::Orange; }
 	virtual uint32 GetCategories() override { return EAssetTypeCategories::Misc; }
 	virtual UClass* GetSupportedClass() const override;
 	virtual bool IsImportedAsset() const override { return true; }

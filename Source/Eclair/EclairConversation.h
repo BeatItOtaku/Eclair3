@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "EclairConversationItem.h"
+#include "EclairConversationType.h"
 #include "EclairConversation.generated.h"
 
 /**
@@ -16,14 +18,15 @@ class ECLAIR_API UEclairConversation : public UObject
 	
 public:
 	UEclairConversation();
-	UPROPERTY(EditAnywhere)
-		int32 ValueA;
 
 	UPROPERTY(EditAnywhere)
-		int32 ValueB;
+		FString Description;
 
 	UPROPERTY(EditAnywhere)
-		int32 ValueC;
+		EConversationType Type;
+
+	UPROPERTY(EditAnywhere)
+		TArray<UEclairConversationItem*> Items;
 	
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Instanced, Category = Reimport)
