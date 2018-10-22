@@ -17,9 +17,27 @@ struct FEclairConversationItem
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
 		FString content;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+		uint8 character;
+
+	/* キャラクターの表情差分 */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+		uint8 variation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+		uint8 name_overwrite;
+
 	FEclairConversationItem()
 	{
-		content = "";
+		content = "Content";
+		character = 0;
+		variation = 0;
+	}
+
+	FEclairConversationItem(FString content, uint8 character, uint8 valiation) {
+		this->content = content;
+		this->character = character;
+		this->variation = valiation;
 	}
 	
 };
