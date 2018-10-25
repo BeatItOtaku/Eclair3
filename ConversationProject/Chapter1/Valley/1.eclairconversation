@@ -1,13 +1,12 @@
 {
   "description": "最初のカットシーン",
   "character-left": [
-    1,
-    2
+    1
   ],
   "character-right": [
     0
   ],
-  "type": 0,
+  "type": 2,
   "content": [
     {
       "id": 0,
@@ -15,7 +14,7 @@
         1
       ],
       "content": "準備はいいか？エクレア",
-      "duration": 3,
+      "duration": 3.5,
       "name-overwrite": ""
     },
     {
