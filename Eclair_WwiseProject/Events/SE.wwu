@@ -139,7 +139,21 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Down" ID="{007F07EE-3940-4867-A894-ED5E8FD59D93}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+											<ObjectRef Name="PillarOfFire" ID="{8D41A6FB-B7C2-45B6-80A5-C4C56CEE8FC0}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="HitGrenade" ID="{8F53D76D-5838-481C-A644-E2B2FB25AE90}">
+							<ChildrenList>
+								<Action Name="" ID="{F4A7D781-62C9-4D24-A18A-43EB38F788FC}" ShortID="352760839">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HitGrenade" ID="{7E395B25-EBF1-4B1F-8E30-EE4AF7AD79A7}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -217,7 +231,21 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Choice" ID="{D0363FCD-93DE-47F7-81FB-40DCC51DE862}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+											<ObjectRef Name="Notify" ID="{C12A349C-8397-474B-9BF7-ACAB3CD2F1F0}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Notify" ID="{526F23B7-7709-47E2-8FA8-48FC64235999}">
+							<ChildrenList>
+								<Action Name="" ID="{E47197F8-AA77-4A5E-9EB4-13B4716A23E1}" ShortID="675920635">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Notify" ID="{C12A349C-8397-474B-9BF7-ACAB3CD2F1F0}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -328,7 +356,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Etoile_end" ID="{8818E0B9-6CA5-4183-833F-F72FF1DA1385}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+											<ObjectRef Name="Hacking" ID="{58E34241-4B91-4D62-B460-03497E9EEDED}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

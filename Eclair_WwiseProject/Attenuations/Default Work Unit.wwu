@@ -97,7 +97,7 @@
 				</Attenuation>
 				<Attenuation Name="Gimmick" ID="{B843796D-DFE8-4CC5-B20B-E417981C79A9}" ShortID="1052355091">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="5600"/>
+						<Property Name="RadiusMax" Type="Real64" Value="12800"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -113,7 +113,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>5600</XPos>
+											<XPos>12800</XPos>
 											<YPos>-18.01446</YPos>
 											<Flags>37</Flags>
 										</Point>
