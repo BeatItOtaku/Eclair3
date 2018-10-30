@@ -48,7 +48,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Windows"/>
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="UOMOitHDJECa3Qo1EBxeEwH/////////CxyONB2W/E2CPMhOM5+CLAH/////////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="CxyONB2W/E2CPMhOM5+CLAH/////////UOMOitHDJECa3Qo1EBxeEwH/////////"/>
 				<Property Name="Interactive Music\x64_{02428D87-286A-4793-A578-ADB1C864D7DB} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPz8+EkH6jTFAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{0B2F7C95-96A8-4D4B-8784-7C70A16D2300} - SegmentEditorZoomInfo" Type="string" Value="Zy+hvYT20j8AAAAAAADwPwAAAAAAkGxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{2E7C7933-889B-4D82-82F5-842EB563AEE7} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPyqt9pLrjiVAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

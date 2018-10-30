@@ -866,6 +866,7 @@
 						<Sound Name="Etoile" ID="{1DA0BFA8-DF91-445D-992C-AAFCDE74BC0C}" ShortID="846391961">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-2</Value>
