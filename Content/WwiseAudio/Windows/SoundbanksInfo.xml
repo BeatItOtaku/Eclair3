@@ -33,6 +33,10 @@
 				<Event Id="705685643" Name="StrikingGround" ObjectPath="\Events\SE\Brioche\StrikingGround"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="69387691" Language="SFX">
+					<ShortName>1-piano.wav</ShortName>
+					<Path>SFX\1-piano_CB1F3167.wem</Path>
+				</File>
 				<File Id="77356971" Language="SFX">
 					<ShortName>1-haikou-1.wav</ShortName>
 					<Path>SFX\1-haikou-1_CB1F3167.wem</Path>
