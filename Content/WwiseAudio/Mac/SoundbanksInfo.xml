@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\data\Documents\Unreal Projects\Eclair\Content\WwiseAudio\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1183684777" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Chapter1</ObjectPath>
+			<ShortName>Chapter1</ShortName>
+			<Path>Chapter1.bnk</Path>
+			<IncludedEvents>
+				<Event Id="112240412" Name="BeforeFrameThrower" ObjectPath="\Events\SE\Brioche\BeforeFrameThrower"/>
+				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
+				<Event Id="1877847629" Name="Door" ObjectPath="\Events\SE\Chapter1\Door"/>
+				<Event Id="560349346" Name="Door_Big" ObjectPath="\Events\SE\Chapter1\Door_Big"/>
+				<Event Id="2280510569" Name="Down" ObjectPath="\Events\SE\Brioche\Down"/>
+				<Event Id="2646605403" Name="Fade" ObjectPath="\Events\Default Work Unit\Chapter1\Fade"/>
+				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
+				<Event Id="3748276840" Name="FlameGrenade" ObjectPath="\Events\SE\Brioche\FlameGrenade"/>
+				<Event Id="2691847895" Name="FlameThrower" ObjectPath="\Events\SE\Brioche\FlameThrower"/>
+				<Event Id="2009975021" Name="FootSteps_BB" ObjectPath="\Events\SE\Brioche\FootSteps_BB"/>
+				<Event Id="2901268394" Name="PillarOfFire" ObjectPath="\Events\SE\Brioche\PillarOfFire"/>
+				<Event Id="645565787" Name="Punch" ObjectPath="\Events\SE\Brioche\Punch"/>
+				<Event Id="2275039111" Name="Rush" ObjectPath="\Events\SE\Brioche\Rush"/>
+				<Event Id="4277651895" Name="Rush2" ObjectPath="\Events\SE\Brioche\Rush2"/>
+				<Event Id="705685643" Name="StrikingGround" ObjectPath="\Events\SE\Brioche\StrikingGround"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="77356971" Language="SFX">
+					<ShortName>1-haikou-1.wav</ShortName>
+					<Path>SFX\1-haikou-1_CB1F3167.wem</Path>
+				</File>
+				<File Id="105590707" Language="SFX">
+					<ShortName>1-boss.wav</ShortName>
+					<Path>SFX\1-boss_CB1F3167.wem</Path>
+				</File>
+				<File Id="150500008" Language="SFX">
+					<ShortName>Punch.wav</ShortName>
+					<Path>SFX\Punch_A1793BE9.wem</Path>
+				</File>
+				<File Id="182787609" Language="SFX">
+					<ShortName>StrikingGround.wav</ShortName>
+					<Path>SFX\StrikingGround_A1793BE9.wem</Path>
+				</File>
+				<File Id="220151601" Language="SFX">
+					<ShortName>BeforeFrameThrower.wav</ShortName>
+					<Path>SFX\BeforeFrameThrower_A1793BE9.wem</Path>
+				</File>
+				<File Id="238159724" Language="SFX">
+					<ShortName>Down.wav</ShortName>
+					<Path>SFX\Down_A1793BE9.wem</Path>
+				</File>
+				<File Id="263033532" Language="SFX">
+					<ShortName>PillarOfFire.wav</ShortName>
+					<Path>SFX\PillarOfFire_A1793BE9.wem</Path>
+				</File>
+				<File Id="347520258" Language="SFX">
+					<ShortName>1-default-1.wav</ShortName>
+					<Path>SFX\1-default-1_CB1F3167.wem</Path>
+				</File>
+				<File Id="396469845" Language="SFX">
+					<ShortName>Rush2.wav</ShortName>
+					<Path>SFX\Rush2_A1793BE9.wem</Path>
+				</File>
+				<File Id="430322998" Language="SFX">
+					<ShortName>Rush.wav</ShortName>
+					<Path>SFX\Rush_A1793BE9.wem</Path>
+				</File>
+				<File Id="486635016" Language="SFX">
+					<ShortName>Empty.wav</ShortName>
+					<Path>SFX\Empty_CB1F3167.wem</Path>
+				</File>
+				<File Id="706389692" Language="SFX">
+					<ShortName>FootSteps_BB.wav</ShortName>
+					<Path>SFX\FootSteps_BB_A1793BE9.wem</Path>
+				</File>
+				<File Id="817075413" Language="SFX">
+					<ShortName>Door-Big.wav</ShortName>
+					<Path>SFX\Door-Big_A1793BE9.wem</Path>
+				</File>
+				<File Id="889719873" Language="SFX">
+					<ShortName>Door.wav</ShortName>
+					<Path>SFX\Door_A1793BE9.wem</Path>
+				</File>
+				<File Id="902868209" Language="SFX">
+					<ShortName>FrameThrower.wav</ShortName>
+					<Path>SFX\FrameThrower_A1793BE9.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2395677314" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Common</ObjectPath>
+			<ShortName>Common</ShortName>
+			<Path>Common.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2760337059" Name="Cancel" ObjectPath="\Events\SE\System\Cancel"/>
+				<Event Id="3099787076" Name="Choice" ObjectPath="\Events\SE\System\Choice"/>
+				<Event Id="3004330733" Name="Decide" ObjectPath="\Events\SE\System\Decide"/>
+				<Event Id="2999290755" Name="Etoile" ObjectPath="\Events\SE\Eclair\Etoile"/>
+				<Event Id="1518282501" Name="Etoile_end" ObjectPath="\Events\SE\Eclair\Etoile_end"/>
+				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\Eclair\FootSteps"/>
+				<Event Id="4228994330" Name="Hacking" ObjectPath="\Events\SE\Eclair\Hacking"/>
+				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\Eclair\HittingBolt"/>
+				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
+				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
+				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
+				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\Eclair\ThrowingBolt"/>
+				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="2744495" Language="SFX">
+					<ShortName>Hacking.wav</ShortName>
+					<Path>SFX\Hacking_A1793BE9.wem</Path>
+				</File>
+				<File Id="30164968" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_13.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_13_A1793BE9.wem</Path>
+				</File>
+				<File Id="60845689" Language="SFX">
+					<ShortName>Cancel.wav</ShortName>
+					<Path>SFX\Cancel_A1793BE9.wem</Path>
+				</File>
+				<File Id="135831222" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_03_A1793BE9.wem</Path>
+				</File>
+				<File Id="184502686" Language="SFX">
+					<ShortName>steam01.wav</ShortName>
+					<Path>SFX\steam01_A1793BE9.wem</Path>
+				</File>
+				<File Id="282001838" Language="SFX">
+					<ShortName>BoltLaunch.wav</ShortName>
+					<Path>SFX\BoltLaunch_A1793BE9.wem</Path>
+				</File>
+				<File Id="302433291" Language="SFX">
+					<ShortName>Choice.wav</ShortName>
+					<Path>SFX\Choice_A1793BE9.wem</Path>
+				</File>
+				<File Id="337206732" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_00.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_00_A1793BE9.wem</Path>
+				</File>
+				<File Id="357065517" Language="SFX">
+					<ShortName>Etoile_end.wav</ShortName>
+					<Path>SFX\Etoile_end_A1793BE9.wem</Path>
+				</File>
+				<File Id="536735455" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_09_A1793BE9.wem</Path>
+				</File>
+				<File Id="537634196" Language="SFX">
+					<ShortName>BoltLand.wav</ShortName>
+					<Path>SFX\BoltLand_A1793BE9.wem</Path>
+				</File>
+				<File Id="548352836" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_01.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_01_A1793BE9.wem</Path>
+				</File>
+				<File Id="575486927" Language="SFX">
+					<ShortName>Notify.wav</ShortName>
+					<Path>SFX\Notify_A1793BE9.wem</Path>
+				</File>
+				<File Id="612193268" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_06.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_06_A1793BE9.wem</Path>
+				</File>
+				<File Id="633214849" Language="SFX">
+					<ShortName>SteelFrame.wav</ShortName>
+					<Path>SFX\SteelFrame_A1793BE9.wem</Path>
+				</File>
+				<File Id="728078664" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_10.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_10_A1793BE9.wem</Path>
+				</File>
+				<File Id="729731780" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_05.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_05_A1793BE9.wem</Path>
+				</File>
+				<File Id="738734767" Language="SFX">
+					<ShortName>wind1.wav</ShortName>
+					<Path>SFX\wind1_CB1F3167.wem</Path>
+				</File>
+				<File Id="800222909" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_04_A1793BE9.wem</Path>
+				</File>
+				<File Id="857708496" Language="SFX">
+					<ShortName>Etoile.wav</ShortName>
+					<Path>SFX\Etoile_CB1F3167.wem</Path>
+				</File>
+				<File Id="857880999" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_02.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_02_A1793BE9.wem</Path>
+				</File>
+				<File Id="901914076" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_08.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_08_A1793BE9.wem</Path>
+				</File>
+				<File Id="922976991" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_11.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_11_A1793BE9.wem</Path>
+				</File>
+				<File Id="942762787" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_07.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_07_A1793BE9.wem</Path>
+				</File>
+				<File Id="1051978060" Language="SFX">
+					<ShortName>Title.wav</ShortName>
+					<Path>SFX\Title_CB1F3167.wem</Path>
+				</File>
+				<File Id="1065652545" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_12.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_12_A1793BE9.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

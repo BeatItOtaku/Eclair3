@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{308220B9-24C6-40EF-A1BE-C7D443B2A281}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{308220B9-24C6-40EF-A1BE-C7D443B2A281}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Chapter1" ID="{2C28E56A-9C86-496E-A59C-0F04B54A041B}" ShortID="848143431">
+					<ChildrenList>
+						<Event Name="Field" ID="{05E59A82-5B12-407F-901A-70207564162B}">
+							<ChildrenList>
+								<Action Name="" ID="{391E2E24-E9FA-4D84-BE2A-E37B4613A756}" ShortID="497188096">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Field" ID="{58F4FBE8-9BBA-4A84-A889-C71BF4E1E1A3}" WorkUnitID="{E8CFBB4A-BB27-4376-A4EA-7FAA1F0F1AFF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Boss" ID="{88905EBC-C17C-4A29-ABD8-B31C02E54992}">
+							<ChildrenList>
+								<Action Name="" ID="{60C73E78-432B-4445-9484-BD4D1582CF6D}" ShortID="1011612470">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss" ID="{9C7DF4CB-E63B-4ADF-B07D-565C2BC89EAF}" WorkUnitID="{E8CFBB4A-BB27-4376-A4EA-7FAA1F0F1AFF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Title" ID="{DF97F116-23BC-4621-887E-A21B3B183BF7}">
+							<ChildrenList>
+								<Action Name="" ID="{E126E08A-1DF8-47E5-BA6F-987641FE5C00}" ShortID="371480180">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Title" ID="{E36F137C-92C2-48A4-B467-F50880C70259}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fade" ID="{1746706D-BF8B-4211-9B50-903DB9E8C026}">
+							<ChildrenList>
+								<Action Name="" ID="{FAAF6F35-CB41-43E3-B5B2-8062EEB12B62}" ShortID="964188086">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Empty" ID="{AA463686-15F9-4C4F-87CF-577E451BBD6A}" WorkUnitID="{4FAAEBC5-552C-4765-B8B3-0B311A12C5FA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{48E68745-E942-4283-BB09-0C1DAC6F76E5}" ShortID="547349936">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="ResumeStateTransition" Type="bool" Value="False"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
