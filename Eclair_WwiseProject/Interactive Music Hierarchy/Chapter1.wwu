@@ -67,7 +67,7 @@
 												<MusicClip Name="1-boss" ID="{167D800B-2281-412A-88B3-6F570CA82345}">
 													<PropertyList>
 														<Property Name="BeginTrimOffset" Type="Real64" Value="-1.55608859131462E-12"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="15094.3396226415"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="21132.0754716981"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 														<Property Name="PlayAt" Type="Real64" Value="1.58384416693025E-12"/>
@@ -86,7 +86,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -105,7 +105,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -124,7 +124,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -147,7 +147,7 @@
 								<MusicCue Name="Exit Cue" ID="{87C1A3A8-907D-4FFA-9E7A-051FEB738FC8}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="15094.3396226415"/>
+										<Property Name="TimeMs" Type="Real64" Value="21132.0754716981"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -198,11 +198,11 @@
 											<ClipList>
 												<MusicClip Name="1-boss" ID="{F6046E6E-E9EB-4437-A38A-5394DFCD952B}">
 													<PropertyList>
-														<Property Name="BeginTrimOffset" Type="Real64" Value="15094.3396226415"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="57358.5034013605"/>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="21132.0754716981"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="63396.2264150944"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-														<Property Name="PlayAt" Type="Real64" Value="-15094.3396226415"/>
+														<Property Name="PlayAt" Type="Real64" Value="-21132.0754716981"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-boss" ID="{4B676C9A-17DF-4147-8422-CDC940CE2631}"/>
 													<PropertyCurveList>
@@ -213,12 +213,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>57.3585034013606</XPos>
+																		<XPos>63.39623</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -232,12 +232,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>57.3585034013606</XPos>
+																		<XPos>63.39623</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -251,12 +251,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>15.09434</XPos>
+																		<XPos>21.13208</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>57.3585034013606</XPos>
+																		<XPos>63.39623</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -322,7 +322,7 @@
 						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-2</Value>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -351,11 +351,6 @@
 								<MusicTrack Name="Default" ID="{0A461696-A3D3-4E57-8D68-9C7AB172CA65}" ShortID="771091425">
 									<PropertyList>
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-1</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DefaultSwitchOrState">
@@ -420,7 +415,7 @@
 											<ClipList>
 												<MusicClip Name="1-default-1" ID="{EEC5E7C4-E174-4B3B-9F08-9F205BBECAF6}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="10413.2231404959"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="16363.6363636364"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
@@ -438,7 +433,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -457,7 +452,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -476,7 +471,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -564,7 +559,7 @@
 											<ClipList>
 												<MusicClip Name="1-haikou-1" ID="{3195B047-BE44-4052-A93E-8E0334B35F3C}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="10413.2231404959"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="16363.6363636364"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
@@ -582,7 +577,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -601,7 +596,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -620,7 +615,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -644,14 +639,14 @@
 								<MusicCue Name="Exit Cue" ID="{75B83EB2-F1DD-4175-ACA4-00D33261E731}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="10413.2231404959"/>
+										<Property Name="TimeMs" Type="Real64" Value="16363.6363636364"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
 						<MusicSegment Name="Main" ID="{02428D87-286A-4793-A578-ADB1C864D7DB}" ShortID="829792076">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="59504.132231405"/>
+								<Property Name="EndPosition" Type="Real64" Value="60495.8677685951"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -665,11 +660,6 @@
 								<MusicTrack Name="Default" ID="{9F52C2BE-B6F7-4A35-83A6-B5BC702EB099}" ShortID="326413922">
 									<PropertyList>
 										<Property Name="MusicTrackType" Type="int16" Value="3"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-1</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DefaultSwitchOrState">
@@ -734,10 +724,11 @@
 											<ClipList>
 												<MusicClip Name="1-default-1" ID="{029140FF-53D2-491A-9991-2B864C6C139E}">
 													<PropertyList>
-														<Property Name="BeginTrimOffset" Type="Real64" Value="10413.2231404959"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="41652.8925619835"/>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="16363.6363636364"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413225"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.4132231405"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-default-1" ID="{ED8CD9DD-2618-4C3E-90FC-976E949C4352}"/>
 													<PropertyCurveList>
@@ -748,12 +739,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -767,12 +758,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -786,12 +777,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -879,10 +870,11 @@
 											<ClipList>
 												<MusicClip Name="1-haikou-1" ID="{530236FF-C5FF-4B90-9927-2C6DB7316291}">
 													<PropertyList>
-														<Property Name="BeginTrimOffset" Type="Real64" Value="10413.2231404959"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="41652.8925619835"/>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="16363.6363636364"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413224"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314051"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-haikou-1" ID="{35CAAED8-8B1A-4FFF-A786-07CA904E6671}"/>
 													<PropertyCurveList>
@@ -893,12 +885,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -912,12 +904,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -931,12 +923,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>10.41322</XPos>
+																		<XPos>16.36364</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>41.65289</XPos>
+																		<XPos>57.7686</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -964,7 +956,66 @@
 								<MusicCue Name="Exit Cue" ID="{BD902924-937E-4CC4-B3D4-37BF41EB8612}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="41652.8925619835"/>
+										<Property Name="TimeMs" Type="Real64" Value="51818.1818181819"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="Piano" ID="{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB}" ShortID="221074286">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="17771.9047619048"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="1-piano" ID="{5EBC472B-2A6E-41EF-9703-719A3844E5DA}" ShortID="576085040">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="1-piano" ID="{7FDFBC1A-BB87-4F2B-8E6D-3C6DD3E83982}" ShortID="69387691">
+											<Language>SFX</Language>
+											<AudioFile>1-piano.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{9370B802-5DF3-43A4-B3C6-04BBF1DA49ED}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{C2F036FB-AF92-4868-946F-89DD73A4EB67}">
+											<ClipList>
+												<MusicClip Name="1-piano" ID="{14803F84-CEE3-466E-81B6-38408E9C5D7C}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="17771.9047619048"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="1-piano" ID="{7FDFBC1A-BB87-4F2B-8E6D-3C6DD3E83982}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{58679923-8D28-44F5-B317-443B63478DDC}"/>
+								<MusicCue Name="Exit Cue" ID="{6AC52DA5-B843-4DE6-9802-BF8AA19A949A}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="17771.9047619048"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -986,6 +1037,12 @@
 					<Playlist>
 						<MusicPlaylistItem Name="" ID="{B8D077C6-1CB8-4391-A2D4-340982382905}" ShortID="103004021">
 							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{7E21594E-1583-406A-8D3A-91072A60E413}" ShortID="749377589">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Piano" ID="{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB}"/>
+								</MusicPlaylistItem>
 								<MusicPlaylistItem Name="" ID="{D057DD68-ADF2-438A-B157-B41D82C7E921}" ShortID="487045688">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
