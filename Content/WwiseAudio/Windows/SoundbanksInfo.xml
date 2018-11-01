@@ -27,6 +27,7 @@
 				<Event Id="2691847895" Name="FlameThrower" ObjectPath="\Events\SE\Brioche\FlameThrower"/>
 				<Event Id="2009975021" Name="FootSteps_BB" ObjectPath="\Events\SE\Brioche\FootSteps_BB"/>
 				<Event Id="2901268394" Name="PillarOfFire" ObjectPath="\Events\SE\Brioche\PillarOfFire"/>
+				<Event Id="113682313" Name="PillarOfFire_Jiware" ObjectPath="\Events\SE\Brioche\PillarOfFire_Jiware"/>
 				<Event Id="645565787" Name="Punch" ObjectPath="\Events\SE\Brioche\Punch"/>
 				<Event Id="2275039111" Name="Rush" ObjectPath="\Events\SE\Brioche\Rush"/>
 				<Event Id="4277651895" Name="Rush2" ObjectPath="\Events\SE\Brioche\Rush2"/>
@@ -96,6 +97,10 @@
 				<File Id="902868209" Language="SFX">
 					<ShortName>FrameThrower.wav</ShortName>
 					<Path>SFX\FrameThrower_A1793BE9.wem</Path>
+				</File>
+				<File Id="993556319" Language="SFX">
+					<ShortName>PillarOfFire_Jiware.wav</ShortName>
+					<Path>SFX\PillarOfFire_Jiware_A1793BE9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
