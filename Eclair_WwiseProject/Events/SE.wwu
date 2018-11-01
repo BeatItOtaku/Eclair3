@@ -21,6 +21,19 @@
 						</Event>
 						<Event Name="PillarOfFire" ID="{6730AD64-FD25-4145-8B71-14D55DCD40A4}">
 							<ChildrenList>
+								<Action Name="" ID="{F36C9A17-019F-49E6-84D4-DCFB72C789FA}" ShortID="1040267422">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PillarOfFire_Jiware" ID="{01C5DAC2-DDAC-4EEA-8EF1-6020CC326DA6}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{B90085B0-9AFC-468A-8E1F-1EA7872127BD}" ShortID="968493072">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
@@ -154,6 +167,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="HitGrenade" ID="{7E395B25-EBF1-4B1F-8E30-EE4AF7AD79A7}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PillarOfFire_Jiware" ID="{883875B8-9C3C-48DC-A65F-AD526C36F265}">
+							<ChildrenList>
+								<Action Name="" ID="{222FE646-F578-40DE-AAE2-4D3A4D3006BA}" ShortID="105837547">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PillarOfFire_Jiware" ID="{01C5DAC2-DDAC-4EEA-8EF1-6020CC326DA6}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
