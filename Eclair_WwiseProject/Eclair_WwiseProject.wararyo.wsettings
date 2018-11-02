@@ -14,6 +14,7 @@
 				<Property Name="Event Action List\{78B28107-71E0-4112-98AF-EEE61DBC8636}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7A15CC54-96A6-4C1B-8512-AB6E64DC01F0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8665C3A6-D562-4E4D-9B1A-89577FEE505B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{883875B8-9C3C-48DC-A65F-AD526C36F265}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{88905EBC-C17C-4A29-ABD8-B31C02E54992}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8F53D76D-5838-481C-A644-E2B2FB25AE90}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{ACEF2CA7-7DF9-4541-BB65-A8A943F130A0}\x64_Expand States" Type="string" Value=""/>
@@ -57,7 +58,7 @@
 				<Property Name="Interactive Music\x64_{BAEA9C64-2E18-443E-AA3E-B649ECF691B0} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPz4jyL948TVAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{D375EFF7-5CCB-4D59-A5D3-BE6636A704C1} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP0MB+lFheS5AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{F231B4D3-4C6E-4502-AEDD-A1BDD6B39E1E} - SegmentEditorZoomInfo" Type="string" Value="y8zMzMzMzD8AAAAAAADwPwAAAAAAkGxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
-				<Property Name="Interactive Music\x64_{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB} - SegmentEditorZoomInfo" Type="string" Value="mpmZmZmZuT8AAAAAAADwPwAAAAAAOHZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB} - SegmentEditorZoomInfo" Type="string" Value="NDMzMzMz4D8AAAAAAADwPwAAAAAAOHZAAAAAAAAA8D8AAAAAANaiQAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
