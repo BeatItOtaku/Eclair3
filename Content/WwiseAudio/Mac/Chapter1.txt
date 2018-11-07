@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	112240412	BeforeFrameThrower			\SE\Brioche\BeforeFrameThrower	
+	113682313	PillarOfFire_Jiware			\SE\Brioche\PillarOfFire_Jiware	
 	514358619	Field			\Default Work Unit\Chapter1\Field	
 	560349346	Door_Big			\SE\Chapter1\Door_Big	
 	645565787	Punch			\SE\Brioche\Punch	
@@ -41,4 +42,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	817075413	Door-Big	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door-Big_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		120920
 	889719873	Door	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		80658
 	902868209	FlameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		66624
+	993556319	PillarOfFire_Jiware	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_Jiware_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		120403
 
