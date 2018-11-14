@@ -1,12 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	399052710	Falling			\SE\Eclair\Falling	
-	624013381	LowHP			\SE\Eclair\LowHP	
+	624013381	LowHP			\SE\System\LowHP	
 	774347976	ThrowingBolt			\SE\Eclair\ThrowingBolt	
 	1433397863	Steam			\Ambient\Steam	
 	1518282501	Etoile_end			\SE\Eclair\Etoile_end	
 	1537061107	Wind			\Ambient\Wind	
-	1814275255	LowHPLoop			\SE\Eclair\LowHPLoop	
+	1814275255	LowHPLoop			\SE\System\LowHPLoop	
 	1834271629	HittingBolt			\SE\Eclair\HittingBolt	
+	2151339297	Voice_Damaged			\SE\Eclair\Voice_Damaged	
 	2255639613	SteelFrame			\Ambient\SteelFrame	
 	2385628198	FootSteps			\SE\Eclair\FootSteps	
 	2760337059	Cancel			\SE\System\Cancel	
@@ -37,19 +38,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30164968	FootSteps_Eclair_Default_13	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_13_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_13		4781
 	60845689	Cancel	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Cancel_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Cancel		8765
 	135831222	FootSteps_Eclair_Default_03	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_03_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_03		5373
+	142300749	Voice_Damaged	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Voice_Damaged_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Voice_Damaged		6132
 	184502686	Main	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\steam01_A1793BE9.wem		\Actor-Mixer Hierarchy\Ambient\Steam\Main		45675
 	282001838	BoltLaunch	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BoltLaunch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLaunch		55988
 	302433291	Choice	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Choice_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Choice		4548
 	337206732	FootSteps_Eclair_Default_00	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_00_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_00		6111
 	357065517	Etoile_end	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_end_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile_end		27722
-	361646227	LowHPLoop	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_CB1F3167.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\LowHPLoop		41490
+	361646227	LowHPLoop	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		35575
 	536735455	FootSteps_Eclair_Default_09	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_09_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		5170
 	537634196	BoltLand	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BoltLand_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		25144
 	548352836	FootSteps_Eclair_Default_01	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_01_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		5576
 	575486927	Notify	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Notify_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Notify		24258
 	612193268	FootSteps_Eclair_Default_06	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_06_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_06		6151
 	633214849	SteelFrame	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\SteelFrame_A1793BE9.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		165915
-	727930744	LowHP	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHP_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\LowHP		3971
+	727930744	LowHP	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHP_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		3971
 	728078664	FootSteps_Eclair_Default_10	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_10_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		6053
 	729731780	FootSteps_Eclair_Default_05	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_05_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_05		5601
 	738734767	Wind	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\wind1_CB1F3167.wem		\Actor-Mixer Hierarchy\Ambient\Wind		1528620
