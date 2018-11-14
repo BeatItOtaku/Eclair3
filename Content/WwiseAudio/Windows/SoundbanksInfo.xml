@@ -123,13 +123,14 @@
 				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\Eclair\FootSteps"/>
 				<Event Id="4228994330" Name="Hacking" ObjectPath="\Events\SE\Eclair\Hacking"/>
 				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\Eclair\HittingBolt"/>
-				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\Eclair\LowHP"/>
-				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\Eclair\LowHPLoop"/>
+				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\System\LowHP"/>
+				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\System\LowHPLoop"/>
 				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
 				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
 				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
 				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\Eclair\ThrowingBolt"/>
 				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+				<Event Id="2151339297" Name="Voice_Damaged" ObjectPath="\Events\SE\Eclair\Voice_Damaged"/>
 				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -148,6 +149,10 @@
 				<File Id="135831222" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_03_A1793BE9.wem</Path>
+				</File>
+				<File Id="142300749" Language="SFX">
+					<ShortName>Voice_Damaged.wav</ShortName>
+					<Path>SFX\Voice_Damaged_A1793BE9.wem</Path>
 				</File>
 				<File Id="184502686" Language="SFX">
 					<ShortName>steam01.wav</ShortName>
