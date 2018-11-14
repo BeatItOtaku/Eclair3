@@ -483,7 +483,6 @@
 						</Sound>
 						<Sound Name="LowHPLoop" ID="{B9A9F80F-A4A8-4675-83DB-FA7873694241}" ShortID="1062965482">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>

@@ -44,7 +44,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	302433291	Choice	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Choice_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Choice		4548
 	337206732	FootSteps_Eclair_Default_00	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_00_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_00		6111
 	357065517	Etoile_end	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_end_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile_end		27722
-	361646227	LowHPLoop	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_CB1F3167.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		35575
+	361646227	LowHPLoop	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		35575
 	536735455	FootSteps_Eclair_Default_09	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_09_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		5170
 	537634196	BoltLand	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BoltLand_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		25144
 	548352836	FootSteps_Eclair_Default_01	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_01_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		5576
