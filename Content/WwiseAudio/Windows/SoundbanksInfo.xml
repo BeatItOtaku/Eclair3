@@ -119,9 +119,12 @@
 				<Event Id="3004330733" Name="Decide" ObjectPath="\Events\SE\System\Decide"/>
 				<Event Id="2999290755" Name="Etoile" ObjectPath="\Events\SE\Eclair\Etoile"/>
 				<Event Id="1518282501" Name="Etoile_end" ObjectPath="\Events\SE\Eclair\Etoile_end"/>
+				<Event Id="399052710" Name="Falling" ObjectPath="\Events\SE\Eclair\Falling"/>
 				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\Eclair\FootSteps"/>
 				<Event Id="4228994330" Name="Hacking" ObjectPath="\Events\SE\Eclair\Hacking"/>
 				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\Eclair\HittingBolt"/>
+				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\Eclair\LowHP"/>
+				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\Eclair\LowHPLoop"/>
 				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
 				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
 				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
@@ -166,6 +169,10 @@
 					<ShortName>Etoile_end.wav</ShortName>
 					<Path>SFX\Etoile_end_A1793BE9.wem</Path>
 				</File>
+				<File Id="361646227" Language="SFX">
+					<ShortName>LowHPLoop.wav</ShortName>
+					<Path>SFX\LowHPLoop_CB1F3167.wem</Path>
+				</File>
 				<File Id="536735455" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_09_A1793BE9.wem</Path>
@@ -190,6 +197,10 @@
 					<ShortName>SteelFrame.wav</ShortName>
 					<Path>SFX\SteelFrame_A1793BE9.wem</Path>
 				</File>
+				<File Id="727930744" Language="SFX">
+					<ShortName>LowHP.wav</ShortName>
+					<Path>SFX\LowHP_A1793BE9.wem</Path>
+				</File>
 				<File Id="728078664" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_10.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_10_A1793BE9.wem</Path>
@@ -205,6 +216,10 @@
 				<File Id="800222909" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_04_A1793BE9.wem</Path>
+				</File>
+				<File Id="837688024" Language="SFX">
+					<ShortName>Falling.wav</ShortName>
+					<Path>SFX\Falling_A1793BE9.wem</Path>
 				</File>
 				<File Id="857708496" Language="SFX">
 					<ShortName>Etoile.wav</ShortName>
