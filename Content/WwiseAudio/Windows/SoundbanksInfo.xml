@@ -11,99 +11,6 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1183684777" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Chapter1</ObjectPath>
-			<ShortName>Chapter1</ShortName>
-			<Path>Chapter1.bnk</Path>
-			<IncludedEvents>
-				<Event Id="112240412" Name="BeforeFrameThrower" ObjectPath="\Events\SE\Brioche\BeforeFrameThrower"/>
-				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
-				<Event Id="1877847629" Name="Door" ObjectPath="\Events\SE\Chapter1\Door"/>
-				<Event Id="560349346" Name="Door_Big" ObjectPath="\Events\SE\Chapter1\Door_Big"/>
-				<Event Id="2280510569" Name="Down" ObjectPath="\Events\SE\Brioche\Down"/>
-				<Event Id="2646605403" Name="Fade" ObjectPath="\Events\Default Work Unit\Chapter1\Fade"/>
-				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
-				<Event Id="3748276840" Name="FlameGrenade" ObjectPath="\Events\SE\Brioche\FlameGrenade"/>
-				<Event Id="2691847895" Name="FlameThrower" ObjectPath="\Events\SE\Brioche\FlameThrower"/>
-				<Event Id="2009975021" Name="FootSteps_BB" ObjectPath="\Events\SE\Brioche\FootSteps_BB"/>
-				<Event Id="2901268394" Name="PillarOfFire" ObjectPath="\Events\SE\Brioche\PillarOfFire"/>
-				<Event Id="113682313" Name="PillarOfFire_Jiware" ObjectPath="\Events\SE\Brioche\PillarOfFire_Jiware"/>
-				<Event Id="645565787" Name="Punch" ObjectPath="\Events\SE\Brioche\Punch"/>
-				<Event Id="2275039111" Name="Rush" ObjectPath="\Events\SE\Brioche\Rush"/>
-				<Event Id="4277651895" Name="Rush2" ObjectPath="\Events\SE\Brioche\Rush2"/>
-				<Event Id="705685643" Name="StrikingGround" ObjectPath="\Events\SE\Brioche\StrikingGround"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="69387691" Language="SFX">
-					<ShortName>1-piano.wav</ShortName>
-					<Path>SFX\1-piano_CB1F3167.wem</Path>
-				</File>
-				<File Id="77356971" Language="SFX">
-					<ShortName>1-haikou-1.wav</ShortName>
-					<Path>SFX\1-haikou-1_CB1F3167.wem</Path>
-				</File>
-				<File Id="105590707" Language="SFX">
-					<ShortName>1-boss.wav</ShortName>
-					<Path>SFX\1-boss_CB1F3167.wem</Path>
-				</File>
-				<File Id="150500008" Language="SFX">
-					<ShortName>Punch.wav</ShortName>
-					<Path>SFX\Punch_A1793BE9.wem</Path>
-				</File>
-				<File Id="182787609" Language="SFX">
-					<ShortName>StrikingGround.wav</ShortName>
-					<Path>SFX\StrikingGround_A1793BE9.wem</Path>
-				</File>
-				<File Id="220151601" Language="SFX">
-					<ShortName>BeforeFrameThrower.wav</ShortName>
-					<Path>SFX\BeforeFrameThrower_A1793BE9.wem</Path>
-				</File>
-				<File Id="238159724" Language="SFX">
-					<ShortName>Down.wav</ShortName>
-					<Path>SFX\Down_A1793BE9.wem</Path>
-				</File>
-				<File Id="263033532" Language="SFX">
-					<ShortName>PillarOfFire.wav</ShortName>
-					<Path>SFX\PillarOfFire_A1793BE9.wem</Path>
-				</File>
-				<File Id="347520258" Language="SFX">
-					<ShortName>1-default-1.wav</ShortName>
-					<Path>SFX\1-default-1_CB1F3167.wem</Path>
-				</File>
-				<File Id="396469845" Language="SFX">
-					<ShortName>Rush2.wav</ShortName>
-					<Path>SFX\Rush2_A1793BE9.wem</Path>
-				</File>
-				<File Id="430322998" Language="SFX">
-					<ShortName>Rush.wav</ShortName>
-					<Path>SFX\Rush_A1793BE9.wem</Path>
-				</File>
-				<File Id="486635016" Language="SFX">
-					<ShortName>Empty.wav</ShortName>
-					<Path>SFX\Empty_CB1F3167.wem</Path>
-				</File>
-				<File Id="706389692" Language="SFX">
-					<ShortName>FootSteps_BB.wav</ShortName>
-					<Path>SFX\FootSteps_BB_A1793BE9.wem</Path>
-				</File>
-				<File Id="817075413" Language="SFX">
-					<ShortName>Door-Big.wav</ShortName>
-					<Path>SFX\Door-Big_A1793BE9.wem</Path>
-				</File>
-				<File Id="889719873" Language="SFX">
-					<ShortName>Door.wav</ShortName>
-					<Path>SFX\Door_A1793BE9.wem</Path>
-				</File>
-				<File Id="902868209" Language="SFX">
-					<ShortName>FrameThrower.wav</ShortName>
-					<Path>SFX\FrameThrower_A1793BE9.wem</Path>
-				</File>
-				<File Id="993556319" Language="SFX">
-					<ShortName>PillarOfFire_Jiware.wav</ShortName>
-					<Path>SFX\PillarOfFire_Jiware_A1793BE9.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -119,14 +26,18 @@
 				<Event Id="3004330733" Name="Decide" ObjectPath="\Events\SE\System\Decide"/>
 				<Event Id="2999290755" Name="Etoile" ObjectPath="\Events\SE\Eclair\Etoile"/>
 				<Event Id="1518282501" Name="Etoile_end" ObjectPath="\Events\SE\Eclair\Etoile_end"/>
+				<Event Id="399052710" Name="Falling" ObjectPath="\Events\SE\Eclair\Falling"/>
 				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\Eclair\FootSteps"/>
 				<Event Id="4228994330" Name="Hacking" ObjectPath="\Events\SE\Eclair\Hacking"/>
 				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\Eclair\HittingBolt"/>
+				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\System\LowHP"/>
+				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\System\LowHPLoop"/>
 				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
 				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
 				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
 				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\Eclair\ThrowingBolt"/>
 				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+				<Event Id="2151339297" Name="Voice_Damaged" ObjectPath="\Events\SE\Eclair\Voice_Damaged"/>
 				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -145,6 +56,10 @@
 				<File Id="135831222" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_03_A1793BE9.wem</Path>
+				</File>
+				<File Id="142300749" Language="SFX">
+					<ShortName>Voice_Damaged.wav</ShortName>
+					<Path>SFX\Voice_Damaged_A1793BE9.wem</Path>
 				</File>
 				<File Id="184502686" Language="SFX">
 					<ShortName>steam01.wav</ShortName>
@@ -165,6 +80,10 @@
 				<File Id="357065517" Language="SFX">
 					<ShortName>Etoile_end.wav</ShortName>
 					<Path>SFX\Etoile_end_A1793BE9.wem</Path>
+				</File>
+				<File Id="361646227" Language="SFX">
+					<ShortName>LowHPLoop.wav</ShortName>
+					<Path>SFX\LowHPLoop_A1793BE9.wem</Path>
 				</File>
 				<File Id="536735455" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
@@ -190,6 +109,10 @@
 					<ShortName>SteelFrame.wav</ShortName>
 					<Path>SFX\SteelFrame_A1793BE9.wem</Path>
 				</File>
+				<File Id="727930744" Language="SFX">
+					<ShortName>LowHP.wav</ShortName>
+					<Path>SFX\LowHP_A1793BE9.wem</Path>
+				</File>
 				<File Id="728078664" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_10.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_10_A1793BE9.wem</Path>
@@ -205,6 +128,10 @@
 				<File Id="800222909" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_04_A1793BE9.wem</Path>
+				</File>
+				<File Id="837688024" Language="SFX">
+					<ShortName>Falling.wav</ShortName>
+					<Path>SFX\Falling_A1793BE9.wem</Path>
 				</File>
 				<File Id="857708496" Language="SFX">
 					<ShortName>Etoile.wav</ShortName>
