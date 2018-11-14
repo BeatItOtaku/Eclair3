@@ -389,6 +389,48 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Falling" ID="{8E4C05A5-617D-4151-A472-179C48991F10}">
+							<ChildrenList>
+								<Action Name="" ID="{2BF815E4-DD1F-4451-8F14-DFFDFE11B684}" ShortID="82934431">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Falling" ID="{8F5A974E-9B5F-44A8-A171-1B6FBC0866A0}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="LowHP" ID="{02F02FD4-244E-4C39-87D9-97AAD84AE127}">
+							<ChildrenList>
+								<Action Name="" ID="{B021030E-1C8E-4652-9327-18E592B63375}" ShortID="156150958">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHP" ID="{BD5869CB-6D55-407E-BA91-469935516A74}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="LowHPLoop" ID="{5E5D5FE6-A173-400A-80A5-5A3714C0309B}">
+							<ChildrenList>
+								<Action Name="" ID="{8033BD03-395B-40FE-94BF-6500B71DB948}" ShortID="1039979105">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LowHPLoop" ID="{B9A9F80F-A4A8-4675-83DB-FA7873694241}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
