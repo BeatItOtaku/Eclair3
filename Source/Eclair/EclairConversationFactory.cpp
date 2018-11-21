@@ -56,6 +56,7 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 {
 	TArray<FString> Values;
 	FString(Buffer).ParseIntoArray(Values, TEXT(","), true);
+
 	UEclairConversation* NewEclairConversation = NewObject<UEclairConversation>(InParent, InClass, InName, Flags);
 
 	if (NewEclairConversation && (3 <= Values.Num()))
