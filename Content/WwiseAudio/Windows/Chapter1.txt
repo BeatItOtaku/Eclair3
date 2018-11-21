@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	112240412	BeforeFrameThrower			\SE\Brioche\BeforeFrameThrower	
+	113682313	PillarOfFire_Jiware			\SE\Brioche\PillarOfFire_Jiware	
 	514358619	Field			\Default Work Unit\Chapter1\Field	
 	560349346	Door_Big			\SE\Chapter1\Door_Big	
 	645565787	Punch			\SE\Brioche\Punch	
@@ -25,14 +26,15 @@ Effect plug-ins	ID	Name	Type				Notes
 	1069874549	Hall_Guns (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	77356971	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		638896
-	105590707	Boss	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		899474
+	69387691	1-piano	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-piano_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Piano\1-piano		267120
+	77356971	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		878566
+	105590707	Boss	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		987722
 	150500008	Punch	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Punch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8228
 	182787609	StrikingGround	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\StrikingGround_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		10247
 	220151601	BeforeFrameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\BeforeFrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		8771
 	238159724	Down	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Down_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		50682
 	263033532	PillarOfFire	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		25347
-	347520258	Default	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-default-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		702709
+	347520258	Default	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\1-default-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		949418
 	396469845	Rush2	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Rush2_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		41922
 	430322998	Rush	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Rush_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		24016
 	486635016	Empty	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Empty_CB1F3167.wem		\Actor-Mixer Hierarchy\Default Work Unit\Empty		17104
@@ -40,4 +42,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	817075413	Door-Big	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Door-Big_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		120920
 	889719873	Door	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\Door_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		80658
 	902868209	FlameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		66624
+	993556319	PillarOfFire_Jiware	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_Jiware_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		120403
 
