@@ -34,7 +34,7 @@ struct FEclairConversationItem
 		FString NameOverwrite;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
-		uint8 Duration;
+		float Duration;
 
 	FEclairConversationItem()
 	{
@@ -52,16 +52,17 @@ struct FEclairConversationItem
 		this->NameOverwrite = nameOverwrite;
 		this->Duration = duration;
 	}
-	
-	template <typename A>
-	void serialize(A& a, FEclairConversationItem& in)
-	{
-		a
-		(cereal::make_nvp("content", in.Content)
-			, cereal::make_nvp("character", in.Character)
-			, cereal::make_nvp("variation", in.Variation)
-			, cereal::make_nvp("name-overwrite", in.NameOverwrite)
-			, cereal::make_nvp("duration", in.Duration)
-		);
-	}
 };
+
+template <typename A>
+void serialize(A& a, FEclairConversationItem& e)
+{
+	UE_LOG(LogTemp, Log, TEXT("ahgoe"));
+	a
+	(cereal::make_nvp("content", e.Content)
+		, cereal::make_nvp("character", e.Character)
+		//, cereal::make_nvp("variation", e.Variation)
+		, cereal::make_nvp("name-overwrite", e.NameOverwrite)
+		, cereal::make_nvp("duration", e.Duration)
+	);
+}

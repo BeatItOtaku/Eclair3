@@ -57,13 +57,23 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 	TArray<FString> Values;
 	FString(Buffer).ParseIntoArray(Values, TEXT(","), true);
 
+	std::stringstream stream;
+	stream << TCHAR_TO_UTF8(Buffer);
+	cereal::JSONInputArchive archive(stream);
+
 	UEclairConversation* NewEclairConversation = NewObject<UEclairConversation>(InParent, InClass, InName, Flags);
 
-	if (NewEclairConversation && (3 <= Values.Num()))
+	if (NewEclairConversation)
 	{
-		NewEclairConversation->Description = Values[0];
-		NewEclairConversation->Type = EConversationType::CT_Auto;
-		NewEclairConversation->Items.Add(FEclairConversationItem());
+		/*archive(
+			cereal::make_nvp("description", NewEclairConversation->Description),
+			cereal::make_nvp("type", NewEclairConversation->Type),
+			cereal::make_nvp("character-left", NewEclairConversation->CharacterLeft),
+			cereal::make_nvp("character-right", NewEclairConversation->CharacterRight),
+			cereal::make_nvp("content", NewEclairConversation->Items)
+		);*/
+
+		NewEclairConversation->serialize(archive);
 
 		if (!NewEclairConversation->AssetImportData)
 		{

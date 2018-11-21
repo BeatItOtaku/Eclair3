@@ -35,12 +35,14 @@ public:
 		TArray<FEclairConversationItem> Items;
 
 	template<typename A>
-	void serialize(A& a, UEclairConversation& in) {
+	void serialize(A& a) {
+		UE_LOG(LogTemp, Log, TEXT("conversation"));
 		a
-		( cereal::make_nvp("description"), in.Description),
-			cereal::make_nvp("type", in.Type),
-			cereal::make_nvp("character-left", in.CharacterLeft),
-			cereal::make_nvp("character-right", in.CharacterRight)
+		( cereal::make_nvp("description", Description),
+			cereal::make_nvp("type", Type),
+			cereal::make_nvp("character-left", CharacterLeft),
+			cereal::make_nvp("character-right", CharacterRight),
+			cereal::make_nvp("content", Items)
 		);
 
 	}
