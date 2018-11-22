@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "ConversationCharacter.h"
+
 #include "EclairConversationSetting.generated.h"
 
 /**
@@ -15,8 +17,8 @@ class ECLAIRED_API UEclairConversationSetting : public UObject
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(EditAnywhere, config, Category = EclairConversationSetting)
-		bool Check0;
+	UPROPERTY(EditAnywhere, config, Category = EclairConversationSetting, meta = (AllowedClasses = "ConversationCharacter"))
+		TArray<FSoftObjectPath> Characters;
 
 	//UEclairConversationSetting(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer);
 };
