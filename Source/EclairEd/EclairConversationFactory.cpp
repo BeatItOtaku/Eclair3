@@ -4,6 +4,11 @@
 #include "EclairConversation.h"
 #include "EclairEd.h"
 
+#include "cereal/cereal.hpp"
+#include "cereal/archives/json.hpp"
+#include "cereal-UE4.hxx"
+#include <sstream>
+
 /*UEclairConversationFactory::UEclairConversationFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {

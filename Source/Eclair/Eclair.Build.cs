@@ -10,7 +10,7 @@ public class Eclair : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "Http", "Json", "JsonUtilities", "UnrealEd", "AssetTools", "Slate", "SlateCore"});
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "Http", "Json"});
 
         var base_path = Path.GetDirectoryName(RulesCompiler.GetFileNameFromType(GetType()));
         string third_party_path = Path.Combine(base_path, "..", "..", "Thirdparty");

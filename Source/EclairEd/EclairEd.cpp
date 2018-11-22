@@ -11,7 +11,7 @@ class FEclairEd : public FDefaultGameModuleImpl
 	TSharedPtr<FAssetTypeActions_EclairConv> EclairConv_AssetTypeActions;
 };
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FEclairEd, "EclairEd", "EclairEd" );
+IMPLEMENT_GAME_MODULE( FEclairEd, "EclairEd");
 
 void FEclairEd::StartupModule()
 {

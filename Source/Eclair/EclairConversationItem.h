@@ -5,10 +5,11 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 
+#if WITH_EDITORONLY_DATA
 #include "cereal/cereal.hpp"
-#include "cereal/archives/json.hpp"
 #include "cereal-UE4.hxx"
 #include <sstream>
+#endif
 
 #include "EclairConversationItem.generated.h"
 
@@ -54,6 +55,8 @@ struct ECLAIR_API FEclairConversationItem
 	}
 };
 
+#if WITH_EDITORONLY_DATA
+
 template <typename A>
 void serialize(A& a, FEclairConversationItem& e)
 {
@@ -66,3 +69,5 @@ void serialize(A& a, FEclairConversationItem& e)
 		, cereal::make_nvp("duration", e.Duration)
 	);
 }
+
+#endif

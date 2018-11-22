@@ -3,10 +3,4 @@
 #include "Eclair.h"
 #include "Modules/ModuleManager.h"
 
-class FEclair : public FDefaultGameModuleImpl
-{
-
-};
-
-IMPLEMENT_PRIMARY_GAME_MODULE( FEclair, "Eclair", "Eclair" );
-
+IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Eclair, "Eclair" );

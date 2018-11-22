@@ -6,6 +6,13 @@
 #include "UObject/NoExportTypes.h"
 #include "EclairConversationItem.h"
 #include "EclairConversationType.h"
+
+#if WITH_EDITORONLY_DATA
+#include "cereal/cereal.hpp"
+#include "cereal-UE4.hxx"
+#include <sstream>
+#endif
+
 #include "EclairConversation.generated.h"
 
 /**
@@ -34,6 +41,8 @@ public:
 	UPROPERTY(EditAnywhere)
 		TArray<FEclairConversationItem> Items;
 
+#if WITH_EDITORONLY_DATA
+
 	template<typename A>
 	void serialize(A& a) {
 		UE_LOG(LogTemp, Log, TEXT("conversation"));
@@ -47,7 +56,6 @@ public:
 
 	}
 	
-#if WITH_EDITORONLY_DATA
 	UPROPERTY(EditAnywhere, Instanced, Category = Reimport)
 		class UAssetImportData* AssetImportData;
 #endif
