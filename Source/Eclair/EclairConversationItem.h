@@ -25,11 +25,11 @@ struct ECLAIR_API FEclairConversationItem
 		FString Content;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
-		TArray<uint8> Character;
+		TArray<int> Character;
 
 	/* キャラクターの表情差分 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
-		uint8 Variation;
+		int Variation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
 		FString NameOverwrite;
@@ -46,7 +46,7 @@ struct ECLAIR_API FEclairConversationItem
 		Duration = 3;
 	}
 
-	FEclairConversationItem(FString content, TArray<uint8> character, uint8 valiation, FString nameOverwrite, uint8 duration) {
+	FEclairConversationItem(FString content, TArray<int> character, int valiation, FString nameOverwrite, float duration) {
 		this->Content = content;
 		this->Character = character;
 		this->Variation = valiation;

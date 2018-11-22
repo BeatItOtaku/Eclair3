@@ -35,10 +35,10 @@ public:
 		EConversationType Type;
 
 	UPROPERTY(EditAnywhere)
-		TArray<uint8> CharacterLeft;
+		TArray<int> CharacterLeft;
 
 	UPROPERTY(EditAnywhere)
-		TArray<uint8> CharacterRight;
+		TArray<int> CharacterRight;
 
 	UPROPERTY(EditAnywhere)
 		TArray<FEclairConversationItem> Items;
@@ -46,11 +46,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "EclairConversation")
 		FEclairConversationItem Get(int index);
 
-	UFUNCTION(BlueprintCallable, Category = "EclairConversation", meta = (CompactNodeTitle = "LENGTH"))
-		uint8 Length();
+	UFUNCTION(BlueprintCallable, Category = "EclairConversation", BlueprintPure, meta = (CompactNodeTitle = "LENGTH"))
+		int Length();
 
 	UFUNCTION(BlueprintCallable, Category = "EclairConversation", BlueprintPure)
-		static UConversationCharacter* GetCharacter(uint8 index);
+		static UConversationCharacter* GetCharacter(int index);
 
 #if WITH_EDITORONLY_DATA
 

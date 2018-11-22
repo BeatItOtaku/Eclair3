@@ -15,12 +15,12 @@ FEclairConversationItem UEclairConversation::Get(int index)
 	return Items[index];
 }
 
-uint8 UEclairConversation::Length()
+int UEclairConversation::Length()
 {
 	return Items.Num();
 }
 
-UConversationCharacter* UEclairConversation::GetCharacter(uint8 index)
+UConversationCharacter* UEclairConversation::GetCharacter(int index)
 {
 	const UEclairConversationSetting* setting = GetDefault<UEclairConversationSetting>();
 	TArray<FSoftObjectPath> path = setting->Characters;
