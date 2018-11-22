@@ -12,7 +12,7 @@
  * 
  */
 UCLASS(config = Engine, defaultconfig)
-class ECLAIRED_API UEclairConversationSetting : public UObject
+class ECLAIR_API UEclairConversationSetting : public UObject
 {
 	GENERATED_BODY()
 	

@@ -6,6 +6,8 @@
 #include "UObject/NoExportTypes.h"
 #include "EclairConversationItem.h"
 #include "EclairConversationType.h"
+#include "ConversationCharacter.h"
+#include "Styling/SlateBrush.h"
 
 #if WITH_EDITORONLY_DATA
 #include "cereal/cereal.hpp"
@@ -18,7 +20,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(meta = (BlueprintSpawnableComponent))
 class ECLAIR_API UEclairConversation : public UObject
 {
 	GENERATED_BODY()
@@ -26,10 +28,10 @@ class ECLAIR_API UEclairConversation : public UObject
 public:
 	UEclairConversation();
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString Description;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		EConversationType Type;
 
 	UPROPERTY(EditAnywhere)
@@ -40,6 +42,15 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		TArray<FEclairConversationItem> Items;
+
+	UFUNCTION(BlueprintCallable, Category = "EclairConversation")
+		FEclairConversationItem Get(int index);
+
+	UFUNCTION(BlueprintCallable, Category = "EclairConversation", meta = (CompactNodeTitle = "LENGTH"))
+		uint8 Length();
+
+	UFUNCTION(BlueprintCallable, Category = "EclairConversation", BlueprintPure)
+		static UConversationCharacter* GetCharacter(uint8 index);
 
 #if WITH_EDITORONLY_DATA
 

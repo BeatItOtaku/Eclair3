@@ -19,9 +19,12 @@ class ECLAIR_API UConversationCharacter : public UObject
 public:
 	UConversationCharacter();
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
 		FString Name;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
 		TArray<FSlateBrush> Brushes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+		FColor Color;
 };
