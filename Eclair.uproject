@@ -13,7 +13,12 @@
 				"CoreUObject",
 				"UnrealEd"
 			]
-		}
+		},
+		{
+	        "Name": "EclairEd",
+	        "Type": "Editor",
+	        "LoadingPhase": "Default"
+	    }
 	],
 	"Plugins": [
 		{

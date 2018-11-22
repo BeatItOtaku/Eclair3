@@ -1,5 +1,5 @@
 #include "AssetTypeActions_EclairConv.h"
-#include "Eclair.h"
+#include "EclairEd.h"
 #include "EditorStyleSet.h"
 #include "Slate/SlateBrushAsset.h"
 #include "Styling/SlateColor.h"

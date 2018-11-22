@@ -16,7 +16,7 @@
  * 
  */
 USTRUCT(BlueprintType)
-struct FEclairConversationItem
+struct ECLAIR_API FEclairConversationItem
 {
 	GENERATED_BODY()
 	

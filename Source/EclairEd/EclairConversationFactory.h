@@ -11,7 +11,7 @@
  * 
  */
 UCLASS()
-class ECLAIR_API UEclairConversationFactory : public UFactory, public FReimportHandler
+class ECLAIRED_API UEclairConversationFactory : public UFactory, public FReimportHandler
 {
 	GENERATED_BODY()
 

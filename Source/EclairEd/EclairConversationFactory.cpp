@@ -2,7 +2,7 @@
 
 #include "EclairConversationFactory.h"
 #include "EclairConversation.h"
-#include "Eclair.h"
+#include "EclairEd.h"
 
 /*UEclairConversationFactory::UEclairConversationFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)

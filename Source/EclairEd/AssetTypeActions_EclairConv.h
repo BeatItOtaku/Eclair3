@@ -9,7 +9,7 @@
 /**
  * 
  */
-class ECLAIR_API FAssetTypeActions_EclairConv : public FAssetTypeActions_Base
+class ECLAIRED_API FAssetTypeActions_EclairConv : public FAssetTypeActions_Base
 {
 public:
 	virtual FText GetName() const override
