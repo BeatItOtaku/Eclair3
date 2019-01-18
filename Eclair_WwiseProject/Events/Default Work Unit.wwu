@@ -73,6 +73,24 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Challanges" ID="{17146BA6-0B43-49FE-B35A-79EF38D0C1C3}" ShortID="266337923">
+					<ChildrenList>
+						<Event Name="Challange1" ID="{EADA6A6A-C867-45A8-BAA4-1F77DE269B68}">
+							<ChildrenList>
+								<Action Name="" ID="{E2E4EFEF-0302-4471-B611-BF9EF01D27EF}" ShortID="158248800">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Challange1" ID="{C50FE7BE-0E05-4F3A-9EE3-93C00C15FD30}" WorkUnitID="{33C0DE7E-F478-497C-A4F5-AAE3D0A49386}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
