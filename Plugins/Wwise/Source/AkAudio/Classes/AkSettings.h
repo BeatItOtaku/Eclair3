@@ -20,33 +20,46 @@ class AKAUDIO_API UAkSettings : public UObject
 	UPROPERTY(Config, EditAnywhere, Category="Installation", meta=(FilePathFilter="wproj", AbsolutePath))
 	FFilePath WwiseProjectPath;
 
-	// Wwise Installation Path (Windows Authoring tool)
-	UPROPERTY(Config, EditAnywhere, Category="Installation")
-	FDirectoryPath WwiseWindowsInstallationPath;
+	// Where the Sound Bank will be generated in the Content Folder
+	UPROPERTY(Config, EditAnywhere, Category = "Sound Bank", meta=(RelativeToGameContentDir))
+	FDirectoryPath WwiseSoundBankFolder;
 
-	// Wwise Installation Path (Mac Authoring tool)
-	UPROPERTY(Config, EditAnywhere, Category="Installation", meta=(FilePathFilter="app", AbsolutePath))
-	FFilePath WwiseMacInstallationPath;
+	UPROPERTY(Config, EditAnywhere, Category = "Installation")
+	bool bAutoConnectToWAAPI = false;
 
-    UPROPERTY(Config, EditAnywhere, Category = "Installation")
-    bool bAutoConnectToWAAPI = false;
+	// Allow to distribute SoundEngine processing tasks across multiple threads. Requires Editor restart.
+	UPROPERTY(Config, EditAnywhere, Category = "Advanced")
+	bool bEnableMultiCoreRendering = false;
+
+	// Default value for Occlusion Collision Channel when creating a new Ak Component.
+	UPROPERTY(Config, EditAnywhere, Category = "Occlusion")
+	TEnumAsByte<ECollisionChannel> DefaultOcclusionCollisionChannel = ECollisionChannel::ECC_Visibility;
 
 	UPROPERTY(Config)
-	bool SuppressWwiseProjectPathWarnings = false;
+	FDirectoryPath WwiseWindowsInstallationPath_DEPRECATED;
+
+	UPROPERTY(Config)
+	FFilePath WwiseMacInstallationPath_DEPRECATED;
+
+	static FString DefaultSoundBankFolder;
+
+	virtual void PostInitProperties() override;
+
+#if WITH_EDITOR
+	void EnsureSoundBankPathIsInPackagingSettings() const;
+#endif
 
 protected:
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty( struct FPropertyChangedEvent& PropertyChangedEvent ) override;
 	virtual void PreEditChange(UProperty* PropertyAboutToChange) override;
-
 #endif
 
 private:
 	FString PreviousWwiseProjectPath;
-	FString PreviousWwiseMacPath;
-	FString PreviousWwiseWindowsPath;
 
 public:
 	bool bRequestRefresh = false;
     mutable AutoConnectChanged OnAutoConnectChanged;
 };
+

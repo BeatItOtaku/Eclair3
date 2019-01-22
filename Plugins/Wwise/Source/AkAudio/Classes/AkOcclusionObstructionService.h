@@ -79,6 +79,7 @@ public:
 
 	// Init for an acoustic portal
 	void Init(AAkAcousticPortal* in_portalId, float in_refreshInterval);
+	void SetOcclusionObstructionFunction(UAkComponent* in_akComponent);
 
 	void Tick(const UAkComponentSet& in_Listeners, const FVector& SourcePosition, const AActor* Actor, AkRoomID RoomID, ECollisionChannel in_collisionChannel, float DeltaTime, float OcclusionRefreshInterval);
 

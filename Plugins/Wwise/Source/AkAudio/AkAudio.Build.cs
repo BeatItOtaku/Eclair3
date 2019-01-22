@@ -236,8 +236,6 @@ public class AkAudio : ModuleRules
 
         Defs.Add("AK_UNREAL_IO_GRANULARITY=32768");
 
-        string samplesSoundEngineBasePath = Path.Combine(akDir, "samples" + Path.DirectorySeparatorChar + "SoundEngine");
-
         if (Target.Platform == UnrealTargetPlatform.Win32 || Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			string tempDir = (Target.Platform == UnrealTargetPlatform.Win32) ? "Win32_" : "x64_";
@@ -281,7 +279,6 @@ public class AkAudio : ModuleRules
 			}
 
             akPlatformLibDir.Add("XboxOne_" + VSVersion);
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "Win32"));
 
             PublicAdditionalLibraries.Add("AcpHal.lib");
 			PublicAdditionalLibraries.Add("MMDevApi.lib");
@@ -290,23 +287,18 @@ public class AkAudio : ModuleRules
 		else if (Target.Platform == UnrealTargetPlatform.Linux)
 		{
             akPlatformLibDir.Add("Linux_x64");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "POSIX"));
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "Common"));
         }
 		else if (Target.Platform == UnrealTargetPlatform.Mac)
 		{
             akPlatformLibDir.Add("Mac");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "POSIX"));
         }
 		else if (Target.Platform == UnrealTargetPlatform.IOS)
 		{
             akPlatformLibDir.Add("iOS");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "POSIX"));
 		}
 		else if (Target.Platform == UnrealTargetPlatform.PS4)
 		{
             akPlatformLibDir.Add("PS4");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "PS4"));
             PublicAdditionalLibraries.Add("SceAjm_stub_weak");
 			PublicAdditionalLibraries.Add("SceAudio3d_stub_weak");
             PublicAdditionalLibraries.Add("SceMove_stub_weak");
@@ -318,21 +310,17 @@ public class AkAudio : ModuleRules
             akPlatformLibDir.Add("Android_x86");
             akPlatformLibDir.Add("Android_arm64-v8a");
             akPlatformLibDir.Add("Android_x86_64");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "Android"));
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "POSIX"));
             Defs.Add("__ANDROID__");
         }
 		else if (TargetPlatformIsNintendoSwitch)
 		{
             akPlatformLibDir.Add("NX64");
-            PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "NX"));
             Defs.Add("NN_NINTENDO_SDK");
         }
 #if UE_4_20_OR_LATER
 		else if (Target.Platform == UnrealTargetPlatform.Lumin)
 		{
 			akPlatformLibDir.Add("Lumin");
-			PublicIncludePaths.Add(Path.Combine(samplesSoundEngineBasePath, "POSIX"));
 			Defs.Add("AK_LUMIN");
 		}
 #endif
@@ -458,7 +446,7 @@ public class AkAudio : ModuleRules
 		{
 			AddWwiseLib(Target, "AkOpusNXDecoder");
 		}
-		else if (Target.Platform != UnrealTargetPlatform.Android && Target.Platform != UnrealTargetPlatform.Mac)
+		else
 		{
 			AddWwiseLib(Target, "AkOpusDecoder");
 		}

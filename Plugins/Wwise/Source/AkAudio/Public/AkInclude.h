@@ -9,6 +9,7 @@
 ------------------------------------------------------------------------------------*/
 
 #pragma once
+#include "Engine/Engine.h"
 
 #if PLATFORM_WINDOWS
 
