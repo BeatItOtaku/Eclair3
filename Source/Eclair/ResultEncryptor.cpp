@@ -16,7 +16,8 @@ FString UResultEncryptor::EncryptResult(int time, int item, FDateTime timestamp)
 	auto Writer = TJsonWriterFactory<>::Create(&Content);
 	FJsonSerializer::Serialize(JsonObject, Writer);
 
-	return Encrypt(Content);
+	return Encrypt("{\"time\":86,\"item\":12,\"timestamp\":1548231246}");
+	//return Encrypt(Content);
 }
 
 FString UResultEncryptor::Encrypt(FString str)
@@ -40,10 +41,22 @@ FString UResultEncryptor::Encrypt(FString str)
 	Blob = new uint8[Size]; //So once we calculated size we allocating space in memory 
 								//which we use for encryption
 
+	TCHAR *c = str.GetCharArray().GetData();
+	unsigned char *strByte = (unsigned char*)TCHAR_TO_UTF8(c);
+
+	int utf8Size = 256; //strlen((char*)strByte);
+	unsigned char* out = new unsigned char[utf8Size];
+
+	UE_LOG(LogTemp, Verbose, TEXT("Size:%d, uft8Size:%d"), Size, utf8Size);
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, uft8Size:%d, strByte:%s"), Size, utf8Size, UTF8_TO_TCHAR(strByte)));
+
 								//We filling allocated space with string to process
-	if (FString::ToBlob(str, Blob, str.Len())) {
-		FAES::EncryptData(Blob, Size, KeyAnsi); //We encrypt the data, don't know how you want to input key
-		str = FString::FromHexBlob(Blob, Size); //now generate hex string of encrypted data
+	if (strByte != nullptr) {
+		//FAES::EncryptData((unsigned char*)c, Size, KeyAnsi); //We encrypt the data, don't know how you want to input key
+		AES_KEY aesKey;
+		AES_set_encrypt_key((unsigned char*)KeyAnsi, AES_KEYLENGTH, &aesKey);
+		AES_ecb_encrypt((unsigned char*)strByte, out, &aesKey, AES_ENCRYPT);
+		str = FBase64::Encode(out, utf8Size);
 		delete Blob; //deleting allocation for safety
 		return str; //and return it
 	}
