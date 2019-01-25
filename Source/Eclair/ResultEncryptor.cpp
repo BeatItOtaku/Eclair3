@@ -18,9 +18,7 @@ FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDate
 	auto Writer = TJsonWriterFactory<>::Create(&Content);
 	FJsonSerializer::Serialize(JsonObject, Writer);
 
-	//return Encrypt("ThisIsCharacters");
-	return Encrypt("{\"time\":86,\"item\":12,\"timestamp\":1548231246}");
-	//return Encrypt(Content);
+	return Encrypt(Content);
 }
 
 FString UResultEncryptor::Encrypt(FString str)
@@ -56,16 +54,16 @@ FString UResultEncryptor::Encrypt(FString str)
 	memset(iv, 0x00, AES_BLOCK_SIZE);
 
 	//DebugMessage
-	FString HexBlobStr = FString::FromHexBlob(in, Size);
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, strByte:%s, Blob:%s"), Size, UTF8_TO_TCHAR(in), HexBlobStr.GetCharArray().GetData()));
+	//FString HexBlobStr = FString::FromHexBlob(in, Size);
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, strByte:%s, Blob:%s"), Size, UTF8_TO_TCHAR(in), HexBlobStr.GetCharArray().GetData()));
 
 	//à√çÜâª
 	if (in != nullptr) {
 		AES_KEY aesKey;
-		
 		AES_set_encrypt_key((unsigned char*)KeyChar, AES_KEYLENGTH, &aesKey);
 		AES_cbc_encrypt((unsigned char*)in, out,Size, &aesKey,iv, AES_ENCRYPT);
 		str = FBase64::Encode(out, Size);
+		str = FGenericPlatformHttp::UrlEncode(str);
 		return str;
 	}
 	return ""; //If failed return empty string

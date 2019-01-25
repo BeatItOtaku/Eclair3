@@ -6,6 +6,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Json.h"
 #include "Base64.h"
+#include "GenericPlatformHttp.h"
 
 #define UI UI_ST
 THIRD_PARTY_INCLUDES_START
