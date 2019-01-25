@@ -27,54 +27,47 @@ FString UResultEncryptor::Encrypt(FString str)
 {
 	if (str.IsEmpty()) return str;  //empty string? do nothing
 
-	uint8* Blob; //we declere uint8 pointer
-	uint32 Size; //for size calculation
-
-	//first we need to calculate the size of array, encrypted data will be processed in blocks so
-	//data size need to be aligned with block size
-
+	//Size設定 ブロックサイズ単位になるようにパディングをとる
+	uint32 Size;
 	Size = str.Len();
-	//Size++;
 	Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
 
-	// キーを生成
-	FString Key = "hogehogefooofooohogehogefooofooo";                            // Choose a key then...
-	TCHAR *KeyTChar = Key.GetCharArray().GetData();            // ...turn key string...
-	ANSICHAR *KeyAnsi = (ANSICHAR*)TCHAR_TO_ANSI(KeyTChar);
+	// キー KeyChar を生成
+	FString Key = "hogehogefooofooohogehogefooofooo";
+	TCHAR *KeyTChar = Key.GetCharArray().GetData();
 	unsigned char *KeyChar = new unsigned char[AES_KEYLENGTH];
 	memset(KeyChar, 0x00, AES_KEYLENGTH);
 	strcpy((char*)KeyChar, (char*)TCHAR_TO_UTF8(KeyTChar));
 
-	Blob = new uint8[Size]; //So once we calculated size we allocating space in memory 
-								//which we use for encryption
-
+	//strをもとに暗号化するバイト列 in を用意
 	TCHAR *c = str.GetCharArray().GetData();
 	unsigned char *in = new unsigned char[Size];
 	memset(in, 0x00, Size);
 	strcpy((char*)in, (char*)TCHAR_TO_UTF8(c));
+	//PKCS#7パディングを付加
+	int padSize = Size - str.Len();
+	memset(in + str.Len(), padSize, padSize);
 
-	int utf8Size = 256; //strlen((char*)strByte);
+	//暗号化されたバイト列が入る out
 	unsigned char* out = new unsigned char[Size];
 
-	/* init vector */
+	//初期化ベクター
 	unsigned char iv[AES_BLOCK_SIZE];
 	memset(iv, 0x00, AES_BLOCK_SIZE);
 
+	//DebugMessage
 	FString HexBlobStr = FString::FromHexBlob(in, Size);
-	UE_LOG(LogTemp, Verbose, TEXT("Size:%d, uft8Size:%d"), Size, utf8Size);
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, uft8Size:%d, strByte:%s, Blob:%s"), Size, utf8Size, UTF8_TO_TCHAR(in), HexBlobStr.GetCharArray().GetData()));
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, strByte:%s, Blob:%s"), Size, UTF8_TO_TCHAR(in), HexBlobStr.GetCharArray().GetData()));
 
-								//We filling allocated space with string to process
+	//暗号化
 	if (in != nullptr) {
-		//FAES::EncryptData((unsigned char*)c, Size, KeyAnsi); //We encrypt the data, don't know how you want to input key
 		AES_KEY aesKey;
+		
 		AES_set_encrypt_key((unsigned char*)KeyChar, AES_KEYLENGTH, &aesKey);
 		AES_cbc_encrypt((unsigned char*)in, out,Size, &aesKey,iv, AES_ENCRYPT);
 		str = FBase64::Encode(out, Size);
-		delete Blob; //deleting allocation for safety
-		return str; //and return it
+		return str;
 	}
-	delete Blob; //deleting allocation for safety
 	return ""; //If failed return empty string
 }
 
