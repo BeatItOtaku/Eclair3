@@ -34,7 +34,10 @@ class ECLAIR_API UResultEncryptor : public UBlueprintFunctionLibrary
 	
 public:
 	UFUNCTION(BlueprintCallable, Category = "Encrypt")
-	static FString EncryptResult(int time, int item, FDateTime timestamp);
+	static FString EncryptResult(FString stage, int time, int item, FDateTime timestamp, FString version);
 
 	static FString Encrypt(FString str);
+
+	UFUNCTION(BlueprintCallable, Category = "Project", BlueprintPure)
+	static FString GetProjectVersion();
 };

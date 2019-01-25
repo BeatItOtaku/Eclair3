@@ -2,14 +2,16 @@
 
 #include "ResultEncryptor.h"
 
-FString UResultEncryptor::EncryptResult(int time, int item, FDateTime timestamp) {
+FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDateTime timestamp, FString version) {
 
 	//JSONを生成
 	TSharedRef<FJsonObject> JsonObject = MakeShareable(new FJsonObject());
 
+	JsonObject->SetStringField("stage", stage);
 	JsonObject->SetStringField("time", FString::FromInt(time));
 	JsonObject->SetStringField("item", FString::FromInt(item));
 	JsonObject->SetStringField("timestamp", timestamp.ToIso8601());
+	JsonObject->SetStringField("version", version);
 
 	// Content文字列にJSONフォーマットで書き出し
 	FString Content;
@@ -33,7 +35,7 @@ FString UResultEncryptor::Encrypt(FString str)
 
 	Size = str.Len();
 	//Size++;
-	//Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
+	Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
 
 	// キーを生成
 	FString Key = "hogehogefooofooohogehogefooofooo";                            // Choose a key then...
@@ -49,7 +51,7 @@ FString UResultEncryptor::Encrypt(FString str)
 	TCHAR *c = str.GetCharArray().GetData();
 	unsigned char *in = new unsigned char[Size];
 	memset(in, 0x00, Size);
-	strcpy((char*)in,(char*)TCHAR_TO_UTF8(c));
+	strcpy((char*)in, (char*)TCHAR_TO_UTF8(c));
 
 	int utf8Size = 256; //strlen((char*)strByte);
 	unsigned char* out = new unsigned char[Size];
@@ -58,8 +60,9 @@ FString UResultEncryptor::Encrypt(FString str)
 	unsigned char iv[AES_BLOCK_SIZE];
 	memset(iv, 0x00, AES_BLOCK_SIZE);
 
+	FString HexBlobStr = FString::FromHexBlob(in, Size);
 	UE_LOG(LogTemp, Verbose, TEXT("Size:%d, uft8Size:%d"), Size, utf8Size);
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, uft8Size:%d, strByte:%s"), Size, utf8Size, UTF8_TO_TCHAR(in)));
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Size:%d, uft8Size:%d, strByte:%s, Blob:%s"), Size, utf8Size, UTF8_TO_TCHAR(in), HexBlobStr.GetCharArray().GetData()));
 
 								//We filling allocated space with string to process
 	if (in != nullptr) {
@@ -74,3 +77,16 @@ FString UResultEncryptor::Encrypt(FString str)
 	delete Blob; //deleting allocation for safety
 	return ""; //If failed return empty string
 }
+
+FString UResultEncryptor::GetProjectVersion()
+{
+	FString ProjectVersion;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectVersion"),
+		ProjectVersion,
+		GGameIni
+	);
+	return ProjectVersion;
+}
+
