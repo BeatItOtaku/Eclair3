@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "StageType.h"
 #include "StageDefinition.generated.h"
 
 /**
@@ -17,13 +18,19 @@ class ECLAIR_API UStageDefinition : public UObject
 public:
 	UStageDefinition();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString Name;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString Slug;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EclairConversation")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString LevelName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		EStageType StageType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0", ClampMax = "255", UIMin = "0", UIMax = "64"))
+		int ItemCount;
 	
 };
