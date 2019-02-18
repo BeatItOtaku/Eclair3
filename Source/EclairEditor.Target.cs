@@ -9,5 +9,6 @@ public class EclairEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		ExtraModuleNames.Add("Eclair");
+		ExtraModuleNames.Add("EclairEd");
 	}
 }

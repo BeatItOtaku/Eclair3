@@ -22,11 +22,11 @@ class AKAUDIO_API UAkLateReverbComponent : public USceneComponent
 	FString AuxBusName;
 
 	/** Maximum send level to the Wwise Auxiliary Bus associated to this AkReverbVolume */
-	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "LateReverb")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "LateReverb", meta = (ClampMin = 0.0f, ClampMax = 1.0f, UIMin = 0.0f, UIMax = 1.0f))
 	float SendLevel;
 
 	/** Rate at which to fade in/out the SendLevel of the current Reverb Volume when entering/exiting it, in percentage per second (0.2 will make the fade time 5 seconds) */
-	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "LateReverb")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "LateReverb" ,meta = (ClampMin = 0.0f, UIMin = 0.0f))
 	float FadeRate;
 
 	/**
@@ -52,8 +52,8 @@ class AKAUDIO_API UAkLateReverbComponent : public USceneComponent
 	bool LateReverbIsActive() const { return ParentVolume && bEnable & !IsRunningCommandlet(); }
 
 	virtual void PostLoad() override;
-	virtual void BeginDestroy() override;
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+	virtual void InitializeComponent() override;
+	virtual void UninitializeComponent() override;
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;

@@ -27,6 +27,8 @@ UAkLateReverbComponent::UAkLateReverbComponent(const class FObjectInitializer& O
 	NextLowerPriorityComponent = NULL;
 
 	bEnable = true;
+	bWantsInitializeComponent = true;
+
 }
 
 bool UAkLateReverbComponent::HasEffectOnLocation(const FVector& Location) const
@@ -69,20 +71,18 @@ void UAkLateReverbComponent::PostEditChangeProperty(FPropertyChangedEvent& Prope
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 	InitializeParentVolume();
-	SendLevel = FMath::Clamp<float>( SendLevel, 0.0f, 1.0f );
-	if( FadeRate < 0.f )
-	{
-		FadeRate = 0.f;
-	}
 }
 #endif // WITH_EDITOR
 
 void UAkLateReverbComponent::PostLoad()
 {
 	Super::PostLoad();
-
 	InitializeParentVolume();
+}
 
+void UAkLateReverbComponent::InitializeComponent()
+{
+	Super::InitializeComponent();
 	UAkRoomComponent* pRoomCmpt = (UAkRoomComponent*)ParentVolume->GetComponentByClass(UAkRoomComponent::StaticClass());
 	if (!pRoomCmpt || !pRoomCmpt->RoomIsActive())
 	{
@@ -92,17 +92,9 @@ void UAkLateReverbComponent::PostLoad()
 	}
 }
 
-void UAkLateReverbComponent::BeginDestroy()
+void UAkLateReverbComponent::UninitializeComponent()
 {
-	Super::BeginDestroy();
-	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if (AkAudioDevice && LateReverbIsActive())
-		AkAudioDevice->RemoveLateReverbComponentFromPrioritizedList(this);
-}
-
-void UAkLateReverbComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
-{
-	Super::EndPlay(EndPlayReason);
+	Super::UninitializeComponent();
 	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
 	if (AkAudioDevice && LateReverbIsActive())
 		AkAudioDevice->RemoveLateReverbComponentFromPrioritizedList(this);

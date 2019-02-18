@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.1  Build: 6727
+  Version: v2018.1.4  Build: 6807
   Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -216,6 +216,7 @@ enum AKRESULT
 	AK_DataAlignmentError		= 89,	///< A pointer to audio data was not aligned to the platform's required alignment (check AkTypes.h in the platform-specific folder)
 	AK_DeviceNotCompatible		= 90,	///< Incompatible Audio device.
 	AK_DuplicateUniqueID		= 91,	///< Two Wwise objects share the same ID.
+	AK_InitBankNotLoaded		= 92,	///< The Init bank was not loaded yet, the sound engine isn't completely ready yet.
 };
 
 /// Game sync group type
@@ -592,7 +593,7 @@ enum AkCurveInterpolation
 /// Auxiliary bus sends information per game object per given auxiliary bus.
 struct AkAuxSendValue
 {
-	AkGameObjectID listenerID;	///< Game object ID of the listener associated with this send.
+	AkGameObjectID listenerID;	///< Game object ID of the listener associated with this send. Use AK_INVALID_GAME_OBJECT as a wildcard to set the auxiliary send to all connected listeners (see AK::SoundEngine::SetListeners).
 	AkAuxBusID auxBusID;		///< Auxiliary bus ID.
 	AkReal32 fControlValue;		///< Value in the range [0.0f:1.0f], send level to auxiliary bus.	
 };
