@@ -42,8 +42,12 @@ namespace cereal
 
 // Override rapidjson assertions to throw exceptions by default
 #ifndef CEREAL_RAPIDJSON_ASSERT
+#ifdef __APPLE__
+#define CEREAL_RAPIDJSON_ASSERT(x) if(!(x)){ assert(0 && "fallo json");};
+#else
 #define CEREAL_RAPIDJSON_ASSERT(x) if(!(x)){ \
-  throw ::cereal::RapidJSONException("rapidjson internal assertion failure: " #x); }
+throw ::cereal::RapidJSONException("rapidjson internal assertion failure: " #x); }
+#endif
 #endif // RAPIDJSON_ASSERT
 
 // Enable support for parsing of nan, inf, -inf

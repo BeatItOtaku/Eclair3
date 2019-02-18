@@ -28,7 +28,7 @@ FString UResultEncryptor::Encrypt(FString str)
 	//Size設定 ブロックサイズ単位になるようにパディングをとる
 	uint32 Size;
 	Size = str.Len();
-	Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
+	//Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
 
 	// キー KeyChar を生成
 	FString Key = "hogehogefooofooohogehogefooofooo";
@@ -50,8 +50,8 @@ FString UResultEncryptor::Encrypt(FString str)
 	unsigned char* out = new unsigned char[Size];
 
 	//初期化ベクター
-	unsigned char iv[AES_BLOCK_SIZE];
-	memset(iv, 0x00, AES_BLOCK_SIZE);
+	//unsigned char iv[AES_BLOCK_SIZE];
+	//memset(iv, 0x00, AES_BLOCK_SIZE);
 
 	//DebugMessage
 	//FString HexBlobStr = FString::FromHexBlob(in, Size);
@@ -59,9 +59,9 @@ FString UResultEncryptor::Encrypt(FString str)
 
 	//暗号化
 	if (in != nullptr) {
-		AES_KEY aesKey;
-		AES_set_encrypt_key((unsigned char*)KeyChar, AES_KEYLENGTH, &aesKey);
-		AES_cbc_encrypt((unsigned char*)in, out,Size, &aesKey,iv, AES_ENCRYPT);
+		//AES_KEY aesKey;
+		//AES_set_encrypt_key((unsigned char*)KeyChar, AES_KEYLENGTH, &aesKey);
+		//AES_cbc_encrypt((unsigned char*)in, out,Size, &aesKey,iv, AES_ENCRYPT);
 		str = FBase64::Encode(out, Size);
 		str = FGenericPlatformHttp::UrlEncode(str);
 		return str;

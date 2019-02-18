@@ -78,7 +78,7 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 			cereal::make_nvp("content", NewEclairConversation->Items)
 		);*/
 
-		NewEclairConversation->serialize(archive);
+        //serialize(archive,std::shared_ptr<UEclairConversation>(NewEclairConversation));
 
 		if (!NewEclairConversation->AssetImportData)
 		{

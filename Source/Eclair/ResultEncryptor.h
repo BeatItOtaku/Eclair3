@@ -13,7 +13,7 @@ THIRD_PARTY_INCLUDES_START
 #if PLATFORM_WINDOWS
 #include "ThirdParty/OpenSSL/1.0.2g/include/Win64/VS2015/openssl/aes.h"
 #elif PLATFORM_MAC
-#include "ThirdParty/OpenSSL/1.0.2g/include/Mac/openssl/aes.h"
+//#include "ThirdParty/OpenSSL/1.0.2g/include/Mac/openssl/aes.h"
 #endif
 THIRD_PARTY_INCLUDES_END
 #undef UI

@@ -9,12 +9,6 @@
 #include "ConversationCharacter.h"
 #include "Styling/SlateBrush.h"
 
-#if WITH_EDITORONLY_DATA
-#include "cereal/cereal.hpp"
-#include "cereal-UE4.hxx"
-#include <sstream>
-#endif
-
 #include "EclairConversation.generated.h"
 
 /**
@@ -53,19 +47,6 @@ public:
 		static UConversationCharacter* GetCharacter(int index);
 
 #if WITH_EDITORONLY_DATA
-
-	template<typename A>
-	void serialize(A& a) {
-		UE_LOG(LogTemp, Log, TEXT("conversation"));
-		a
-		( cereal::make_nvp("description", Description),
-			cereal::make_nvp("type", Type),
-			cereal::make_nvp("character-left", CharacterLeft),
-			cereal::make_nvp("character-right", CharacterRight),
-			cereal::make_nvp("content", Items)
-		);
-
-	}
 	
 	UPROPERTY(EditAnywhere, Instanced, Category = Reimport)
 		class UAssetImportData* AssetImportData;

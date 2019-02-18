@@ -5,12 +5,6 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 
-#if WITH_EDITORONLY_DATA
-#include "cereal/cereal.hpp"
-#include "cereal-UE4.hxx"
-#include <sstream>
-#endif
-
 #include "EclairConversationItem.generated.h"
 
 /**
@@ -55,19 +49,3 @@ struct ECLAIR_API FEclairConversationItem
 	}
 };
 
-#if WITH_EDITORONLY_DATA
-
-template <typename A>
-void serialize(A& a, FEclairConversationItem& e)
-{
-	UE_LOG(LogTemp, Log, TEXT("ahgoe"));
-	a
-	(cereal::make_nvp("content", e.Content)
-		, cereal::make_nvp("character", e.Character)
-		//, cereal::make_nvp("variation", e.Variation)
-		, cereal::make_nvp("name-overwrite", e.NameOverwrite)
-		, cereal::make_nvp("duration", e.Duration)
-	);
-}
-
-#endif

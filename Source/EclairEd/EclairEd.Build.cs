@@ -8,6 +8,7 @@ public class EclairEd : ModuleRules
 {
 	public EclairEd(ReadOnlyTargetRules Target) : base(Target)
 	{
+        bUseRTTI = true;
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "Http", "Json", "JsonUtilities", "UnrealEd", "AssetTools", "Slate", "SlateCore", "Eclair"});

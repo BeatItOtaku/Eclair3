@@ -7,6 +7,8 @@
 #include "EclairConversationSetting.h"
 //#include "Runtime/CoreUObject/Public/UObject/UObjectGlobals.h"
 
+
+
 #define LOCTEXT_NAMESPACE ""
 
 class FEclairEd : public FDefaultGameModuleImpl
