@@ -42,5 +42,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UTexture2D* Image;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0", ClampMax = "255", UIMin = "0", UIMax = "64"))
+		int ItemCountToUnlock;
 	
 };
