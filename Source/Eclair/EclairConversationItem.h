@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 
-#if WITH_EDITORONLY_DATA
+#if WITH_EDITORONLY_DATA && PLATFORM_WINDOWS
 #include "cereal/cereal.hpp"
 #include "cereal-UE4.hxx"
 #include <sstream>
@@ -55,7 +55,7 @@ struct ECLAIR_API FEclairConversationItem
 	}
 };
 
-#if WITH_EDITORONLY_DATA
+#if WITH_EDITORONLY_DATA && PLATFORM_WINDOWS
 
 template <typename A>
 void serialize(A& a, FEclairConversationItem& e)

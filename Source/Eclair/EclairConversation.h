@@ -9,7 +9,7 @@
 #include "ConversationCharacter.h"
 #include "Styling/SlateBrush.h"
 
-#if WITH_EDITORONLY_DATA
+#if WITH_EDITORONLY_DATA && PLATFORM_WINDOWS
 #include "cereal/cereal.hpp"
 #include "cereal-UE4.hxx"
 #include <sstream>
@@ -53,7 +53,7 @@ public:
 		static UConversationCharacter* GetCharacter(int index);
 
 #if WITH_EDITORONLY_DATA
-
+#if PLATFORM_WINDOWS
 	template<typename A>
 	void serialize(A& a) {
 		UE_LOG(LogTemp, Log, TEXT("conversation"));
@@ -66,6 +66,7 @@ public:
 		);
 
 	}
+#endif
 	
 	UPROPERTY(EditAnywhere, Instanced, Category = Reimport)
 		class UAssetImportData* AssetImportData;

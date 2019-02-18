@@ -3,6 +3,8 @@
 #include "ResultEncryptor.h"
 
 FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDateTime timestamp, FString version) {
+    
+#if PLATFORM_WINDOWS
 
 	//JSONを生成
 	TSharedRef<FJsonObject> JsonObject = MakeShareable(new FJsonObject());
@@ -19,10 +21,16 @@ FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDate
 	FJsonSerializer::Serialize(JsonObject, Writer);
 
 	return Encrypt(Content);
+    
+#else
+    return "";
+#endif
 }
 
 FString UResultEncryptor::Encrypt(FString str)
 {
+#if PLATFORM_WINDOWS
+    
 	if (str.IsEmpty()) return str;  //empty string? do nothing
 
 	//Size設定 ブロックサイズ単位になるようにパディングをとる
@@ -67,6 +75,9 @@ FString UResultEncryptor::Encrypt(FString str)
 		return str;
 	}
 	return ""; //If failed return empty string
+#else
+    return "";
+#endif
 }
 
 FString UResultEncryptor::GetProjectVersion()
@@ -80,4 +91,3 @@ FString UResultEncryptor::GetProjectVersion()
 	);
 	return ProjectVersion;
 }
-

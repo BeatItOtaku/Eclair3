@@ -4,10 +4,12 @@
 #include "EclairConversation.h"
 #include "EclairEd.h"
 
+#if PLATFORM_WINDOWS
 #include "cereal/cereal.hpp"
 #include "cereal/archives/json.hpp"
 #include "cereal-UE4.hxx"
 #include <sstream>
+#endif
 
 /*UEclairConversationFactory::UEclairConversationFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -62,9 +64,11 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 	TArray<FString> Values;
 	FString(Buffer).ParseIntoArray(Values, TEXT(","), true);
 
+#if PLATFORM_WINDOWS
 	std::stringstream stream;
 	stream << TCHAR_TO_UTF8(Buffer);
 	cereal::JSONInputArchive archive(stream);
+#endif
 
 	UEclairConversation* NewEclairConversation = NewObject<UEclairConversation>(InParent, InClass, InName, Flags);
 
@@ -77,8 +81,9 @@ UObject* UEclairConversationFactory::FactoryCreateText(
 			cereal::make_nvp("character-right", NewEclairConversation->CharacterRight),
 			cereal::make_nvp("content", NewEclairConversation->Items)
 		);*/
-
+#if PLATFORM_WINDOWS
 		NewEclairConversation->serialize(archive);
+#endif
 
 		if (!NewEclairConversation->AssetImportData)
 		{
