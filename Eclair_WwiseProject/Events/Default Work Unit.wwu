@@ -71,6 +71,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{88E3B7D4-74E8-43C5-8887-384193B5282C}" ShortID="433982588">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ChallengeModePicoPico" ID="{79202193-A38E-432F-A5CB-F8BF3712FA50}" WorkUnitID="{4E774218-E0F5-4259-8D8C-147DD80E7F80}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Fade" ID="{1746706D-BF8B-4211-9B50-903DB9E8C026}">

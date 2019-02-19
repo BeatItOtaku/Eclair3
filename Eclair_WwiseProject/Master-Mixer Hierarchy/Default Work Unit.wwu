@@ -48,7 +48,7 @@
 							</StateInfo>
 						</Bus>
 						<Bus Name="UI Audio Bus" ID="{569C0182-E842-4C69-9B1C-0EDAFF81272E}"/>
-						<Bus Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}">
+						<Bus Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
@@ -106,6 +106,22 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<Bus Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.200000002980232</FadeOutTime>
+										<FadeCurve>FadeSCurve</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

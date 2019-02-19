@@ -327,11 +327,6 @@
 						<Property Name="Tempo" Type="Real64" Value="121"/>
 						<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
 						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
-						<Property Name="UseMaxSoundPerInstance" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-1</Value>
@@ -740,7 +735,7 @@
 														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413225"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-														<Property Name="PlayAt" Type="Real64" Value="-5950.4132231405"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314053"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-default-1" ID="{ED8CD9DD-2618-4C3E-90FC-976E949C4352}"/>
 													<PropertyCurveList>
@@ -886,7 +881,7 @@
 														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413224"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314051"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314054"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-haikou-1" ID="{35CAAED8-8B1A-4FFF-A786-07CA904E6671}"/>
 													<PropertyCurveList>
@@ -981,6 +976,10 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{DB5D2D3D-A32F-4F25-8476-FB7306B81316}">
+									<PropertyList>
+										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+									</PropertyList>
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
@@ -996,7 +995,7 @@
 									</PropertyList>
 									<SegmentRef Name="Intro" ID="{0B2F7C95-96A8-4D4B-8784-7C70A16D2300}"/>
 								</MusicPlaylistItem>
-								<MusicPlaylistItem Name="" ID="{58342DE7-7DB8-40FA-BE21-6143F01111BF}" ShortID="591839849">
+								<MusicPlaylistItem Name="" ID="{A2A8F28F-E12C-416C-B73E-A48BE09A7B1D}" ShortID="248505919">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
