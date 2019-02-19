@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	560349346	Door_Big			\SE\Chapter1\Door_Big	
 	645565787	Punch			\SE\Brioche\Punch	
 	705685643	StrikingGround			\SE\Brioche\StrikingGround	
+	1324340420	Piano			\Default Work Unit\Chapter1\Piano	
 	1560169506	Boss			\Default Work Unit\Chapter1\Boss	
 	1877847629	Door			\SE\Chapter1\Door	
 	2009975021	FootSteps_BB			\SE\Brioche\FootSteps_BB	
@@ -26,7 +27,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	1069874549	Hall_Guns (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	69387691	1-piano	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-piano_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Piano\1-piano		267120
+	69387691	1-piano	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-piano_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Piano\Piano\1-piano		267120
 	77356971	Haikou	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		878566
 	105590707	Boss	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		987722
 	150500008	Punch	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Punch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8228

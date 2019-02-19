@@ -306,6 +306,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="BigDecide" ID="{62471A33-C330-4F42-84B1-121D540D5DEC}">
+							<ChildrenList>
+								<Action Name="" ID="{39B97035-5341-4F2C-9197-F7DDA554E5DA}" ShortID="277554943">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BigDecide" ID="{2F4FE7C6-02D3-4835-BEF6-7FFF77FE4175}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eclair" ID="{85675E97-5D83-4D44-A0B6-E341644C8CFB}" ShortID="48386419">

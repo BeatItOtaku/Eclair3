@@ -46,7 +46,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	337206732	FootSteps_Eclair_Default_00	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_00_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_00		6111
 	357065517	Etoile_end	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Etoile_end_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile_end		27722
 	361646227	LowHPLoop	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\LowHPLoop_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		35575
-	385552327	Challange1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Challange1_CB1F3167.wem		\Interactive Music Hierarchy\Challanges\Challange1\Intro\Challange1		1236287
+	457887179	Challenge1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Challenge1_CB1F3167.wem		\Interactive Music Hierarchy\Challenges\Challenge1\Intro\Challenge1		1683477
 	536735455	FootSteps_Eclair_Default_09	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_09_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		5170
 	537634196	BoltLand	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\BoltLand_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		25144
 	548352836	FootSteps_Eclair_Default_01	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_01_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		5576
