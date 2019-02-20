@@ -329,7 +329,7 @@
 						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-1</Value>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1061,7 +1061,6 @@
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</TransitionList>
