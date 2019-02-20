@@ -378,7 +378,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -393,11 +393,32 @@
 						</Sound>
 						<Sound Name="Choice" ID="{D0363FCD-93DE-47F7-81FB-40DCC51DE862}" ShortID="923707544">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>68</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>580</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1D5F2B86-A893-401F-B0E2-8DCACE7EBA2D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-177"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
@@ -406,7 +427,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -507,6 +528,110 @@
 								<ActiveSource Name="LowHPLoop" ID="{5777A8E2-FFA6-4C71-9180-787ED70BC706}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="BigDecide" ID="{2F4FE7C6-02D3-4835-BEF6-7FFF77FE4175}" ShortID="544918980">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BigDecide" ID="{7D1EB923-8170-44FD-AC78-D4679E81578E}" ShortID="534887956">
+									<Language>SFX</Language>
+									<AudioFile>BigDecide.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BigDecide" ID="{7D1EB923-8170-44FD-AC78-D4679E81578E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CannotUnlock" ID="{5820A5E7-721D-463E-BFDB-AA0413DDCA10}" ShortID="658026735">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CannotUnlock" ID="{48C74D47-A798-4B0F-B68B-AEF8B974247C}" ShortID="105108458">
+									<Language>SFX</Language>
+									<AudioFile>CannotUnlock.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CannotUnlock" ID="{48C74D47-A798-4B0F-B68B-AEF8B974247C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OpenWindow" ID="{60D4F67B-7CEC-4CAF-B7E0-4F2DC9E40229}" ShortID="637329798">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OpenWindow" ID="{08224251-0B6A-448D-868D-CDAF46C531E5}" ShortID="811912202">
+									<Language>SFX</Language>
+									<AudioFile>OpenWindow.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="OpenWindow" ID="{08224251-0B6A-448D-868D-CDAF46C531E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UnlockStage" ID="{1CEA3A5B-6A5A-48D6-B28B-22ED95D67168}" ShortID="689864060">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UnlockStage" ID="{6767995D-0C45-4F81-A634-C5525C744CC0}" ShortID="59565763">
+									<Language>SFX</Language>
+									<AudioFile>UnlockStage.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UnlockStage" ID="{6767995D-0C45-4F81-A634-C5525C744CC0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eclair" ID="{9CF3AE3D-21D5-41C7-A821-311387054262}" ShortID="25561467">
@@ -526,7 +651,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -545,7 +670,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-4</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -597,7 +722,7 @@
 									<ObjectRef Name="None" ID="{3996D0A7-B642-4BA6-B591-FDEAC80EED0C}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="GroundType" ID="{4845AAE3-D8C4-42DB-BB9A-0F8A139973E0}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
@@ -913,7 +1038,7 @@
 						</SwitchContainer>
 						<Sound Name="BoltLand" ID="{13488B15-6F3B-42CC-8615-F03290FE3285}" ShortID="174371390">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
@@ -928,7 +1053,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -959,7 +1084,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -990,7 +1115,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1080,6 +1205,32 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Voice_Damaged" ID="{4E93D7A5-DB7D-486D-8503-962A0E52C75F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BoltCannotLaunch" ID="{1A71525D-3525-4717-B93D-9B18599232B8}" ShortID="520113415">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BoltCannotLaunch" ID="{9A459338-72A8-46AE-B95E-73EA7D54C4B8}" ShortID="149872137">
+									<Language>SFX</Language>
+									<AudioFile>BoltCannotLaunch.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BoltCannotLaunch" ID="{9A459338-72A8-46AE-B95E-73EA7D54C4B8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
