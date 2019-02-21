@@ -2,7 +2,7 @@
 
 #include "ResultEncryptor.h"
 
-FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDateTime timestamp, FString version) {
+FString UResultEncryptor::EncryptResult(FString stage, FString stageName, int time, int item, FDateTime timestamp, FString version) {
     
 #if PLATFORM_WINDOWS
 
@@ -10,6 +10,7 @@ FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDate
 	TSharedRef<FJsonObject> JsonObject = MakeShareable(new FJsonObject());
 
 	JsonObject->SetStringField("stage", stage);
+	//JsonObject->SetStringField("stage-name", stageName);
 	JsonObject->SetStringField("time", FString::FromInt(time));
 	JsonObject->SetStringField("item", FString::FromInt(item));
 	JsonObject->SetStringField("timestamp", timestamp.ToIso8601());
@@ -27,6 +28,15 @@ FString UResultEncryptor::EncryptResult(FString stage, int time, int item, FDate
 #endif
 }
 
+bool UResultEncryptor::isEncryptSupported()
+{
+#if PLATFORM_WINDOWS
+	return true;
+#else
+	return false;
+#endif
+}
+
 FString UResultEncryptor::Encrypt(FString str)
 {
 #if PLATFORM_WINDOWS
@@ -39,7 +49,7 @@ FString UResultEncryptor::Encrypt(FString str)
 	Size = Size + (AES_BLOCK_SIZE - (Size % AES_BLOCK_SIZE));
 
 	// ÉLÅ[ KeyChar Çê∂ê¨
-	FString Key = "hogehogefooofooohogehogefooofooo";
+	FString Key = "eclairhtl2017thethunderboltX8kr2";
 	TCHAR *KeyTChar = Key.GetCharArray().GetData();
 	unsigned char *KeyChar = new unsigned char[AES_KEYLENGTH];
 	memset(KeyChar, 0x00, AES_KEYLENGTH);
