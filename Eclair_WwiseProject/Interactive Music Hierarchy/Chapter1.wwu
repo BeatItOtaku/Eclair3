@@ -316,20 +316,13 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Field" ID="{58F4FBE8-9BBA-4A84-A889-C71BF4E1E1A3}" ShortID="939062395">
 					<PropertyList>
-						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-						<Property Name="MaxSoundPerInstance" Type="int16">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Tempo" Type="Real64" Value="121"/>
 						<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
 						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>1</Value>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -735,7 +728,7 @@
 														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413225"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314053"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.4132231405"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-default-1" ID="{ED8CD9DD-2618-4C3E-90FC-976E949C4352}"/>
 													<PropertyCurveList>
@@ -881,7 +874,7 @@
 														<Property Name="EndTrimOffset" Type="Real64" Value="57768.5950413224"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314054"/>
+														<Property Name="PlayAt" Type="Real64" Value="-5950.41322314051"/>
 													</PropertyList>
 													<AudioSourceRef Name="1-haikou-1" ID="{35CAAED8-8B1A-4FFF-A786-07CA904E6671}"/>
 													<PropertyCurveList>
@@ -968,79 +961,16 @@
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
-					</ChildrenList>
-					<TransitionList>
-						<MusicTransition Name="Root" ID="{D4A35743-9C6D-4CEB-BDBE-2F3F3647AAB0}">
-							<PropertyList>
-								<Property Name="IsFolder" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{DB5D2D3D-A32F-4F25-8476-FB7306B81316}">
-									<PropertyList>
-										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
-										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
-									</PropertyList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</ChildrenList>
-							<TransitionInfo/>
-						</MusicTransition>
-					</TransitionList>
-					<Playlist>
-						<MusicPlaylistItem Name="" ID="{B8D077C6-1CB8-4391-A2D4-340982382905}" ShortID="103004021">
-							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{D057DD68-ADF2-438A-B157-B41D82C7E921}" ShortID="487045688">
-									<PropertyList>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Intro" ID="{0B2F7C95-96A8-4D4B-8784-7C70A16D2300}"/>
-								</MusicPlaylistItem>
-								<MusicPlaylistItem Name="" ID="{A2A8F28F-E12C-416C-B73E-A48BE09A7B1D}" ShortID="248505919">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Main" ID="{02428D87-286A-4793-A578-ADB1C864D7DB}"/>
-								</MusicPlaylistItem>
-							</ChildrenList>
-						</MusicPlaylistItem>
-					</Playlist>
-				</MusicPlaylistContainer>
-				<MusicPlaylistContainer Name="Piano" ID="{BAA433C6-A985-40D6-AF50-DA31CB1F826F}" ShortID="99008809">
-					<PropertyList>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-						<Property Name="Tempo" Type="Real64" Value="121"/>
-						<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
-						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-1</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
 						<MusicSegment Name="Piano" ID="{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB}" ShortID="221074286">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="17771.9047619048"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-								<Property Name="Tempo" Type="Real64" Value="121"/>
-								<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
-								<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1092,12 +1022,12 @@
 						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
-						<MusicTransition Name="Root" ID="{044E0FE2-9CC7-4062-B93B-519D231E7DF6}">
+						<MusicTransition Name="Root" ID="{D4A35743-9C6D-4CEB-BDBE-2F3F3647AAB0}">
 							<PropertyList>
 								<Property Name="IsFolder" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{5F6910CF-C49E-4D2A-997C-2ADA441D5C6A}">
+								<MusicTransition Name="Transition" ID="{DB5D2D3D-A32F-4F25-8476-FB7306B81316}">
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
@@ -1105,13 +1035,26 @@
 						</MusicTransition>
 					</TransitionList>
 					<Playlist>
-						<MusicPlaylistItem Name="" ID="{DA82099D-9075-41EF-A6C1-74A33945A50D}" ShortID="90816673">
+						<MusicPlaylistItem Name="" ID="{B8D077C6-1CB8-4391-A2D4-340982382905}" ShortID="103004021">
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{BFD6C6AE-6782-4CF4-B294-3E1F835E2FCB}" ShortID="303837414">
+								<MusicPlaylistItem Name="" ID="{7E21594E-1583-406A-8D3A-91072A60E413}" ShortID="749377589">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
 									<SegmentRef Name="Piano" ID="{FC2E9670-B42F-4B13-A5F1-A4C53F7CF5EB}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{D057DD68-ADF2-438A-B157-B41D82C7E921}" ShortID="487045688">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Intro" ID="{0B2F7C95-96A8-4D4B-8784-7C70A16D2300}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{58342DE7-7DB8-40FA-BE21-6143F01111BF}" ShortID="591839849">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Main" ID="{02428D87-286A-4793-A578-ADB1C864D7DB}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>

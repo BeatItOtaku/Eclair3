@@ -496,7 +496,7 @@ public:
             
             FSlateDrawElement::MakeViewport(
                 InPainter.DrawElements,
-                LayerId++,
+                ++LayerId,
                 InPainter.SectionGeometry.ToPaintGeometry(t),
                 WaveformViewport,
                 (InPainter.bParentEnabled ? ESlateDrawEffect::None : ESlateDrawEffect::DisabledEffect) | ESlateDrawEffect::NoGamma,
@@ -704,7 +704,8 @@ private:
 	{
 #if UE_4_20_OR_LATER
 		TRange<double> ViewRange(Section->GetStartTime(), Section->GetEndTime());
-		double VisibleWidth = FMath::Min(1.0, ViewRange.Size<double>());
+		double VisibleWidth = ViewRange.Size<double>();
+		ensure(VisibleWidth > 0);
 		out_PixelsPerSecond = AllottedGeometry.GetLocalSize().X / VisibleWidth;
 
 		FFrameRate   TickResolution = Section->GetTypedOuter<UMovieScene>()->GetTickResolution();

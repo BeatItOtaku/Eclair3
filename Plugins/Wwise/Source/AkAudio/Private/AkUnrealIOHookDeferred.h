@@ -39,16 +39,7 @@ public:
 
 	static inline AkUInt32 GetBlockSize(AkFileDesc& in_fileDesc)
 	{
-		return GetBlockSize();
-	}
-
-	static inline AkUInt32 GetBlockSize()
-	{
-#if PLATFORM_XBOXONE
-        return 4096;
-#else
-        return 1;
-#endif	
+		return 1;
 	}
 
 	template<class T_PACKAGE, class T_ENTRY>

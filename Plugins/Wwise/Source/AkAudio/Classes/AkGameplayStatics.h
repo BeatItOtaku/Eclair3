@@ -100,17 +100,6 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic", meta=(WorldContext="WorldContextObject", DeprecatedFunction, DeprecationMessage = "Please use the \"Event Name\" field of PostEventAtLocation"))
 	static void PostEventAtLocationByName(const FString& EventName, FVector Location, FRotator Orientation, UObject* WorldContextObject );
 
-	/** Execute action on event attached to and following the root component of the specified actor
-	 * @param AkEvent - Wwise Event to act upon.
-	 * @param ActionType - Which action to do.
-	 * @param Actor - Which actor to use.
-	 * @param TransitionDuration - Transition duration in milliseconds.
-	 * @param FadeCurve - The interpolation curve of the transition.
-	 * @param PlayingID - Use the return value of a Post Event to act only on this specific instance of an event.
-	 */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic|Actor")
-	static void ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, AkActionOnEventType ActionType, class AActor* Actor, int32 TransitionDuration = 0, EAkCurveInterpolation FadeCurve = EAkCurveInterpolation::Linear, int32 PlayingID = 0);
-
 	/** Spawn an AkComponent at a location. Allows, for example, to set a switch on a fire and forget sound.
 	 * @param AkEvent - Wwise Event to post.
 	 * @param EarlyReflectionsBus - Use the provided auxiliary bus to process early reflections.  If NULL, EarlyReflectionsBusName will be used.
@@ -248,55 +237,6 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	static void SetPanningRule(PanningRule PanRule);
 	
 	/**
-	 * Gets speaker angles of the specified device. Speaker angles are used for 3D positioning of sounds over standard configurations.
-	 * Note that the current version of Wwise only supports positioning on the plane.
-	 * The speaker angles are expressed as an array of loudspeaker pairs, in degrees, relative to azimuth ]0,180].
-	 * Supported loudspeaker setups are always symmetric; the center speaker is always in the middle and thus not specified by angles.
-	 * Angles must be set in ascending order.
-	 * Typical usage:
-	 * - float heightAngle;
-	 * - TArray<float> speakerAngles;
-	 * - GetSpeakerAngles(speakerAngles, heightAngle, AkOutput_Main );
-	 * \aknote
-	 *  On most platforms, the angle set on the plane consists of 3 angles, to account for 7.1.
-	 * - When panning to stereo (speaker mode, see <tt>AK::SoundEngine::SetPanningRule()</tt>), only angle[0] is used, and 3D sounds in the back of the listener are mirrored to the front.
-	 * - When panning to 5.1, the front speakers use angle[0], and the surround speakers use (angle[2] - angle[1]) / 2.
-	 * \endaknote
-	 * \warning Call this function only after the sound engine has been properly initialized.
-	 *
-	 * @param SpeakerAngles Returned array of loudspeaker pair angles, in degrees relative to azimuth [0,180]. Pass NULL to get the required size of the array.
-	 * @param HeightAngle Elevation of the height layer, in degrees relative to the plane [-90,90].
-	 * @param DeviceShareset Shareset for which to get the angles. You can pass "" for the main (default) output
-	 * @return AK_Success if device exists
-	 *
-	 */
-	UFUNCTION(BlueprintCallable, Category = "Audiokinetic")
-	static void GetSpeakerAngles(TArray<float>& SpeakerAngles, float& HeightAngle, const FString& DeviceShareset = "");
-
-	/**
-	 * Sets speaker angles of the specified device. Speaker angles are used for 3D positioning of sounds over standard configurations.
-	 * Note that the current version of Wwise only supports positioning on the plane.
-	 * The speaker angles are expressed as an array of loudspeaker pairs, in degrees, relative to azimuth ]0,180].
-	 * Supported loudspeaker setups are always symmetric; the center speaker is always in the middle and thus not specified by angles.
-	 * Angles must be set in ascending order.
-	 * Typical usage:
-	 * - Initialize the sound engine and/or add secondary output(s).
-	 * - Get number of speaker angles and their value into an array using GetSpeakerAngles().
-	 * - Modify the angles and call SetSpeakerAngles().
-	 * This function posts a message to the audio thread through the command queue, so it is thread safe. However the result may not be immediately read with GetSpeakerAngles().
-	 * \warning This function only applies to configurations (or subset of these configurations) that are standard and whose speakers are on the plane (2D).
-	 * \sa GetSpeakerAngles()
-	 *
-	 * @param SpeakerAngles Array of loudspeaker pair angles, in degrees relative to azimuth [0,180]
-	 * @param HeightAngle Elevation of the height layer, in degrees relative to the plane [-90,90]
-	 * @param DeviceShareset Shareset for which to set the angles on. You can pass "" for the main (default) output
-	 * @return AK_Success if successful (device exists and angles are valid), AK_NotCompatible if the channel configuration of the device is not standard (AK_ChannelConfigType_Standard), AK_Fail otherwise.
-	 *
-	 */
-	UFUNCTION(BlueprintCallable, Category = "Audiokinetic")
-	static void SetSpeakerAngles(const TArray<float>& SpeakerAngles, float HeightAngle, const FString& DeviceShareset = "");
-
-	/**
 	 * Sets the occlusion calculation refresh interval, targetting the root component of a specified actor.
 	 * @param RefreshInterval - Value of the wanted refresh interval
 	 * @param Actor - Actor on which to set the refresh interval
@@ -315,12 +255,6 @@ class AKAUDIO_API UAkGameplayStatics : public UBlueprintFunctionLibrary
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audiokinetic")
 	static void StopAll();
-
-	/**
-	 * Cancels an Event callback
-	 */
-	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category = "Audiokinetic")
-	static void CancelEventCallback(const FOnAkPostEventCallback& PostEventCallback);
 
 	/**
 	 * Start all Ak ambient sounds.

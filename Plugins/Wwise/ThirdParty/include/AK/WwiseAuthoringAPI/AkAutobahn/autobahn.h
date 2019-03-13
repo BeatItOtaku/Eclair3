@@ -289,7 +289,7 @@ namespace AK
 			std::atomic<bool> m_wasDisconnected;
 
 			std::shared_ptr<WebSocketClient> m_websocket;
-			std::recursive_mutex m_websocketMutex;
+			std::mutex m_websocketMutex;
 
 			std::thread m_sendThread;
 

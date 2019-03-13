@@ -58,11 +58,6 @@ class AKAUDIO_API UAkComponent: public USceneComponent
 	GENERATED_UCLASS_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, BlueprintSetter=SetUseSpatialAudio, Category = "AkComponent|Spatial Audio")
-	bool bUseSpatialAudio = true;
-
-	UFUNCTION(BlueprintSetter)
-	void SetUseSpatialAudio(const bool bNewValue);
 
 	/** Wwise Auxiliary Bus for early reflection processing */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, AdvancedDisplay, Category = "AkComponent|Spatial Audio|Reflect")
@@ -85,7 +80,7 @@ public:
 	float EarlyReflectionMaxPathLength;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AkComponent|Occlusion")
-	TEnumAsByte<ECollisionChannel> OcclusionCollisionChannel;
+	TEnumAsByte<ECollisionChannel> OcclusionCollisionChannel = ECollisionChannel::ECC_Visibility;
 
 	// Note: Reflection fiters are not currently supported on individual polygons in AkSpatialAudioVolume, so it is useless to have it here and therefor hidden from the UI.
 	//UPROPERTY(EditAnywhere, AdvancedDisplay, Category = "AkComponent|Spatial Audio", Meta = (Bitmask, BitmaskEnum = "EReflectionFilterBits"))
@@ -336,7 +331,7 @@ public:
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
 	// Begin USceneComponent Interface
-	virtual void BeginPlay() override;
+	virtual void Activate(bool bReset=false) override;
 	virtual void OnUpdateTransform(EUpdateTransformFlags UpdateTransformFlags, ETeleportType Teleport = ETeleportType::None) override;
 	// End USceneComponent Interface
 
@@ -385,6 +380,11 @@ public:
 
 	FVector GetPosition() const;
 
+protected:
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
+
 private:
 	/**
 	 * Register the component with Wwise
@@ -421,12 +421,6 @@ private:
 	/** Array of the active AkReverbVolumes at the AkComponent's location */
 	TArray<AkReverbFadeControl> ReverbFadeControls;
 
-	/** Aux Send values sent to the SoundEngine in the previous frame */
-	TArray<AkAuxSendValue> CurrentAuxSendValues;
-
-	/** Do we need to refresh Aux Send values? */
-	bool NeedToUpdateAuxSends(const TArray<AkAuxSendValue>& NewValues);
-
 	/** Room the AkComponent is currently in. nullptr if none */
 	class UAkRoomComponent* CurrentRoom;
 
@@ -438,10 +432,6 @@ private:
 
 	/** Whether an event was posted on the component. Never reset to false. */
 	bool bStarted;
-
-	/** Previous known position. Used to avoid Spamming SetPOsition on a listener */
-	AkSoundPosition CurrentSoundPosition;
-	bool HasMoved();
 
 #endif
 

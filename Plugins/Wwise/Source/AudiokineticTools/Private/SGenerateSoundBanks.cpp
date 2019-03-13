@@ -9,6 +9,7 @@
 #include "AkAudioDevice.h"
 #include "AkAudioBankGenerationHelpers.h"
 #include "AssetRegistryModule.h"
+#include "Interfaces/IProjectManager.h"
 #include "Dom/JsonObject.h"
 #include "Interfaces/ITargetPlatformManagerModule.h"
 #include "Interfaces/ITargetPlatform.h"
@@ -24,6 +25,7 @@
 #include "Misc/FileHelper.h"
 #include "Misc/MessageDialog.h"
 
+#include "ProjectDescriptor.h"
 
 #define LOCTEXT_NAMESPACE "AkAudio"
 DEFINE_LOG_CATEGORY_STATIC(LogAkBanks, Log, All);
@@ -185,7 +187,37 @@ void SGenerateSoundBanks::PopulateList(void)
 	}
 
 	// Get available platforms
-	WwiseBnkGenHelper::GetWwisePlatforms(PlatformNames);
+	GetWwisePlatforms();
+}
+
+void SGenerateSoundBanks::AddPlatformIfSupported(const TSet<FString>& SupportedPlatforms, const FString& UnrealName, const TCHAR* WwiseName)
+{
+	if (SupportedPlatforms.Num() == 0 || SupportedPlatforms.Contains(UnrealName))
+	{
+		PlatformNames.Add(TSharedPtr<FString>(new FString(WwiseName)));
+	}
+}
+
+void SGenerateSoundBanks::GetWwisePlatforms()
+{
+	IProjectManager& ProjectManager = IProjectManager::Get();
+	TSet<FString> SupportedPlatforms;
+	for (FName TargetPlatform : ProjectManager.GetCurrentProject()->TargetPlatforms)
+	{
+		SupportedPlatforms.Add(TargetPlatform.ToString());
+	}
+	PlatformNames.Empty();
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("Android"), TEXT("Android"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("IOS"), TEXT("IOS"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("LinuxNoEditor"), TEXT("Linux"));
+#if UE_4_20_OR_LATER
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("Lumin"), TEXT("Lumin"));
+#endif
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("MacNoEditor"), TEXT("Mac"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("PS4"), TEXT("PS4"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("WindowsNoEditor"), TEXT("Windows"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("XboxOne"), TEXT("XboxOne"));
+	AddPlatformIfSupported(SupportedPlatforms, TEXT("Switch"), TEXT("Switch"));
 }
 
 FReply SGenerateSoundBanks::OnKeyDown( const FGeometry& MyGeometry, const FKeyEvent& InKeyboardEvent )
@@ -258,7 +290,7 @@ FReply SGenerateSoundBanks::OnGenerateButtonClicked()
 		}
 		else
 		{
-			FMessageDialog::Open( EAppMsgType::Ok, LOCTEXT("AkAudio_SoundBankGenFail", "SoundBank generation returned errors: see the Ouput Log window (Window->Developer Tools->Output Log) for more information.") );
+			FMessageDialog::Open( EAppMsgType::Ok, LOCTEXT("AkAudio_SoundBankGenFail", "SoundBank generation failed: see log for more information.") );
 		}
 	}
 	else

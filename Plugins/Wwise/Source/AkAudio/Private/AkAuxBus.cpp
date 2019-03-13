@@ -16,22 +16,11 @@
 UAkAuxBus::UAkAuxBus(const class FObjectInitializer& ObjectInitializer) :
 	Super(ObjectInitializer)
 {
-	if (HasAnyFlags(RF_ClassDefaultObject))
-	{
-		AuxBusId = AK_INVALID_AUX_ID;
-	}
+	// Property initialization
+	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
+	if(AkAudioDevice)
+		AuxBusId = AkAudioDevice->GetIDFromString(GetName());
 	else
-	{
-		// Property initialization
-		FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-		if (AkAudioDevice)
-		{
-			AuxBusId = AkAudioDevice->GetIDFromString(GetName());
-		}
-		else
-		{
-			AuxBusId = AK_INVALID_AUX_ID;
-		}
-	}
+		AuxBusId = AK_INVALID_AUX_ID;
 }
 

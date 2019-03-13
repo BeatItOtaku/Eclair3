@@ -93,12 +93,6 @@ struct FMovieSceneAkAudioEventSectionData
 		}
 	}
 
-	void SectionBeingDestroyed(FAkAudioDevice* AudioDevice)
-	{
-		AudioDevice->CancelEventCallbackCookie(EventTracker.Get());
-		ResetTracker(AudioDevice);
-	}
-
     void ResetTracker(FAkAudioDevice* AudioDevice) 
     {
         if (EventTracker->bStopAtSectionEnd)
@@ -312,7 +306,5 @@ void FMovieSceneAkAudioEventTemplate::TearDown(FPersistentEvaluationData& Persis
 		return;
 	TSharedPtr<FMovieSceneAkAudioEventSectionData> SectionData = PersistentData.GetSectionData<FAkAudioEventEvaluationData>().SectionData;
 	if (SectionData.IsValid())
-	{
-		SectionData->SectionBeingDestroyed(AudioDevice);
-	}
+        SectionData->ResetTracker(AudioDevice);
 }

@@ -1,62 +1,122 @@
-// Copyright (c) 2006-2018 Audiokinetic Inc. / All Rights Reserved
+// Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
 
 #include "AkSettings.h"
 #include "AkAudioDevice.h"
-#include "AkUnrealHelper.h"
-#include "AkSettingsPerUser.h"
-
+#include "Misc/Paths.h"
 #if WITH_EDITOR
-#include "Settings/ProjectPackagingSettings.h"
+#include "Misc/MessageDialog.h"
+#include "HAL/FileManager.h"
+#include "Widgets/Docking/SDockTab.h"
 #endif
 
 #include "UObject/UnrealType.h"
 
+
 //////////////////////////////////////////////////////////////////////////
 // UAkSettings
-
-FString UAkSettings::DefaultSoundBankFolder = TEXT("WwiseAudio");
 
 UAkSettings::UAkSettings(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	WwiseSoundBankFolder.Path = DefaultSoundBankFolder;
+	TCHAR WwiseDir[AK_MAX_PATH];
+	FPlatformMisc::GetEnvironmentVariable(TEXT("WWISEROOT"), WwiseDir, AK_MAX_PATH);
+
+	WwiseWindowsInstallationPath.Path = FString(WwiseDir);
 }
 
-void UAkSettings::PostInitProperties()
+#if WITH_EDITOR
+namespace UAkSettings_Helper
 {
-	Super::PostInitProperties();
+	void TrimPath(FString& Path)
+	{
+#if UE_4_18_OR_LATER
+		Path.TrimStartAndEndInline();
+#else
+		Path = Path.Trim();
+		Path = Path.TrimTrailing();
+#endif // UE_4_18_OR_LATER
+	}
+
+	FString GetProjectDirectory()
+	{
+#if UE_4_18_OR_LATER
+		return FPaths::ProjectDir();
+#else
+		return FPaths::GameDir();
+#endif // UE_4_18_OR_LATER
+	}
 
 #if WITH_EDITOR
-	UAkSettingsPerUser* AkSettingsPerUser = GetMutableDefault<UAkSettingsPerUser>();
-
-	if (AkSettingsPerUser)
+	void SanitizePath(FString& Path, const FString& PreviousPath, const FText& DialogMessage)
 	{
-		bool didChanges = false;
+		TrimPath(Path);
 
-		if (!WwiseWindowsInstallationPath_DEPRECATED.Path.IsEmpty())
+		FText FailReason;
+		if (!FPaths::ValidatePath(Path, &FailReason))
 		{
-			AkSettingsPerUser->WwiseWindowsInstallationPath = WwiseWindowsInstallationPath_DEPRECATED;
-			didChanges = true;
+			FMessageDialog::Open(EAppMsgType::Ok, FailReason);
+			Path = PreviousPath;
 		}
 
-		if (!WwiseMacInstallationPath_DEPRECATED.FilePath.IsEmpty())
+		const FString TempPath = FPaths::IsRelative(Path) ? FPaths::ConvertRelativePathToFull(GetProjectDirectory(), Path) : Path;
+		if (!FPaths::DirectoryExists(TempPath))
 		{
-			AkSettingsPerUser->WwiseMacInstallationPath = WwiseMacInstallationPath_DEPRECATED;
-			didChanges = true;
-		}
-
-		if (didChanges)
-		{
-			AkSettingsPerUser->SaveConfig();
+			FMessageDialog::Open(EAppMsgType::Ok, DialogMessage);
+			Path = PreviousPath;
 		}
 	}
-#endif
+
+	void SanitizeProjectPath(FString& Path, const FString& PreviousPath, const FText& DialogMessage, bool& bRequestRefresh)
+	{
+		TrimPath(Path);
+
+		FString TempPath = IFileManager::Get().ConvertToAbsolutePathForExternalAppForWrite(*Path);
+
+		FText FailReason;
+		if (!FPaths::ValidatePath(TempPath, &FailReason))
+		{
+			if (EAppReturnType::Ok == FMessageDialog::Open(EAppMsgType::Ok, FailReason))
+			{
+				Path = PreviousPath;
+				return;
+			}
+		}
+
+		auto ProjectDirectory = GetProjectDirectory();
+		if (!FPaths::FileExists(TempPath))
+		{
+			// Path might be a valid one (relative to game) entered manually. Check that.
+			TempPath = FPaths::ConvertRelativePathToFull(ProjectDirectory, Path);
+
+			if (!FPaths::FileExists(TempPath))
+			{
+                if (EAppReturnType::Ok == FMessageDialog::Open(EAppMsgType::Ok, DialogMessage))
+				{
+					Path = PreviousPath;
+					return;
+				}
+			}
+		}
+
+		// Make the path relative to the game dir
+		FPaths::MakePathRelativeTo(TempPath, *ProjectDirectory);
+		Path = TempPath;
+
+		if (Path != PreviousPath)
+		{
+			TSharedRef<SDockTab> WaapiPickerTab = FGlobalTabmanager::Get()->InvokeTab(FName("WaapiPicker"));
+			TSharedRef<SDockTab> WwisePickerTab = FGlobalTabmanager::Get()->InvokeTab(FName("WwisePicker"));
+			bRequestRefresh = true;
+		}
+	}
+#endif //WITH_EDITOR
 }
 
-#if WITH_EDITOR
 void UAkSettings::PreEditChange(UProperty* PropertyAboutToChange)
 {
 	PreviousWwiseProjectPath = WwiseProjectPath.FilePath;
+	PreviousWwiseMacPath = WwiseMacInstallationPath.FilePath;
+	PreviousWwiseWindowsPath = WwiseWindowsInstallationPath.Path;
 }
 
 void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
@@ -73,60 +133,24 @@ void UAkSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedE
 			AkAudioDevice->SetMaxAuxBus(MaxSimultaneousReverbVolumes);
 		}
 	}
+	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, WwiseWindowsInstallationPath))
+	{
+		UAkSettings_Helper::SanitizePath(WwiseWindowsInstallationPath.Path, PreviousWwiseWindowsPath, FText::FromString("Please enter a valid Wwise Authoring Windows executable path"));
+	}
+	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, WwiseMacInstallationPath))
+	{
+		UAkSettings_Helper::SanitizePath(WwiseMacInstallationPath.FilePath, PreviousWwiseMacPath, FText::FromString("Please enter a valid Wwise Authoring Mac executable path"));
+	}
 	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, WwiseProjectPath))
 	{
-		AkUnrealHelper::SanitizeProjectPath(WwiseProjectPath.FilePath, PreviousWwiseProjectPath, FText::FromString("Please enter a valid Wwise project"), bRequestRefresh);
+		UAkSettings_Helper::SanitizeProjectPath(WwiseProjectPath.FilePath, PreviousWwiseProjectPath, FText::FromString("Please enter a valid Wwise project"), bRequestRefresh);
 	}
     else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, bAutoConnectToWAAPI))
     {
         OnAutoConnectChanged.Broadcast();
     }
-	else if (MemberPropertyName == GET_MEMBER_NAME_CHECKED(UAkSettings, WwiseSoundBankFolder))
-	{
-		EnsureSoundBankPathIsInPackagingSettings();
-	}
 
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 }
+#endif
 
-void UAkSettings::EnsureSoundBankPathIsInPackagingSettings() const
-{
-	UProjectPackagingSettings* PackagingSettings = GetMutableDefault<UProjectPackagingSettings>();
-
-	bool foundPackageDirectory = false;
-	bool packageSettingsNeedUpdate = false;
-
-	for (int32 i = 0; i < PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num(); i++)
-	{
-		if (PackagingSettings->DirectoriesToAlwaysStageAsUFS[i].Path == WwiseSoundBankFolder.Path)
-		{
-			foundPackageDirectory = true;
-			break;
-		}
-	}
-
-	if (!foundPackageDirectory)
-	{
-		PackagingSettings->DirectoriesToAlwaysStageAsUFS.Add(WwiseSoundBankFolder);
-		packageSettingsNeedUpdate = true;
-	}
-
-	FString ContentFolder = FPaths::ConvertRelativePathToFull(AkUnrealHelper::GetContentDirectory());
-
-	for (int32 i = PackagingSettings->DirectoriesToAlwaysStageAsUFS.Num() - 1; i >= 0; --i)
-	{
-		FString FullContentFolder = FPaths::Combine(*ContentFolder, PackagingSettings->DirectoriesToAlwaysStageAsUFS[i].Path);
-
-		if (!FPaths::DirectoryExists(FullContentFolder))
-		{
-			PackagingSettings->DirectoriesToAlwaysStageAsUFS.RemoveAt(i);
-			packageSettingsNeedUpdate = true;
-		}
-	}
-
-	if (packageSettingsNeedUpdate)
-	{
-		PackagingSettings->UpdateDefaultConfigFile();
-	}
-}
-#endif // WITH_EDITOR

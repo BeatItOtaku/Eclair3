@@ -11,34 +11,29 @@ public:
 	/** Copy of the user callback flags, for use in our own callback */
 	uint32 uUserFlags;
 
-	uint32 KeyHash;
-
 	IAkUserEventCallbackPackage()
 		: uUserFlags(0)
 	{}
 
-	IAkUserEventCallbackPackage(uint32 in_Flags, uint32 in_Hash)
+	IAkUserEventCallbackPackage(uint32 in_Flags)
 		: uUserFlags(in_Flags)
-		, KeyHash(in_Hash)
 	{}
 
 	virtual ~IAkUserEventCallbackPackage() {}
 
 	virtual void HandleAction(AkCallbackType in_eType, AkCallbackInfo* in_pCallbackInfo) = 0;
-	virtual void CancelCallback() {};
 };
 
 class FAkFunctionPtrEventCallbackPackage : public IAkUserEventCallbackPackage
 {
 public:
-	FAkFunctionPtrEventCallbackPackage(AkCallbackFunc CbFunc, void* Cookie, uint32 Flags, uint32 in_Hash)
-		: IAkUserEventCallbackPackage(Flags, in_Hash)
+	FAkFunctionPtrEventCallbackPackage(AkCallbackFunc CbFunc, void* Cookie, uint32 Flags)
+		: IAkUserEventCallbackPackage(Flags)
 		, pfnUserCallback(CbFunc)
 		, pUserCookie(Cookie)
 	{}
 
 	virtual void HandleAction(AkCallbackType in_eType, AkCallbackInfo* in_pCallbackInfo) override;
-	virtual void CancelCallback() override;
 
 private:
 	/** Copy of the user callback, for use in our own callback */
@@ -52,13 +47,12 @@ private:
 class FAkBlueprintDelegateEventCallbackPackage : public IAkUserEventCallbackPackage
 {
 public:
-	FAkBlueprintDelegateEventCallbackPackage(FOnAkPostEventCallback PostEventCallback, uint32 Flags, uint32 in_Hash)
-		: IAkUserEventCallbackPackage(Flags, in_Hash)
+	FAkBlueprintDelegateEventCallbackPackage(FOnAkPostEventCallback PostEventCallback, uint32 Flags)
+		: IAkUserEventCallbackPackage(Flags)
 		, BlueprintCallback(PostEventCallback)
 	{}
 
 	virtual void HandleAction(AkCallbackType in_eType, AkCallbackInfo* in_pCallbackInfo) override;
-	virtual void CancelCallback() override;
 
 private:
 	FOnAkPostEventCallback BlueprintCallback;
@@ -67,8 +61,8 @@ private:
 class FAkLatentActionEventCallbackPackage : public IAkUserEventCallbackPackage
 {
 public:
-	FAkLatentActionEventCallbackPackage(FWaitEndOfEventAction* LatentAction, uint32 in_Hash)
-		: IAkUserEventCallbackPackage(AK_EndOfEvent, in_Hash)
+	FAkLatentActionEventCallbackPackage(FWaitEndOfEventAction* LatentAction)
+		: IAkUserEventCallbackPackage(AK_EndOfEvent)
 		, EndOfEventLatentAction(LatentAction)
 	{}
 
@@ -96,9 +90,6 @@ public:
 	IAkUserEventCallbackPackage* CreateCallbackPackage(FWaitEndOfEventAction* LatentAction, AkGameObjectID in_gameObjID);
 	void RemoveCallbackPackage(IAkUserEventCallbackPackage* in_Package, AkGameObjectID in_gameObjID);
 
-	void CancelEventCallback(void* in_Cookie);
-	void CancelEventCallback(const FOnAkPostEventCallback& in_Delegate);
-
 	void RegisterGameObject(AkGameObjectID in_gameObjID);
 	void UnregisterGameObject(AkGameObjectID in_gameObjID);
 
@@ -113,11 +104,4 @@ private:
 
 	typedef AkGameObjectIdKeyFuncs<PackageSet, false> PackageSetGameObjectIDKeyFuncs;
 	TMap<AkGameObjectID, PackageSet, FDefaultSetAllocator, PackageSetGameObjectIDKeyFuncs> GameObjectToPackagesMap;
-
-	// Used for quick lookup in cancel
-	uint32 inline GetKeyHash(void* Key);
-	uint32 inline GetKeyHash(const FOnAkPostEventCallback& Key);
-
-	void CancelKeyHash(uint32 HashToCancel);
-	TMultiMap<uint32, IAkUserEventCallbackPackage*> UserCookieHashToPackageMap;
 };

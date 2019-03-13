@@ -185,9 +185,14 @@ void AAkAcousticPortal::TickActor(float DeltaTime, enum ELevelTick TickType, FAc
 			if (Listener != nullptr)
 			{
 				AkRoomID listenerRoom = Listener->GetSpatialAudioRoom();
-				UAkComponentSet set;
-				set.Add(Listener);
-				ObstructionService.Tick(set, GetActorLocation(), this, listenerRoom, ObstructionCollisionChannel, DeltaTime, ObstructionRefreshInterval);
+				if (listenerRoom == BackRoom || listenerRoom == FrontRoom)
+				{
+					UAkComponentSet set;
+					set.Add(Listener);
+					ObstructionService.Tick(set, GetActorLocation(), this, listenerRoom, ObstructionCollisionChannel, DeltaTime, ObstructionRefreshInterval);
+				}
+				else
+					ObstructionService.ClearOcclusionValues();
 			}
 		}
 	}

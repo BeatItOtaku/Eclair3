@@ -39,12 +39,6 @@ void FAkFunctionPtrEventCallbackPackage::HandleAction(AkCallbackType in_eType, A
 	}
 }
 
-void FAkFunctionPtrEventCallbackPackage::CancelCallback()
-{
-	pfnUserCallback = nullptr;
-	uUserFlags = 0;
-}
-
 void FAkBlueprintDelegateEventCallbackPackage::HandleAction(AkCallbackType in_eType, AkCallbackInfo* in_pCallbackInfo)
 {
 	if (BlueprintCallback.IsBound())
@@ -57,12 +51,6 @@ void FAkBlueprintDelegateEventCallbackPackage::HandleAction(AkCallbackType in_eT
 			CachedBlueprintCallback.ExecuteIfBound(BlueprintCallbackType, CachedAkCallbackInfo);
 		});
 	}
-}
-
-void FAkBlueprintDelegateEventCallbackPackage::CancelCallback()
-{
-	BlueprintCallback.Clear();
-	uUserFlags = 0;
 }
 
 void FAkLatentActionEventCallbackPackage::HandleAction(AkCallbackType in_eType, AkCallbackInfo* in_pCallbackInfo)
@@ -92,16 +80,15 @@ void FAkComponentCallbackManager::AkComponentCallback(AkCallbackType in_eType, A
 			}
 		}
 
-		if ((pPackage->uUserFlags & in_eType) != 0)
+		if((pPackage->uUserFlags & in_eType) != 0)
 		{
 			pPackage->HandleAction(in_eType, in_pCallbackInfo);
 		}
 
 		if (deletePackage)
-		{
 			delete pPackage;
-		}
 	}
+
 }
 
 FAkComponentCallbackManager::FAkComponentCallbackManager()
@@ -117,25 +104,19 @@ FAkComponentCallbackManager::FAkComponentCallbackManager()
 FAkComponentCallbackManager::~FAkComponentCallbackManager()
 {
 	for (auto& Item : GameObjectToPackagesMap)
-	{
 		for (auto pPackage : Item.Value)
-		{
 			delete pPackage;
-		}
-	}
 
 	Instance = nullptr;
 }
 
 IAkUserEventCallbackPackage* FAkComponentCallbackManager::CreateCallbackPackage(AkCallbackFunc in_cbFunc, void* in_Cookie, uint32 in_Flags, AkGameObjectID in_gameObjID)
 {
-	uint32 KeyHash = GetKeyHash(in_Cookie);
-	auto pPackage = new FAkFunctionPtrEventCallbackPackage(in_cbFunc, in_Cookie, in_Flags, KeyHash);
+	auto pPackage = new FAkFunctionPtrEventCallbackPackage(in_cbFunc, in_Cookie, in_Flags);
 	if (pPackage)
 	{
 		FScopeLock Lock(&CriticalSection);
 		GameObjectToPackagesMap.FindOrAdd(in_gameObjID).Add(pPackage);
-		UserCookieHashToPackageMap.Add(KeyHash, pPackage);
 	}
 
 	return pPackage;
@@ -143,13 +124,11 @@ IAkUserEventCallbackPackage* FAkComponentCallbackManager::CreateCallbackPackage(
 
 IAkUserEventCallbackPackage* FAkComponentCallbackManager::CreateCallbackPackage(FOnAkPostEventCallback BlueprintCallback, uint32 in_Flags, AkGameObjectID in_gameObjID)
 {
-	uint32 KeyHash = GetKeyHash(BlueprintCallback);
-	auto pPackage = new FAkBlueprintDelegateEventCallbackPackage(BlueprintCallback, in_Flags, KeyHash);
+	auto pPackage = new FAkBlueprintDelegateEventCallbackPackage(BlueprintCallback, in_Flags);
 	if (pPackage)
 	{
 		FScopeLock Lock(&CriticalSection);
 		GameObjectToPackagesMap.FindOrAdd(in_gameObjID).Add(pPackage);
-		UserCookieHashToPackageMap.Add(KeyHash, pPackage);
 	}
 
 	return pPackage;
@@ -157,7 +136,7 @@ IAkUserEventCallbackPackage* FAkComponentCallbackManager::CreateCallbackPackage(
 
 IAkUserEventCallbackPackage* FAkComponentCallbackManager::CreateCallbackPackage(FWaitEndOfEventAction* LatentAction, AkGameObjectID in_gameObjID)
 {
-	auto pPackage = new FAkLatentActionEventCallbackPackage(LatentAction, 0);
+	auto pPackage = new FAkLatentActionEventCallbackPackage(LatentAction);
 	if (pPackage)
 	{
 		FScopeLock Lock(&CriticalSection);
@@ -173,38 +152,10 @@ void FAkComponentCallbackManager::RemoveCallbackPackage(IAkUserEventCallbackPack
 		FScopeLock Lock(&CriticalSection);
 		auto pPackageSet = GameObjectToPackagesMap.Find(in_gameObjID);
 		if (pPackageSet)
-		{
 			RemovePackageFromSet(pPackageSet, in_Package, in_gameObjID);
-		}
 	}
 
 	delete in_Package;
-}
-
-void FAkComponentCallbackManager::CancelEventCallback(void* in_Cookie)
-{
-	CancelKeyHash(GetKeyHash(in_Cookie));
-}
-
-void FAkComponentCallbackManager::CancelEventCallback(const FOnAkPostEventCallback& in_Delegate)
-{
-	CancelKeyHash(GetKeyHash(in_Delegate));
-}
-
-void FAkComponentCallbackManager::CancelKeyHash(uint32 HashToCancel)
-{
-	FScopeLock AutoLock(&CriticalSection);
-
-	TArray<IAkUserEventCallbackPackage*> PackagesToCancel;
-	UserCookieHashToPackageMap.MultiFind(HashToCancel, PackagesToCancel);
-
-	for (auto iter = PackagesToCancel.CreateConstIterator(); iter; ++iter)
-	{
-		if (*iter)
-		{
-			(*iter)->CancelCallback();
-		}
-	}
 }
 
 void FAkComponentCallbackManager::RegisterGameObject(AkGameObjectID in_gameObjID)
@@ -226,10 +177,7 @@ void FAkComponentCallbackManager::UnregisterGameObject(AkGameObjectID in_gameObj
 	if (pPackageSet)
 	{
 		for (auto pPackage : *pPackageSet)
-		{
-			UserCookieHashToPackageMap.Remove(pPackage->KeyHash, pPackage);
 			delete pPackage;
-		}
 
 		GameObjectToPackagesMap.Remove(in_gameObjID);
 	}
@@ -244,25 +192,10 @@ bool FAkComponentCallbackManager::HasActiveEvents(AkGameObjectID in_gameObjID)
 
 void FAkComponentCallbackManager::RemovePackageFromSet(FAkComponentCallbackManager::PackageSet* in_pPackageSet, IAkUserEventCallbackPackage* in_pPackage, AkGameObjectID in_gameObjID)
 {
-	// No need for a lock here because those calling this function are already locking
 	in_pPackageSet->Remove(in_pPackage);
-	UserCookieHashToPackageMap.Remove(in_pPackage->KeyHash, in_pPackage);
 	if (FAkComponentCallbackManager_Constants::Optimize::Value == FAkComponentCallbackManager_Constants::Optimize::MemoryUsage)
 	{
 		if (in_pPackageSet->Num() == 0)
-		{
 			GameObjectToPackagesMap.Remove(in_gameObjID);
-		}
 	}
 }
-
-uint32 FAkComponentCallbackManager::GetKeyHash(void* Key)
-{
-	return GetTypeHash(Key);
-}
-
-uint32 FAkComponentCallbackManager::GetKeyHash(const FOnAkPostEventCallback& Key)
-{
-	return HashCombine(GetTypeHash(Key.GetUObject()), GetTypeHash(Key.GetFunctionName()));
-}
-

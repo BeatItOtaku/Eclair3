@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Bolt" ID="{537014C9-A9F8-4793-8CA8-4A9CFDC4624A}" ShortID="715729533">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="8600"/>
+						<Property Name="RadiusMax" Type="Real64" Value="8000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,7 +21,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>8600</XPos>
+											<XPos>8000</XPos>
 											<YPos>-12.18477</YPos>
 											<Flags>37</Flags>
 										</Point>

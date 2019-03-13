@@ -153,24 +153,22 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 	void VerifyAkSettings()
 	{
 		UAkSettings* AkSettings = GetMutableDefault<UAkSettings>();
-		UAkSettingsPerUser* AkSettingsPerUser = GetMutableDefault<UAkSettingsPerUser>();
-
-		if (AkSettings && AkSettingsPerUser)
+		if (AkSettings)
 		{
 			if (AkSettings->WwiseProjectPath.FilePath.IsEmpty())
 			{
-				if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
-				{
+				if (!AkSettings->SuppressWwiseProjectPathWarnings)
+			{
 					if (EAppReturnType::Yes == FMessageDialog::Open(EAppMsgType::YesNo, LOCTEXT("SettingsNotSet", "Wwise settings do not seem to be set. Would you like to open the settings window to set them?")))
 					{
 						FModuleManager::LoadModuleChecked<ISettingsModule>("Settings").ShowViewer(FName("Project"), FName("Plugins"), FName("Wwise"));
-					}
+			}
 				}
 				else
-				{
+			{
 					UE_LOG(LogAudiokineticTools, Log, TEXT("Wwise project not found. The Wwise picker will not be usable."));
-				}
 			}
+		}
 			else
 			{
 				// First-time plugin migration: Project might be relative to Engine path. Fix-up the path to make it relative to the game.
@@ -183,9 +181,9 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 				FString FullGameDir = FPaths::ConvertRelativePathToFull(ProjectDir);
 				FString TempPath = FPaths::ConvertRelativePathToFull(FullGameDir, AkSettings->WwiseProjectPath.FilePath);
 				if (!FPaths::FileExists(TempPath))
-				{
-					if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
-					{
+		{
+					if (!AkSettings->SuppressWwiseProjectPathWarnings)
+		{
 						TSharedPtr<SWindow> Dialog = SNew(SWindow)
 							.Title(LOCTEXT("ResetWwisePath", "Re-set Wwise Path"))
 							.SupportsMaximize(false)
@@ -217,7 +215,7 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 								SNew(SCheckBox)
 								.Padding(FMargin(6.0, 2.0))
 							.OnCheckStateChanged_Lambda([&](ECheckBoxState DontAskState) {
-							AkSettingsPerUser->SuppressWwiseProjectPathWarnings = (DontAskState == ECheckBoxState::Checked);
+							AkSettings->SuppressWwiseProjectPathWarnings = (DontAskState == ECheckBoxState::Checked);
 						})
 							[
 								SNew(STextBlock)
@@ -264,26 +262,26 @@ class FAudiokineticToolsModule : public IAudiokineticTools
 						FSlateApplication::Get().AddModalWindow(Dialog.ToSharedRef(), nullptr);
 					}
 					else
-					{
+			{
 						UE_LOG(LogAudiokineticTools, Log, TEXT("Wwise project not found. The Wwise picker will not be usable."));
-					}
-				}
+			}
+		}
 				else
-				{
+		{
 					FPaths::MakePathRelativeTo(TempPath, *ProjectDir);
 					AkSettings->WwiseProjectPath.FilePath = TempPath;
 					AkSettings->UpdateDefaultConfigFile();
-				}
+			}
 			}
 		}
 
 		if (GUnrealEd != NULL)
-		{
+			{
 			GUnrealEd->RegisterComponentVisualizer(UAkComponent::StaticClass()->GetFName(), MakeShareable(new FAkComponentVisualizer));
 			GUnrealEd->RegisterComponentVisualizer(UAkSurfaceReflectorSetComponent::StaticClass()->GetFName(), MakeShareable(new FAkSurfaceReflectorSetComponentVisualizer));
 			GUnrealEd->RegisterComponentVisualizer(UAkPortalComponent::StaticClass()->GetFName(), MakeShareable(new UAkPortalComponentVisualizer));
+			}
 		}
-	}
 
 	EAssetTypeCategories::Type AudiokineticAssetCategoryBit;
 
@@ -506,16 +504,10 @@ private:
 	{
 		if (ISettingsModule* SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
 		{
-			SettingsModule->RegisterSettings("Project", "Wwise", "Game Settings",
-				LOCTEXT("WwiseRuntimeSettingsName", "Wwise Game Settings"),
-				LOCTEXT("WwiseRuntimeSettingsDescription", "Configure the Wwise Integration"),
+			SettingsModule->RegisterSettings("Project", "Plugins", "Wwise",
+				LOCTEXT("RuntimeSettingsName", "Wwise"),
+				LOCTEXT("RuntimeSettingsDescription", "Configure the Wwise Integration"),
 				GetMutableDefault<UAkSettings>()
-				);
-
-			SettingsModule->RegisterSettings("Project", "Wwise", "User Settings",
-				LOCTEXT("WwiseRuntimePerUserSettingsName", "Wwise User Settings"),
-				LOCTEXT("WwiseRuntimePerUserSettingsDescription", "Configure the Wwise Integration per user"),
-				GetMutableDefault<UAkSettingsPerUser>()
 				);
 		}
 	}
@@ -553,16 +545,15 @@ private:
 
 IMPLEMENT_MODULE( FAudiokineticToolsModule, AudiokineticTools );
 
+
 void VerifyAkSettings()
 {
 	UAkSettings* AkSettings = GetMutableDefault<UAkSettings>();
-	UAkSettingsPerUser* AkSettingsPerUser = GetMutableDefault<UAkSettingsPerUser>();
-
-	if( AkSettings && AkSettingsPerUser )
+	if( AkSettings )
 	{
 		if (AkSettings->WwiseProjectPath.FilePath.IsEmpty())
 		{
-			if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
+			if (!AkSettings->SuppressWwiseProjectPathWarnings)
 			{
 				if (EAppReturnType::Yes == FMessageDialog::Open(EAppMsgType::YesNo, LOCTEXT("SettingsNotSet", "Wwise settings do not seem to be set. Would you like to open the settings window to set them?")))
 				{
@@ -587,7 +578,7 @@ void VerifyAkSettings()
 			FString TempPath = FPaths::ConvertRelativePathToFull(FullGameDir, AkSettings->WwiseProjectPath.FilePath);
 			if (!FPaths::FileExists(TempPath))
 			{
-				if (!AkSettingsPerUser->SuppressWwiseProjectPathWarnings)
+				if (!AkSettings->SuppressWwiseProjectPathWarnings)
 				{
 					TSharedPtr<SWindow> Dialog = SNew(SWindow)
 						.Title(LOCTEXT("ResetWwisePath", "Re-set Wwise Path"))
@@ -620,7 +611,7 @@ void VerifyAkSettings()
 							SNew(SCheckBox)
 							.Padding(FMargin(6.0, 2.0))
 							.OnCheckStateChanged_Lambda([&](ECheckBoxState DontAskState) {
-								AkSettingsPerUser->SuppressWwiseProjectPathWarnings = (DontAskState == ECheckBoxState::Checked);
+								AkSettings->SuppressWwiseProjectPathWarnings = (DontAskState == ECheckBoxState::Checked);
 							})
 							[
 								SNew(STextBlock)
@@ -685,6 +676,7 @@ void VerifyAkSettings()
 		GUnrealEd->RegisterComponentVisualizer(UAkComponent::StaticClass()->GetFName(), MakeShareable(new FAkComponentVisualizer));
 		GUnrealEd->RegisterComponentVisualizer(UAkSurfaceReflectorSetComponent::StaticClass()->GetFName(), MakeShareable(new FAkSurfaceReflectorSetComponentVisualizer));
 	}
+
 }
 
 #undef LOCTEXT_NAMESPACE

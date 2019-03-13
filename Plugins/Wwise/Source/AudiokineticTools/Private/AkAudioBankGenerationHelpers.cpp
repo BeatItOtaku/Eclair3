@@ -16,9 +16,6 @@
 #include "Misc/FileHelper.h"
 #include "Framework/Application/SlateApplication.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
-#include "Interfaces/IProjectManager.h"
-#include "ProjectDescriptor.h"
-
 
 #define LOCTEXT_NAMESPACE "AkAudio"
 
@@ -38,16 +35,16 @@ FString WwiseBnkGenHelper::GetProjectDirectory()
 
 FString GetWwiseApplicationPath()
 {
-	const UAkSettingsPerUser* AkSettingsPerUser = GetDefault<UAkSettingsPerUser>();
+	const UAkSettings* AkSettings = GetDefault<UAkSettings>();
 	FString ApplicationToRun;
 	ApplicationToRun.Empty();
 
-	if( AkSettingsPerUser )
+	if( AkSettings )
 	{
 #if PLATFORM_WINDOWS
-		ApplicationToRun = AkSettingsPerUser->WwiseWindowsInstallationPath.Path;
+		ApplicationToRun = AkSettings->WwiseWindowsInstallationPath.Path;
 #else
-        ApplicationToRun = AkSettingsPerUser->WwiseMacInstallationPath.FilePath;
+        ApplicationToRun = AkSettings->WwiseMacInstallationPath.FilePath;
 #endif
 		if (FPaths::IsRelative(ApplicationToRun))
 		{
@@ -130,7 +127,7 @@ int32 RunWwiseBlockingProcess( const TCHAR* Parms, const FString* WwisePathOverr
             NewLine = FPlatformProcess::ReadPipe(ReadPipe);
             if (NewLine.Len() > 0)
             {
-                UE_LOG(LogAk, Display, TEXT("%s"), *NewLine);
+                UE_LOG(LogAk, Log, TEXT("%s"), *NewLine);
                 NewLine.Empty();
             }
             FPlatformProcess::Sleep(0.25f);
@@ -139,7 +136,7 @@ int32 RunWwiseBlockingProcess( const TCHAR* Parms, const FString* WwisePathOverr
         NewLine = FPlatformProcess::ReadPipe(ReadPipe);
         if (NewLine.Len() > 0)
         {
-            UE_LOG(LogAk, Display, TEXT("%s"), *NewLine);
+            UE_LOG(LogAk, Log, TEXT("%s"), *NewLine);
         }
         
         FPlatformProcess::GetProcReturnCode(ProcHandle, &ReturnCode);
@@ -150,7 +147,7 @@ int32 RunWwiseBlockingProcess( const TCHAR* Parms, const FString* WwisePathOverr
                 UE_LOG( LogAk, Warning, TEXT("Wwise command-line completed with warnings.") );
                 break;
             case 0:
-                UE_LOG( LogAk, Display, TEXT("Wwise command-line successfully completed.") );
+                UE_LOG( LogAk, Log, TEXT("Wwise command-line successfully completed.") );
                 break; 
             default: 
                 UE_LOG( LogAk, Error, TEXT("Wwise command-line failed with error %d."), ReturnCode );
@@ -352,11 +349,6 @@ int32 WwiseBnkGenHelper::GenerateSoundBanks( TArray< TSharedPtr<FString> >& in_r
 		//
 
 		// Generating for all asked platforms.
-		if (in_PlatformNames.Num() == 0)
-		{
-			GetWwisePlatforms(in_PlatformNames);
-		}
-
 		for(int32 PlatformIdx = 0; PlatformIdx < in_PlatformNames.Num(); PlatformIdx++)
 		{
             FString BankPath = WwiseBnkGenHelper::GetBankGenerationFullDirectory( **in_PlatformNames[PlatformIdx] );
@@ -453,38 +445,6 @@ private:
 	IPlatformFile& PlatformFile;
 	FFileStatData StatData;
 };
-
-void WwiseBnkGenHelper::AddPlatformIfSupported(const TSet<FString>& SupportedPlatforms, const FString& UnrealName, const TCHAR* WwiseName, TArray< TSharedPtr<FString> >& WwisePlatforms)
-{
-	if (SupportedPlatforms.Num() == 0 || SupportedPlatforms.Contains(UnrealName))
-	{
-		WwisePlatforms.Add(TSharedPtr<FString>(new FString(WwiseName)));
-	}
-}
-
-void WwiseBnkGenHelper::GetWwisePlatforms(TArray< TSharedPtr<FString> >& WwisePlatforms)
-{
-	IProjectManager& ProjectManager = IProjectManager::Get();
-	TSet<FString> SupportedPlatforms;
-	for (FName TargetPlatform : ProjectManager.GetCurrentProject()->TargetPlatforms)
-	{
-		SupportedPlatforms.Add(TargetPlatform.ToString());
-	}
-	WwisePlatforms.Empty();
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("Android"), TEXT("Android"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("IOS"), TEXT("IOS"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("LinuxNoEditor"), TEXT("Linux"), WwisePlatforms);
-#if UE_4_20_OR_LATER
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("Lumin"), TEXT("Lumin"), WwisePlatforms);
-#endif
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("MacNoEditor"), TEXT("Mac"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("PS4"), TEXT("PS4"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("WindowsNoEditor"), TEXT("Windows"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("XboxOne"), TEXT("XboxOne"), WwisePlatforms);
-	AddPlatformIfSupported(SupportedPlatforms, TEXT("Switch"), TEXT("Switch"), WwisePlatforms);
-}
-
-
 
 bool WwiseBnkGenHelper::FetchAttenuationInfo(const TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet)
 {

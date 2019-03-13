@@ -5,7 +5,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	560349346	Door_Big			\SE\Chapter1\Door_Big	
 	645565787	Punch			\SE\Brioche\Punch	
 	705685643	StrikingGround			\SE\Brioche\StrikingGround	
-	1324340420	Piano			\Default Work Unit\Chapter1\Piano	
 	1560169506	Boss			\Default Work Unit\Chapter1\Boss	
 	1877847629	Door			\SE\Chapter1\Door	
 	2009975021	FootSteps_BB			\SE\Brioche\FootSteps_BB	
@@ -24,25 +23,24 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
-	912960626	Extreme_Limiting_1 (Custom)	Wwise Peak Limiter			
 	1069874549	Hall_Guns (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	69387691	1-piano	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\1-piano_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Piano\Piano\1-piano		267120
-	77356971	Haikou	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\1-haikou-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		878566
-	105590707	Boss	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\1-boss_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		987722
-	150500008	Punch	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Punch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8228
-	182787609	StrikingGround	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\StrikingGround_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		10247
-	220151601	BeforeFrameThrower	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BeforeFrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		8771
-	238159724	Down	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Down_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		50682
-	263033532	PillarOfFire	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		25347
-	347520258	Default	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\1-default-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		949418
-	396469845	Rush2	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Rush2_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		41922
-	430322998	Rush	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Rush_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		24016
-	486635016	Empty	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Empty_CB1F3167.wem		\Actor-Mixer Hierarchy\Default Work Unit\Empty		17104
-	706389692	FootSteps_BB	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_BB_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FootSteps_BB		7344
-	817075413	Door-Big	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Door-Big_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		120920
-	889719873	Door	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Door_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		80658
-	902868209	FlameThrower	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		66624
-	993556319	PillarOfFire_Jiware	Z:\Volumes\AudioLib\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_Jiware_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		120403
+	69387691	1-piano	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1-piano_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Piano\1-piano		267120
+	77356971	Haikou	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1-haikou-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		878566
+	105590707	Boss	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1-boss_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		987722
+	150500008	Punch	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Punch_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8228
+	182787609	StrikingGround	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\StrikingGround_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		10247
+	220151601	BeforeFrameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\BeforeFrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		8771
+	238159724	Down	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Down_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		50682
+	263033532	PillarOfFire	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		25347
+	347520258	Default	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\1-default-1_CB1F3167.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		949418
+	396469845	Rush2	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Rush2_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		41922
+	430322998	Rush	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Rush_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		24016
+	486635016	Empty	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Empty_CB1F3167.wem		\Actor-Mixer Hierarchy\Default Work Unit\Empty		17104
+	706389692	FootSteps_BB	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_BB_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FootSteps_BB		7344
+	817075413	Door-Big	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door-Big_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		120920
+	889719873	Door	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\Door_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		80658
+	902868209	FlameThrower	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\FrameThrower_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		66624
+	993556319	PillarOfFire_Jiware	D:\data\Documents\Unreal Projects\Eclair\Eclair_WwiseProject\.cache\Mac\SFX\PillarOfFire_Jiware_A1793BE9.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		120403
 

@@ -160,8 +160,8 @@ public:
 
     /** Sets in_outParentGUID to the object ID of a parent of object in_objectGUID of type in_strType. */
     static void GetParentOfType(FGuid in_objectGUID, FGuid& in_outParentGUID, FString in_strType);
-    /** Gets the path of the currently loaded project in Wwise Authoring. */
-    static bool GetProjectPath(TSharedPtr<FJsonObject>& inOutJsonReslut, FString& ProjectPath);
+    /** Returns the path of the Wwise project as defined in AkSettings (WWise Plugin Settings). */
+    static FString GetProjectPath(TSharedPtr<FJsonObject>& inOutJsonReslut);
 
 
     WwiseProjectLoaded OnProjectLoaded;

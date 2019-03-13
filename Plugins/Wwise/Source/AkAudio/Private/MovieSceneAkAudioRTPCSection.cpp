@@ -95,6 +95,14 @@ void UMovieSceneAkAudioRTPCSection::PostLoad()
 	FloatChannelSerializationHelper.ToFloatChannel(RTPCChannel);
 }
 
+void UMovieSceneAkAudioRTPCSection::Serialize(FArchive& Ar)
+{
+	FloatChannelSerializationHelper = RTPCChannel;
+	Super::Serialize(Ar);
+
+	Ar.UsingCustomVersion(FAkCustomVersion::GUID);
+}
+
 #else
 
 void UMovieSceneAkAudioRTPCSection::MoveSection(float DeltaPosition, TSet<FKeyHandle>& KeyHandles)
@@ -172,17 +180,6 @@ void UMovieSceneAkAudioRTPCSection::ClearDefaults()
 	FloatCurve.ClearDefaultValue();
 }
 #endif // UE_4_20_OR_LATER
-
-void UMovieSceneAkAudioRTPCSection::Serialize(FArchive& Ar)
-{
-#if UE_4_20_OR_LATER
-	FloatChannelSerializationHelper = RTPCChannel;
-	Ar.UsingCustomVersion(FAkCustomVersion::GUID);
-#endif
-	Super::Serialize(Ar);
-}
-
-
 
 #if WITH_EDITOR
 void UMovieSceneAkAudioRTPCSection::PreEditChange(UProperty* PropertyAboutToChange)

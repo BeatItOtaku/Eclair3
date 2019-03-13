@@ -30,8 +30,8 @@ class AKAUDIO_API UMovieSceneAkAudioRTPCSection
 	UMovieSceneAkAudioRTPCSection(const FObjectInitializer& Init);
 #if UE_4_20_OR_LATER
 	virtual void PostLoad() override;
-#endif
 	virtual void Serialize(FArchive& Ar) override;
+#endif
 
 public:
 #if UE_4_20_OR_LATER

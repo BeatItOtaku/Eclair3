@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.4  Build: 6807
+  Version: v2018.1.1  Build: 6727
   Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -3310,9 +3310,9 @@ namespace AK
 			AkMeteringFlags in_eMeteringFlags			///< Metering flags.
 			);
 
-		/// Sets the Output Bus Volume (direct) to be used for the specified game object.
+		/// Sets the output bus volume (direct) to be used for the specified game object.
 		/// The control value is a number ranging from 0.0f to 1.0f.
-		/// Output Bus Volumes are stored per listener association, so calling this function will override the default set of listeners. The game object in_emitterObjID will now reference its own set of listeners which will 
+		/// Output bus volumes are stored per listener association, so calling this function will override the default set of listeners. The game object in_emitterObjID will now reference its own set of listeners which will 
 		/// be the same as the old set of listeners, but with the new associated gain.  Future changes to the default listener set will not be picked up by this game object unless ResetListenersToDefault() is called.
 		/// \sa 
 		/// - \ref AK::SoundEngine::ResetListenersToDefault
@@ -3322,7 +3322,7 @@ namespace AK
 		/// \return Always returns AK_Success
 		AK_EXTERNAPIFUNC( AKRESULT, SetGameObjectOutputBusVolume )( 
 			AkGameObjectID		in_emitterObjID,		///< Associated emitter game object ID
-			AkGameObjectID		in_listenerObjID,		///< Associated listener game object ID. Pass AK_INVALID_GAME_OBJECT to set the Output Bus Volume for all connected listeners.
+			AkGameObjectID		in_listenerObjID,		///< Associated listener game object ID
 			AkReal32			in_fControlValue		///< A multiplier where 0 means silence and 1 means no change. 
 														///< (Therefore, values between 0 and 1 will attenuate the sound, and values greater than 1 will amplify it.)
 			);

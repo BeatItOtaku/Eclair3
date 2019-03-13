@@ -25,10 +25,6 @@ namespace WwiseBnkGenHelper
 	 * @param in_bImportDefinitionFile	Use an import definition file
 	 */
 	AUDIOKINETICTOOLS_API int32 GenerateSoundBanks( TArray< TSharedPtr<FString> >& in_rBankNames, TArray< TSharedPtr<FString> >& in_PlatformNames, const FString* WwisePathOverride = nullptr);
-
-	AUDIOKINETICTOOLS_API void GetWwisePlatforms(TArray< TSharedPtr<FString> >& WwisePlatforms);
-	void AddPlatformIfSupported(const TSet<FString>& SupportedPlatforms, const FString& UnrealName, const TCHAR* WwiseName, TArray< TSharedPtr<FString> >& WwisePlatforms);
-
 	AUDIOKINETICTOOLS_API bool FetchAttenuationInfo(const TMap<FString, TSet<UAkAudioEvent*> >& BankToEventSet);
 
 	void CreateGenerateSoundBankWindow(TArray<TWeakObjectPtr<UAkAudioBank>>* pSoundBanks, bool in_bShouldSaveWwiseProject);

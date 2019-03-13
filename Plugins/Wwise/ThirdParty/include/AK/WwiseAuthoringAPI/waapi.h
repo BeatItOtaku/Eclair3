@@ -1,3 +1,29 @@
+/*******************************************************************************
+The content of this file includes portions of the AUDIOKINETIC Wwise Technology
+released in source code form as part of the SDK installer package.
+
+Commercial License Usage
+
+Licensees holding valid commercial licenses to the AUDIOKINETIC Wwise Technology
+may use this file in accordance with the end user license agreement provided 
+with the software or, alternatively, in accordance with the terms contained in a
+written agreement between you and Audiokinetic Inc.
+
+Apache License Usage
+
+Alternatively, this file may be used under the Apache License, Version 2.0 (the 
+"Apache License"); you may not use this file except in compliance with the 
+Apache License. You may obtain a copy of the Apache License at 
+http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
+the specific language governing permissions and limitations under the License.
+
+  Version: v2018.1.1  Build: 6727
+  Copyright (c) 2006-2018 Audiokinetic Inc.
+*******************************************************************************/
 namespace ak {
     namespace soundengine {
         // Set multiple positions for a single game object. Setting multiple positions for a single game object is a way to simulate multiple emission sources while using the resources of only one voice. This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area. See <tt>AK::SoundEngine::SetMultiplePositions</tt>.
@@ -49,7 +75,7 @@ namespace ak {
             static const char* testAssert =  "ak.wwise.debug.testAssert"; 
             // Sent when an assert has failed.
             static const char* assertFailed =  "ak.wwise.debug.assertFailed"; 
-            // Enable or disable the automation mode for Wwise. This reduces the potential interruptions caused by message boxes and dialogs. For instance, enabling the automation mode silently accepts: project migration, project load log, EULA acceptance, project licence display and generic message boxes.
+            // Set the automation mode for Wwise. This reduces the potential interruptions caused by message box and dialogs.
             static const char* enableAutomationMode =  "ak.wwise.debug.enableAutomationMode"; 
             // Enables debug assertions. Every call to enableAsserts with false increments the ref count. Calling with true will decrement the ref count. This is only available with Debug builds.
             static const char* enableAsserts =  "ak.wwise.debug.enableAsserts";
@@ -126,17 +152,14 @@ namespace ak {
                 static const char* created =  "ak.wwise.core.object.created"; 
                 // Sent when an object is removed from the children of another object.
                 static const char* childRemoved =  "ak.wwise.core.object.childRemoved"; 
-                // Retrieves the list of property and reference names for an object.
-                // \deprecated in favor of ak.wwise.core.object.getPropertyAndReferenceNames
+                // Retrieves the list of property names for an object.
                 static const char* getPropertyNames =  "ak.wwise.core.object.getPropertyNames"; 
                 // Gets the specified attenuation curve for a given attenuation object.
                 static const char* getAttenuationCurve =  "ak.wwise.core.object.getAttenuationCurve"; 
                 // Sent when one or many curves are changed.
                 static const char* curveChanged =  "ak.wwise.core.object.curveChanged"; 
                 // Deletes the specified object.
-                static const char* delete_ =  "ak.wwise.core.object.delete"; 
-                // Retrieves the list of property and reference names for an object.
-                static const char* getPropertyAndReferenceNames =  "ak.wwise.core.object.getPropertyAndReferenceNames";
+                static const char* delete_ =  "ak.wwise.core.object.delete";
             } 
             namespace undo {
                 // Ends the last undo group.
@@ -149,14 +172,12 @@ namespace ak {
             namespace project {
                 // Sent when the after the project is completely closed.
                 static const char* postClosed =  "ak.wwise.core.project.postClosed"; 
-                // Sent when the project has been successfully loaded.
+                // Sent when the project has been loaded.
                 static const char* loaded =  "ak.wwise.core.project.loaded"; 
                 // Sent when the project begins closing.
                 static const char* preClosed =  "ak.wwise.core.project.preClosed"; 
                 // Saves the current project.
-                static const char* save =  "ak.wwise.core.project.save"; 
-                // Sent when the project has been saved.
-                static const char* saved =  "ak.wwise.core.project.saved";
+                static const char* save =  "ak.wwise.core.project.save";
             } 
             namespace transport {
                 // Gets the state of the given transport object.
@@ -181,7 +202,7 @@ namespace ak {
                 static const char* setInclusions =  "ak.wwise.core.soundbank.setInclusions";
             } 
             namespace audio {
-                // Create Wwise objects and import audio files. This function is using the same importation processor available through the Tab Delimited import in the Audio File Importer. See \ref ak_wwise_core_audio_importtabdelimited. The function returns an array of all objects created, replaced or re-used. Use the options to specify how the objects are returned.
+                // Scripted object creation and audio file import. The contents of this command very closely mirror that of a tab-delimited import file. See \ref ak_wwise_core_audio_importtabdelimited.
                 static const char* import =  "ak.wwise.core.audio.import"; 
                 // Scripted object creation and audio file import from a tab-delimited file.
                 static const char* importTabDelimited =  "ak.wwise.core.audio.importTabDelimited";
@@ -205,8 +226,8 @@ namespace ak {
                 // Retrieves information about an object property.
                 // \deprecated in favor of ak.wwise.core.object.getPropertyInfo
                 static const char* getProperty =  "ak.wwise.core.plugin.getProperty"; 
-                // Retrieves the list of property and reference names for an object.
-                // \deprecated in favor of ak.wwise.core.object.getPropertyAndReferenceNames
+                // Retrieves the list of property names for an object.
+                // \deprecated in favor of ak.wwise.core.object.getPropertyNames
                 static const char* getProperties =  "ak.wwise.core.plugin.getProperties";
             }
         } 
@@ -214,20 +235,14 @@ namespace ak {
             namespace project {
                 // Closes the current project.
                 static const char* close =  "ak.wwise.ui.project.close"; 
-                // Opens a project, specified by path. Please refer to \ref ak_wwise_core_project_loaded for further explanations on how to be notified when the operation has completed.
+                // Opens a project, specified by path.
                 static const char* open =  "ak.wwise.ui.project.open";
             } 
             // Bring Wwise main window to foreground. Refer to SetForegroundWindow and AllowSetForegroundWindow on MSDN for more information on the restrictions. Refer to ak.wwise.core.getInfo to obtain the Wwise process ID for AllowSetForegroundWindow.
             static const char* bringToForeground =  "ak.wwise.ui.bringToForeground"; 
             namespace commands {
-                // Unregister an array of add-on UI commands.
-                static const char* unregister =  "ak.wwise.ui.commands.unregister"; 
-                // Sent when a command is executed. The objects for which the command is executed are sent in the publication.
-                static const char* executed =  "ak.wwise.ui.commands.executed"; 
                 // Executes a command. Some commands can take a list of objects as parameter. Refer to \ref globalcommandsids for the available commands.
                 static const char* execute =  "ak.wwise.ui.commands.execute"; 
-                // Register an array of add-on UI commands.
-                static const char* register_ =  "ak.wwise.ui.commands.register"; 
                 // Get the list of commands.
                 static const char* getCommands =  "ak.wwise.ui.commands.getCommands";
             } 

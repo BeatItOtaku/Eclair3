@@ -9,16 +9,7 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine",
-				"CoreUObject"
-			]
-		},
-		{
-			"Name": "EclairEd",
-			"Type": "Editor",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
+				"Engine"
 			]
 		}
 	],
@@ -31,11 +22,5 @@
 			"Name": "SteamVR",
 			"Enabled": false
 		}
-	],
-	"TargetPlatforms": [
-		"AllDesktop",
-		"WindowsNoEditor",
-		"MacNoEditor",
-		"LinuxNoEditor"
 	]
 }

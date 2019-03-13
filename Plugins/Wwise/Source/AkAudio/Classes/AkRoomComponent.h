@@ -36,15 +36,12 @@ class AKAUDIO_API UAkRoomComponent : public USceneComponent
 	* This value can be thought of as 'thickness', as it relates to how much sound energy is transmitted through the wall. 
 	* Valid range 0.0f-1.0f, and is mapped to the occlusion curve as defined in the Wwise project.
 	*/
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room", meta = (ClampMin=0.0f, ClampMax=1.0f, UIMin=0.0f, UIMax=1.0f))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Room")
 	float WallOcclusion;
 
 
-	/** Register a room in AK Spatial Audio. */
+	/** Register a room in AK Spatial Audio. Can be called again to update the room parameters	*/
 	void AddSpatialAudioRoom();
-
-	/** Modify a room in AK Spatial Audio. */
-	void UpdateSpatialAudioRoom();
 
 	/** Remove a room from AK Spatial Audio	*/
 	void RemoveSpatialAudioRoom();
@@ -56,8 +53,9 @@ class AKAUDIO_API UAkRoomComponent : public USceneComponent
 	AkRoomID GetRoomID() const { return AkRoomID(this); }
 
 	virtual void PostLoad() override;
-	virtual void InitializeComponent() override;
-	virtual void UninitializeComponent() override;
+	virtual void BeginDestroy() override;
+	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 	FName GetName() const;
 
@@ -70,6 +68,5 @@ private:
 
 	void InitializeParentVolume();
 
-	void GetRoomParams(AkRoomParams& outParams);
 	bool RoomAdded = false;
 };

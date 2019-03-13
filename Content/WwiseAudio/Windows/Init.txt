@@ -22,15 +22,15 @@ Custom State	ID	Name	State Group	Owner		Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	957100585	BGM Audio Bus			\Default Work Unit\Master Audio Bus\BGM Audio Bus	
-	3250258578	System SE Audio Bus			\Default Work Unit\Master Audio Bus\System SE Audio Bus	
-	3295115226	Character SE Audio Bus			\Default Work Unit\Master Audio Bus\Character SE Audio Bus	
+	2306887053	SE Audio Bus			\Default Work Unit\Master Audio Bus\SE Audio Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4141518855	UI Audio Bus			\Default Work Unit\Master Audio Bus\UI Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
-	912960626	Extreme_Limiting_1 (Custom)	Wwise Peak Limiter			
+	373286653	Extreme_Limiting_1 (Custom)	Wwise Peak Limiter			
 	1069874549	Hall_Guns (Custom)	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
