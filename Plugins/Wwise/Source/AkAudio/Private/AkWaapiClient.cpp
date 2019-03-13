@@ -117,7 +117,6 @@ uint32 FAkWaapiClientConnectionHandler::Run()
                 if (bReconnect)
                     UE_LOG(LogAkWaapiClient, Warning, TEXT("Lost connection to WAAPI client. Attempting reconnection ..."));
                 hadConnection = false;
-                m_Client.SetConnectionClosing(false);
                 AsyncTask(ENamedThreads::GameThread, [this]()
                 {
                     m_Client.BroadcastConnectionLost();
@@ -131,6 +130,7 @@ uint32 FAkWaapiClientConnectionHandler::Run()
                 if (AttemptReconnect())
                 {
                     hadConnection = true;
+					m_Client.SetConnectionClosing(false);
                     ResetReconnectionDelay();
                     AsyncTask(ENamedThreads::GameThread, [this]()
                     {
@@ -262,7 +262,7 @@ struct FAkWaapiClientImpl
     FCriticalSection ClientSection;
 
     /** Flag indicating whether the correct project has been loaded (it's "correct" if it matches the Project Path in AkSettings.) */
-    FThreadSafeCounter iProjectLoaded = 0;
+    FThreadSafeBool bProjectLoaded = false;
 
     /** Flag indicating if the connection is being killed and shouldn't be restarted. */
     FThreadSafeBool bIsConnectionClosing = false;
@@ -420,7 +420,7 @@ bool FAkWaapiClient::IsProjectLoaded()
 		return false;
 	}
 
-	return pInstance->m_Impl->iProjectLoaded.GetValue() == 1;
+	return pInstance->m_Impl->bProjectLoaded;
 #else
 	return false;
 #endif
@@ -439,19 +439,20 @@ void FAkWaapiClient::ConnectionEstablished()
         //We check if the correct project is loaded on a background thread. If it is, we broadcast OnProjectLoaded.
         AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [this]()
         {
-            m_Impl->iProjectLoaded.Set(CheckProjectLoaded() ? 1 : 0);
-            if (m_Impl->iProjectLoaded.GetValue() == 1)
+            m_Impl->bProjectLoaded = CheckProjectLoaded();
+            if (m_Impl->bProjectLoaded)
             {
                 OnProjectLoaded.Broadcast();
             }
         });
+
         //We also subscribe to ak::wwise::core::project::loaded in order to check the project whenever one is loaded.
         auto projectLoadedCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
         {
             AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [this, id, in_UEJsonObject]()
             {
-                m_Impl->iProjectLoaded.Set(CheckProjectLoaded(true) ? 1 : 0);
-                if (m_Impl->iProjectLoaded.GetValue() == 1)
+                m_Impl->bProjectLoaded = CheckProjectLoaded(true);
+                if (m_Impl->bProjectLoaded)
                 {
                     OnProjectLoaded.Broadcast();
                 }
@@ -467,24 +468,10 @@ void FAkWaapiClient::ConnectionEstablished()
         uint64_t projectLoadedSubscriptionID;
         m_AkWaapiClient->Subscribe(ak::wwise::core::project::loaded, projectLoadedOptions, projectLoadedCallback, projectLoadedSubscriptionID, projectLoadedSubscriptionResult);
 
-        //We also subscribe to ak::wwise::core::project::preClosed in order to stop any waaapi calls from being sent during disconnection.
-        //auto projectClosingCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
-        //{
-        //    bIsConnectionClosing = true;
-        //    AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [this, id, in_UEJsonObject]()
-        //    {
-        //        m_wampEventCallbackMap.Empty();
-        //    });
-        //});
-        //TSharedPtr<FJsonObject> projectClosingSubscriptionResult = MakeShareable(new FJsonObject());
-        //TSharedRef<FJsonObject> projectClosingOptions = MakeShareable(new FJsonObject());
-       // uint64_t projectClosingSubscriptionID;
-       // m_AkWaapiClient->Subscribe(ak::wwise::core::project::preClosed, projectClosingOptions, projectClosingCallback, projectClosingSubscriptionID, projectClosingSubscriptionResult);
-
         //And we need to subscribe to ak::wwise::core::project::postClosed such that we are able to re-connect to WAAPI (for example if Wwise is closed then opened again).
         auto projectClosedCallback = WampEventCallback::CreateLambda([this](uint64_t id, TSharedPtr<FJsonObject> in_UEJsonObject)
         {
-            m_Impl->bIsConnectionClosing = false;
+			BroadcastConnectionLost();
         });
         TSharedPtr<FJsonObject> projectClosedSubscriptionResult = MakeShareable(new FJsonObject());
         TSharedRef<FJsonObject> projectClosedOptions = MakeShareable(new FJsonObject());
@@ -495,27 +482,59 @@ void FAkWaapiClient::ConnectionEstablished()
 }
 
 /** Returns the path of the Wwise project as defined in AkSettings (WWise Plugin Settings). */
-FString FAkWaapiClient::GetProjectPath(TSharedPtr<FJsonObject>& inOutJsonReslut)
+bool FAkWaapiClient::GetProjectPath(TSharedPtr<FJsonObject>& inOutJsonReslut, FString& ProjectPath)
 {
 #if AK_SUPPORT_WAAPI
-    FString sPath;
-    sPath.Empty();
     TArray<TSharedPtr<FJsonValue>> inFromItems;
     inFromItems.Add(MakeShareable(new FJsonValueString("Project")));
-    if (WAAPIGet(WAAPIGetFromOption::OF_TYPE, inFromItems, (AkInt64)WAAPIGetReturnOptionFlag::FILEPATH,
-        inOutJsonReslut, WAAPIGetTransformOption::NONE, TArray<TSharedPtr<FJsonValue>>(), true))
+	const bool bSuccess = WAAPIGet(WAAPIGetFromOption::OF_TYPE, inFromItems, (AkInt64)WAAPIGetReturnOptionFlag::FILEPATH,
+								   inOutJsonReslut, WAAPIGetTransformOption::NONE, TArray<TSharedPtr<FJsonValue>>(), true);
+	if (bSuccess)
     {
         if (inOutJsonReslut->HasField(FAkWaapiClient::WAAPIStrings::RETURN))
         {
             TArray<TSharedPtr<FJsonValue>> returnJson = inOutJsonReslut->GetArrayField(FAkWaapiClient::WAAPIStrings::RETURN);
             if (returnJson.Num() > 0)
-                sPath = returnJson[0]->AsObject()->GetStringField(FAkWaapiClient::WAAPIStrings::FILEPATH);
+				ProjectPath = returnJson[0]->AsObject()->GetStringField(FAkWaapiClient::WAAPIStrings::FILEPATH);
         }
     }
-    return sPath;
+    return bSuccess;
 #else
-	return FString();
+	return true;
 #endif
+}
+
+// WAAPI can become temporarily unavailable from time to time, this should be taken into account in the design.
+// Please note that you shouldn't use this kind of design unless you know your call is accurate. If you do this
+// and the error is caused by an argument problem, you might end up with an infinite retry loop.
+bool ExecuteAutoRetry(FAkWaapiClient& Client, TFunction<bool()> Function, float RetrySleepTimeSeconds)
+{
+	bool bResult = false;
+
+	while (Client.IsConnected() && !bResult)
+	{
+		bResult = Function();
+		if (!bResult && RetrySleepTimeSeconds > 0.0f)
+		{
+			// Avoid flooding with requests while WAAPI is unavailable.
+			FPlatformProcess::Sleep(RetrySleepTimeSeconds);
+		}
+	}
+
+	return bResult;
+}
+
+FString GetAndWaitForCurrentProject(FAkWaapiClient& Client, float RetrySleepTimeSeconds)
+{
+	FString ProjectPath = FString("No project.");
+
+	ExecuteAutoRetry(Client, [&Client, &ProjectPath]() 
+	{
+		TSharedPtr<FJsonObject> JsonResult = MakeShareable(new FJsonObject());
+		return Client.GetProjectPath(JsonResult, ProjectPath);
+	}, RetrySleepTimeSeconds);
+
+	return ProjectPath;
 }
 
 /** Checks if the currently loaded Wwise project matches the project path set in AkSettings (Wwise plugin settings).
@@ -539,30 +558,7 @@ bool FAkWaapiClient::CheckProjectLoaded(bool shouldRetry /* = false */)
             ProjectPathString = ProjectPathString.Replace(*FString("../"), *FString(""));
         }
         auto RelativePath = ProjectPathString.Replace(*FString("/"), *FString("\\"));
-        FString sCurrentlyLoadedProjectPath;
-        TSharedPtr<FJsonObject> pJsonResult = MakeShareable(new FJsonObject());
-        bool bWAAPILocked = true;
-        while (bWAAPILocked)
-        {
-            sCurrentlyLoadedProjectPath = GetProjectPath(pJsonResult);
-            if (pJsonResult->HasField("uri"))
-            {
-                auto errorUri = pJsonResult->GetStringField("uri");
-                bWAAPILocked = errorUri.Equals("ak.wwise.locked", ESearchCase::IgnoreCase);
-            }
-            else
-            {
-				if (!shouldRetry || !sCurrentlyLoadedProjectPath.IsEmpty())
-				{
-					bWAAPILocked = false;
-				}
-            }
-			if (bWAAPILocked)
-			{
-				//Don't flood WAAPI with requests.
-				FPlatformProcess::Sleep(1);
-			}
-        }
+        FString sCurrentlyLoadedProjectPath = GetAndWaitForCurrentProject(*pInstance, 1.0f);
         if (sCurrentlyLoadedProjectPath.Contains(RelativePath))
         {
             return true;
@@ -575,7 +571,7 @@ bool FAkWaapiClient::CheckProjectLoaded(bool shouldRetry /* = false */)
 void FAkWaapiClient::BroadcastConnectionLost()
 {
 #if AK_SUPPORT_WAAPI
-    m_Impl->iProjectLoaded.Set(0);
+    m_Impl->bProjectLoaded = false;
     OnConnectionLost.Broadcast();
 #endif
 }
@@ -655,7 +651,7 @@ bool FAkWaapiClient::Subscribe(const char* in_uri, const TSharedRef<FJsonObject>
 
         if ((!FJsonSerializer::Deserialize(Reader, out_result) || !out_result.IsValid()) && IsConnected())
         {
-            UE_LOG(LogAkWaapiClient, Log, TEXT("Output result -> unable to deserialize the Json object from the string : %s"), *out_resultString);
+            UE_LOG(LogAkWaapiClient, Log, TEXT("Subscribe: Output result -> unable to deserialize the Json object from the string : %s"), *out_resultString);
         }
     }
 #endif
@@ -713,7 +709,7 @@ bool FAkWaapiClient::Unsubscribe(const uint64_t& in_subscriptionId, TSharedPtr<F
 
             if ((!FJsonSerializer::Deserialize(Reader, out_result) || !out_result.IsValid()) && IsConnected())
             {
-                UE_LOG(LogAkWaapiClient, Log, TEXT("Output result -> unable to deserialize the Json object from the string : %s"), *out_resultString);
+                UE_LOG(LogAkWaapiClient, Log, TEXT("Unsubscribe: Output result -> unable to deserialize the Json object from the string : %s"), *out_resultString);
             }
         }
     }

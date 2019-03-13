@@ -48,6 +48,7 @@
 // Device info.
 #define DEFERRED_DEVICE_NAME		("UnrealIODevice")	// Default deferred device name.
 
+#define ROUND_TO_BLOCK(ToBeRounded, BlockSize) ((((ToBeRounded) + (BlockSize) - 1) / BlockSize) * BlockSize)
 
 AkFileCustomParam* AkFileCustomParam::GetFileCustomParam(const AkFileDesc& fileDesc)
 {
@@ -103,15 +104,35 @@ public:
 
 		ReadRequests.Remove(nullptr);
 
-		FAsyncFileCallBack AsyncFileCallBack = [AkTransferInfo](bool bWasCancelled, IAsyncReadRequest* Req) mutable
+		uint8* TempMemory = nullptr;
+#if PLATFORM_XBOXONE
+		// Because of WG-38169, we can get unaligned pointers, which Xbox IO doesn't like. We need to allocate an aligned temp buffer to avoid crashes.
+		if (((uint64)AkTransferInfo.pBuffer) % AkFileCustomParamPolicy::GetBlockSize() != 0)
 		{
+			uint32 RoundedSize = ROUND_TO_BLOCK(AkTransferInfo.uRequestedSize, AkFileCustomParamPolicy::GetBlockSize());
+			TempMemory = (uint8*)FMemory::Malloc(RoundedSize, AkFileCustomParamPolicy::GetBlockSize());
+		}
+#endif
+
+		FAsyncFileCallBack AsyncFileCallBack = [AkTransferInfo, TempMemory](bool bWasCancelled, IAsyncReadRequest* Req) mutable
+		{
+#if PLATFORM_XBOXONE
+			if (TempMemory)
+			{
+				FMemory::Memcpy(AkTransferInfo.pBuffer, TempMemory, AkTransferInfo.uRequestedSize);
+				FMemory::Free(TempMemory);
+			}
+#endif
 			if (AkTransferInfo.pCallback)
 				AkTransferInfo.pCallback(&AkTransferInfo, AK_Success);
 		};
-
-		auto PendingReadRequest = IORequestHandle->ReadRequest(AkTransferInfo.uFilePosition, AkTransferInfo.uRequestedSize, AIOP_High, &AsyncFileCallBack, (uint8*)AkTransferInfo.pBuffer);
+		auto PendingReadRequest = IORequestHandle->ReadRequest(AkTransferInfo.uFilePosition, AkTransferInfo.uRequestedSize, AIOP_High, &AsyncFileCallBack, TempMemory ? TempMemory : (uint8*)AkTransferInfo.pBuffer);
 		if (PendingReadRequest)
 			ReadRequests.Add(PendingReadRequest);
+#if PLATFORM_XBOXONE
+		else
+			FMemory::Free(TempMemory);
+#endif
 
 		return AK_Success;
 	}
@@ -208,6 +229,7 @@ AKRESULT CAkUnrealIOHookDeferred::PerformOpen(
 			auto IORequestHandle = FPlatformFileManager::Get().GetPlatformFile().OpenAsyncRead(*FilePath);
 			if (IORequestHandle)
 			{
+				io_bSyncOpen = true;
 				AkFileCustomParam::SetupFileDesc(out_fileDesc, new AkReadFileCustomParam(IORequestHandle));
 				return AK_Success;
 			}

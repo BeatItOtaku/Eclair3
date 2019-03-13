@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="89" WwiseVersion="v2018.1.1" WwiseBuild="6727">
+<WwiseDocument Type="Project" SchemaVersion="89" WwiseVersion="v2018.1.4" WwiseBuild="6807">
 	<ProjectInfo>
 		<Project Name="Eclair_WwiseProject" ID="{8BE4C1A6-5B3F-467A-A182-6672856AA982}">
 			<Platforms>
@@ -111,6 +111,16 @@
 						<Property Name="LoopEnd" Type="Real64">
 							<ValueList>
 								<Value>-1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MarkerDetectionSensitivity" Type="Real64">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MarkerInputMode" Type="int16">
+							<ValueList>
+								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideConversion" Type="bool">
@@ -9001,6 +9011,15 @@
 						<Property Name="insertFrom" Type="int16">
 							<ValueList>
 								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Marker" PluginType="0" CompanyID="0" PluginID="993">
+					<PropertyList>
+						<Property Name="Time" Type="Real64">
+							<ValueList>
+								<Value>0</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

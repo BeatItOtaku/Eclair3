@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.1  Build: 6727
+  Version: v2018.1.4  Build: 6807
   Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -316,7 +316,7 @@ namespace AK
 		/// - \ref memorymanager
 	    AK_EXTERNAPIFUNC( AKRESULT, Falign )(
 			AkMemPoolId in_poolId,				///< ID of the memory pool
-			void *		in_pMemAddress			///< Pointer to the start of memory allocated with Malloc
+			void *		in_pMemAddress			///< Pointer to the start of memory allocated with Malign
 		    );
 
 		//@}

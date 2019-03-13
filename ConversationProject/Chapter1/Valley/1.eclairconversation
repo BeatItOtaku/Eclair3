@@ -1,0 +1,57 @@
+{
+  "description": "最初のカットシーン",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 2,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "準備はいいか？エクレア",
+      "duration": 3.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "e5c6f640-d813-11e8-a78d-2d3c1eec2526",
+      "character": [
+        0
+      ],
+      "content": "ええ。オレイエット。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "f25587f0-d813-11e8-a78d-2d3c1eec2526",
+      "character": [
+        1
+      ],
+      "content": "今回の任務は武装集団『アーミーギア』の一人を倒すこと。\n奴の名は…",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "0d58d070-d814-11e8-a78d-2d3c1eec2526",
+      "character": [
+        0
+      ],
+      "content": "ブルレファン・ブリオッシュ、『歩く火事場の馬鹿力』。ここら一帯で暴れまわっている…",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "2faaac20-d814-11e8-a78d-2d3c1eec2526",
+      "character": [
+        1
+      ],
+      "content": "その通りだ。奴はこの先の廃坑を抜けた先にいるはずだ…\nエクレア、気をつけろよ。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

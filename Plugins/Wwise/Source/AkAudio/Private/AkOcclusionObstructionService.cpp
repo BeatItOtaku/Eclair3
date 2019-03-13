@@ -187,22 +187,30 @@ void AkOcclusionObstructionService::_Init(UWorld* in_world, float in_refreshInte
 void AkOcclusionObstructionService::Init(UAkComponent* in_akComponent, float in_refreshInterval)
 {
 	_Init(in_akComponent->GetWorld(), in_refreshInterval);
+	SetOcclusionObstructionFunction(in_akComponent);
 
-	AkGameObjectID gameObjId = (AkGameObjectID)in_akComponent;
+}
+
+void AkOcclusionObstructionService::SetOcclusionObstructionFunction(UAkComponent* in_akComponent)
+{
+	AkGameObjectID gameObjId = in_akComponent->GetAkGameObjectID();
 	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if (AkAudioDevice && AkAudioDevice->UsingSpatialAudioRooms(in_akComponent->GetWorld()))
+	if (AkAudioDevice)
 	{
-		SetOcclusionObstructionFcn = [gameObjId](AkGameObjectID in_gameObjId, float value)
+		if (in_akComponent->bUseSpatialAudio)
 		{
-			AK::SpatialAudio::SetEmitterObstructionAndOcclusion(gameObjId, value, 0.0f);
-		};
-	}
-	else
-	{
-		SetOcclusionObstructionFcn = [gameObjId](AkGameObjectID in_gameObjId, float value)
+			SetOcclusionObstructionFcn = [gameObjId](AkGameObjectID in_listenerId, float value)
+			{
+				AK::SpatialAudio::SetEmitterObstructionAndOcclusion(gameObjId, value, 0.0f);
+			};
+		}
+		else
 		{
-			AK::SpatialAudio::SetEmitterObstructionAndOcclusion(gameObjId, 0.0f, value);
-		};
+			SetOcclusionObstructionFcn = [gameObjId](AkGameObjectID in_listenerId, float value)
+			{
+				AK::SoundEngine::SetObjectObstructionAndOcclusion(gameObjId, in_listenerId, 0.0f, value);
+			};
+		}
 	}
 }
 
