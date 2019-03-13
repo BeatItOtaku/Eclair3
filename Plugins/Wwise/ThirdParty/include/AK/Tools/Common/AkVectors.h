@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.1  Build: 6727
+  Version: v2018.1.4  Build: 6807
   Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -933,7 +933,6 @@ public:
 	// Build quaternion from an axis and angle representation.
 	AkQuaternion(AkReal32 in_angle, const Ak3DVector& in_axis)
 	{
-		AkReal32 sinHalfAngle = sinf(in_angle / 2.f);
 		AkReal32 cosHalfAngle = cosf(in_angle / 2.f);
 		W = cosHalfAngle;
 		X = cosHalfAngle*in_axis.X;

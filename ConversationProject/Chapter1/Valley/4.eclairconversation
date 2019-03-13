@@ -1,0 +1,39 @@
+{
+  "description": "途切れ途切れの 足場を渡った後",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "ブリオッシュ！？・・・やばいぞエクレア、奴の\nグレネード弾が来る、逃げろ！！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bcc3fd10-d859-11e8-a02d-f1bb00051b7d",
+      "character": [
+        0
+      ],
+      "content": "あっちから現れてくれたんだから、倒せばいいじゃない！！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c2869910-d859-11e8-a02d-f1bb00051b7d",
+      "character": [
+        1
+      ],
+      "content": "あの距離だとお前のボルトは届かない・・・\n一度廃坑の中に逃げ込むんだ！！",
+      "duration": 8,
+      "name-overwrite": ""
+    }
+  ]
+}

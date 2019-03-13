@@ -67,6 +67,50 @@ static_assert(static_cast<AK::SoundEngine::MultiPositionType>(AkMultiPositionTyp
 static_assert(static_cast<AK::SoundEngine::MultiPositionType>(AkMultiPositionType::MultiDirections) == AK::SoundEngine::MultiPositionType_MultiDirections, "AkMultiPositionType::MultiDirections does not correspond with its internal Wwise counterpart.");
 
 UENUM(BlueprintType)
+enum class AkActionOnEventType : uint8
+{
+	Stop = 0,            // AK::SoundEngine::AkActionOnEventType_Stop
+	Pause = 1,           // AK::SoundEngine::AkActionOnEventType_Pause
+	Resume = 2,          // AK::SoundEngine::AkActionOnEventType_Resume
+	Break = 3,           // AK::SoundEngine::AkActionOnEventType_Break
+	ReleaseEnvelope = 4  // AK::SoundEngine::AkActionOnEventType_ReleaseEnvelope
+};
+
+static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::Stop) == AK::SoundEngine::AkActionOnEventType_Stop, "AkActionOnEventType::Stop does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::Pause) == AK::SoundEngine::AkActionOnEventType_Pause, "AkActionOnEventType::Pause does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::Resume) == AK::SoundEngine::AkActionOnEventType_Resume, "AkActionOnEventType::Resume does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::Break) == AK::SoundEngine::AkActionOnEventType_Break, "AkActionOnEventType::Break does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AK::SoundEngine::AkActionOnEventType>(AkActionOnEventType::ReleaseEnvelope) == AK::SoundEngine::AkActionOnEventType_ReleaseEnvelope, "AkActionOnEventType::ReleaseEnvelope does not correspond with its internal Wwise counterpart.");
+
+UENUM(BlueprintType)
+enum class EAkCurveInterpolation : uint8
+{
+	Log3 = 0,          ///< Log3
+	Sine = 1,          ///< Sine
+	Log1 = 2,          ///< Log1
+	InvSCurve = 3,     ///< Inversed S Curve
+	Linear = 4,        ///< Linear (Default)
+	SCurve = 5,        ///< S Curve
+	Exp1 = 6,          ///< Exp1
+	SineRecip = 7,     ///< Reciprocal of sine curve
+	Exp3 = 8,          ///< Exp3
+	LastFadeCurve = 8, ///< Update this value to reflect last curve available for fades
+	Constant = 9       ///< Constant ( not valid for fading values )
+};
+
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Log3) == AkCurveInterpolation_Log3, "AkCurveInterpolation::Log3 does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Sine) == AkCurveInterpolation_Sine, "AkCurveInterpolation::Sine does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Log1) == AkCurveInterpolation_Log1, "AkCurveInterpolation::Log1 does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::InvSCurve) == AkCurveInterpolation_InvSCurve, "AkCurveInterpolation::InvSCurve does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Linear) == AkCurveInterpolation_Linear, "AkCurveInterpolation::Linear does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::SCurve) == AkCurveInterpolation_SCurve, "AkCurveInterpolation::SCurve does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Exp1) == AkCurveInterpolation_Exp1, "AkCurveInterpolation::Exp1 does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::SineRecip) == AkCurveInterpolation_SineRecip, "AkCurveInterpolation::SineRecip does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Exp3) == AkCurveInterpolation_Exp3, "AkCurveInterpolation::Exp3 does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::LastFadeCurve) == AkCurveInterpolation_LastFadeCurve, "AkCurveInterpolation::LastFadeCurve does not correspond with its internal Wwise counterpart.");
+static_assert(static_cast<AkCurveInterpolation>(EAkCurveInterpolation::Constant) == AkCurveInterpolation_Constant, "AkCurveInterpolation::Constant does not correspond with its internal Wwise counterpart.");
+
+UENUM(BlueprintType)
 enum class EAkResult : uint8
 {
 	NotImplemented				UMETA("This feature is not implemented."),
@@ -812,6 +856,13 @@ public:
 	{
 		Response.FinishAndTriggerIf(EventFinished, ExecutionFunction, OutputLink, CallbackTarget);
 	}
+
+#if WITH_EDITOR
+	virtual FString GetDescription() const override
+	{
+		return TEXT("Waiting for posted AkEvent to end.");
+	}
+#endif
 };
 
 // Class used for Blueprint nodes blocking on EndOfEvent
@@ -836,5 +887,12 @@ public:
 	{
 		Response.FinishAndTriggerIf(ActionDone, ExecutionFunction, OutputLink, CallbackTarget);
 	}
+
+#if WITH_EDITOR
+	virtual FString GetDescription() const override
+	{
+		return TEXT("Waiting for AkBank to finish loading or unloading.");
+	}
+#endif
 };
 
