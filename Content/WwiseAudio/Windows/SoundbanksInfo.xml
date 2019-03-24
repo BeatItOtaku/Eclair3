@@ -26,6 +26,7 @@
 				<Event Id="3748276840" Name="FlameGrenade" ObjectPath="\Events\SE\Brioche\FlameGrenade"/>
 				<Event Id="2691847895" Name="FlameThrower" ObjectPath="\Events\SE\Brioche\FlameThrower"/>
 				<Event Id="2009975021" Name="FootSteps_BB" ObjectPath="\Events\SE\Brioche\FootSteps_BB"/>
+				<Event Id="1324340420" Name="Piano" ObjectPath="\Events\Default Work Unit\Chapter1\Piano"/>
 				<Event Id="2901268394" Name="PillarOfFire" ObjectPath="\Events\SE\Brioche\PillarOfFire"/>
 				<Event Id="113682313" Name="PillarOfFire_Jiware" ObjectPath="\Events\SE\Brioche\PillarOfFire_Jiware"/>
 				<Event Id="645565787" Name="Punch" ObjectPath="\Events\SE\Brioche\Punch"/>
@@ -114,7 +115,9 @@
 			<ShortName>Common</ShortName>
 			<Path>Common.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1591411653" Name="BigDecide" ObjectPath="\Events\SE\System\BigDecide"/>
 				<Event Id="2760337059" Name="Cancel" ObjectPath="\Events\SE\System\Cancel"/>
+				<Event Id="2928609216" Name="CannotUnlock" ObjectPath="\Events\SE\System\CannotUnlock"/>
 				<Event Id="3048239629" Name="Challange1" ObjectPath="\Events\Default Work Unit\Challanges\Challange1"/>
 				<Event Id="3099787076" Name="Choice" ObjectPath="\Events\SE\System\Choice"/>
 				<Event Id="3004330733" Name="Decide" ObjectPath="\Events\SE\System\Decide"/>
@@ -127,10 +130,12 @@
 				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\System\LowHP"/>
 				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\System\LowHPLoop"/>
 				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
+				<Event Id="3712166233" Name="OpenWindow" ObjectPath="\Events\SE\System\OpenWindow"/>
 				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
 				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
 				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\Eclair\ThrowingBolt"/>
 				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+				<Event Id="370150497" Name="UnlockStage" ObjectPath="\Events\SE\System\UnlockStage"/>
 				<Event Id="2151339297" Name="Voice_Damaged" ObjectPath="\Events\SE\Eclair\Voice_Damaged"/>
 				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
 			</IncludedEvents>
@@ -143,9 +148,17 @@
 					<ShortName>FootSteps_Eclair_Default_13.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_13_A1793BE9.wem</Path>
 				</File>
+				<File Id="59565763" Language="SFX">
+					<ShortName>UnlockStage.wav</ShortName>
+					<Path>SFX\UnlockStage_A1793BE9.wem</Path>
+				</File>
 				<File Id="60845689" Language="SFX">
 					<ShortName>Cancel.wav</ShortName>
 					<Path>SFX\Cancel_A1793BE9.wem</Path>
+				</File>
+				<File Id="105108458" Language="SFX">
+					<ShortName>CannotUnlock.wav</ShortName>
+					<Path>SFX\CannotUnlock_A1793BE9.wem</Path>
 				</File>
 				<File Id="135831222" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
@@ -154,6 +167,10 @@
 				<File Id="142300749" Language="SFX">
 					<ShortName>Voice_Damaged.wav</ShortName>
 					<Path>SFX\Voice_Damaged_A1793BE9.wem</Path>
+				</File>
+				<File Id="154465229" Language="SFX">
+					<ShortName>Pico1.wav</ShortName>
+					<Path>SFX\Pico1_CB1F3167.wem</Path>
 				</File>
 				<File Id="184502686" Language="SFX">
 					<ShortName>steam01.wav</ShortName>
@@ -179,9 +196,17 @@
 					<ShortName>LowHPLoop.wav</ShortName>
 					<Path>SFX\LowHPLoop_A1793BE9.wem</Path>
 				</File>
-				<File Id="385552327" Language="SFX">
-					<ShortName>Challange1.wav</ShortName>
-					<Path>SFX\Challange1_CB1F3167.wem</Path>
+				<File Id="371293037" Language="SFX">
+					<ShortName>Pico3.wav</ShortName>
+					<Path>SFX\Pico3_CB1F3167.wem</Path>
+				</File>
+				<File Id="457887179" Language="SFX">
+					<ShortName>Challenge1.wav</ShortName>
+					<Path>SFX\Challenge1_CB1F3167.wem</Path>
+				</File>
+				<File Id="534887956" Language="SFX">
+					<ShortName>BigDecide.wav</ShortName>
+					<Path>SFX\BigDecide_A1793BE9.wem</Path>
 				</File>
 				<File Id="536735455" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
@@ -207,6 +232,10 @@
 					<ShortName>SteelFrame.wav</ShortName>
 					<Path>SFX\SteelFrame_A1793BE9.wem</Path>
 				</File>
+				<File Id="648148738" Language="SFX">
+					<ShortName>Pico2.wav</ShortName>
+					<Path>SFX\Pico2_CB1F3167.wem</Path>
+				</File>
 				<File Id="727930744" Language="SFX">
 					<ShortName>LowHP.wav</ShortName>
 					<Path>SFX\LowHP_A1793BE9.wem</Path>
@@ -226,6 +255,10 @@
 				<File Id="800222909" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_04_A1793BE9.wem</Path>
+				</File>
+				<File Id="811912202" Language="SFX">
+					<ShortName>OpenWindow.wav</ShortName>
+					<Path>SFX\OpenWindow_A1793BE9.wem</Path>
 				</File>
 				<File Id="837688024" Language="SFX">
 					<ShortName>Falling.wav</ShortName>
@@ -250,6 +283,10 @@
 				<File Id="942762787" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_07.wav</ShortName>
 					<Path>SFX\FootSteps_Eclair_Default_07_A1793BE9.wem</Path>
+				</File>
+				<File Id="998476598" Language="SFX">
+					<ShortName>Pico4.wav</ShortName>
+					<Path>SFX\Pico4_CB1F3167.wem</Path>
 				</File>
 				<File Id="1051978060" Language="SFX">
 					<ShortName>Title.wav</ShortName>
