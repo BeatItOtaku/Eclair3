@@ -222,6 +222,27 @@ UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(UObject* WorldConte
 	return nullptr;
 }
 
+void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, AkActionOnEventType ActionType, class AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID)
+{
+	if (AkEvent == NULL)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::ExecuteActionOnEvent: No Event specified!"));
+		return;
+	}
+
+	if (Actor == NULL)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::ExecuteActionOnEvent: NULL Actor specified!"));
+		return;
+	}
+
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice)
+	{
+		AudioDevice->ExecuteActionOnEvent(AkEvent->GetName(), ActionType, Actor, TransitionDuration, FadeCurve, PlayingID);
+	}
+}
+
 void UAkGameplayStatics::SetRTPCValue( FName RTPC, float Value, int32 InterpolationTimeMs = 0, class AActor* Actor = NULL )
 {
 	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
@@ -273,7 +294,13 @@ void UAkGameplayStatics::SetSwitch( FName SwitchGroup, FName SwitchState, class 
 void UAkGameplayStatics::SetMultiplePositions(UAkComponent* GameObjectAkComponent, TArray<FTransform> Positions,
                                               AkMultiPositionType MultiPositionType /*= AkMultiPositionType::MultiPositionType_MultiDirections*/)
 {
-    FAkAudioDevice * pAudioDevice = FAkAudioDevice::Get();
+	if (GameObjectAkComponent == NULL)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::SetMultiplePositions: NULL Component specified!"));
+		return;
+	}
+
+	FAkAudioDevice * pAudioDevice = FAkAudioDevice::Get();
     if (pAudioDevice)
     {
         pAudioDevice->SetMultiplePositions(GameObjectAkComponent, Positions, MultiPositionType);
@@ -283,7 +310,13 @@ void UAkGameplayStatics::SetMultiplePositions(UAkComponent* GameObjectAkComponen
 void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<AkChannelConfiguration> ChannelMasks, TArray<FTransform> Positions,
                                                             AkMultiPositionType MultiPositionType /*= AkMultiPositionType::MultiPositionType_MultiDirections*/)
 {
-    FAkAudioDevice * pAudioDevice = FAkAudioDevice::Get();
+	if (GameObjectAkComponent == NULL)
+	{
+		UE_LOG(LogScript, Warning, TEXT("UAkGameplayStatics::SetMultipleChannelEmitterPositions: NULL Component specified!"));
+		return;
+	}
+
+	FAkAudioDevice * pAudioDevice = FAkAudioDevice::Get();
     if (pAudioDevice)
     {
         pAudioDevice->SetMultiplePositions(GameObjectAkComponent, ChannelMasks, Positions, MultiPositionType);
@@ -374,6 +407,26 @@ void UAkGameplayStatics::SetPanningRule(PanningRule PanRule)
 	}
 }
 
+void UAkGameplayStatics::GetSpeakerAngles(TArray<float>& SpeakerAngles, float& HeightAngle, const FString& DeviceShareset)
+{
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice)
+	{
+		AkOutputDeviceID DeviceID = DeviceShareset.IsEmpty() ? 0 : AudioDevice->GetOutputID(DeviceShareset);
+		AudioDevice->GetSpeakerAngles(SpeakerAngles, HeightAngle, DeviceID);
+	}
+}
+
+void UAkGameplayStatics::SetSpeakerAngles(const TArray<float>& SpeakerAngles, float HeightAngles, const FString& DeviceShareset)
+{
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice)
+	{
+		AkOutputDeviceID DeviceID = DeviceShareset.IsEmpty() ? 0 : AudioDevice->GetOutputID(DeviceShareset);
+		AudioDevice->SetSpeakerAngles(SpeakerAngles, HeightAngles, DeviceID);
+	}
+}
+
 void UAkGameplayStatics::SetOcclusionRefreshInterval(float RefreshInterval, class AActor* Actor )
 {
 	if ( Actor == NULL )
@@ -414,6 +467,15 @@ void UAkGameplayStatics::StopAll()
 	if( AudioDevice )
 	{
 		AudioDevice->StopAllSounds();
+	}
+}
+
+void UAkGameplayStatics::CancelEventCallback(const FOnAkPostEventCallback& PostEventCallback)
+{
+	FAkAudioDevice * AudioDevice = FAkAudioDevice::Get();
+	if (AudioDevice)
+	{
+		AudioDevice->CancelEventCallbackDelegate(PostEventCallback);
 	}
 }
 

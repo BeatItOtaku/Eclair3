@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-  Version: v2018.1.1  Build: 6727
+  Version: v2018.1.4  Build: 6807
   Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -528,6 +528,18 @@ namespace AK
 		virtual AKRESULT  SetMinimalBufferSize(
 			AkUInt32		in_uMinBufferSize	///< Minimum buffer size that can be handed out to client.
 			) = 0;
+
+		/// Set the minimum size to buffer ahead in an automated stream.
+		///
+		/// This function was made available to allow systems that cannot only rely on AkAutoStmHeuristics::fThroughput to predict what will be the best target size of an automatic stream.
+		/// The system will predict the minimum size to buffer and will consider this value as the minimal size to be the target.
+		/// \sa
+		/// - AkAutoStmBufSettings
+		/// - \ref streamingdevicemanager
+		/// - \ref AkAutoStmHeuristics
+		virtual AKRESULT  SetMinTargetBufferSize(
+			AkUInt32		in_uMinTargetBufferSize	///< Minimum size to buffer ahead in an automated stream. (in bytes)
+		) = 0;
 
         /// Give the stream a name (appears in the Wwise profiler).
 		/// \sa

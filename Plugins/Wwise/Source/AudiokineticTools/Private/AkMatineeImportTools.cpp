@@ -82,7 +82,11 @@ void FAkMatineeImportTools::CopyInterpTrackToFloatChannel(const UInterpTrackAkAu
 	{
 		FFrameNumber KeyTime = (Point.InVal * FrameRate).RoundToFrame();
 
+#if UE_4_21_OR_LATER
+		FMatineeImportTools::SetOrAddKey(ChannelData, KeyTime, Point.OutVal, Point.ArriveTangent, Point.LeaveTangent, Point.InterpMode, FrameRate);
+#else
 		FMatineeImportTools::SetOrAddKey(ChannelData, KeyTime, Point.OutVal, Point.ArriveTangent, Point.LeaveTangent, Point.InterpMode);
+#endif
 
 		KeyRange = TRange<FFrameNumber>::Hull(KeyRange, TRange<FFrameNumber>(KeyTime));
 	}

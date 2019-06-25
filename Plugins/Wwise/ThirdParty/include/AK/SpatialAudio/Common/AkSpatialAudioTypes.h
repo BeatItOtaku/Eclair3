@@ -21,7 +21,7 @@ under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
 OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
 the specific language governing permissions and limitations under the License.
 
-Version: v2018.1.1  Build: 6727
+Version: v2018.1.4  Build: 6807
 Copyright (c) 2006-2018 Audiokinetic Inc.
 *******************************************************************************/
 
@@ -46,7 +46,7 @@ class AkImageSourcePlane;
 #define AK_DEFAULT_DIFFR_SHADOW_DEGREES (30.0f)
 #define AK_DEFAULT_DIFFR_SHADOW_ATTEN (2.0f)
 #define AK_SA_EPSILON (0.001f)
-#define AK_SA_PLANARITY_EPSILON (0.01f)
+#define AK_SA_PLANE_THICKNESS_RATIO (0.005f)
 
 const AkReal32 kDefaultMaxPathLength = 100.f;
 

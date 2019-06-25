@@ -60,7 +60,7 @@
             testAssert: "ak.wwise.debug.testAssert", 
             /** Sent when an assert has failed. */
             assertFailed: "ak.wwise.debug.assertFailed", 
-            /** Set the automation mode for Wwise. This reduces the potential interruptions caused by message box and dialogs. */
+            /** Enable or disable the automation mode for Wwise. This reduces the potential interruptions caused by message boxes and dialogs. For instance, enabling the automation mode silently accepts: project migration, project load log, EULA acceptance, project licence display and generic message boxes. */
             enableAutomationMode: "ak.wwise.debug.enableAutomationMode", 
             /** Enables debug assertions. Every call to enableAsserts with false increments the ref count. Calling with true will decrement the ref count. This is only available with Debug builds. */
             enableAsserts: "ak.wwise.debug.enableAsserts"
@@ -137,14 +137,19 @@
                 created: "ak.wwise.core.object.created", 
                 /** Sent when an object is removed from the children of another object. */
                 childRemoved: "ak.wwise.core.object.childRemoved", 
-                /** Retrieves the list of property names for an object. */
+                /**
+                 * Retrieves the list of property and reference names for an object.
+                 * \deprecated in favor of ak.wwise.core.object.getPropertyAndReferenceNames
+                 */
                 getPropertyNames: "ak.wwise.core.object.getPropertyNames", 
                 /** Gets the specified attenuation curve for a given attenuation object. */
                 getAttenuationCurve: "ak.wwise.core.object.getAttenuationCurve", 
                 /** Sent when one or many curves are changed. */
                 curveChanged: "ak.wwise.core.object.curveChanged", 
                 /** Deletes the specified object. */
-                delete_: "ak.wwise.core.object.delete"
+                delete_: "ak.wwise.core.object.delete", 
+                /** Retrieves the list of property and reference names for an object. */
+                getPropertyAndReferenceNames: "ak.wwise.core.object.getPropertyAndReferenceNames"
             }, 
             undo: {
                 /** Ends the last undo group. */
@@ -157,12 +162,14 @@
             project: {
                 /** Sent when the after the project is completely closed. */
                 postClosed: "ak.wwise.core.project.postClosed", 
-                /** Sent when the project has been loaded. */
+                /** Sent when the project has been successfully loaded. */
                 loaded: "ak.wwise.core.project.loaded", 
                 /** Sent when the project begins closing. */
                 preClosed: "ak.wwise.core.project.preClosed", 
                 /** Saves the current project. */
-                save: "ak.wwise.core.project.save"
+                save: "ak.wwise.core.project.save", 
+                /** Sent when the project has been saved. */
+                saved: "ak.wwise.core.project.saved"
             }, 
             transport: {
                 /** Gets the state of the given transport object. */
@@ -187,7 +194,7 @@
                 setInclusions: "ak.wwise.core.soundbank.setInclusions"
             }, 
             audio: {
-                /** Scripted object creation and audio file import. The contents of this command very closely mirror that of a tab-delimited import file. See \ref ak_wwise_core_audio_importtabdelimited. */
+                /** Create Wwise objects and import audio files. This function is using the same importation processor available through the Tab Delimited import in the Audio File Importer. See \ref ak_wwise_core_audio_importtabdelimited. The function returns an array of all objects created, replaced or re-used. Use the options to specify how the objects are returned. */
                 import_: "ak.wwise.core.audio.import", 
                 /** Scripted object creation and audio file import from a tab-delimited file. */
                 importTabDelimited: "ak.wwise.core.audio.importTabDelimited"
@@ -216,8 +223,8 @@
                  */
                 getProperty: "ak.wwise.core.plugin.getProperty", 
                 /**
-                 * Retrieves the list of property names for an object.
-                 * \deprecated in favor of ak.wwise.core.object.getPropertyNames
+                 * Retrieves the list of property and reference names for an object.
+                 * \deprecated in favor of ak.wwise.core.object.getPropertyAndReferenceNames
                  */
                 getProperties: "ak.wwise.core.plugin.getProperties"
             }
@@ -226,14 +233,20 @@
             project: {
                 /** Closes the current project. */
                 close: "ak.wwise.ui.project.close", 
-                /** Opens a project, specified by path. */
+                /** Opens a project, specified by path. Please refer to \ref ak_wwise_core_project_loaded for further explanations on how to be notified when the operation has completed. */
                 open: "ak.wwise.ui.project.open"
             }, 
             /** Bring Wwise main window to foreground. Refer to SetForegroundWindow and AllowSetForegroundWindow on MSDN for more information on the restrictions. Refer to ak.wwise.core.getInfo to obtain the Wwise process ID for AllowSetForegroundWindow. */
             bringToForeground: "ak.wwise.ui.bringToForeground", 
             commands: {
+                /** Unregister an array of add-on UI commands. */
+                unregister: "ak.wwise.ui.commands.unregister", 
+                /** Sent when a command is executed. The objects for which the command is executed are sent in the publication. */
+                executed: "ak.wwise.ui.commands.executed", 
                 /** Executes a command. Some commands can take a list of objects as parameter. Refer to \ref globalcommandsids for the available commands. */
                 execute: "ak.wwise.ui.commands.execute", 
+                /** Register an array of add-on UI commands. */
+                register: "ak.wwise.ui.commands.register", 
                 /** Get the list of commands. */
                 getCommands: "ak.wwise.ui.commands.getCommands"
             }, 

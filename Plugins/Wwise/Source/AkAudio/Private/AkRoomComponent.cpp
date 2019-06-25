@@ -28,6 +28,7 @@ UAkRoomComponent::UAkRoomComponent(const class FObjectInitializer& ObjectInitial
 	WallOcclusion = 1.0f;
 
 	bEnable = true;
+	bWantsInitializeComponent = true;
 }
 
 FName UAkRoomComponent::GetName() const
@@ -47,17 +48,11 @@ void UAkRoomComponent::PostLoad()
 {
 	Super::PostLoad();
 	InitializeParentVolume();
-
-	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if (AkAudioDevice && RoomIsActive())
-	{
-		AkAudioDevice->AddRoomComponentToPrioritizedList(this);
-	}
 }
 
-void UAkRoomComponent::BeginPlay()
+void UAkRoomComponent::InitializeComponent()
 {
-	Super::BeginPlay();
+	Super::InitializeComponent();
 
 	AddSpatialAudioRoom();
 }
@@ -72,33 +67,14 @@ void UAkRoomComponent::InitializeParentVolume()
 	}
 }
 
-void UAkRoomComponent::BeginDestroy()
+void UAkRoomComponent::UninitializeComponent()
 {
-	Super::BeginDestroy();
-	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if (AkAudioDevice && RoomIsActive())
-	{
-		AkAudioDevice->RemoveRoomComponentFromPrioritizedList(this);
-		RemoveSpatialAudioRoom();
-	}
+	Super::UninitializeComponent();
+	RemoveSpatialAudioRoom();
 }
 
-void UAkRoomComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+void UAkRoomComponent::GetRoomParams(AkRoomParams& outParams)
 {
-	Super::EndPlay(EndPlayReason);
-	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if (AkAudioDevice && RoomIsActive())
-	{
-		AkAudioDevice->RemoveRoomComponentFromPrioritizedList(this);
-		RemoveSpatialAudioRoom();
-	}
-}
-
-void UAkRoomComponent::AddSpatialAudioRoom()
-{
-	if(!RoomIsActive())
-		return;
-
 	TArray<AAkAcousticPortal*> IntersectingPortals;
 
 	FString nameStr = ParentVolume->GetName();
@@ -109,35 +85,54 @@ void UAkRoomComponent::AddSpatialAudioRoom()
 	FVector Up = rotation.RotateVector(FVector::UpVector);
 
 	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if(!AkAudioDevice)
+	if (!AkAudioDevice)
 		return;
 
-	AkRoomParams params;
-	AkAudioDevice->FVectorToAKVector(Front, params.Front);
-	AkAudioDevice->FVectorToAKVector(Up, params.Up);
-	params.strName = TCHAR_TO_ANSI(*nameStr);
+	AkAudioDevice->FVectorToAKVector(Front, outParams.Front);
+	AkAudioDevice->FVectorToAKVector(Up, outParams.Up);
+	outParams.strName = TCHAR_TO_ANSI(*nameStr); // This will copy the string inside operator=
 
-	params.WallOcclusion = WallOcclusion;
+	outParams.WallOcclusion = WallOcclusion;
 
 	UAkLateReverbComponent* pRvbCmtp = (UAkLateReverbComponent*)ParentVolume->GetComponentByClass(UAkLateReverbComponent::StaticClass());
 	if (pRvbCmtp)
 	{
-		params.ReverbAuxBus = pRvbCmtp->GetAuxBusId();
-		params.ReverbLevel = pRvbCmtp->SendLevel;
+		outParams.ReverbAuxBus = pRvbCmtp->GetAuxBusId();
+		outParams.ReverbLevel = pRvbCmtp->SendLevel;
 	}
+}
 
-	AkAudioDevice->SetRoom(this, params);
+void UAkRoomComponent::AddSpatialAudioRoom()
+{
+	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
+	if (RoomIsActive() && AkAudioDevice)
+	{
+		AkRoomParams params;
+		GetRoomParams(params);
+		AkAudioDevice->AddRoom(this, params);
+		RoomAdded = true;
+	}
+}
 
-	RoomAdded = true;
+void UAkRoomComponent::UpdateSpatialAudioRoom()
+{
+	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
+	if (RoomIsActive() && AkAudioDevice)
+	{
+		AkRoomParams params;
+		GetRoomParams(params);
+		AkAudioDevice->UpdateRoom(this, params);
+	}
 }
 
 void UAkRoomComponent::RemoveSpatialAudioRoom()
 {
 	FAkAudioDevice* AkAudioDevice = FAkAudioDevice::Get();
-	if(RoomIsActive() && AkAudioDevice)
+	if (RoomIsActive() && AkAudioDevice)
+	{
 		AkAudioDevice->RemoveRoom(this);
-
-	RoomAdded = false;
+		RoomAdded = false;
+	}
 }
 
 #if WITH_EDITOR
@@ -148,6 +143,6 @@ void UAkRoomComponent::PostEditChangeProperty(FPropertyChangedEvent& PropertyCha
 	
 	//Call add again to update the room parameters, if it has already been added.
 	if (RoomAdded)
-		AddSpatialAudioRoom();
+		UpdateSpatialAudioRoom();
 }
 #endif

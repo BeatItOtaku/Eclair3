@@ -8,16 +8,19 @@
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{D3E1376A-CB2F-4C4E-8B4D-4A56DF6AEF92}" WorkUnitID="{A75F6C10-BD46-492B-A1DA-C24251563C3F}"/>
 						</Reference>
+						<Reference Name="Effect0">
+							<Custom CreatedFrom="{8F08A8A7-3313-4E5D-9EBD-2B1B564DE411}">
+								<Effect Name="Extreme_Limiting_1 (Custom)" ID="{6E7E19A6-61E9-47A8-B03F-0F50B6E78646}" ShortID="912960626" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+									<PropertyList>
+										<Property Name="Threshold" Type="Real32" Value="-1"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}">
-							<ReferenceList>
-								<Reference Name="Effect0">
-									<Custom CreatedFrom="{8F08A8A7-3313-4E5D-9EBD-2B1B564DE411}">
-										<Effect Name="Extreme_Limiting_1 (Custom)" ID="{6126681B-639F-47C8-9C0E-40D3A12AE5F4}" ShortID="373286653" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3"/>
-									</Custom>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
@@ -47,14 +50,8 @@
 								</CustomStateList>
 							</StateInfo>
 						</Bus>
-						<Bus Name="UI Audio Bus" ID="{569C0182-E842-4C69-9B1C-0EDAFF81272E}"/>
-						<Bus Name="SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}">
+						<Bus Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}">
 							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>-8</Value>
@@ -106,6 +103,22 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<Bus Name="System SE Audio Bus" ID="{7F40360D-4E2E-4BF3-A420-9CF647887E31}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}"/>
+									<DuckingParam>
+										<Volume>-6</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.200000002980232</FadeOutTime>
+										<FadeCurve>FadeSCurve</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

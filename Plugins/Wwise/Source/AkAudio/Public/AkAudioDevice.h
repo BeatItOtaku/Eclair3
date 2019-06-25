@@ -452,7 +452,6 @@ public:
 		FWaitEndOfEventAction* LatentAction
 	);
 
-
 	/**
 	 * Post an event at location to ak soundengine
 	 *
@@ -491,6 +490,24 @@ public:
 	 * @param AutoDestroy - Automatically destroy the AkComponent once the event is finished.
 	 */
 	class UAkComponent* SpawnAkComponentAtLocation( class UAkAudioEvent* in_pAkEvent, class UAkAuxBus* EarlyReflectionsBus, FVector Location, FRotator Orientation, bool AutoPost, const FString& EventName, const FString& EarlyReflectionsBusName, bool AutoDestroy, class UWorld* in_World );
+
+	/**
+	 * Executes an action on all nodes that are referenced in the specified event in an action of type play.
+	 * @param in_EventName Name of the event to post
+	 * @param in_ActionType Action to execute on all the elements that were played using the specified event.
+	 * @param in_pActor Associated actor
+	 * @param in_uTransitionDuration Fade duration
+	 * @param in_eFadeCurve Curve type to be used for the transition
+	 * @param in_PlayingID Associated PlayingID
+	 */
+	AKRESULT ExecuteActionOnEvent(
+		const FString& in_EventName,
+		AkActionOnEventType in_ActionType,
+		AActor* in_pActor,
+		AkTimeMs in_uTransitionDuration = 0,
+		EAkCurveInterpolation in_eFadeCurve = EAkCurveInterpolation::Linear,
+		AkPlayingID in_PlayingID = AK_INVALID_PLAYING_ID
+	);
 
     /** Seek on an event in the ak soundengine.
     * @param in_EventName            Name of the event on which to seek.
@@ -610,17 +627,6 @@ public:
         AkMultiPositionType in_eMultiPositionType = AkMultiPositionType::MultiDirections
     );
 
-    /** Sets the position of a game object.
-     *  NOTE: The object's orientation vector (in_Position.Orientation) must be normalized.
-     *  @param in_GameObjectID Game Object identifier
-     *  @param in_Position Position to set; in_Position.Orientation must be normalized.
-     *  @return AK_Success when successful, AK_InvalidParameter if parameters are not valid.
-     */
-    AKRESULT SetPosition(
-        AkGameObjectID in_GameObjectID,
-        const AkSoundPosition & in_Position
-        );
-
     /** Sets multiple positions to a single game object.
      *  Setting multiple positions on a single game object is a way to simulate multiple emission sources while using the resources of only one voice.
      *  This can be used to simulate wall openings, area sounds, or multiple objects emitting the same sound in the same area.
@@ -657,22 +663,6 @@ public:
         );
 
 	/**
-	 * Sets occlusion and obstruction values for a game object and a listener.
-	 *
-	 * @param in_pActor			AkComponent on which to activate the occlusion
-	 * @param in_ListenerIndex	Listener index on which to set the parameters
-	 * @param in_Occlusion		Occlusion value to set
-	 * @param in_Obstruction	Obstruction value to set
-	 * @return Result from ak sound engine
-	 */
-	AKRESULT SetOcclusionObstruction(
-		const UAkComponent * const in_pEmitter,
-		const UAkComponent * const in_pListener,
-		const float in_Obstruction,
-		const float in_Occlusion
-		);
-
-	/**
 	 * Set auxiliary sends
 	 *
 	 * @param in_GameObjId		Wwise Game Object ID
@@ -680,7 +670,7 @@ public:
 	 * @return Result from ak sound engine
 	 */
 	AKRESULT SetAuxSends(
-		const AkGameObjectID in_GameObjId,
+		const UAkComponent* in_akComponent,
 		TArray<AkAuxSendValue>& in_AuxSendValues
 		);
 
@@ -718,6 +708,75 @@ public:
 	 */
 	AKRESULT SetPanningRule(
 		AkPanningRule		in_ePanningRule			///< Panning rule.
+		);
+
+	/**
+	 * Gets the compounded output ID from shareset and device id.
+	 * Outputs are defined by their type (Audio Device shareset) and their specific system ID.
+	 * A system ID could be reused for other device types on some OS or platforms, hence the compounded ID.
+	 *
+	 * @param in_szShareset Audio Device ShareSet Name, as defined in the Wwise Project.  If Null, will select the Default Output shareset (always available)
+	 * @param in_idDevice Device specific identifier, when multiple devices of the same type are possible. If only one device is possible, leave to 0.
+	 * @return The id of the output
+	 */
+	AkOutputDeviceID GetOutputID(
+		const FString& in_szShareSet,
+		AkUInt32 in_idDevice = 0
+	);
+
+	/**
+	 * Gets speaker angles of the specified device. Speaker angles are used for 3D positioning of sounds over standard configurations.
+	 * Note that the current version of Wwise only supports positioning on the plane.
+	 * The speaker angles are expressed as an array of loudspeaker pairs, in degrees, relative to azimuth ]0,180].
+	 * Supported loudspeaker setups are always symmetric; the center speaker is always in the middle and thus not specified by angles.
+	 * Angles must be set in ascending order.
+	 * Typical usage:
+	 * - AkReal32 heightAngle;
+	 * - TArray<AkReal32> speakerAngles;
+	 * - GetSpeakerAngles(speakerAngles, heightAngle, AkOutput_Main );
+	 * \aknote
+	 *  On most platforms, the angle set on the plane consists of 3 angles, to account for 7.1.
+	 * - When panning to stereo (speaker mode, see <tt>AK::SoundEngine::SetPanningRule()</tt>), only angle[0] is used, and 3D sounds in the back of the listener are mirrored to the front.
+	 * - When panning to 5.1, the front speakers use angle[0], and the surround speakers use (angle[2] - angle[1]) / 2.
+	 * \endaknote
+	 * \warning Call this function only after the sound engine has been properly initialized.
+	 *
+	 * @param io_pfSpeakerAngles Returned array of loudspeaker pair angles, in degrees relative to azimuth [0,180]. Pass NULL to get the required size of the array.
+	 * @param out_fHeightAngle Elevation of the height layer, in degrees relative to the plane [-90,90].
+	 * @param in_idOutput Output ID to set the bus on.  As returned from AddOutput or GetOutputID.  You can pass 0 for the main (default) output
+	 * @return AK_Success if device exists
+	 *
+	 */
+	AKRESULT GetSpeakerAngles(
+		TArray<AkReal32>& io_pfSpeakerAngles,
+		AkReal32& out_fHeightAngle,
+		AkOutputDeviceID in_idOutput = 0
+		);
+
+	/**
+	 * Sets speaker angles of the specified device. Speaker angles are used for 3D positioning of sounds over standard configurations.
+	 * Note that the current version of Wwise only supports positioning on the plane.
+	 * The speaker angles are expressed as an array of loudspeaker pairs, in degrees, relative to azimuth ]0,180].
+	 * Supported loudspeaker setups are always symmetric; the center speaker is always in the middle and thus not specified by angles.
+	 * Angles must be set in ascending order.
+	 * Typical usage:
+	 * - Initialize the sound engine and/or add secondary output(s).
+	 * - Get number of speaker angles and their value into an array using GetSpeakerAngles().
+	 * - Modify the angles and call SetSpeakerAngles().
+	 * This function posts a message to the audio thread through the command queue, so it is thread safe. However the result may not be immediately read with GetSpeakerAngles().
+	 * \warning This function only applies to configurations (or subset of these configurations) that are standard and whose speakers are on the plane (2D).
+	 * \sa GetSpeakerAngles()
+	 *
+	 * @param in_pfSpeakerAngles Array of loudspeaker pair angles, in degrees relative to azimuth [0,180]
+	 * @param in_fHeightAngle Elevation of the height layer, in degrees relative to the plane [-90,90]
+	 * @param in_idOutput Output ID to set the bus on. As returned from AddOutput or GetOutputID.  You can pass 0 for the main (default) output
+	 * @return AK_Success if successful (device exists and angles are valid), AK_NotCompatible if the channel configuration of the device is not standard (AK_ChannelConfigType_Standard), AK_Fail otherwise.
+	 *
+	 */
+	AKRESULT SetSpeakerAngles(
+		const TArray<AkReal32>& in_pfSpeakerAngles,
+		AkReal32 in_fHeightAngle,
+		AkOutputDeviceID in_idOutput = 0
 		);
 
 	/**
@@ -812,7 +871,6 @@ public:
 	*/
 	AKRESULT RemoveGeometrySet(AkGeometrySetID AcousticZoneID);
 
-
 	/**
 	 * Get an ak audio component, or create it if none exists that fit the attachment criteria.
 	 */
@@ -825,6 +883,8 @@ public:
 	 * @param in_cookie			The cookie to cancel
 	 */
 	void CancelEventCallbackCookie(void* in_cookie);
+
+	void CancelEventCallbackDelegate(const FOnAkPostEventCallback& in_Delegate);
 
 	 /** 
 	  * Set the scaling factor of a game object.
@@ -1105,12 +1165,6 @@ public:
 	/** Find UAkRoomComponents at a given location. */
 	TArray<class UAkRoomComponent*> FindRoomComponentsAtLocation(const FVector& Loc, const UWorld* in_World, int32 depth = FIND_COMPONENTS_DEPTH_INFINITE);
 
-	/** Add a UAkRoomComponent to the linked list. */
-	void AddRoomComponentToPrioritizedList(class UAkRoomComponent* in_ComponentToAdd);
-
-	/** Remove a UAkRoomComponent from the linked list. */
-	void RemoveRoomComponentFromPrioritizedList(class UAkRoomComponent* in_ComponentToRemove);
-
 	/** Return true if any UAkRoomComponents have been added to the prioritized list of rooms for the in_World**/
 	bool UsingSpatialAudioRooms(const UWorld* in_World);
 
@@ -1148,9 +1202,16 @@ public:
 	/** Get the listener that has been choosen to be used for Wwise Spatial Audio**/
 	UAkComponent* GetSpatialAudioListener() const;
 
-	AKRESULT SetPosition(UAkComponent* in_pListener, const AkTransform& in_SoundPosition);
+	AKRESULT SetPosition(UAkComponent* in_akComponent, const AkTransform& in_SoundPosition);
 
-	AKRESULT SetRoom(UAkRoomComponent* in_pRoom, const AkRoomParams& in_RoomParams);
+	/** Add a UAkRoomComponent to the linked list. */
+	void AddRoomComponentToPrioritizedList(class UAkRoomComponent* in_ComponentToAdd);
+
+	/** Remove a UAkRoomComponent from the linked list. */
+	void RemoveRoomComponentFromPrioritizedList(class UAkRoomComponent* in_ComponentToRemove);
+
+	AKRESULT AddRoom(UAkRoomComponent* in_pRoom, const AkRoomParams& in_RoomParams);
+	AKRESULT UpdateRoom(UAkRoomComponent* in_pRoom, const AkRoomParams& in_RoomParams);
 	AKRESULT RemoveRoom(UAkRoomComponent* in_pRoom);
 
 	AKRESULT SetImageSource(class AAkSpotReflector* in_pSpotReflector, const AkImageSourceSettings& in_ImageSourceInfo, AkUniqueID in_AuxBusID, AkRoomID in_RoomID);
@@ -1176,10 +1237,16 @@ private:
 	template<typename FCreateCallbackPackage>
 	AkPlayingID PostEvent(
 		const FString& in_EventName,
-		UAkComponent* in_pComponent,
+		const AkGameObjectID in_GameObjectID,
 		FCreateCallbackPackage CreateCallbackPackage
 	);
 
+	template<typename FCreateCallbackPackage>
+	AkPlayingID PostEvent(
+		const FString& in_EventName,
+		UAkComponent* in_pComponent,
+		FCreateCallbackPackage CreateCallbackPackage
+	);
 
 	// Overload allowing to modify StopWhenOwnerDestroyed after getting the AkComponent
 	AKRESULT GetGameObjectID(AActor * in_pActor, AkGameObjectID& io_GameObject, bool in_bStopWhenOwnerDestroyed );
