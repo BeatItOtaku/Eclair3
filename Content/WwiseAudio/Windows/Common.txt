@@ -6,10 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	1433397863	Steam			\Ambient\Steam	
 	1518282501	Etoile_end			\SE\Eclair\Etoile_end	
 	1537061107	Wind			\Ambient\Wind	
+	1544377644	Bird			\Ambient\Bird	
 	1591411653	BigDecide			\SE\System\BigDecide	
 	1814275255	LowHPLoop			\SE\System\LowHPLoop	
 	1834271629	HittingBolt			\SE\Eclair\HittingBolt	
+	2023306206	WaterFlow			\Ambient\WaterFlow	
 	2151339297	Voice_Damaged			\SE\Eclair\Voice_Damaged	
+	2174908572	GrassAndBirds			\Ambient\GrassAndBirds	
 	2255639613	SteelFrame			\Ambient\SteelFrame	
 	2385628198	FootSteps			\SE\Eclair\FootSteps	
 	2760337059	Cancel			\SE\System\Cancel	
@@ -45,14 +48,18 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	95071851	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambient\Steam\Wait\Wwise Silence	
+	868447865	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambient\Bird\Wait\Wwise Silence	
 	1049395718	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambient\SteelFrame\Wait\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	2744495	Hacking	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Hacking_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Hacking		25108
+	18691838	GrassAndBirds	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\GrassAndBirds_C54F28C6.wem		\Actor-Mixer Hierarchy\Ambient\GrassAndBirds		853411
 	30164968	FootSteps_Eclair_Default_13	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_13_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_13		5433
 	59565763	UnlockStage	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\UnlockStage_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\System\UnlockStage		50078
 	60845689	Cancel	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Cancel_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Cancel		8744
+	71549198	WaterFlow	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\WaterFlow_C54F28C6.wem		\Actor-Mixer Hierarchy\Ambient\WaterFlow		392327
 	105108458	CannotUnlock	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\CannotUnlock_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\System\CannotUnlock		6879
+	109089291	Bird2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Bird2_A0997E7C.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird2		132970
 	135831222	FootSteps_Eclair_Default_03	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_03_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_03		6490
 	142300749	Voice_Damaged	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Voice_Damaged_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Voice_Damaged		6022
 	154465229	Pico1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Pico1_C54F28C6.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico1\Pico1		29865
@@ -70,6 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	548352836	FootSteps_Eclair_Default_01	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_01_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		6575
 	575486927	Notify	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Notify_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Notify		39289
 	612193268	FootSteps_Eclair_Default_06	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_06_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_06		6997
+	626261930	Bird1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Bird1_A0997E7C.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird1		100041
 	633214849	SteelFrame	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\SteelFrame_A0997E7C.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		117152
 	648148738	Pico2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Pico2_C54F28C6.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico2\Pico2		29873
 	727930744	LowHP	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\LowHP_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		5860

@@ -16,6 +16,7 @@
 			<ShortName>Chapter2</ShortName>
 			<Path>Chapter2.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1990701021" Name="Catapult" ObjectPath="\Events\SE\Chapter2\Catapult"/>
 				<Event Id="2654819955" Name="Field2" ObjectPath="\Events\Default Work Unit\Chapter2\Field2"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -42,6 +43,10 @@
 				<File Id="599951383" Language="SFX">
 					<ShortName>Cymbal roll sound effect.wav</ShortName>
 					<Path>SFX\Cymbal roll sound effect_C54F28C6.wem</Path>
+				</File>
+				<File Id="762942166" Language="SFX">
+					<ShortName>Catapult.wav</ShortName>
+					<Path>SFX\Catapult_A0997E7C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
