@@ -153,6 +153,24 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Chapter2" ID="{F1D8893E-4528-4F29-804E-620070829706}" ShortID="216245669">
+					<ChildrenList>
+						<Event Name="Field2" ID="{0FE43F61-2A63-471C-A6A5-C7341872CD21}">
+							<ChildrenList>
+								<Action Name="" ID="{3500E5FE-4C4F-4285-890C-1A5A2F39654D}" ShortID="665592818">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Field" ID="{D9F208C4-FBE8-45C0-9F4E-4702CDAF7D63}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

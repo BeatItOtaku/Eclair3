@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1990701021	Catapult			\SE\Chapter2\Catapult	
+	2654819955	Field2			\Default Work Unit\Chapter2\Field2	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	94529234	2-Fighting	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Fighting_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Fighting		1545391
+	116336102	2-BigTree	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-BigTree_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\BigTree\Main\2-BigTree		1276254
+	411093624	2-Main	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal_Fighting\Main\2-Main		1554855
+	458424964	2-Main-FirstTime	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main-FirstTime_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Main-FirstTime		1655518
+	590896552	2-Normal	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Normal_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		1198668
+	599951383	Cymbal roll sound effect	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Cymbal roll sound effect_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Cymbal roll sound effect\Cymbal roll sound effect		139883
+	762942166	Catapult	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Catapult_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter2\Catapult		20956
+

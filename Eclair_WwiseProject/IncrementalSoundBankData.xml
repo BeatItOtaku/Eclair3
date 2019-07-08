@@ -3,30 +3,32 @@
 	<Platform GUID="{257EC70B-6C2B-49A4-8CCA-5D5536F5B23C}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Chapter1" Hash="2624627027" Timestamp="1550726598"/>
-				<File Name="Common" Hash="3226313264" Timestamp="1550726730"/>
+				<File Name="Chapter1" Hash="1606596410" Timestamp="1562608968"/>
+				<File Name="Chapter2" Hash="13865420" Timestamp="1562617378"/>
+				<File Name="Common" Hash="2168912857" Timestamp="1562614422"/>
 				<File Name="EclairAkAudioBank" Hash="803701938" Timestamp="1537987590"/>
-				<File Name="Init" Hash="1967958914" Timestamp="1550726599"/>
+				<File Name="Init" Hash="4219823134" Timestamp="1562617378"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="837683754" Timestamp="1550726730"/>
+				<File Name="" Hash="3403083785" Timestamp="1562617378"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{273E58E0-7A5B-4DCF-9255-91753951D9B9}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Chapter1" Hash="2624627027" Timestamp="1550666474"/>
-				<File Name="Common" Hash="3226313264" Timestamp="1550665418"/>
+				<File Name="Chapter1" Hash="1606596410" Timestamp="1562608970"/>
+				<File Name="Chapter2" Hash="13865420" Timestamp="1562617378"/>
+				<File Name="Common" Hash="2168912857" Timestamp="1562614424"/>
 				<File Name="EclairAkAudioBank" Hash="1547978074" Timestamp="1538045160"/>
-				<File Name="Init" Hash="2660827576" Timestamp="1550666474"/>
+				<File Name="Init" Hash="42819596" Timestamp="1562617378"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1196501932" Timestamp="1550666474"/>
+				<File Name="" Hash="3214173883" Timestamp="1562617378"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
