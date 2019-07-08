@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1990701021	Catapult			\SE\Chapter2\Catapult	
 	2654819955	Field2			\Default Work Unit\Chapter2\Field2	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -8,4 +9,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	458424964	2-Main-FirstTime	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\2-Main-FirstTime_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Main-FirstTime		1655518
 	590896552	2-Normal	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\2-Normal_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		1198668
 	599951383	Cymbal roll sound effect	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Cymbal roll sound effect_C54F28C6.wem		\Interactive Music Hierarchy\Chapter2\Cymbal roll sound effect\Cymbal roll sound effect		139883
+	762942166	Catapult	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Catapult_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter2\Catapult		20956
 

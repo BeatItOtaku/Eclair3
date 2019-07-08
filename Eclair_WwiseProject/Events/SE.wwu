@@ -503,6 +503,24 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Chapter2" ID="{045C516B-74D0-48C2-8022-8FC308B1E9AD}" ShortID="448510055">
+					<ChildrenList>
+						<Event Name="Catapult" ID="{0C526229-5688-4112-AFDB-B4AC9F4C366D}">
+							<ChildrenList>
+								<Action Name="" ID="{55A97A7D-ACE7-45FE-9AF6-D74A4B38AA04}" ShortID="60825141">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catapult" ID="{BBB99CA6-B1AC-4D2B-965D-A3A9EF43A31F}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

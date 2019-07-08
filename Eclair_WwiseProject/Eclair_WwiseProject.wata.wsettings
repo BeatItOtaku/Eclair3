@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{72099D9C-15BA-4AFA-8909-B36FC7905881}">
 			<PropertyList>
+				<Property Name="Event Action List\{0C526229-5688-4112-AFDB-B4AC9F4C366D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0FE43F61-2A63-471C-A6A5-C7341872CD21}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{339C5E07-6EB5-4D82-B978-659A038217BB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4A572880-CE5A-4F82-9E8A-3B354C54A348}\x64_Expand States" Type="string" Value=""/>
@@ -97,8 +98,8 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="haUvGd5aTEqWX/TvjFRNkQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="uSCCMMYk70ChvsfUQ7KigWrlKCyGnG5JpZwPBLVKBBs+idjxKEUpT4BOYgBwgpcG"/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="f4JIvqJe/kWrv+/ujm8DlvD/kqdMoOxHnw7gITbHeMet29DcnGSESrjUoc5ydxro"/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="uSCCMMYk70ChvsfUQ7KigWnuwLttr+ZGlwj+1dT9aZhq5SgshpxuSaWcDwS1SgQbPonY8ShFKU+ATmIAcIKXBg=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="UDSrYVkppkS0DgQlob1WyBZW1QlHroxFrOvT/nBgMulMNN04bqH8SI4GBwGndiRt"/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
