@@ -55,6 +55,10 @@
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
+												<StateRef Name="Sub2" ID="{C788C2BE-7DD3-43AF-A05F-C88054904CC3}"/>
+												<State Name="" ID="{6F651904-A905-455E-AACE-347622EDCF5F}" ShortID="436507442"/>
+											</CustomState>
+											<CustomState>
 												<StateRef Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
 												<State Name="" ID="{8A4F09CF-6B9C-4137-B538-AF71CD42808D}" ShortID="91695379"/>
 											</CustomState>
@@ -721,6 +725,10 @@
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Sub2" ID="{C788C2BE-7DD3-43AF-A05F-C88054904CC3}"/>
+								<State Name="" ID="{BC0BA27D-9A48-4141-9FC9-E32835E7DCE0}" ShortID="886642433"/>
+							</CustomState>
 							<CustomState>
 								<StateRef Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
 								<State Name="" ID="{6556487D-FA1A-4D11-AE54-4733B6F67905}" ShortID="593469208"/>
