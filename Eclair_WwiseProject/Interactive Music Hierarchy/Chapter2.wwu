@@ -4,6 +4,9 @@
 		<WorkUnit Name="Chapter2" ID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Piano" ID="{9F55319E-B504-43FC-AE2E-9EAF3F0B4AF1}" ShortID="1002186583">
+					<PropertyList>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
@@ -93,6 +96,7 @@
 				<MusicSwitchContainer Name="Field" ID="{D9F208C4-FBE8-45C0-9F4E-4702CDAF7D63}" ShortID="333098608">
 					<PropertyList>
 						<Property Name="ContinuePlay" Type="bool" Value="False"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="Tempo" Type="Real64" Value="111.45"/>
 						<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
 						<Property Name="TimeSignatureUpper" Type="int16" Value="6"/>
@@ -102,7 +106,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+							<ObjectRef Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -185,23 +189,6 @@
 													<AudioFile>2-Normal.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
-											<StateInfo>
-												<StateGroupList>
-													<StateGroupInfo>
-														<StateGroupRef Name="IsFighting" ID="{09D55616-AE47-458C-ACEB-D3FE706032E9}"/>
-													</StateGroupInfo>
-												</StateGroupList>
-												<CustomStateList>
-													<CustomState>
-														<StateRef Name="Fighting" ID="{65EF1AC3-3E94-4227-91B7-9E44A1E3C9D7}"/>
-														<State Name="" ID="{A62FBC29-E71F-45B3-8030-64846BFE4F15}" ShortID="261259243">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</State>
-													</CustomState>
-												</CustomStateList>
-											</StateInfo>
 											<TransitionList>
 												<MusicTransition Name="Root" ID="{4C34D05B-0F88-4C7B-B41E-CC5E7BF82706}">
 													<PropertyList>
@@ -1139,7 +1126,6 @@
 										<Property Name="ExitSourceAt" Type="int16" Value="5"/>
 										<Property Name="SourceContextType" Type="int16" Value="1"/>
 									</PropertyList>
-									<ReferenceList/>
 									<TransitionInfo>
 										<TransitionObjectRef Name="Cymbal roll sound effect" ID="{01E6ACE3-D0F0-4A3F-B374-9C53A8456477}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
 										<SourceFadeOut>
