@@ -8,6 +8,7 @@
 						<State Name="None" ID="{2E43FAF3-AC0B-436E-B9A3-50F9CF90F565}"/>
 						<State Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
 						<State Name="Sub1" ID="{F6707CA2-EDAC-4726-B6FD-26273A1C9867}"/>
+						<State Name="Sub2" ID="{C788C2BE-7DD3-43AF-A05F-C88054904CC3}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}">
@@ -33,6 +34,12 @@
 						<State Name="None" ID="{3996D0A7-B642-4BA6-B591-FDEAC80EED0C}"/>
 						<State Name="Puddle" ID="{75BF2A21-CB15-4D00-8AC1-E7BF5DF56D8D}"/>
 						<State Name="Metal" ID="{573570FB-6D43-43F1-9CAA-889EF73B3285}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="IsFighting" ID="{09D55616-AE47-458C-ACEB-D3FE706032E9}">
+					<ChildrenList>
+						<State Name="None" ID="{9B2DA21A-16AB-4FA9-8751-F5BB2DB511E1}"/>
+						<State Name="Fighting" ID="{65EF1AC3-3E94-4227-91B7-9E44A1E3C9D7}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

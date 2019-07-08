@@ -153,6 +153,62 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Chapter2" ID="{F1D8893E-4528-4F29-804E-620070829706}" ShortID="216245669">
+					<ChildrenList>
+						<Event Name="Field2" ID="{0FE43F61-2A63-471C-A6A5-C7341872CD21}">
+							<ChildrenList>
+								<Action Name="" ID="{3500E5FE-4C4F-4285-890C-1A5A2F39654D}" ShortID="665592818">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Field" ID="{D9F208C4-FBE8-45C0-9F4E-4702CDAF7D63}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StartFight2" ID="{4A572880-CE5A-4F82-9E8A-3B354C54A348}">
+							<ChildrenList>
+								<Action Name="" ID="{5E1E4ABD-0859-45E5-A7B5-94F8785931D0}" ShortID="225481583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fighting" ID="{65EF1AC3-3E94-4227-91B7-9E44A1E3C9D7}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EndFight2" ID="{6974A6D6-092A-48BC-AA8A-7CA7EE4CB357}">
+							<ChildrenList>
+								<Action Name="" ID="{7335420F-7AB2-4312-A393-6E26B9EF1E35}" ShortID="480321086">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="None" ID="{9B2DA21A-16AB-4FA9-8751-F5BB2DB511E1}" WorkUnitID="{38DD344C-A16E-48FC-8E06-0701A776246D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{90410B8A-4868-46C0-BAF6-9451AD24FD96}" ShortID="725153042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cymbal roll sound effect" ID="{01E6ACE3-D0F0-4A3F-B374-9C53A8456477}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
