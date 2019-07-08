@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2654819955	Field2			\Default Work Unit\Chapter2\Field2	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2965688519	IsFighting			\Default Work Unit\IsFighting	
+
+State	ID	Name	State Group			Notes
+	0	None	IsFighting			
+	168610243	Fighting	IsFighting			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	261259243	Fighting	IsFighting	\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	94529234	2-Fighting	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Fighting_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Fighting		1724916
+	116336102	2-BigTree	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-BigTree_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Field\BigTree\Main\2-BigTree		1288919
+	411093624	2-Main	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal_Fighting\Main\2-Main		1245239
+	458424964	2-Main-FirstTime	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main-FirstTime_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Main-FirstTime		1142586
+	590896552	2-Normal	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Normal_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		1155111
+	599951383	Cymbal roll sound effect	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Cymbal roll sound effect_CB1F3167.wem		\Interactive Music Hierarchy\Chapter2\Cymbal roll sound effect\Cymbal roll sound effect		118199
+

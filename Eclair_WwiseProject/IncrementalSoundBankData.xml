@@ -19,15 +19,15 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Chapter1" Hash="2624627027" Timestamp="1562565164"/>
-				<File Name="Chapter2" Hash="932259524" Timestamp="1562566100"/>
+				<File Name="Chapter2" Hash="1813737964" Timestamp="1562594014"/>
 				<File Name="Common" Hash="3226313264" Timestamp="1562565174"/>
 				<File Name="EclairAkAudioBank" Hash="1547978074" Timestamp="1538045160"/>
-				<File Name="Init" Hash="42819596" Timestamp="1562565878"/>
+				<File Name="Init" Hash="42819596" Timestamp="1562594014"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3306654213" Timestamp="1562566100"/>
+				<File Name="" Hash="2550863113" Timestamp="1562594014"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
