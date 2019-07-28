@@ -362,6 +362,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="GetArchive" ID="{E5E53757-7A15-45ED-BD72-224DA914BFB2}">
+							<ChildrenList>
+								<Action Name="" ID="{3EFF5983-EE49-4DF2-92A0-26CFF4E048AD}" ShortID="591739864">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GetArchive" ID="{AE26879C-DCF0-4660-A851-BF4A653EEE2A}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GetKey" ID="{67E49596-6325-44D1-9386-FE38CA956299}">
+							<ChildrenList>
+								<Action Name="" ID="{91130580-33CA-436E-A504-0E4C06D24A26}" ShortID="512262153">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GetKey" ID="{23B811BC-1D23-495F-A121-9A442E5C2E3C}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eclair" ID="{85675E97-5D83-4D44-A0B6-E341644C8CFB}" ShortID="48386419">
