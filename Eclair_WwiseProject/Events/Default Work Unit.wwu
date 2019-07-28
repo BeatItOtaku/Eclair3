@@ -169,6 +169,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Boss2" ID="{86986BD2-4DF0-4BE9-8911-7E33544CE0A6}">
+							<ChildrenList>
+								<Action Name="" ID="{9D3B5326-98C0-4BAE-918C-8280A17E6672}" ShortID="169384514">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss" ID="{4DD333A0-CC1C-4050-A6F8-00D06731C329}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

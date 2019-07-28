@@ -632,6 +632,44 @@
 								<ActiveSource Name="UnlockStage" ID="{6767995D-0C45-4F81-A634-C5525C744CC0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="GetArchive" ID="{AE26879C-DCF0-4660-A851-BF4A653EEE2A}" ShortID="460123652">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GetArchive" ID="{EBDE2005-D6A2-4F22-9E4C-48BE1248533A}" ShortID="886501689">
+									<Language>SFX</Language>
+									<AudioFile>GetArchive.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GetArchive" ID="{EBDE2005-D6A2-4F22-9E4C-48BE1248533A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GetKey" ID="{23B811BC-1D23-495F-A121-9A442E5C2E3C}" ShortID="769594332">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{92FA8BC9-2C12-4B0E-9E22-2E99B6170BB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Character SE Audio Bus" ID="{DD41832B-D81C-4977-AADF-2DD0BFBC42D4}" WorkUnitID="{192FA585-5ADE-4A4C-965F-F4EF8C544D91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GetKey" ID="{6940E5B7-FFD0-44A2-A73D-13AD143B81A4}" ShortID="310164942">
+									<Language>SFX</Language>
+									<AudioFile>GetKey.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GetKey" ID="{6940E5B7-FFD0-44A2-A73D-13AD143B81A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eclair" ID="{9CF3AE3D-21D5-41C7-A821-311387054262}" ShortID="25561467">

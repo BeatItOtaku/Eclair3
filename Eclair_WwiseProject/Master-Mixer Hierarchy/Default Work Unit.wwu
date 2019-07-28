@@ -20,7 +20,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="BGM Audio Bus" ID="{B254BF6A-C51F-4FD3-8505-D70268E10168}">
-							<ReferenceList/>
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
@@ -43,7 +42,9 @@
 										<StateRef Name="Pausing" ID="{7E0D7C6A-FF9C-4C02-892A-83205C1434BE}"/>
 										<State Name="" ID="{BE17BB01-07DA-4D93-9107-3294E67D3B44}" ShortID="726338649">
 											<PropertyList>
-												<Property Name="Highpass" Type="int16" Value="60"/>
+												<Property Name="BusVolume" Type="Real64" Value="-5"/>
+												<Property Name="Highpass" Type="int16" Value="30"/>
+												<Property Name="Lowpass" Type="int16" Value="30"/>
 											</PropertyList>
 										</State>
 									</CustomState>
