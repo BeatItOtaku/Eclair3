@@ -43,7 +43,7 @@ public:
 	UPROPERTY(EditAnywhere)
 		TArray<FEclairConversationItem> Items;
 
-	UFUNCTION(BlueprintCallable, Category = "EclairConversation")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "EclairConversation")
 		FEclairConversationItem Get(int index);
 
 	UFUNCTION(BlueprintCallable, Category = "EclairConversation", BlueprintPure, meta = (CompactNodeTitle = "LENGTH"))
