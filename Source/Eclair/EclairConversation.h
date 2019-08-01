@@ -34,10 +34,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		EConversationType Type;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TArray<int> CharacterLeft;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TArray<int> CharacterRight;
 
 	UPROPERTY(EditAnywhere)
