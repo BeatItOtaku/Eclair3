@@ -12,7 +12,7 @@ UEclairConversation::UEclairConversation()
 
 FEclairConversationItem UEclairConversation::Get(int index)
 {
-	return Items.Num > index ? Items[index] : FEclairConversationItem();
+	return Items.Num() > index ? Items[index] : FEclairConversationItem();
 }
 
 int UEclairConversation::Length()
