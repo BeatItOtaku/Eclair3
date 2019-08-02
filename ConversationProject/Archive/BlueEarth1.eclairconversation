@@ -1,0 +1,46 @@
+{
+  "description": "青き大地計画 1日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 1日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "アーミーギア、孤島に上陸。\n\"青の粉塵\"散布区域の選定と\n散布準備に取り掛かった。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "散布区域は\n生態系構築にふさわしい非居住区である\n孤島北東部の荒野に指定した。 ",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d92f58f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "今回の任務で成功すれば、",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

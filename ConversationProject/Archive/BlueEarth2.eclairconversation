@@ -1,0 +1,37 @@
+{
+  "description": "青き大地計画 2日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 2日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "区域内で青の粉塵の散布を開始した。\n青の粉塵は分化を開始し、区域内に生態系を構築。\n安定した速度を維持し増殖が進んでいる。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "このまま分化が進めば、目標である\nどんな環境にも適応する生物の誕生も\n起こりうるだろう。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
