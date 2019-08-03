@@ -1,0 +1,76 @@
+{
+  "description": "ブリオッシュ",
+  "character-left": [
+    3,
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 2,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "…ブリオッシュ！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "1dc25d30-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        1
+      ],
+      "content": "現れたな…",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "2b59fa70-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        3
+      ],
+      "content": "… フシュー… フシュー…",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "3bd381f0-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        0
+      ],
+      "content": "ウォーミングアップも完ぺきなようね…",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "543d81f0-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        1
+      ],
+      "content": "エクレア、奴はあの体格通り\n攻撃も大ぶりなはずだ。",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "85f09750-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        1
+      ],
+      "content": "奴の攻撃をお前の素早さで\nかわした後、電撃で体当たりするんだ。",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "90cf2f10-b5a1-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        0
+      ],
+      "content": "了解。いくぞ…！",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
