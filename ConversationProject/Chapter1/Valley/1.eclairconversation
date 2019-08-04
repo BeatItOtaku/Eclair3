@@ -15,7 +15,7 @@
       ],
       "content": "準備はいいか？エクレア",
       "duration": 3.5,
-      "name-overwrite": ""
+      "name-overwrite": "？？？"
     },
     {
       "id": "e5c6f640-d813-11e8-a78d-2d3c1eec2526",
@@ -40,7 +40,7 @@
       "character": [
         0
       ],
-      "content": "ブルレファン・ブリオッシュ、『歩く火事場の馬鹿力』。ここら一帯で暴れまわっている…",
+      "content": "ブルレファン・ブリオッシュ、『歩く火事場の馬鹿力』。\nここら一帯で暴れまわっている…",
       "duration": 3,
       "name-overwrite": ""
     },
