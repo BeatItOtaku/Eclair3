@@ -1,0 +1,28 @@
+{
+  "description": "赤壁の説明",
+  "character-left": [
+    1
+  ],
+  "character-right": [],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "この赤色の壁、電撃を通さない\n特性のようだな・・・。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "760ecde0-b59f-11e9-9822-854d5499a132",
+      "character": [
+        1
+      ],
+      "content": "お前の投げるボルトは通過できるが、\n電撃移動中のお前自身は通過できない。\n気をつけろよ。",
+      "duration": 120,
+      "name-overwrite": ""
+    }
+  ]
+}
