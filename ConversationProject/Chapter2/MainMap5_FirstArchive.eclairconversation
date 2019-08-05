@@ -1,0 +1,21 @@
+{
+  "description": "アーカイブを初めて取得した「後」の会話。オレイエットが青き大地計画知ってる的なのほのめかしてもいいかも",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "Initial Content",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
