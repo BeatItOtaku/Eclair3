@@ -1,0 +1,19 @@
+{
+  "description": "壁のおさらい",
+  "character-left": [],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "赤色が電撃を通さなくて、\n黄色は電撃だけ通す…ね。",
+      "duration": 30,
+      "name-overwrite": ""
+    }
+  ]
+}
