@@ -16,37 +16,58 @@
 			<ShortName>Chapter2</ShortName>
 			<Path>Chapter2.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2253511092" Name="Boss2" ObjectPath="\Events\Default Work Unit\Chapter2\Boss2"/>
 				<Event Id="1990701021" Name="Catapult" ObjectPath="\Events\SE\Chapter2\Catapult"/>
 				<Event Id="2654819955" Name="Field2" ObjectPath="\Events\Default Work Unit\Chapter2\Field2"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="94529234" Language="SFX">
 					<ShortName>2-Fighting.wav</ShortName>
-					<Path>SFX\2-Fighting_C54F28C6.wem</Path>
+					<Path>SFX\2-Fighting_2EB51506.wem</Path>
 				</File>
 				<File Id="116336102" Language="SFX">
 					<ShortName>2-BigTree.wav</ShortName>
-					<Path>SFX\2-BigTree_C54F28C6.wem</Path>
+					<Path>SFX\2-BigTree_2EB51506.wem</Path>
+				</File>
+				<File Id="173695219" Language="SFX">
+					<ShortName>2-boss-end.wav</ShortName>
+					<Path>SFX\2-boss-end_2EB51506.wem</Path>
+				</File>
+				<File Id="236271485" Language="SFX">
+					<ShortName>2-boss-intro.wav</ShortName>
+					<Path>SFX\2-boss-intro_2EB51506.wem</Path>
 				</File>
 				<File Id="411093624" Language="SFX">
 					<ShortName>2-Main.wav</ShortName>
-					<Path>SFX\2-Main_C54F28C6.wem</Path>
+					<Path>SFX\2-Main_2EB51506.wem</Path>
 				</File>
 				<File Id="458424964" Language="SFX">
 					<ShortName>2-Main-FirstTime.wav</ShortName>
-					<Path>SFX\2-Main-FirstTime_C54F28C6.wem</Path>
+					<Path>SFX\2-Main-FirstTime_2EB51506.wem</Path>
 				</File>
 				<File Id="590896552" Language="SFX">
 					<ShortName>2-Normal.wav</ShortName>
-					<Path>SFX\2-Normal_C54F28C6.wem</Path>
+					<Path>SFX\2-Normal_2EB51506.wem</Path>
 				</File>
 				<File Id="599951383" Language="SFX">
 					<ShortName>Cymbal roll sound effect.wav</ShortName>
-					<Path>SFX\Cymbal roll sound effect_C54F28C6.wem</Path>
+					<Path>SFX\Cymbal roll sound effect_2EB51506.wem</Path>
+				</File>
+				<File Id="604434698" Language="SFX">
+					<ShortName>2-boss-intro-loop.wav</ShortName>
+					<Path>SFX\2-boss-intro-loop_2EB51506.wem</Path>
+				</File>
+				<File Id="751418782" Language="SFX">
+					<ShortName>2-boss-silent.wav</ShortName>
+					<Path>SFX\2-boss-silent_2EB51506.wem</Path>
+				</File>
+				<File Id="751420286" Language="SFX">
+					<ShortName>2-boss-normal.wav</ShortName>
+					<Path>SFX\2-boss-normal_2EB51506.wem</Path>
 				</File>
 				<File Id="762942166" Language="SFX">
 					<ShortName>Catapult.wav</ShortName>
-					<Path>SFX\Catapult_A0997E7C.wem</Path>
+					<Path>SFX\Catapult_324331BC.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -9,6 +9,7 @@
 						<State Name="Fighting" ID="{C983031F-C7B7-46FE-B507-4DF4CFC9E269}"/>
 						<State Name="Sub1" ID="{F6707CA2-EDAC-4726-B6FD-26273A1C9867}"/>
 						<State Name="Sub2" ID="{C788C2BE-7DD3-43AF-A05F-C88054904CC3}"/>
+						<State Name="Sub3" ID="{FBC8ABB5-02F0-4100-986A-8945E0150525}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Pausing" ID="{9882406C-6295-40DD-AA3B-26FF5EE78318}">
