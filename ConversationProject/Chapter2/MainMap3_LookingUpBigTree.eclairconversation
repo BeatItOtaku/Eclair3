@@ -13,7 +13,133 @@
       "character": [
         0
       ],
-      "content": "Initial Content",
+      "content": "これは…巨大な塔？いや木か？",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bdf199c0-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "この一番大きい木が“大樹”だ。このエリアの木々の中心でランドマークだな。",
+      "duration": 5.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "be37ca80-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "大樹だって？植物がこんなに大きく育つことなんてあるのか？",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bf4542e0-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "こいつは正確には植物ではない。",
+      "duration": 3.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bf1f6b60-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "植物じゃない？だったら一体…？",
+      "duration": 3.6,
+      "name-overwrite": ""
+    },
+    {
+      "id": "be90e700-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "「何者か」だ。私にもわからない。生態は植物とほぼ変わりないがこの大樹をはじめとする木々の組織は明らかに植物のものとは異なる物質で構成されている。\n",
+      "duration": 11.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "be791940-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "奴らは突然現れ、ここで増殖し、この大樹を築いた。何かの目的で…。",
+      "duration": 5.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "be61e7c0-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "…。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "2d1c2860-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "アーミーギアの一員であるサヴアも調査のためにこの大樹の頂上にいる。\nそこに行って奴を倒すんだ。",
+      "duration": 6.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "2d037040-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "頂上？木の表面をよじ登っていくのか？",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "68b12600-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "その必要はない。\nアーミーギアがここを調査した時に内部に頂上までの通路を作っているはずだ。",
+      "duration": 6,
+      "name-overwrite": ""
+    },
+    {
+      "id": "68933dc0-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "未知の巨大植物の内部に通路を？大胆な奴らだね。",
+      "duration": 4.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "aa504ff0-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "あるいは…アーミーギアの連中にとってはまったく未知のものではないのかもしれないな…。",
+      "duration": 5.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "acb2d100-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "ともかく、この大樹の頂上に行きサヴアを倒してくれ。頂上にはそこのドアから入れるはずだ。",
+      "duration": 6.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ac970ba0-b808-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "了解。",
       "duration": 3,
       "name-overwrite": ""
     }

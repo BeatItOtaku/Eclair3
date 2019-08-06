@@ -6,15 +6,87 @@
   "character-right": [
     0
   ],
-  "type": 0,
+  "type": 2,
   "content": [
     {
       "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
       "character": [
+        1
+      ],
+      "content": "聞こえるかエクレア。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ab3befd0-b805-11e9-94b6-41eacf5cf744",
+      "character": [
         0
       ],
-      "content": "Initial Content",
-      "duration": 3,
+      "content": "ああ、バッチリ。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bccd4ff0-b805-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "今回のターゲットはサガナメ・サヴア。\n武装ギア組織アーミーギアの参謀のサムライボーイだ。\n奴が時空のギアをもっている。",
+      "duration": 8,
+      "name-overwrite": ""
+    },
+    {
+      "id": "44547110-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "炎使いのブリオッシュは時空のギアを持っていなかった…。\n今度は確かなんだろうな。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "442d6110-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "ああ間違いない。時空のギアを持っているのはブリオッシュかサヴアのどちらか。\n前回は当てが外れただけだ。",
+      "duration": 5.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "788c0e70-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "今度はもっと確かな情報がほしいところね。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "883bdd50-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "すまないと思っている。\nだが、今回の作戦で確実にアーミーギアの戦力を削ぐことができる。",
+      "duration": 4.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "9b9b1fa0-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "アーミーギアに対抗できる力として私が頼れるのはお前だけだ。\nサヴアはこのエリアにいる。頼んだぞ。",
+      "duration": 4.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b4a13890-b806-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "…了解。先へ進むわ.\n",
+      "duration": 1.5,
       "name-overwrite": ""
     }
   ]

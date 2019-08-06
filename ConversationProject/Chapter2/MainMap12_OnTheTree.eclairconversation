@@ -13,7 +13,25 @@
       "character": [
         0
       ],
-      "content": "Initial Content",
+      "content": "すごく高いとこまで来たな。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "8b612410-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "まるで鳥になった気分か？",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "811640d0-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "そうだね、こんな見晴らしのいいところに来たのは久しぶりだ。",
       "duration": 3,
       "name-overwrite": ""
     }
