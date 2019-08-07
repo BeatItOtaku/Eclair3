@@ -13,7 +13,7 @@
       "character": [
         0
       ],
-      "content": "なんだあのカメは！？こっちへ向かってくるぞ！",
+      "content": "なにあのカメ！？こっちへ向かってくる！",
       "duration": 2.5,
       "name-overwrite": ""
     },
@@ -31,7 +31,7 @@
       "character": [
         1
       ],
-      "content": "エクレア、お前のELE-GEARの新しい機能の剣で攻撃してみるんだ！",
+      "content": "エクレア、お前のELE-GEARの新しい機能『剣成攻撃』をしてみるんだ！",
       "duration": 3.5,
       "name-overwrite": ""
     }

@@ -13,7 +13,7 @@
       "character": [
         0
       ],
-      "content": "これは…巨大な塔？いや木か？",
+      "content": "これは…巨大な塔？いや木？",
       "duration": 4,
       "name-overwrite": ""
     },
@@ -31,7 +31,7 @@
       "character": [
         0
       ],
-      "content": "大樹だって？植物がこんなに大きく育つことなんてあるのか？",
+      "content": "大樹だって？植物がこんなに大きく育つことなんてあるの？",
       "duration": 5,
       "name-overwrite": ""
     },
@@ -94,7 +94,7 @@
       "character": [
         0
       ],
-      "content": "頂上？木の表面をよじ登っていくのか？",
+      "content": "頂上？木の表面をよじ登っていくの？",
       "duration": 3,
       "name-overwrite": ""
     },
