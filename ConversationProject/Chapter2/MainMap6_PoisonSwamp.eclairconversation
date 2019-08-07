@@ -3,9 +3,7 @@
   "character-left": [
     1
   ],
-  "character-right": [
-    0
-  ],
+  "character-right": [],
   "type": 0,
   "content": [
     {
@@ -13,8 +11,17 @@
       "character": [
         1
       ],
-      "content": "待て！！その紫色の水には有害な物質が溶け出している！触れると徐々にダメージを受けるぞ。\n紫色の水は避けて通るんだ。",
+      "content": "待て！！\nその紫色の水には有害な物質が溶け出している！\n触れると徐々にダメージを受けるぞ。",
       "duration": 7,
+      "name-overwrite": ""
+    },
+    {
+      "id": "3ec8d150-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "紫色の水は避けて通るんだ。",
+      "duration": 4,
       "name-overwrite": ""
     }
   ]

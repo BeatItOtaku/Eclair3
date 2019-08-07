@@ -11,9 +11,18 @@
     {
       "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
       "character": [
+        0
+      ],
+      "content": "残りは1つだね。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "acff0ea0-b8ec-11e9-9180-557648120c1e",
+      "character": [
         1
       ],
-      "content": "あの巨大な化け物を倒したのか！奴が大樹のカギを飲み込んでいたとは…。",
+      "content": "この調子で大樹のカギを集めてくれ。",
       "duration": 5,
       "name-overwrite": ""
     }
