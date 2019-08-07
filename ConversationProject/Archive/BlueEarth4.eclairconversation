@@ -1,5 +1,5 @@
 {
-  "description": "青き大地計画 1日目",
+  "description": "青き大地計画 4日目",
   "character-left": [
     10
   ],
@@ -16,11 +16,11 @@
       "name-overwrite": ""
     },
     {
-      "id": "02b33320-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
       "character": [
         10
       ],
-      "content": "【青き大地計画 1日目】",
+      "content": "【青き大地計画 4日目】",
       "duration": 3,
       "name-overwrite": ""
     },
@@ -29,7 +29,7 @@
       "character": [
         10
       ],
-      "content": "アーミーギア、孤島に上陸。\n\"青の粉塵\"散布区域の選定と\n散布準備に取り掛かった。",
+      "content": "増殖を続けるMinerが凶暴化。",
       "duration": 3,
       "name-overwrite": ""
     },
@@ -38,34 +38,34 @@
       "character": [
         10
       ],
-      "content": "散布区域は生態系構築にふさわしい非居住区である\n孤島北東部の荒野に指定した。",
+      "content": "驚異的な脚力で区域全域を駆け巡り、\n周囲の動植物へ突進による襲撃を仕掛けた。 ",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "d92f58f0-b382-11e9-a592-19d7e33bb9f8",
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
       "character": [
         10
       ],
-      "content": "今回の任務内容は、青の粉塵による生態系構築および\n新兵器創造である。",
+      "content": "突進は強靭な表皮により装甲車にも匹敵する破壊力を\n持ち、遂には区域の隔離壁を破壊。\n散布地域外に侵攻を開始した。",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "a891a9c0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "b6e5ead0-b8ea-11e9-9180-557648120c1e",
       "character": [
         10
       ],
-      "content": "成功すれば、我が国は\n無敵の軍隊を手に入れることができ、\n我々アーミーギアの地位も安泰になるであろう。",
+      "content": "予想外の事態が起こるやもとは危惧していたが、\n成長が早すぎる。",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "b2656130-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "c0b3fcf0-b8ea-11e9-9180-557648120c1e",
       "character": [
         10
       ],
-      "content": "必ず成功させてみせる。",
+      "content": "侵攻を止めるべく最大限の戦闘態勢を取っているが、\nこの数と勢いではどこまで持つか......。",
       "duration": 3,
       "name-overwrite": ""
     }

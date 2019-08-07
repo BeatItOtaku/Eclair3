@@ -1,5 +1,5 @@
 {
-  "description": "青き大地計画 1日目",
+  "description": "青き大地計画 6日目",
   "character-left": [
     10
   ],
@@ -16,11 +16,11 @@
       "name-overwrite": ""
     },
     {
-      "id": "02b33320-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
       "character": [
         10
       ],
-      "content": "【青き大地計画 1日目】",
+      "content": "【青き大地計画 6日目】",
       "duration": 3,
       "name-overwrite": ""
     },
@@ -29,7 +29,7 @@
       "character": [
         10
       ],
-      "content": "アーミーギア、孤島に上陸。\n\"青の粉塵\"散布区域の選定と\n散布準備に取り掛かった。",
+      "content": "アーミーギアは政府の指示に従い、\n孤島の周囲の海上封鎖およびライフラインの切断、\nそして島民の殲滅作戦を開始した。",
       "duration": 3,
       "name-overwrite": ""
     },
@@ -38,34 +38,34 @@
       "character": [
         10
       ],
-      "content": "散布区域は生態系構築にふさわしい非居住区である\n孤島北東部の荒野に指定した。",
+      "content": "侵攻を続けるMinerは進化を遂げ、\n火を吹くようになり島中は火の海となった。\n現段階で島民の半分の殲滅を完了。",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "d92f58f0-b382-11e9-a592-19d7e33bb9f8",
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
       "character": [
         10
       ],
-      "content": "今回の任務内容は、青の粉塵による生態系構築および\n新兵器創造である。",
+      "content": "Minerの襲撃と島民の抵抗により、\nアーミーギアも死傷者多数。",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "a891a9c0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "4ec5ec10-b8eb-11e9-9180-557648120c1e",
       "character": [
         10
       ],
-      "content": "成功すれば、我が国は\n無敵の軍隊を手に入れることができ、\n我々アーミーギアの地位も安泰になるであろう。",
+      "content": "これまで何度も死線をくぐり抜けてきたが\n共に戦ってきた仲間を守れず......",
       "duration": 3,
       "name-overwrite": ""
     },
     {
-      "id": "b2656130-b8e9-11e9-9aaa-df8f4d0688ff",
+      "id": "59856310-b8eb-11e9-9180-557648120c1e",
       "character": [
         10
       ],
-      "content": "必ず成功させてみせる。",
+      "content": "そして何より、罪のない一般人を......私は......",
       "duration": 3,
       "name-overwrite": ""
     }
