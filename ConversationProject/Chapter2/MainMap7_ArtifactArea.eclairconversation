@@ -22,7 +22,7 @@
       "character": [
         1
       ],
-      "content": "ああ、アーミーギアが調査の拠点にしていたのかもしれん。",
+      "content": "ああ、\nアーミーギアが調査の拠点にしていたのかもしれん。",
       "duration": 5,
       "name-overwrite": ""
     },
@@ -40,7 +40,7 @@
       "character": [
         1
       ],
-      "content": "全くだ。",
+      "content": "まったくだ。",
       "duration": 2,
       "name-overwrite": ""
     }

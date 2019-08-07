@@ -13,7 +13,16 @@
       "character": [
         0
       ],
-      "content": "Initial Content",
+      "content": "残りは2つだね。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "7c9716e0-b8ec-11e9-9180-557648120c1e",
+      "character": [
+        1
+      ],
+      "content": "ああ、この調子で頼む。",
       "duration": 3,
       "name-overwrite": ""
     }
