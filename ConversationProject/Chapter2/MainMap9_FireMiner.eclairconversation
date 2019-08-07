@@ -13,8 +13,17 @@
       "character": [
         0
       ],
-      "content": "Initial Content",
-      "duration": 3,
+      "content": "なんなんだこいつは！！",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "073844f0-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "気をつけろエクレア！マイナーの巨大種だ！通常種とは違う攻撃を仕掛けてくるかもしれん。",
+      "duration": 6,
       "name-overwrite": ""
     }
   ]

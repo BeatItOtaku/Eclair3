@@ -9,12 +9,12 @@
   "type": 0,
   "content": [
     {
-      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "id": "a133fe70-b804-11e9-94b6-41eacf5cf744",
       "character": [
-        0
+        1
       ],
-      "content": "Initial Content",
-      "duration": 3,
+      "content": "隠された湖…。なかなかロマンティックな場所だな。",
+      "duration": 3.5,
       "name-overwrite": ""
     }
   ]

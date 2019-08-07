@@ -13,7 +13,25 @@
       "character": [
         0
       ],
-      "content": "Initial Content",
+      "content": "ここに生えてる3本の木…他の木の比較にならないくらい大きいな。",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "cebf8a30-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "ああ、3人の巨人ってところか。\nどうやらジャンプパッドで登っていけるみたいだぞ。\n巨人からの贈り物もあるかもしれないな。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "cc7f5e30-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "そうね。上に登れば景色もよさそう。",
       "duration": 3,
       "name-overwrite": ""
     }
