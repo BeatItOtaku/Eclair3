@@ -4,15 +4,15 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Chapter1" Hash="3447958833" Timestamp="1564330350"/>
-				<File Name="Chapter2" Hash="726637753" Timestamp="1564330900"/>
-				<File Name="Common" Hash="1645877906" Timestamp="1564331810"/>
+				<File Name="Chapter2" Hash="3421828182" Timestamp="1565223900"/>
+				<File Name="Common" Hash="79291289" Timestamp="1565223902"/>
 				<File Name="EclairAkAudioBank" Hash="803701938" Timestamp="1537987590"/>
-				<File Name="Init" Hash="1963179136" Timestamp="1564332078"/>
+				<File Name="Init" Hash="474493876" Timestamp="1565223902"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1320884810" Timestamp="1564332078"/>
+				<File Name="" Hash="3201567176" Timestamp="1565223902"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -20,15 +20,15 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Chapter1" Hash="3447958833" Timestamp="1564330350"/>
-				<File Name="Chapter2" Hash="726637753" Timestamp="1564330900"/>
-				<File Name="Common" Hash="1645877906" Timestamp="1564331810"/>
+				<File Name="Chapter2" Hash="3421828182" Timestamp="1565223904"/>
+				<File Name="Common" Hash="79291289" Timestamp="1565223904"/>
 				<File Name="EclairAkAudioBank" Hash="1547978074" Timestamp="1538045160"/>
-				<File Name="Init" Hash="3568160174" Timestamp="1564332078"/>
+				<File Name="Init" Hash="1449285914" Timestamp="1565223904"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3985177592" Timestamp="1564332078"/>
+				<File Name="" Hash="3348590222" Timestamp="1565223904"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

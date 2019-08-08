@@ -90,7 +90,16 @@
 						</MusicTransition>
 					</TransitionList>
 					<Playlist>
-						<MusicPlaylistItem Name="" ID="{A92BEAFE-59D0-4260-9EBB-810E752A7267}" ShortID="250242995"/>
+						<MusicPlaylistItem Name="" ID="{A92BEAFE-59D0-4260-9EBB-810E752A7267}" ShortID="250242995">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{29028621-96CE-4F1A-9062-3D30505559B4}" ShortID="623202983">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="2-Beginning" ID="{B4D1139A-8440-43C3-807B-A472DF883FFE}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicSwitchContainer Name="Field" ID="{D9F208C4-FBE8-45C0-9F4E-4702CDAF7D63}" ShortID="333098608">
