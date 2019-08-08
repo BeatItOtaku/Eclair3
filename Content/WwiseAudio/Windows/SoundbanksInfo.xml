@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>F:\Git\Eclair3\Eclair_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>F:\Git\Eclair3\Content\WwiseAudio\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Git\Eclair3\Eclair_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Git\Eclair3\Content\WwiseAudio\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\Git\Eclair3\Eclair_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Git\Eclair3\Eclair_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -19,8 +19,13 @@
 				<Event Id="2253511092" Name="Boss2" ObjectPath="\Events\Default Work Unit\Chapter2\Boss2"/>
 				<Event Id="1990701021" Name="Catapult" ObjectPath="\Events\SE\Chapter2\Catapult"/>
 				<Event Id="2654819955" Name="Field2" ObjectPath="\Events\Default Work Unit\Chapter2\Field2"/>
+				<Event Id="126611646" Name="Piano2" ObjectPath="\Events\Default Work Unit\Chapter2\Piano2"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="20557333" Language="SFX">
+					<ShortName>2-Beginning.wav</ShortName>
+					<Path>SFX\2-Beginning_2EB51506.wem</Path>
+				</File>
 				<File Id="94529234" Language="SFX">
 					<ShortName>2-Fighting.wav</ShortName>
 					<Path>SFX\2-Fighting_2EB51506.wem</Path>
@@ -75,6 +80,243 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2395677314" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Common</ObjectPath>
+			<ShortName>Common</ShortName>
+			<Path>Common.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\SE\Eclair\Attack1"/>
+				<Event Id="3768540965" Name="Attack2" ObjectPath="\Events\SE\Eclair\Attack2"/>
+				<Event Id="3768540964" Name="Attack3" ObjectPath="\Events\SE\Eclair\Attack3"/>
+				<Event Id="1591411653" Name="BigDecide" ObjectPath="\Events\SE\System\BigDecide"/>
+				<Event Id="1544377644" Name="Bird" ObjectPath="\Events\Ambient\Bird"/>
+				<Event Id="2760337059" Name="Cancel" ObjectPath="\Events\SE\System\Cancel"/>
+				<Event Id="2928609216" Name="CannotUnlock" ObjectPath="\Events\SE\System\CannotUnlock"/>
+				<Event Id="3048239629" Name="Challange1" ObjectPath="\Events\Default Work Unit\Challanges\Challange1"/>
+				<Event Id="3099787076" Name="Choice" ObjectPath="\Events\SE\System\Choice"/>
+				<Event Id="3004330733" Name="Decide" ObjectPath="\Events\SE\System\Decide"/>
+				<Event Id="1146361434" Name="DrawSword" ObjectPath="\Events\SE\Eclair\DrawSword"/>
+				<Event Id="2999290755" Name="Etoile" ObjectPath="\Events\SE\Eclair\Etoile"/>
+				<Event Id="1518282501" Name="Etoile_end" ObjectPath="\Events\SE\Eclair\Etoile_end"/>
+				<Event Id="399052710" Name="Falling" ObjectPath="\Events\SE\Eclair\Falling"/>
+				<Event Id="2385628198" Name="FootSteps" ObjectPath="\Events\SE\Eclair\FootSteps"/>
+				<Event Id="2488446635" Name="GetArchive" ObjectPath="\Events\SE\System\GetArchive"/>
+				<Event Id="580540528" Name="GetKey" ObjectPath="\Events\SE\System\GetKey"/>
+				<Event Id="2174908572" Name="GrassAndBirds" ObjectPath="\Events\Ambient\GrassAndBirds"/>
+				<Event Id="4228994330" Name="Hacking" ObjectPath="\Events\SE\Eclair\Hacking"/>
+				<Event Id="1834271629" Name="HittingBolt" ObjectPath="\Events\SE\Eclair\HittingBolt"/>
+				<Event Id="624013381" Name="LowHP" ObjectPath="\Events\SE\System\LowHP"/>
+				<Event Id="1814275255" Name="LowHPLoop" ObjectPath="\Events\SE\System\LowHPLoop"/>
+				<Event Id="3065411006" Name="Notify" ObjectPath="\Events\SE\System\Notify"/>
+				<Event Id="3712166233" Name="OpenWindow" ObjectPath="\Events\SE\System\OpenWindow"/>
+				<Event Id="1433397863" Name="Steam" ObjectPath="\Events\Ambient\Steam"/>
+				<Event Id="2255639613" Name="SteelFrame" ObjectPath="\Events\Ambient\SteelFrame"/>
+				<Event Id="774347976" Name="ThrowingBolt" ObjectPath="\Events\SE\Eclair\ThrowingBolt"/>
+				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
+				<Event Id="370150497" Name="UnlockStage" ObjectPath="\Events\SE\System\UnlockStage"/>
+				<Event Id="2151339297" Name="Voice_Damaged" ObjectPath="\Events\SE\Eclair\Voice_Damaged"/>
+				<Event Id="2023306206" Name="WaterFlow" ObjectPath="\Events\Ambient\WaterFlow"/>
+				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="2744495" Language="SFX">
+					<ShortName>Hacking.wav</ShortName>
+					<Path>SFX\Hacking_324331BC.wem</Path>
+				</File>
+				<File Id="13197744" Language="SFX">
+					<ShortName>DrawSword.wav</ShortName>
+					<Path>SFX\DrawSword_324331BC.wem</Path>
+				</File>
+				<File Id="18691838" Language="SFX">
+					<ShortName>GrassAndBirds.wav</ShortName>
+					<Path>SFX\GrassAndBirds_2EB51506.wem</Path>
+				</File>
+				<File Id="30164968" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_13.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_13_324331BC.wem</Path>
+				</File>
+				<File Id="59565763" Language="SFX">
+					<ShortName>UnlockStage.wav</ShortName>
+					<Path>SFX\UnlockStage_324331BC.wem</Path>
+				</File>
+				<File Id="60845689" Language="SFX">
+					<ShortName>Cancel.wav</ShortName>
+					<Path>SFX\Cancel_324331BC.wem</Path>
+				</File>
+				<File Id="62389251" Language="SFX">
+					<ShortName>Attack1.wav</ShortName>
+					<Path>SFX\Attack1_324331BC.wem</Path>
+				</File>
+				<File Id="71549198" Language="SFX">
+					<ShortName>WaterFlow.wav</ShortName>
+					<Path>SFX\WaterFlow_2EB51506.wem</Path>
+				</File>
+				<File Id="105108458" Language="SFX">
+					<ShortName>CannotUnlock.wav</ShortName>
+					<Path>SFX\CannotUnlock_324331BC.wem</Path>
+				</File>
+				<File Id="109089291" Language="SFX">
+					<ShortName>Bird2.wav</ShortName>
+					<Path>SFX\Bird2_324331BC.wem</Path>
+				</File>
+				<File Id="135831222" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_03_324331BC.wem</Path>
+				</File>
+				<File Id="142300749" Language="SFX">
+					<ShortName>Voice_Damaged.wav</ShortName>
+					<Path>SFX\Voice_Damaged_324331BC.wem</Path>
+				</File>
+				<File Id="154465229" Language="SFX">
+					<ShortName>Pico1.wav</ShortName>
+					<Path>SFX\Pico1_2EB51506.wem</Path>
+				</File>
+				<File Id="157339454" Language="SFX">
+					<ShortName>Attack2.wav</ShortName>
+					<Path>SFX\Attack2_324331BC.wem</Path>
+				</File>
+				<File Id="184502686" Language="SFX">
+					<ShortName>steam01.wav</ShortName>
+					<Path>SFX\steam01_324331BC.wem</Path>
+				</File>
+				<File Id="184992213" Language="SFX">
+					<ShortName>Attack3.wav</ShortName>
+					<Path>SFX\Attack3_324331BC.wem</Path>
+				</File>
+				<File Id="282001838" Language="SFX">
+					<ShortName>BoltLaunch.wav</ShortName>
+					<Path>SFX\BoltLaunch_324331BC.wem</Path>
+				</File>
+				<File Id="302433291" Language="SFX">
+					<ShortName>Choice.wav</ShortName>
+					<Path>SFX\Choice_324331BC.wem</Path>
+				</File>
+				<File Id="310164942" Language="SFX">
+					<ShortName>GetKey.wav</ShortName>
+					<Path>SFX\GetKey_324331BC.wem</Path>
+				</File>
+				<File Id="337206732" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_00.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_00_324331BC.wem</Path>
+				</File>
+				<File Id="357065517" Language="SFX">
+					<ShortName>Etoile_end.wav</ShortName>
+					<Path>SFX\Etoile_end_324331BC.wem</Path>
+				</File>
+				<File Id="361646227" Language="SFX">
+					<ShortName>LowHPLoop.wav</ShortName>
+					<Path>SFX\LowHPLoop_324331BC.wem</Path>
+				</File>
+				<File Id="371293037" Language="SFX">
+					<ShortName>Pico3.wav</ShortName>
+					<Path>SFX\Pico3_2EB51506.wem</Path>
+				</File>
+				<File Id="457887179" Language="SFX">
+					<ShortName>Challenge1.wav</ShortName>
+					<Path>SFX\Challenge1_2EB51506.wem</Path>
+				</File>
+				<File Id="534887956" Language="SFX">
+					<ShortName>BigDecide.wav</ShortName>
+					<Path>SFX\BigDecide_324331BC.wem</Path>
+				</File>
+				<File Id="536735455" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_09.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_09_324331BC.wem</Path>
+				</File>
+				<File Id="537634196" Language="SFX">
+					<ShortName>BoltLand.wav</ShortName>
+					<Path>SFX\BoltLand_324331BC.wem</Path>
+				</File>
+				<File Id="548352836" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_01.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_01_324331BC.wem</Path>
+				</File>
+				<File Id="575486927" Language="SFX">
+					<ShortName>Notify.wav</ShortName>
+					<Path>SFX\Notify_324331BC.wem</Path>
+				</File>
+				<File Id="612193268" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_06.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_06_324331BC.wem</Path>
+				</File>
+				<File Id="626261930" Language="SFX">
+					<ShortName>Bird1.wav</ShortName>
+					<Path>SFX\Bird1_324331BC.wem</Path>
+				</File>
+				<File Id="633214849" Language="SFX">
+					<ShortName>SteelFrame.wav</ShortName>
+					<Path>SFX\SteelFrame_324331BC.wem</Path>
+				</File>
+				<File Id="648148738" Language="SFX">
+					<ShortName>Pico2.wav</ShortName>
+					<Path>SFX\Pico2_2EB51506.wem</Path>
+				</File>
+				<File Id="727930744" Language="SFX">
+					<ShortName>LowHP.wav</ShortName>
+					<Path>SFX\LowHP_324331BC.wem</Path>
+				</File>
+				<File Id="728078664" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_10.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_10_324331BC.wem</Path>
+				</File>
+				<File Id="729731780" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_05.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_05_324331BC.wem</Path>
+				</File>
+				<File Id="738734767" Language="SFX">
+					<ShortName>wind1.wav</ShortName>
+					<Path>SFX\wind1_2EB51506.wem</Path>
+				</File>
+				<File Id="800222909" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_04.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_04_324331BC.wem</Path>
+				</File>
+				<File Id="811912202" Language="SFX">
+					<ShortName>OpenWindow.wav</ShortName>
+					<Path>SFX\OpenWindow_324331BC.wem</Path>
+				</File>
+				<File Id="837688024" Language="SFX">
+					<ShortName>Falling.wav</ShortName>
+					<Path>SFX\Falling_324331BC.wem</Path>
+				</File>
+				<File Id="857708496" Language="SFX">
+					<ShortName>Etoile.wav</ShortName>
+					<Path>SFX\Etoile_2EB51506.wem</Path>
+				</File>
+				<File Id="857880999" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_02.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_02_324331BC.wem</Path>
+				</File>
+				<File Id="886501689" Language="SFX">
+					<ShortName>GetArchive.wav</ShortName>
+					<Path>SFX\GetArchive_324331BC.wem</Path>
+				</File>
+				<File Id="901914076" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_08.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_08_324331BC.wem</Path>
+				</File>
+				<File Id="922976991" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_11.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_11_324331BC.wem</Path>
+				</File>
+				<File Id="942762787" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_07.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_07_324331BC.wem</Path>
+				</File>
+				<File Id="998476598" Language="SFX">
+					<ShortName>Pico4.wav</ShortName>
+					<Path>SFX\Pico4_2EB51506.wem</Path>
+				</File>
+				<File Id="1051978060" Language="SFX">
+					<ShortName>Title.wav</ShortName>
+					<Path>SFX\Title_2EB51506.wem</Path>
+				</File>
+				<File Id="1065652545" Language="SFX">
+					<ShortName>FootSteps_Eclair_Default_12.wav</ShortName>
+					<Path>SFX\FootSteps_Eclair_Default_12_324331BC.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
