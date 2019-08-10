@@ -5,17 +5,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	2654819955	Field2			\Default Work Unit\Chapter2\Field2	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	20557333	2-Beginning	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Beginning_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Piano\2-Beginning\2-Beginning		697758
-	94529234	2-Fighting	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Fighting_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Fighting		3073333
-	116336102	2-BigTree	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-BigTree_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\BigTree\Main\2-BigTree		2536941
-	173695219	2-boss-end	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-end_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\End\Main\2-boss-end		3352873
-	236271485	2-boss-intro	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-intro_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Intro\2-boss-intro\2-boss-intro		392822
-	411093624	2-Main	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal_Fighting\Main\2-Main		3000813
-	458424964	2-Main-FirstTime	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main-FirstTime_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Main-FirstTime		3084502
-	590896552	2-Normal	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Normal_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		2396365
-	599951383	Cymbal roll sound effect	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Cymbal roll sound effect_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Cymbal roll sound effect\Cymbal roll sound effect		276722
-	604434698	2-boss-intro-loop	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-intro-loop_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Intro\2-boss-intro-loop\2-boss-intro-loop		347993
-	751418782	2-boss-silent	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-silent_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Silent\Main\2-boss-silent		3205980
-	751420286	2-boss-normal	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-normal_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Normal\Main\2-boss-normal		3264005
-	762942166	Catapult	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Catapult_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter2\Catapult		44750
+	20557333	2-Beginning	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Beginning_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Piano\2-Beginning\2-Beginning		697758
+	94529234	2-Fighting	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Fighting_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Fighting		3073333
+	116336102	2-BigTree	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-BigTree_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\BigTree\Main\2-BigTree		2536941
+	173695219	2-boss-end	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-end_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\End\Main\2-boss-end		3352873
+	236271485	2-boss-intro	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-intro_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Intro\2-boss-intro\2-boss-intro		392822
+	411093624	2-Main	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal_Fighting\Main\2-Main		3000813
+	458424964	2-Main-FirstTime	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Main-FirstTime_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Entrance_Fighting\Main\2-Main-FirstTime		3084502
+	590896552	2-Normal	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-Normal_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Field\Normal\Main\2-Normal		2396365
+	599951383	Cymbal roll sound effect	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Cymbal roll sound effect_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Cymbal roll sound effect\Cymbal roll sound effect		276722
+	604434698	2-boss-intro-loop	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-intro-loop_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Intro\2-boss-intro-loop\2-boss-intro-loop		347993
+	751418782	2-boss-silent	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-silent_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Silent\Main\2-boss-silent		3205980
+	751420286	2-boss-normal	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\2-boss-normal_2EB51506.wem		\Interactive Music Hierarchy\Chapter2\Boss\Normal\Main\2-boss-normal		3264005
+	762942166	Catapult	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Catapult_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter2\Catapult		44750
 

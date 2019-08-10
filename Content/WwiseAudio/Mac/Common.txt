@@ -59,53 +59,53 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	1049395718	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambient\SteelFrame\Wait\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	2744495	Hacking	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Hacking_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Hacking		48864
-	13197744	DrawSword	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\DrawSword_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\DrawSword		78423
-	18691838	GrassAndBirds	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GrassAndBirds_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\GrassAndBirds		1748433
-	30164968	FootSteps_Eclair_Default_13	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_13_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_13		10340
-	59565763	UnlockStage	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\UnlockStage_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\UnlockStage		96119
-	60845689	Cancel	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Cancel_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Cancel		16499
-	62389251	Attack1	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack1_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack1		80522
-	71549198	WaterFlow	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\WaterFlow_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\WaterFlow		856398
-	105108458	CannotUnlock	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\CannotUnlock_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\CannotUnlock		13558
-	109089291	Bird2	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird2_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird2		266026
-	135831222	FootSteps_Eclair_Default_03	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_03_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_03		12184
-	142300749	Voice_Damaged	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Voice_Damaged_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Voice_Damaged		13554
-	154465229	Pico1	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico1_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico1\Pico1		50812
-	157339454	Attack2	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack2_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack2		81724
-	184502686	Main	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\steam01_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Steam\Main		113126
-	184992213	Attack3	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack3_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack3		117298
-	282001838	BoltLaunch	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BoltLaunch_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLaunch		113330
-	302433291	Choice	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Choice_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Choice		10056
-	310164942	GetKey	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GetKey_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\GetKey		72159
-	337206732	FootSteps_Eclair_Default_00	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_00_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_00		13209
-	357065517	Etoile_end	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_end_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile_end		56210
-	361646227	LowHPLoop	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		95394
-	371293037	Pico3	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico3_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico3\Pico3		50257
-	457887179	Challenge1	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Challenge1_2EB51506.wem		\Interactive Music Hierarchy\Challenges\Challenge1\Intro\Challenge1		3530723
-	534887956	BigDecide	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BigDecide_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\BigDecide		108063
-	536735455	FootSteps_Eclair_Default_09	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_09_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		12357
-	537634196	BoltLand	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BoltLand_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		49323
-	548352836	FootSteps_Eclair_Default_01	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_01_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		12586
-	575486927	Notify	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Notify_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Notify		62865
-	612193268	FootSteps_Eclair_Default_06	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_06_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_06		13021
-	626261930	Bird1	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird1_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird1		199975
-	633214849	SteelFrame	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\SteelFrame_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		213065
-	648148738	Pico2	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico2_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico2\Pico2		50834
-	727930744	LowHP	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\LowHP_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		10603
-	728078664	FootSteps_Eclair_Default_10	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_10_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		13936
-	729731780	FootSteps_Eclair_Default_05	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_05_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_05		11733
-	738734767	Wind	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\wind1_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\Wind		3202525
-	800222909	FootSteps_Eclair_Default_04	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_04_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_04		12851
-	811912202	OpenWindow	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\OpenWindow_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\OpenWindow		14454
-	837688024	Falling	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Falling_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Falling		118046
-	857708496	Etoile	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_2EB51506.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile		202723
-	857880999	FootSteps_Eclair_Default_02	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_02_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_02		12443
-	886501689	GetArchive	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GetArchive_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\GetArchive		72364
-	901914076	FootSteps_Eclair_Default_08	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_08_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_08		11010
-	922976991	FootSteps_Eclair_Default_11	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_11_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_11		13976
-	942762787	FootSteps_Eclair_Default_07	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_07_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_07		14862
-	998476598	Pico4	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico4_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico4\Pico4		50003
-	1051978060	Title	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Title_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\Title\Title\Title		1909208
-	1065652545	FootSteps_Eclair_Default_12	D:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_12_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_12		13649
+	2744495	Hacking	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Hacking_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Hacking		48864
+	13197744	DrawSword	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\DrawSword_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\DrawSword		78423
+	18691838	GrassAndBirds	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GrassAndBirds_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\GrassAndBirds		1748433
+	30164968	FootSteps_Eclair_Default_13	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_13_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_13		10340
+	59565763	UnlockStage	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\UnlockStage_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\UnlockStage		96119
+	60845689	Cancel	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Cancel_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Cancel		16499
+	62389251	Attack1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack1_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack1		80522
+	71549198	WaterFlow	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\WaterFlow_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\WaterFlow		856398
+	105108458	CannotUnlock	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\CannotUnlock_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\CannotUnlock		13558
+	109089291	Bird2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird2_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird2		266026
+	135831222	FootSteps_Eclair_Default_03	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_03_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_03		12184
+	142300749	Voice_Damaged	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Voice_Damaged_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Voice_Damaged		13554
+	154465229	Pico1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico1_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico1\Pico1		50812
+	157339454	Attack2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack2_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack2		81724
+	184502686	Main	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\steam01_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Steam\Main		113126
+	184992213	Attack3	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Attack3_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Attack3		117298
+	282001838	BoltLaunch	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BoltLaunch_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLaunch		113330
+	302433291	Choice	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Choice_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Choice		10056
+	310164942	GetKey	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GetKey_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\GetKey		72159
+	337206732	FootSteps_Eclair_Default_00	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_00_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_00		13209
+	357065517	Etoile_end	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_end_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile_end		56210
+	361646227	LowHPLoop	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\LowHPLoop_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHPLoop		95394
+	371293037	Pico3	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico3_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico3\Pico3		50257
+	457887179	Challenge1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Challenge1_2EB51506.wem		\Interactive Music Hierarchy\Challenges\Challenge1\Intro\Challenge1		3530723
+	534887956	BigDecide	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BigDecide_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\BigDecide		108063
+	536735455	FootSteps_Eclair_Default_09	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_09_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_09		12357
+	537634196	BoltLand	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\BoltLand_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\BoltLand		49323
+	548352836	FootSteps_Eclair_Default_01	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_01_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_01		12586
+	575486927	Notify	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Notify_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\Notify		62865
+	612193268	FootSteps_Eclair_Default_06	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_06_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_06		13021
+	626261930	Bird1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird1_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird1		199975
+	633214849	SteelFrame	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\SteelFrame_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		213065
+	648148738	Pico2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico2_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico2\Pico2		50834
+	727930744	LowHP	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\LowHP_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		10603
+	728078664	FootSteps_Eclair_Default_10	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_10_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		13936
+	729731780	FootSteps_Eclair_Default_05	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_05_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_05		11733
+	738734767	Wind	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\wind1_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\Wind		3202525
+	800222909	FootSteps_Eclair_Default_04	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_04_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_04		12851
+	811912202	OpenWindow	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\OpenWindow_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\OpenWindow		14454
+	837688024	Falling	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Falling_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Falling		118046
+	857708496	Etoile	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Etoile_2EB51506.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Etoile		202723
+	857880999	FootSteps_Eclair_Default_02	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_02_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_02		12443
+	886501689	GetArchive	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\GetArchive_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\GetArchive		72364
+	901914076	FootSteps_Eclair_Default_08	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_08_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_08		11010
+	922976991	FootSteps_Eclair_Default_11	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_11_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_11		13976
+	942762787	FootSteps_Eclair_Default_07	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_07_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_07		14862
+	998476598	Pico4	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico4_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico4\Pico4		50003
+	1051978060	Title	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Title_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\Title\Title\Title		1909208
+	1065652545	FootSteps_Eclair_Default_12	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_12_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_12		13649
 
