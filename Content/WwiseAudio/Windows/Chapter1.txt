@@ -28,21 +28,21 @@ Effect plug-ins	ID	Name	Type				Notes
 	1069874549	Hall_Guns (Custom)	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	69387691	1-piano	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-piano_C54F28C6.wem		\Interactive Music Hierarchy\Chapter1\Piano\Piano\1-piano		323828
-	77356971	Haikou	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_C54F28C6.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		945341
-	105590707	Boss	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_C54F28C6.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		987274
-	150500008	Punch	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Punch_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		8893
-	182787609	StrikingGround	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\StrikingGround_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		9991
-	220151601	BeforeFrameThrower	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\BeforeFrameThrower_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		6310
-	238159724	Down	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Down_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		52719
-	263033532	PillarOfFire	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		19930
-	347520258	Default	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-default-1_C54F28C6.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		973533
-	396469845	Rush2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Rush2_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		46507
-	430322998	Rush	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Rush_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		23115
-	486635016	Empty	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Empty_C54F28C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Empty		18191
-	706389692	FootSteps_BB	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_BB_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FootSteps_BB		7949
-	817075413	Door-Big	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Door-Big_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		107505
-	889719873	Door	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Door_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		78325
-	902868209	FlameThrower	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FrameThrower_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		56821
-	993556319	PillarOfFire_Jiware	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_Jiware_A0997E7C.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		127573
+	69387691	1-piano	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-piano_2EB51506.wem		\Interactive Music Hierarchy\Chapter1\Piano\Piano\1-piano		600601
+	77356971	Haikou	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-haikou-1_2EB51506.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Haikou		1863332
+	105590707	Boss	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-boss_2EB51506.wem		\Interactive Music Hierarchy\Chapter1\Boss\Intro\Boss		1990333
+	150500008	Punch	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Punch_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Punch		17054
+	182787609	StrikingGround	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\StrikingGround_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\StrikingGround		19982
+	220151601	BeforeFrameThrower	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\BeforeFrameThrower_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\BeforeFrameThrower		11062
+	238159724	Down	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Down_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Down		108169
+	263033532	PillarOfFire	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire		44118
+	347520258	Default	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\1-default-1_2EB51506.wem		\Interactive Music Hierarchy\Chapter1\Field\Intro\Default		1904198
+	396469845	Rush2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Rush2_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush2		90888
+	430322998	Rush	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Rush_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\Rush		46134
+	486635016	Empty	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Empty_2EB51506.wem		\Actor-Mixer Hierarchy\Default Work Unit\Empty		20985
+	706389692	FootSteps_BB	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_BB_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FootSteps_BB		16484
+	817075413	Door-Big	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Door-Big_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door-Big		220774
+	889719873	Door	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Door_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Chapter1\Door		157203
+	902868209	FlameThrower	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FrameThrower_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\FlameThrower		114913
+	993556319	PillarOfFire_Jiware	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\PillarOfFire_Jiware_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Brioche\PillarOfFire_Jiware		257846
 
