@@ -1,0 +1,19 @@
+{
+  "description": "２個目の鍵を手に入れた時。２個目の鍵はFireMinerを倒すと出現する。戦闘後のセリフも含みたい。",
+  "character-left": [
+    1
+  ],
+  "character-right": [],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "あの巨大な化け物を倒したのか！\n奴が大樹のカギを飲み込んでいたとは…。",
+      "duration": 7,
+      "name-overwrite": ""
+    }
+  ]
+}
