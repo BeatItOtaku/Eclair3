@@ -22,4 +22,5 @@ public:
 	virtual uint32 GetCategories() override { return EAssetTypeCategories::Misc; }
 	virtual UClass* GetSupportedClass() const override;
 	virtual bool IsImportedAsset() const override { return true; }
+    virtual void GetResolvedSourceFilePaths(const TArray<UObject*>& TypeAssets, TArray<FString>& OutSourceFilePaths) const override;
 };
