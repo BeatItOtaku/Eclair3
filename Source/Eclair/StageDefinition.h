@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "StageType.h"
+#include "Styling/SlateBrush.h"
 #include "Engine/Texture2D.h"
 #include "StageDefinition.generated.h"
 
@@ -45,5 +46,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0", ClampMax = "255", UIMin = "0", UIMax = "64"))
 		int ItemCountToUnlock;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FSlateBrush MapImage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FTransform MapTransform;
 	
 };
