@@ -5,7 +5,9 @@
 #include "AssetTypeActions_EclairConv.h"
 #include "ISettingsModule.h"
 #include "EclairConversationSetting.h"
-//#include "Runtime/CoreUObject/Public/UObject/UObjectGlobals.h"
+
+#include "MovieSceneConvTrackEditor.h"
+#include "ISequencerModule.h"
 
 #define LOCTEXT_NAMESPACE ""
 
@@ -14,6 +16,7 @@ class FEclairEd : public FDefaultGameModuleImpl
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 	TSharedPtr<FAssetTypeActions_EclairConv> EclairConv_AssetTypeActions;
+	FDelegateHandle ConversationTrackEditorHandle;
 };
 
 IMPLEMENT_GAME_MODULE( FEclairEd, EclairEd);
@@ -36,6 +39,11 @@ void FEclairEd::StartupModule()
 			GetMutableDefault<UEclairConversationSetting>()
 		);
 	}
+
+	//ConversationTrack
+	ISequencerModule& SequencerModule = FModuleManager::Get().LoadModuleChecked<ISequencerModule>("Sequencer");
+	ConversationTrackEditorHandle = SequencerModule.RegisterTrackEditor(
+		FOnCreateTrackEditor::CreateStatic(&FMovieSceneConvTrackEditor::CreateTrackEditor));
 }
 
 void FEclairEd::ShutdownModule()
@@ -60,6 +68,15 @@ void FEclairEd::ShutdownModule()
 			"Eclair"
 		);
 	}
+
+	//ConversationTrack
+	if (!FModuleManager::Get().IsModuleLoaded("Sequencer"))
+	{
+		return;
+	}
+
+	ISequencerModule& SequencerModule = FModuleManager::Get().GetModuleChecked<ISequencerModule>("Sequencer");
+	SequencerModule.UnRegisterTrackEditor(ConversationTrackEditorHandle);
 }
 
 #undef LOCTEXT_NAMESPACE

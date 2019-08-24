@@ -18,7 +18,7 @@ public:
 	UMovieSceneConversationTrack()
 	{
 #if WITH_EDITORONLY_DATA
-		SetColorTint(FColor(0, 156, 255, 65));
+		SetColorTint(FColor::Orange);
 #endif
 	}
 

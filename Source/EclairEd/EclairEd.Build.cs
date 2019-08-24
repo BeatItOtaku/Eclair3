@@ -12,6 +12,10 @@ public class EclairEd : ModuleRules
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "Http", "Json", "JsonUtilities", "UnrealEd", "AssetTools", "Slate", "SlateCore", "Eclair"});
 
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "EditorStyle", "Sequencer", "MovieScene", "MovieSceneTools", "MovieSceneTracks"
+        });
+
         var base_path = Path.GetDirectoryName(RulesCompiler.GetFileNameFromType(GetType()));
         string third_party_path = Path.Combine(base_path, "..", "..", "Thirdparty");
         PublicIncludePaths.Add(Path.Combine(third_party_path, "cereal", "include"));

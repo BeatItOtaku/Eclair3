@@ -27,7 +27,7 @@ bool UMovieSceneConversationTrack::AddNewEvent(TimeUnit Time, UEclairConversatio
 #if UE_4_20_OR_LATER
 	NewSection->InitialPlacement(GetAllSections(), Time, Duration, SupportsMultipleRows());
 #else
-	NewSection->InitialPlacement(GetAllSections(), Time, Time /*+ Duration*/, SupportsMultipleRows());
+	NewSection->InitialPlacement(GetAllSections(), Time, Time + 10.0f/*+ Duration*/, SupportsMultipleRows());
 #endif
 	AddSection(*NewSection);
 

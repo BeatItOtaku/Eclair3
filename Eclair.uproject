@@ -19,7 +19,8 @@
 			"Type": "Editor",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"UnrealEd"
+				"UnrealEd",
+				"CoreUObject"
 			]
 		}
 	],
