@@ -34,14 +34,6 @@ bool UMovieSceneConversationTrack::AddNewEvent(TimeUnit Time, UEclairConversatio
 	return true;
 }
 
-
-#if WITH_EDITORONLY_DATA
-FText UMovieSceneConversationTrack::GetDisplayName() const
-{
-	return NSLOCTEXT("MovieSceneAkAudioEventTrack", "TrackName", "AkAudioEvents");
-}
-#endif
-
 FName UMovieSceneConversationTrack::GetTrackName() const
 {
 	static FName TrackName("AkAudioEvents");

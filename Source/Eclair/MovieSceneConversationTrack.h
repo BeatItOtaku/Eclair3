@@ -1,7 +1,7 @@
 #pragma once
 
 #include "MovieScene.h"
-#include "MovieSceneTrack.h"
+#include "MovieSceneNameableTrack.h"
 #include "IMovieSceneTrackInstance.h"
 #include "EclairUEFeatures.h"
 #include "EclairConversation.h"
@@ -10,7 +10,7 @@
 class UMovieSceneConversationSection;
 
 UCLASS( MinimalAPI )
-class UMovieSceneConversationTrack : public UMovieSceneTrack
+class UMovieSceneConversationTrack : public UMovieSceneNameableTrack
 {
 	GENERATED_BODY()
 
@@ -56,10 +56,6 @@ public:
 	virtual bool SupportsMultipleRows() const override { return false; }
 
 	ECLAIR_API virtual FName GetTrackName() const override;
-
-#if WITH_EDITORONLY_DATA
-	ECLAIR_API virtual FText GetDisplayName() const override;
-#endif
 
 	ECLAIR_API bool AddNewEvent(TimeUnit Time, UEclairConversation* Event, const FString& EventName = FString());
 

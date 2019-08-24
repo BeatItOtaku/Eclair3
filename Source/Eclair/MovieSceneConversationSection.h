@@ -14,7 +14,7 @@ class UMovieSceneConversationSection : public UMovieSceneSection
 
 public:
 
-	void BeginDestroy() override;
+	void BeginDestroy() override {}
 
 	/* UMovieSceneSection interface */
 	ECLAIR_API virtual FMovieSceneEvalTemplatePtr GenerateTemplate() const override;
@@ -39,8 +39,8 @@ struct ECLAIR_API FMovieSceneConversationTemplate
 
 	virtual UScriptStruct& GetScriptStructImpl() const override { return *StaticStruct(); }
 
-	virtual void Setup(FPersistentEvaluationData& PersistentData, IMovieScenePlayer& Player) const override;
-	virtual void TearDown(FPersistentEvaluationData& PersistentData, IMovieScenePlayer& Player) const override;
+	virtual void Setup(FPersistentEvaluationData& PersistentData, IMovieScenePlayer& Player) const override {}
+	virtual void TearDown(FPersistentEvaluationData& PersistentData, IMovieScenePlayer& Player) const override {}
 	virtual void SetupOverrides() override { EnableOverrides(RequiresSetupFlag | RequiresTearDownFlag); }
 
 	UPROPERTY()
