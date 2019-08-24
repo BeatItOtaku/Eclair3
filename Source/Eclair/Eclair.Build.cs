@@ -12,6 +12,10 @@ public class Eclair : ModuleRules
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "Http", "Json", "SlateCore", "OpenSSL"});
 
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "MovieScene", "MovieSceneTracks"
+        });
+
         var base_path = Path.GetDirectoryName(RulesCompiler.GetFileNameFromType(GetType()));
         string third_party_path = Path.Combine(base_path, "..", "..", "Thirdparty");
         PublicIncludePaths.Add(Path.Combine(third_party_path, "cereal", "include"));
