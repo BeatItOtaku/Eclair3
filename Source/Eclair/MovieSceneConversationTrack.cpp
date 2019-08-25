@@ -24,12 +24,12 @@ bool UMovieSceneConversationTrack::AddNewItem(TimeUnit Time)
 #if UE_4_20_OR_LATER
 	NewSection->InitialPlacement(GetAllSections(), Time, Duration, SupportsMultipleRows());
 #else
-	NewSection->InitialPlacement(GetAllSections(), Time, Time + 10.0f/*+ Duration*/, SupportsMultipleRows());
+	NewSection->InitialPlacement(GetAllSections(), Time, Time + 1.0f/*+ Duration*/, SupportsMultipleRows());
 #endif
 	//NewSection->Item = Conversation->Get(0);
 	AddSection(*NewSection);
 
-	volatile auto hoge = GetAllSections();
+	RemapSectionsItem();
 
 	return true;
 }
