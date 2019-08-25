@@ -65,6 +65,11 @@ public:
 		return FText::FromString("hoge");
 	}
 
+	virtual float GetSectionHeight() const override
+	{
+		return 31;
+	}
+
 	virtual int32 OnPaintSection(FSequencerSectionPainter& InPainter) const override
 	{
 		return InPainter.PaintSectionBackground();
@@ -77,9 +82,17 @@ public:
 #if !UE_4_20_OR_LATER
 	virtual void ResizeSection(ESequencerSectionResizeMode ResizeMode, float ResizeTime) override
 	{
+		TArray<UMovieSceneSection *> sections = GetSectionObject()->GetTypedOuter<UMovieSceneTrack>()->GetAllSections();
+		int32 index = sections.Find(Section);
+		if (ResizeMode == ESequencerSectionResizeMode::SSRM_LeadingEdge)
+		{
+			Section->SetStartTime(ResizeTime);
+			if (index > 0) sections[index - 1]->SetEndTime(ResizeTime);//空白をなくす
+		}
 		if (ResizeMode == ESequencerSectionResizeMode::SSRM_TrailingEdge)
 		{
 			Section->SetEndTime(ResizeTime);
+			if (index + 1 < sections.Num()) sections[index + 1]->SetStartTime(ResizeTime);//空白をなくす
 		}
 	}
 #endif
@@ -139,6 +152,9 @@ void FMovieSceneConvTrackEditor::BuildTrackContextMenu(FMenuBuilder & MenuBuilde
 	public:
 		UMovieSceneConversationTrack *track;
 
+		FConversationTrackCustomization() {}
+		FConversationTrackCustomization(UMovieSceneConversationTrack *Track) : track(Track) {}
+
 		void OnPropertyValueChanged() {
 			if(track != nullptr) track->RemapSectionsItem();
 		}
@@ -148,7 +164,7 @@ void FMovieSceneConvTrackEditor::BuildTrackContextMenu(FMenuBuilder & MenuBuilde
 			DetailBuilder.HideCategory("Track");
 			DetailBuilder.HideCategory("General");
 
-			track = Cast<UMovieSceneConversationTrack>(DetailBuilder.GetBaseClass());
+			//track = DetailBuilder.GetBaseClass()->GetTypedOuter<UMovieSceneConversationTrack>();
 			//volatile auto hoge = DetailBuilder.GetBaseClass();
 
 			IDetailCategoryBuilder& Category = DetailBuilder.EditCategory("ConversationTrack");
@@ -170,7 +186,7 @@ void FMovieSceneConvTrackEditor::BuildTrackContextMenu(FMenuBuilder & MenuBuilde
 		TSharedRef<IDetailsView> DetailsView = PropertyEditor.CreateDetailView(DetailsViewArgs);
 
 		// Register the custom type layout for the class
-		FOnGetDetailCustomizationInstance CreateInstance = FOnGetDetailCustomizationInstance::CreateLambda(&MakeShared<FConversationTrackCustomization>);
+		FOnGetDetailCustomizationInstance CreateInstance = FOnGetDetailCustomizationInstance::CreateLambda([ConvTrack]() {return MakeShared<FConversationTrackCustomization>(ConvTrack); });
 		DetailsView->RegisterInstancedCustomPropertyLayout(UMovieSceneConversationTrack::StaticClass(), CreateInstance);
 
 		GetSequencer()->OnInitializeDetailsPanel().Broadcast(DetailsView, GetSequencer().ToSharedRef());
@@ -231,7 +247,9 @@ TSharedPtr<SWidget> FMovieSceneConvTrackEditor::BuildOutlinerEditWidget(const FG
 		.VAlign(VAlign_Center)
 		[
 			//FSequencerUtilities::MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnGetContent::CreateSP(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
-			MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
+			//MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
+			//TODO: Conversationの展開ボタンにして横並び
+			MakeAddButton(LOCTEXT("ConversationInflate", "Inflate"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
 		];
 }
 
@@ -243,14 +261,6 @@ void FMovieSceneConvTrackEditor::FindOrCreateTrack(FGuid ObjectHandle)
 
 	if (TrackResult.bWasCreated)
 	{
-		// トラック作成成功
-
-		// セクション作成
-		UMovieSceneSection* NewSection = NewTrack->CreateNewSection();
-		check(NewSection);
-
-		// セクション追加
-		NewTrack->AddSection(*NewSection);
 		NewTrack->SetDisplayName(LOCTEXT("TrackName", "Conversation"));
 	}
 

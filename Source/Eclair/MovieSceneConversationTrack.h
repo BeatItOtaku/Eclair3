@@ -18,14 +18,19 @@ public:
 	UMovieSceneConversationTrack()
 	{
 #if WITH_EDITORONLY_DATA
-		SetColorTint(FColor(242,121,55,255));
+		SetColorTint(FColor(216,71,0,255));
 #endif
 	}
 
 	virtual void RemoveAllAnimationData() override { Sections.Empty(); }
 	
 	virtual bool HasSection(const UMovieSceneSection& Section) const override { return Sections.Contains(&Section); }
-	virtual void AddSection(UMovieSceneSection& Section) override { Sections.Add(&Section); }
+	virtual void AddSection(UMovieSceneSection& Section) override {
+		Sections.Add(&Section);
+		Sections.Sort([](const UMovieSceneSection& A, const UMovieSceneSection& B) {
+			return A.GetStartTime() < B.GetStartTime();
+		});
+	}
 	virtual void RemoveSection(UMovieSceneSection& Section) override { Sections.Remove(&Section); }
 	virtual bool IsEmpty() const override { return Sections.Num() == 0; }
 	virtual const TArray<UMovieSceneSection*>& GetAllSections() const override { return Sections; }
