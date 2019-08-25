@@ -57,7 +57,12 @@ public:
 
 	ECLAIR_API virtual FName GetTrackName() const override;
 
-	ECLAIR_API bool AddNewEvent(TimeUnit Time, UEclairConversation* Event, const FString& EventName = FString());
+	ECLAIR_API bool AddNewItem(TimeUnit Time);
+
+	UPROPERTY(EditAnywhere, Category = "ConversationTrack")
+		UEclairConversation* Conversation;
+
+	ECLAIR_API void RemapSectionsItem();
 
 protected:
 

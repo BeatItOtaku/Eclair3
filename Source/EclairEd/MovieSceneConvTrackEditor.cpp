@@ -12,6 +12,13 @@
 
 #include "RenderUtils.h"
 #include "Textures/SlateTextureData.h"
+#include "Modules/ModuleManager.h"
+#include "IDetailCustomization.h"
+#include "DetailLayoutBuilder.h"
+#include "DetailCategoryBuilder.h"
+#include "Widgets/Layout/SBox.h"
+#include "Widgets/Input/SButton.h"
+#include "Widgets/Images/SImage.h"
 #include "Slate/SlateTextures.h"
 #include "Rendering/DrawElements.h"
 #include "Framework/MultiBox/MultiBoxBuilder.h"
@@ -50,14 +57,12 @@ public:
 
 	virtual FText GetSectionTitle() const override
 	{
-		/*if (Section != nullptr)
+		if (Section != nullptr)
 		{
-			FString name = Section->GetEventName();
-			if (Section->EventTracker->IsDirty)
-				name += "*";
+			FString name = Section->Item.Content;
 			return FText::FromString(name);
-		}*/
-		return FText::GetEmpty();
+		}
+		return FText::FromString("hoge");
 	}
 
 	virtual int32 OnPaintSection(FSequencerSectionPainter& InPainter) const override
@@ -74,7 +79,7 @@ public:
 	{
 		if (ResizeMode == ESequencerSectionResizeMode::SSRM_TrailingEdge)
 		{
-			//Section->SetEndTime(ResizeTime);
+			Section->SetEndTime(ResizeTime);
 		}
 	}
 #endif
@@ -99,13 +104,6 @@ private:
 	/** The section we are visualizing */
 	UMovieSceneConversationSection* Section;
 
-	/** The amount of pixels to offset the waveform texture by (if any part of it is clipped beyond the left of the editor view). */
-	float PixelOffsetLeft = 0.0f;
-	/** The number of pixels "left over" at the end of the smoothed waveform. This will be between 0 and AkAudioWaveformViewport::SmoothingAmount. */
-	int LeftOverPixels = 0;
-	/** This depends on the zoom level, as well as the position and length of the section*/
-	int NumPeaksRequired = 0;
-
 	TWeakPtr<ISequencer> Sequencer;
 };
 
@@ -128,6 +126,71 @@ bool FMovieSceneConvTrackEditor::SupportsSequence(UMovieSceneSequence* InSequenc
 bool FMovieSceneConvTrackEditor::SupportsType(TSubclassOf<UMovieSceneTrack> Type) const
 {
 	return Type == UMovieSceneConversationTrack::StaticClass();
+}
+
+//自動でConversationを割り当てるようになったらこのコードはいらないはずである
+void FMovieSceneConvTrackEditor::BuildTrackContextMenu(FMenuBuilder & MenuBuilder, UMovieSceneTrack * Track)
+{
+	UMovieSceneConversationTrack* ConvTrack = CastChecked<UMovieSceneConversationTrack>(Track);
+
+	/** Specific details customization for the event track */
+	class FConversationTrackCustomization : public IDetailCustomization
+	{
+	public:
+		UMovieSceneConversationTrack *track;
+
+		void OnPropertyValueChanged() {
+			if(track != nullptr) track->RemapSectionsItem();
+		}
+
+		virtual void CustomizeDetails(IDetailLayoutBuilder& DetailBuilder) override
+		{
+			DetailBuilder.HideCategory("Track");
+			DetailBuilder.HideCategory("General");
+
+			track = Cast<UMovieSceneConversationTrack>(DetailBuilder.GetBaseClass());
+			//volatile auto hoge = DetailBuilder.GetBaseClass();
+
+			IDetailCategoryBuilder& Category = DetailBuilder.EditCategory("ConversationTrack");
+			TSharedPtr<IPropertyHandle> handle = Category.AddProperty("Conversation").ShouldAutoExpand(true).GetPropertyHandle();
+			handle->SetOnPropertyValueChanged(FSimpleDelegate::CreateSP(this,&FConversationTrackCustomization::OnPropertyValueChanged));
+		}
+	};
+
+	auto PopulateSubMenu = [this, ConvTrack](FMenuBuilder& SubMenuBuilder)
+	{
+		FPropertyEditorModule& PropertyEditor = FModuleManager::Get().LoadModuleChecked<FPropertyEditorModule>("PropertyEditor");
+
+		// Create a details view for the track
+		FDetailsViewArgs DetailsViewArgs(false, false, false, FDetailsViewArgs::HideNameArea, true);
+		DetailsViewArgs.DefaultsOnlyVisibility = EEditDefaultsOnlyNodeVisibility::Automatic;
+		DetailsViewArgs.bShowOptions = false;
+		//DetailsViewArgs.ColumnWidth = 0.55f;
+
+		TSharedRef<IDetailsView> DetailsView = PropertyEditor.CreateDetailView(DetailsViewArgs);
+
+		// Register the custom type layout for the class
+		FOnGetDetailCustomizationInstance CreateInstance = FOnGetDetailCustomizationInstance::CreateLambda(&MakeShared<FConversationTrackCustomization>);
+		DetailsView->RegisterInstancedCustomPropertyLayout(UMovieSceneConversationTrack::StaticClass(), CreateInstance);
+
+		GetSequencer()->OnInitializeDetailsPanel().Broadcast(DetailsView, GetSequencer().ToSharedRef());
+
+		// Assign the object
+		DetailsView->SetObject(ConvTrack, true);
+
+		// Add it to the menu
+		TSharedRef< SWidget > DetailsViewWidget =
+			SNew(SBox)
+			.MaxDesiredHeight(400.0f)
+			.WidthOverride(450.0f)
+			[
+				DetailsView
+			];
+
+		SubMenuBuilder.AddWidget(DetailsViewWidget, FText(), true, false);
+	};
+
+	MenuBuilder.AddSubMenu(LOCTEXT("Properties_MenuText", "Properties"), FText(), FNewMenuDelegate::CreateLambda(PopulateSubMenu));
 }
 
 TSharedRef<ISequencerSection> FMovieSceneConvTrackEditor::MakeSectionInterface(UMovieSceneSection& SectionObject, UMovieSceneTrack& Track, FGuid ObjectBinding)
@@ -164,17 +227,18 @@ TSharedPtr<SWidget> FMovieSceneConvTrackEditor::BuildOutlinerEditWidget(const FG
 
 		// Add the audio combo box
 		+ SHorizontalBox::Slot()
-		.AutoWidth();
-		/*.VAlign(VAlign_Center)
+		.AutoWidth()
+		.VAlign(VAlign_Center)
 		[
-			FSequencerUtilities::MakeAddButton(LOCTEXT("AudioText", "AkAudioEvent"), FOnGetContent::CreateSP(this, &FMovieSceneConvTrackEditor::BuildAudioSubMenu, Track), Params.NodeIsHovered)
-		];*/
+			//FSequencerUtilities::MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnGetContent::CreateSP(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
+			MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
+		];
 }
 
 void FMovieSceneConvTrackEditor::FindOrCreateTrack(FGuid ObjectHandle)
 {
 	// トラックがなかったら作成する
-	FFindOrCreateTrackResult TrackResult = FindOrCreateTrackForObject(ObjectHandle, UMovieSceneConversationTrack::StaticClass(), TEXT("Actor Event"));
+	FFindOrCreateTrackResult TrackResult = FindOrCreateTrackForObject(ObjectHandle, UMovieSceneConversationTrack::StaticClass(), TEXT("Conversation"));
 	auto* NewTrack = CastChecked<UMovieSceneConversationTrack>(TrackResult.Track, ECastCheckedType::NullAllowed);
 
 	if (TrackResult.bWasCreated)
@@ -188,13 +252,73 @@ void FMovieSceneConvTrackEditor::FindOrCreateTrack(FGuid ObjectHandle)
 		// セクション追加
 		NewTrack->AddSection(*NewSection);
 		NewTrack->SetDisplayName(LOCTEXT("TrackName", "Conversation"));
-
-		//テスト
-		NewTrack->AddNewEvent(0, nullptr);
 	}
 
 	// 構成に変更が起きたことを Sequencer に伝える(トラックが再描画される）
 	GetSequencer()->NotifyMovieSceneDataChanged(EMovieSceneDataChangeType::MovieSceneStructureItemAdded);
+}
+
+FReply FMovieSceneConvTrackEditor::OnCreateButtonClicked(UMovieSceneTrack* track) {
+
+	const FScopedTransaction Transaction(LOCTEXT("AddAkAudioEvent_Transaction", "Add AkAudioEvent"));
+
+	track->Modify();
+#if UE_4_20_OR_LATER
+	FFrameNumber KeyTime = GetSequencer()->GetGlobalTime().Time.FrameNumber;
+#else
+	float KeyTime = GetSequencer()->GetGlobalTime();
+#endif
+	auto ConvTrack = Cast<UMovieSceneConversationTrack>(track);
+	ConvTrack->AddNewItem(KeyTime);
+
+	GetSequencer()->NotifyMovieSceneDataChanged(EMovieSceneDataChangeType::MovieSceneStructureItemAdded);
+
+	return FReply::Handled();
+}
+
+TSharedRef<SWidget> FMovieSceneConvTrackEditor::MakeAddButton(FText HoverText, FOnClicked OnClicked, const TAttribute<bool>& HoverState)
+{
+	FSlateFontInfo SmallLayoutFont = FCoreStyle::GetDefaultFontStyle("Regular", 8);
+
+	TSharedRef<STextBlock> ButtonText = SNew(STextBlock)
+		.Text(HoverText)
+		.Font(SmallLayoutFont)
+		.ColorAndOpacity(FSlateColor::UseForeground());
+
+	TSharedRef<SButton> Button =
+
+		SNew(SButton)
+		.ButtonStyle(FEditorStyle::Get(), "HoverHintOnly")
+		.ForegroundColor(FSlateColor::UseForeground())
+		.OnClicked(OnClicked)
+		.ContentPadding(FMargin(5, 2))
+		.HAlign(HAlign_Center)
+		.VAlign(VAlign_Center)
+		[
+			SNew(SHorizontalBox)
+
+			+ SHorizontalBox::Slot()
+		.AutoWidth()
+		.VAlign(VAlign_Center)
+		.Padding(FMargin(0, 0, 2, 0))
+		[
+			SNew(SImage)
+			.ColorAndOpacity(FSlateColor::UseForeground())
+		.Image(FEditorStyle::GetBrush("Plus"))
+		]
+
+	+ SHorizontalBox::Slot()
+		.VAlign(VAlign_Center)
+		.AutoWidth()
+		[
+			ButtonText
+		]
+		];
+
+	//TAttribute<EVisibility> Visibility = TAttribute<EVisibility>::Create(TAttribute<EVisibility>::FGetter::CreateStatic(GetRolloverVisibility, HoverState, TWeakPtr<SButton>(ComboButton)));
+	//ComboButtonText->SetVisibility(Visibility);
+
+	return Button;
 }
 
 #undef LOCTEXT_NAMESPACE

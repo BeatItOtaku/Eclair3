@@ -2,6 +2,7 @@
 
 #include "MovieSceneTrackEditor.h"
 #include "MovieSceneConversationTrack.h"
+#include "Reply.h"
 #include "AssetData.h"
 
 class FMovieSceneConvTrackEditor
@@ -38,9 +39,13 @@ public:
 	virtual bool SupportsSequence(UMovieSceneSequence* InSequence) const override;
 	virtual bool SupportsType(TSubclassOf<UMovieSceneTrack> Type) const override;
 
-	//virtual void BuildTrackContextMenu(FMenuBuilder& MenuBuilder, UMovieSceneTrack* Track) override;
+	virtual void BuildTrackContextMenu(FMenuBuilder& MenuBuilder, UMovieSceneTrack* Track) override;
 
 	virtual const FSlateBrush* GetIconBrush() const override;
+
+	FReply OnCreateButtonClicked(UMovieSceneTrack* track);
+
+	TSharedRef<SWidget> MakeAddButton(FText HoverText, FOnClicked OnClicked, const TAttribute<bool>& HoverState);
 
 private:
 	void FindOrCreateTrack(FGuid ObjectHandle);

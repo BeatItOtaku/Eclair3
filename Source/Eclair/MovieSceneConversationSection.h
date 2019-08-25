@@ -2,6 +2,8 @@
 
 #include "MovieSceneSection.h"
 #include "Evaluation/MovieSceneEvalTemplate.h"
+#include "EclairConversationItem.h"
+
 #include "MovieSceneConversationSection.generated.h"
 
 /**
@@ -14,7 +16,7 @@ class UMovieSceneConversationSection : public UMovieSceneSection
 
 public:
 
-	void BeginDestroy() override {}
+	void BeginDestroy() override;
 
 	/* UMovieSceneSection interface */
 	ECLAIR_API virtual FMovieSceneEvalTemplatePtr GenerateTemplate() const override;
@@ -22,6 +24,12 @@ public:
 #if WITH_EDITOR
 	void PostEditChangeProperty(struct FPropertyChangedEvent& e) override {};
 #endif//WITH_EDITOR
+
+public:
+	UPROPERTY(EditAnywhere, Category = "ConversationItem")
+		bool isSectionHead = false;
+
+	FEclairConversationItem Item = FEclairConversationItem();
 
 };
 
