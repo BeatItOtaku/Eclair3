@@ -29,7 +29,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ConversationItem")
 		bool isSectionHead = false;
 
-	FEclairConversationItem Item = FEclairConversationItem();
+	UPROPERTY()
+	FEclairConversationItem Item;
 
 };
 

@@ -261,10 +261,13 @@ TSharedPtr<SWidget> FMovieSceneConvTrackEditor::BuildOutlinerEditWidget(const FG
 		.AutoWidth()
 		.VAlign(VAlign_Center)
 		[
-			//FSequencerUtilities::MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnGetContent::CreateSP(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
-			//MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
-			//TODO: Conversationの展開ボタンにして横並び
-			MakeAddButton(LOCTEXT("ConversationInflate", "Inflate"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
+			MakeAddButton(LOCTEXT("ConversationInflate", "Inflate"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnInflateButtonClicked, Track), Params.NodeIsHovered)
+		]
+		+ SHorizontalBox::Slot()
+		.AutoWidth()
+		.VAlign(VAlign_Center)
+		[
+			MakeAddButton(LOCTEXT("ConversationItem", "Item"), FOnClicked::CreateRaw(this, &FMovieSceneConvTrackEditor::OnCreateButtonClicked, Track), Params.NodeIsHovered)
 		];
 }
 
@@ -285,7 +288,7 @@ void FMovieSceneConvTrackEditor::FindOrCreateTrack(FGuid ObjectHandle)
 
 FReply FMovieSceneConvTrackEditor::OnCreateButtonClicked(UMovieSceneTrack* track) {
 
-	const FScopedTransaction Transaction(LOCTEXT("AddAkAudioEvent_Transaction", "Add AkAudioEvent"));
+	const FScopedTransaction Transaction(LOCTEXT("AddConversationItem_Transaction", "Add ConversationItem"));
 
 	track->Modify();
 #if UE_4_20_OR_LATER
@@ -296,6 +299,35 @@ FReply FMovieSceneConvTrackEditor::OnCreateButtonClicked(UMovieSceneTrack* track
 	auto ConvTrack = Cast<UMovieSceneConversationTrack>(track);
 	ConvTrack->AddNewItem(KeyTime);
 
+	GetSequencer()->NotifyMovieSceneDataChanged(EMovieSceneDataChangeType::MovieSceneStructureItemAdded);
+
+	return FReply::Handled();
+}
+
+//Conversationをトラックに展開する
+FReply FMovieSceneConvTrackEditor::OnInflateButtonClicked(UMovieSceneTrack* track) {
+
+	const FScopedTransaction Transaction(LOCTEXT("InflateConversation_Transaction", "Inflate Conversation"));
+	track->Modify();
+	auto ConvTrack = Cast<UMovieSceneConversationTrack>(track);
+
+	float absoluteTime = 0;
+#if UE_4_20_OR_LATER
+	FFrameNumber KeyTime = GetSequencer()->GetGlobalTime().Time.FrameNumber;
+#else
+	absoluteTime = GetSequencer()->GetGlobalTime();
+#endif
+
+	ConvTrack->RemoveAllAnimationData();
+	if (ConvTrack->Conversation != nullptr) {
+		//配置していく
+		TArray<FEclairConversationItem> &items = ConvTrack->Conversation->Items;
+		for (auto item : items) {
+			ConvTrack->AddNewItem(absoluteTime, 0);
+			absoluteTime += item.Duration;
+		}
+		ConvTrack->GetAllSections()[ConvTrack->GetAllSections().Num() - 1]->SetEndTime(absoluteTime);
+	}
 	GetSequencer()->NotifyMovieSceneDataChanged(EMovieSceneDataChangeType::MovieSceneStructureItemAdded);
 
 	return FReply::Handled();

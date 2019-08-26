@@ -16,20 +16,24 @@ UMovieSceneSection* UMovieSceneConversationTrack::CreateNewSection()
 	return NewObject<UMovieSceneSection>(this, UMovieSceneConversationSection::StaticClass(), NAME_None, RF_Transactional);
 }
 
-bool UMovieSceneConversationTrack::AddNewItem(TimeUnit Time)
+bool UMovieSceneConversationTrack::AddNewItem(TimeUnit Time,TimeUnit Duration)
 {
 	UMovieSceneConversationSection* NewSection = NewObject<UMovieSceneConversationSection>(this);
 	ensure(NewSection);
 
-	TimeUnit endTime = Time + 3.0f;
+	TimeUnit endTime = Time + Duration;
 
 	TArray<UMovieSceneSection*> sections = GetAllSections();
 
 	//セクションの途中なら分割する
 	for (auto s : sections) {
-		if (s->IsTimeWithinSection(Time)) {
+		if (Time > s->GetStartTime() && Time < s->GetEndTime()) {
 			endTime = s->GetEndTime();
 			s->SetEndTime(Time);
+		}
+		else if (Time == s->GetStartTime()) {
+			endTime = (s->GetStartTime() + s->GetEndTime()) / 2;
+			s->SetStartTime(endTime);
 		}
 	}
 	//もしこれから置かれるセクションが最後になるなら現在の最後を伸ばす(空白をなくす)

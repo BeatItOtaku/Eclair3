@@ -43,6 +43,7 @@ public:
 
 	virtual const FSlateBrush* GetIconBrush() const override;
 
+	FReply OnInflateButtonClicked(UMovieSceneTrack* track);
 	FReply OnCreateButtonClicked(UMovieSceneTrack* track);
 
 	TSharedRef<SWidget> MakeAddButton(FText HoverText, FOnClicked OnClicked, const TAttribute<bool>& HoverState);

@@ -62,7 +62,7 @@ public:
 
 	ECLAIR_API virtual FName GetTrackName() const override;
 
-	ECLAIR_API bool AddNewItem(TimeUnit Time);
+	ECLAIR_API bool AddNewItem(TimeUnit Time, TimeUnit Duration = 1.0f);
 
 	UPROPERTY(EditAnywhere, Category = "ConversationTrack")
 		UEclairConversation* Conversation;
