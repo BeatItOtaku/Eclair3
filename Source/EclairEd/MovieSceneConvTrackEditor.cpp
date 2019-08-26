@@ -62,7 +62,7 @@ public:
 			FString name = Section->Item.Content;
 			return FText::FromString(name);
 		}
-		return FText::FromString("hoge");
+		return FText::GetEmpty();
 	}
 
 	virtual float GetSectionHeight() const override
@@ -72,7 +72,14 @@ public:
 
 	virtual int32 OnPaintSection(FSequencerSectionPainter& InPainter) const override
 	{
-		return InPainter.PaintSectionBackground();
+		int32 LayerId = InPainter.PaintSectionBackground();
+		if (Section->isSectionHead) {
+			LayerId++;
+			FPaintGeometry PaintGeometry = InPainter.SectionGeometry.ToPaintGeometry(FVector2D(1.f, 3.f), FVector2D(16.0f,30.0f));
+			const FSlateBrush* brush = FEditorStyle::GetBrush("Sequencer.Tracks.Event");
+			FSlateDrawElement::MakeBox(InPainter.DrawElements, LayerId, PaintGeometry, brush);
+		}
+		return LayerId;
 	}
 
 #if !UE_4_20_OR_LATER
@@ -86,13 +93,21 @@ public:
 		int32 index = sections.Find(Section);
 		if (ResizeMode == ESequencerSectionResizeMode::SSRM_LeadingEdge)
 		{
+			//‹ó”’‚ð‚È‚­‚·
+			if (index > 0) {
+				ResizeTime = FMath::Max(ResizeTime, sections[index - 1]->GetStartTime());
+				sections[index - 1]->SetEndTime(ResizeTime);
+			}
 			Section->SetStartTime(ResizeTime);
-			if (index > 0) sections[index - 1]->SetEndTime(ResizeTime);//‹ó”’‚ð‚È‚­‚·
 		}
 		if (ResizeMode == ESequencerSectionResizeMode::SSRM_TrailingEdge)
 		{
+			//‹ó”’‚ð‚È‚­‚·
+			if (index + 1 < sections.Num()) {
+				ResizeTime = FMath::Min(ResizeTime, sections[index + 1]->GetEndTime());
+				sections[index + 1]->SetStartTime(ResizeTime);
+			}
 			Section->SetEndTime(ResizeTime);
-			if (index + 1 < sections.Num()) sections[index + 1]->SetStartTime(ResizeTime);//‹ó”’‚ð‚È‚­‚·
 		}
 	}
 #endif

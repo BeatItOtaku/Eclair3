@@ -2,7 +2,7 @@
 
 void  UMovieSceneConversationSection::BeginDestroy()
 {
-
+	Super::BeginDestroy();
 }
 
 FMovieSceneEvalTemplatePtr UMovieSceneConversationSection::GenerateTemplate() const

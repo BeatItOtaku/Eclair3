@@ -21,17 +21,24 @@ bool UMovieSceneConversationTrack::AddNewItem(TimeUnit Time)
 	UMovieSceneConversationSection* NewSection = NewObject<UMovieSceneConversationSection>(this);
 	ensure(NewSection);
 
-	TimeUnit endTime = Time + 1.0f;
+	TimeUnit endTime = Time + 3.0f;
 
-	for (auto s : GetAllSections()) {
+	TArray<UMovieSceneSection*> sections = GetAllSections();
+
+	//セクションの途中なら分割する
+	for (auto s : sections) {
 		if (s->IsTimeWithinSection(Time)) {
 			endTime = s->GetEndTime();
 			s->SetEndTime(Time);
 		}
 	}
+	//もしこれから置かれるセクションが最後になるなら現在の最後を伸ばす(空白をなくす)
+	if(!IsEmpty()) if (sections[sections.Num() - 1]->GetEndTime() < Time) {
+		sections[sections.Num() - 1]->SetEndTime(Time);
+	}
 
 #if UE_4_20_OR_LATER
-	NewSection->InitialPlacement(GetAllSections(), Time, 1.0f, SupportsMultipleRows());
+	NewSection->InitialPlacement(GetAllSections(), Time, endTime - Time, SupportsMultipleRows());
 #else
 	NewSection->InitialPlacement(GetAllSections(), Time, endTime, SupportsMultipleRows());
 #endif
@@ -51,7 +58,6 @@ FName UMovieSceneConversationTrack::GetTrackName() const
 
 void UMovieSceneConversationTrack::RemapSectionsItem()
 {
-
 	if (Conversation == nullptr) return;
 	for (int i = 0; i < Sections.Num(); i++) {
 		CastChecked<UMovieSceneConversationSection>(Sections[i])->Item = (Conversation->Items.Num() > i) ? Conversation->Items[i] : FEclairConversationItem();
