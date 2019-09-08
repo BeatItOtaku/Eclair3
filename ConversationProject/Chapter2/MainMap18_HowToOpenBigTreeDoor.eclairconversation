@@ -1,0 +1,19 @@
+{
+  "description": "閉まったドアに触れた時の会話",
+  "character-left": [
+    1
+  ],
+  "character-right": [],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "ドアは左のスイッチから開けられるみたいだぞ。",
+      "duration": 8,
+      "name-overwrite": ""
+    }
+  ]
+}

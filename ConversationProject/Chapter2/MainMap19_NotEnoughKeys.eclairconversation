@@ -1,0 +1,28 @@
+{
+  "description": "鍵を3つ集めてないのにドアを開けようとした時の会話",
+  "character-left": [
+    1
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        1
+      ],
+      "content": "まだカギが全部集まってないみたいだな。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "75fc7840-d244-11e9-8d50-dd3abae0cf73",
+      "character": [
+        1
+      ],
+      "content": "大樹の頂上まで行くために\n大樹のカギを3つ探し出してくれ。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
