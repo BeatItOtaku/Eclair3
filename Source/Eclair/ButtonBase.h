@@ -82,10 +82,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Button|Appearance")
 		void SetStyle(const FButtonStyle& InStyle);
 
-	/** Sets the color multiplier for the button background */
-	UFUNCTION(BlueprintCallable, Category = "Button|Appearance")
-		void SetBackgroundColor(FLinearColor InBackgroundColor);
-
 	/**
 	 * Returns true if the user is actively pressing the button.  Do not use this for detecting 'Clicks', use the OnClicked event instead.
 	 *
@@ -116,10 +112,6 @@ public:
 	//~ Begin UObject Interface
 	virtual void PostLoad() override;
 	//~ End UObject Interface
-
-#if WITH_EDITOR
-	virtual const FText GetPaletteCategory() override;
-#endif
 
 protected:
 	/** Handle the actual click event from slate and forward it on */

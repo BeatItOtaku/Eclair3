@@ -30,7 +30,9 @@ void UButtonBase::ReleaseSlateResources(bool bReleaseChildren)
 
 TSharedRef<SWidget> UButtonBase::RebuildWidget()
 {
-	Super::RebuildWidget();
+	auto content = Super::RebuildWidget();
+	bIsFocusable = 0;
+
 	MyButton = SNew(SButton)
 		.OnClicked(BIND_UOBJECT_DELEGATE(FOnClicked, SlateHandleClicked))
 		.OnPressed(BIND_UOBJECT_DELEGATE(FSimpleDelegate, SlateHandlePressed))
@@ -41,7 +43,11 @@ TSharedRef<SWidget> UButtonBase::RebuildWidget()
 		.ClickMethod(ClickMethod)
 		.TouchMethod(TouchMethod)
 		.IsFocusable(IsFocusable)
-		;
+		.ContentPadding(0)
+		.Content()
+		[
+			content
+		];
 
 	return MyButton.ToSharedRef();
 }
@@ -60,15 +66,6 @@ void UButtonBase::SetStyle(const FButtonStyle& InStyle)
 	if (MyButton.IsValid())
 	{
 		MyButton->SetButtonStyle(&WidgetStyle);
-	}
-}
-
-void UButtonBase::SetBackgroundColor(FLinearColor InBackgroundColor)
-{
-	BackgroundColor = InBackgroundColor;
-	if (MyButton.IsValid())
-	{
-		MyButton->SetBorderBackgroundColor(InBackgroundColor);
 	}
 }
 
