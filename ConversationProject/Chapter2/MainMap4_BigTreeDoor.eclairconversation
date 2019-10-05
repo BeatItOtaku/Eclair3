@@ -1,0 +1,85 @@
+{
+  "description": "大樹のドアまで来たエクレア。大樹のキーが３ついることをオレイエットと話す。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 1,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0,
+        1
+      ],
+      "content": "…",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "3105a260-d245-11e9-8d50-dd3abae0cf73",
+      "character": [
+        0
+      ],
+      "content": "む…。開かないぞ。",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bb753d30-b809-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "何？…なるほど、このドアを開けるには\n“大樹のカギ”が必要なようだな。\nそれも3つ。",
+      "duration": 7,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bb8bd270-b809-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "大樹のカギ？それはどこにあるんだ？",
+      "duration": 3.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bba3a030-b809-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "どうやらこの周辺のエリアの\nどこかに隠されているらしい。",
+      "duration": 6,
+      "name-overwrite": ""
+    },
+    {
+      "id": "090224f0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "どこかってどこに？",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "1bdef0d0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "どこかだ。森は広いが\nお前の電撃移動なら素早く移動できるだろう。\n自由に飛び回って探検を楽しんでくれ。",
+      "duration": 6,
+      "name-overwrite": ""
+    },
+    {
+      "id": "362021d0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "大樹の頂上まで行くために\n大樹のカギを3つ探し出すんだ。",
+      "duration": 5,
+      "name-overwrite": ""
+    }
+  ]
+}

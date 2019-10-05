@@ -29,4 +29,13 @@ UClass* FAssetTypeActions_EclairConv::GetSupportedClass() const
 	return UEclairConversation::StaticClass();
 }
 
+void FAssetTypeActions_EclairConv::GetResolvedSourceFilePaths(const TArray<UObject*>& TypeAssets, TArray<FString>& OutSourceFilePaths) const
+{
+    for (auto& Asset : TypeAssets)
+    {
+        UEclairConversation* Conversation = CastChecked<UEclairConversation>(Asset);
+        Conversation->AssetImportData->ExtractFilenames(OutSourceFilePaths);
+    }
+}
+
 #undef LOCTEXT_NAMESPACE

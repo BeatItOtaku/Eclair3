@@ -1,0 +1,39 @@
+{
+  "description": "黄壁の説明",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "この黄色の壁はどんな特性があるの？",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "760ecde0-b59f-11e9-9822-854d5499a132",
+      "character": [
+        1
+      ],
+      "content": "そいつは電撃を通す。だが、それ以外の実体は\n通り抜けるのが無理そうだな。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "6a4cbe80-b5a0-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        1
+      ],
+      "content": "お前の投げるボルトは通過できないが、\n電撃移動中なら通り抜けられるようだ。\n頭を使って突破するんだ。",
+      "duration": 60,
+      "name-overwrite": ""
+    }
+  ]
+}

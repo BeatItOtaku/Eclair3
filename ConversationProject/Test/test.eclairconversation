@@ -1,0 +1,49 @@
+{
+  "description": "Text",
+  "character-left": [
+    1,
+    3
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 1,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "エクレアです！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "f64c9f90-b479-11e9-b41d-05a75d4e10dc",
+      "character": [
+        1
+      ],
+      "content": "オレイエットです！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "07ddffb0-b47a-11e9-b41d-05a75d4e10dc",
+      "character": [
+        3
+      ],
+      "content": "ブリオッシュだ。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "19b59090-b47a-11e9-b41d-05a75d4e10dc",
+      "character": [
+        1
+      ],
+      "content": "もう一度オレイエットです！",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

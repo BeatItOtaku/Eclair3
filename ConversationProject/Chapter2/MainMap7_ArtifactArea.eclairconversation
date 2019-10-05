@@ -1,0 +1,48 @@
+{
+  "description": "人工物エリアに初めて到着した時。人が生活してた形跡がある～的な。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "この辺りにはずいぶん人工物が散乱している・・・。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "64cfecd0-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "ああ、\nアーミーギアが調査の拠点にしていたのかもしれん。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "68091ed0-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "こんな危険な場所で生活してる奴の気が知れないよ。",
+      "duration": 4.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "67d27e70-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "まったくだ。",
+      "duration": 2,
+      "name-overwrite": ""
+    }
+  ]
+}

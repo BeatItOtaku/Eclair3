@@ -153,6 +153,63 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Chapter2" ID="{F1D8893E-4528-4F29-804E-620070829706}" ShortID="216245669">
+					<ChildrenList>
+						<Event Name="Field2" ID="{0FE43F61-2A63-471C-A6A5-C7341872CD21}">
+							<ChildrenList>
+								<Action Name="" ID="{93FCEA12-4B2C-4CF6-8513-DF34300B97BE}" ShortID="314386511">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Piano" ID="{9F55319E-B504-43FC-AE2E-9EAF3F0B4AF1}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3500E5FE-4C4F-4285-890C-1A5A2F39654D}" ShortID="665592818">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Field" ID="{D9F208C4-FBE8-45C0-9F4E-4702CDAF7D63}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Boss2" ID="{86986BD2-4DF0-4BE9-8911-7E33544CE0A6}">
+							<ChildrenList>
+								<Action Name="" ID="{9D3B5326-98C0-4BAE-918C-8280A17E6672}" ShortID="169384514">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boss" ID="{4DD333A0-CC1C-4050-A6F8-00D06731C329}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Piano2" ID="{12F24FD7-5699-4A6E-A4F7-A143A7003068}">
+							<ChildrenList>
+								<Action Name="" ID="{4B6D0D51-A3E6-48EB-913D-90D7AA2D2C98}" ShortID="1063841597">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Piano" ID="{9F55319E-B504-43FC-AE2E-9EAF3F0B4AF1}" WorkUnitID="{99251602-E66C-4F1A-9816-A4F0112B5A2C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

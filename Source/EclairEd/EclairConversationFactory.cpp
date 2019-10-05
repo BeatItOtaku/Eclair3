@@ -117,6 +117,10 @@ void UEclairConversationFactory::SetReimportPaths(UObject* Obj, const TArray<FSt
 }
 EReimportResult::Type UEclairConversationFactory::Reimport(UObject* Obj)
 {
+    #if PLATFORM_MAC
+        return EReimportResult::Failed;
+    #endif
+    
 	UEclairConversation* EclairConversation = Cast<UEclairConversation>(Obj);
 	if (!EclairConversation)
 	{

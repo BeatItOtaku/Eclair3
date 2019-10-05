@@ -1,0 +1,48 @@
+{
+  "description": "川エリアの下流に初めて来た時。上流には何かあるかもしれないことをほのめかす。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "d4a86fb0-b800-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "小川が流れてるね。",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d83ae540-b800-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "川の源流も調べてみたらどうだ？\n月の山脈にたどり着けるかもしれないぞ。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "f0f416b0-b800-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "なんだって？",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "fb2ea640-b800-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "…上流のほうも調べてみればいかがかなという\n提案だ。",
+      "duration": 5,
+      "name-overwrite": ""
+    }
+  ]
+}

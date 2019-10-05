@@ -1,0 +1,73 @@
+{
+  "description": "青き大地計画 4日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "古びたカードの中にデータが記されている。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 4日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "増殖を続けるMinerが凶暴化。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "驚異的な脚力で区域全域を駆け巡り、\n周囲の動植物へ突進による襲撃を仕掛けた。 ",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "突進は強靭な表皮により装甲車にも匹敵する破壊力を\n持ち、遂には区域の隔離壁を破壊。\n散布地域外に侵攻を開始した。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b6e5ead0-b8ea-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "予想外の事態が起こるやもとは危惧していたが、\n成長が早すぎる。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c0b3fcf0-b8ea-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "侵攻を止めるべく最大限の戦闘態勢を取っているが、\nこの数と勢いではどこまで持つか......。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "description": "青き大地計画 6日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "古びたカードの中にデータが記されている。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 6日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "アーミーギアは政府の指示に従い、\n孤島の周囲の海上封鎖およびライフラインの切断、\nそして島民の殲滅作戦を開始した。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "侵攻を続けるMinerは進化を遂げ、\n火を吹くようになり島中は火の海となった。\n現段階で島民の半分の殲滅を完了。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "Minerの襲撃と島民の抵抗により、\nアーミーギアも死傷者多数。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "4ec5ec10-b8eb-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "これまで何度も死線をくぐり抜けてきたが\n共に戦ってきた仲間を守れず......",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "59856310-b8eb-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "そして何より、罪のない一般人を......私は......",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

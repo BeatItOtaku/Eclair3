@@ -38,10 +38,18 @@
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{3CAD817E-90F5-4B37-B1A1-89242A5D07FD}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+							<ConversionPlugin Name="" ID="{27FA5ADB-F694-4669-83CF-101D213FCE39}" PluginName="Opus" CompanyID="0" PluginID="19">
+								<PropertyList>
+									<Property Name="Quality" Type="int32" Value="128"/>
+								</PropertyList>
+							</ConversionPlugin>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{D2A8E3D3-006A-408D-9E53-EFAD981E441E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
+							<ConversionPlugin Name="" ID="{03B5B37F-7E0F-46C6-961B-A2CB28AECCA8}" PluginName="Opus" CompanyID="0" PluginID="19">
+								<PropertyList>
+									<Property Name="Quality" Type="int32" Value="128"/>
+								</PropertyList>
+							</ConversionPlugin>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

@@ -1,0 +1,39 @@
+{
+  "description": "周りより大きい木の上に登った時。風景や高いところからの眺めに感嘆するような会話がほしい。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "すごく高いとこまで来たみたい。",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "8b612410-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "まるで鳥になった気分か？",
+      "duration": 2,
+      "name-overwrite": ""
+    },
+    {
+      "id": "811640d0-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "そうだね、\nこんな見晴らしのいいところに来たのは久しぶり。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "description": "ちょっとした会話",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "この廃坑、元からこんなものが置いてあるの？",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "760ecde0-b59f-11e9-9822-854d5499a132",
+      "character": [
+        1
+      ],
+      "content": "いや、たぶんブリオッシュがお前の侵入を\n阻むために置いたものだろう。\nうまく利用させてもらってるがな。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ae5fcea0-b5a0-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        0
+      ],
+      "content": "ブリオッシュも案外バカなのかしら？\nさっきも何も言わずに攻撃してきたし。",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b3fe67e0-b5a0-11e9-a70b-d7c7f354b1a2",
+      "character": [
+        1
+      ],
+      "content": "そうかもな。\nただ、戦闘に関するカンは働きそうだ…\n用心しろよ、エクレア。",
+      "duration": 5,
+      "name-overwrite": ""
+    }
+  ]
+}
