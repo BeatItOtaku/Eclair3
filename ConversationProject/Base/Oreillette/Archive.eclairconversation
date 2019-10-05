@@ -1,0 +1,21 @@
+{
+  "description": "アーカイブについて",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 1,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "エクレアです！",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
