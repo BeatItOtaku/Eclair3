@@ -1,0 +1,73 @@
+{
+  "description": "青き大地計画 3日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "古びたカードの中にデータが記されている。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 3日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "青の粉塵の増殖速度が加速。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "想定よりも早く区域内に分化し、\n既存の生態系に属さない、\n新種の機械に似た表皮を持つ未知の生物が誕生した。 ",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": " アーミーギアはこの生物を\"Miner\"と命名した。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "76ef19b0-b8ea-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "こんなにも早く新種の生物が誕生するとは......。\n神経ネットワークによる\n進化の最適化が行われたのだろうか？",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "900eae10-b8ea-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "成長速度と生態に注目しつつ、\n引き続きMinerの調査・観察を続ける。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

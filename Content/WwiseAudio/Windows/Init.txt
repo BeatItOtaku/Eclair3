@@ -1,6 +1,7 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	1087692520	CharacterStates			\Default Work Unit\CharacterStates	
 	2835351336	GroundType			\Default Work Unit\GroundType	
+	2965688519	IsFighting			\Default Work Unit\IsFighting	
 	3856304344	Pausing			\Default Work Unit\Pausing	
 	4146872587	BGMStates			\Default Work Unit\BGMStates	
 
@@ -10,9 +11,13 @@ State	ID	Name	State Group			Notes
 	0	None	GroundType			
 	2003927601	Puddle	GroundType			
 	2473969246	Metal	GroundType			
+	0	None	IsFighting			
+	168610243	Fighting	IsFighting			
 	0	None	Pausing			
 	3856304344	Pausing	Pausing			
 	0	None	BGMStates			
+	67594016	Sub3	BGMStates			
+	67594017	Sub2	BGMStates			
 	67594018	Sub1	BGMStates			
 	168610243	Fighting	BGMStates			
 

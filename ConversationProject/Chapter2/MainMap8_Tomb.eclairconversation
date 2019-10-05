@@ -1,0 +1,66 @@
+{
+  "description": "墓エリアに初めて到達した時。青き大地計画の被害者の墓であるという会話がほしい。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "ここは…墓地？",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "5377e1a0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "そうだ。\n皆アーミーギアの策略に巻き込まれて命を落とした。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "536013e0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "そんな...！？",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "53462340-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "お前のように強いものはそう多くはない。\n私が動けない今、奴らに対抗できるのはお前だけだ。",
+      "duration": 6,
+      "name-overwrite": ""
+    },
+    {
+      "id": "defe6af0-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "奴らには一体何のために…？",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ee3fc090-b80a-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "少なくとも\nこの墓の下の彼らのためではなかったようだな。\nエクレア、奴らを止めてくれ。",
+      "duration": 7,
+      "name-overwrite": ""
+    }
+  ]
+}

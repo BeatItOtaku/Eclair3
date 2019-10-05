@@ -1,0 +1,21 @@
+{
+  "description": "中ボスFireMinerに初めて出会った時。戦闘前なので一言二言くらいで。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "073844f0-b80b-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "気をつけろエクレア！マイナーの巨大種だ！\n通常種とは違う攻撃を仕掛けてくるかもしれん。",
+      "duration": 6,
+      "name-overwrite": ""
+    }
+  ]
+}

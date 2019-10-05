@@ -1,0 +1,73 @@
+{
+  "description": "青き大地計画 5日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "古びたカードの中にデータが記されている。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 5日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "隔離壁を突破したMinerは孤島の居住区にまで侵攻。\n凶暴化は止まらず住民への襲撃を開始した。 ",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "事態を最大レベルの危機的状況と見た\nアーミーギアは政府に報告。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "e2331f50-b8ea-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "政府は2日間でおよそ1000体にまで増殖したMinerを\n殲滅することは不可能と判断し、\n事実の隠蔽を決定した。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "アーミーギアの最新鋭の装備を持ってしてもMinerを止めることができなかった以上、",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "17397e60-b8eb-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "我々はどんな手を使ってでも、\n誰にも知られず事態を収束させなければならない。\nならないのだ......。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

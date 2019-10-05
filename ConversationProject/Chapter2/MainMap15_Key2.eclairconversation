@@ -1,0 +1,30 @@
+{
+  "description": "２個目の鍵を手に入れた時。２個目の鍵はFireMinerを倒すと出現する。戦闘後のセリフも含みたい。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "残りは1つだね。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "acff0ea0-b8ec-11e9-9180-557648120c1e",
+      "character": [
+        1
+      ],
+      "content": "この調子で大樹のカギを集めてくれ。",
+      "duration": 5,
+      "name-overwrite": ""
+    }
+  ]
+}

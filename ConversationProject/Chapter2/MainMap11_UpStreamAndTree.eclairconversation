@@ -1,0 +1,39 @@
+{
+  "description": "川エリア上流の周りより大きい木に来た時。上にも足場あって何かあるかもしれないことをほのめかす。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "ここに生えてる3本の木…\n他の木の比較にならないくらい大きいな。",
+      "duration": 4,
+      "name-overwrite": ""
+    },
+    {
+      "id": "cebf8a30-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "ああ、3人の巨人ってところか。\nどうやらジャンプパッドで登っていけるみたいだぞ。\n巨人からの贈り物もあるかもしれないな。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "cc7f5e30-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        0
+      ],
+      "content": "そうね。上に登れば景色もよさそう。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}

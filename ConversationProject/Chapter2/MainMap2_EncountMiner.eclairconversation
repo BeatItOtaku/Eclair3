@@ -1,0 +1,39 @@
+{
+  "description": "Miner対峙。オレイエットがエクレアにＥＴＯは硬くて効きそうにないので剣攻撃をすることを勧める。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "9ee1cf60-b6b7-11e9-ac46-9341e2b6d921",
+      "character": [
+        0
+      ],
+      "content": "なにあのカメ！？こっちへ向かってくる！",
+      "duration": 2.5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "67e82620-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "あれは“マイナー”、採掘者だ。外敵に対して\n体当たり攻撃をしてくるぞ。奴の堅い甲羅の前には\n電撃移動の体当たりも効果がない。",
+      "duration": 5,
+      "name-overwrite": ""
+    },
+    {
+      "id": "8a09f120-b807-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "エクレア、お前のELE-GEARの新しい機能\n『剣成攻撃』をしてみるんだ！",
+      "duration": 3.5,
+      "name-overwrite": ""
+    }
+  ]
+}

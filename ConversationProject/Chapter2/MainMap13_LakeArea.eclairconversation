@@ -1,0 +1,21 @@
+{
+  "description": "川エリアの奥地に入った時。抜け穴とか隠し扉を見つけた時のような、少し驚く感じの会話が欲しい。",
+  "character-left": [
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 0,
+  "content": [
+    {
+      "id": "a133fe70-b804-11e9-94b6-41eacf5cf744",
+      "character": [
+        1
+      ],
+      "content": "隠された湖…。なかなかロマンティックな場所だな。",
+      "duration": 3.5,
+      "name-overwrite": ""
+    }
+  ]
+}

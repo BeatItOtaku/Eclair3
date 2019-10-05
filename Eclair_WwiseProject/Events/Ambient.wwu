@@ -45,6 +45,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bird" ID="{339C5E07-6EB5-4D82-B978-659A038217BB}">
+					<ChildrenList>
+						<Action Name="" ID="{0497A691-6574-4B2C-80AA-55261EF215A6}" ShortID="826802525">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bird" ID="{75E0D4B2-A021-4DD8-88D0-783972DF913F}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GrassAndBirds" ID="{5003D8C2-6CC1-4998-9EE8-6CA3795EB650}">
+					<ChildrenList>
+						<Action Name="" ID="{6F730022-1AC7-4EA7-A1FC-8176D2A9B703}" ShortID="669507248">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GrassAndBirds" ID="{7483D74B-3111-48D3-9004-05E88BC78BA4}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="WaterFlow" ID="{B318F16B-5A3C-41B7-A126-F23571B46730}">
+					<ChildrenList>
+						<Action Name="" ID="{1390B2D8-D8E8-4EA5-870F-137C3028E3EB}" ShortID="695350115">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WaterFlow" ID="{1CD8F8BF-C777-4510-B494-B3796E131703}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

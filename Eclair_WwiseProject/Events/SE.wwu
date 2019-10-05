@@ -362,6 +362,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="GetArchive" ID="{E5E53757-7A15-45ED-BD72-224DA914BFB2}">
+							<ChildrenList>
+								<Action Name="" ID="{3EFF5983-EE49-4DF2-92A0-26CFF4E048AD}" ShortID="591739864">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GetArchive" ID="{AE26879C-DCF0-4660-A851-BF4A653EEE2A}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GetKey" ID="{67E49596-6325-44D1-9386-FE38CA956299}">
+							<ChildrenList>
+								<Action Name="" ID="{91130580-33CA-436E-A504-0E4C06D24A26}" ShortID="512262153">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GetKey" ID="{23B811BC-1D23-495F-A121-9A442E5C2E3C}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Eclair" ID="{85675E97-5D83-4D44-A0B6-E341644C8CFB}" ShortID="48386419">
@@ -496,6 +524,80 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Voice_Damaged" ID="{5DF9699A-5A94-44FA-8689-5CEA2C3FBA76}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Attack2" ID="{7A5FD5EE-360B-4755-A9D4-32A0B0C37CEA}">
+							<ChildrenList>
+								<Action Name="" ID="{43707D4F-F8F9-45D5-A0A1-AA73A4C601BD}" ShortID="908612131">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack2" ID="{EF694FA9-18DF-46C1-AC20-9A0F80B7F4C2}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Attack1" ID="{C47A5D84-6101-4A2F-83CF-8A3FEF92EC86}">
+							<ChildrenList>
+								<Action Name="" ID="{A52C2E37-8AED-479A-8C2B-1009229D439B}" ShortID="1036290862">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack1" ID="{210C6721-4FE8-4676-8C5B-B6AF026B1889}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Attack3" ID="{378063ED-F272-455A-818C-EE35EED4BA16}">
+							<ChildrenList>
+								<Action Name="" ID="{CAB37B2C-92CC-43E8-AA4B-863695641339}" ShortID="33876141">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Attack3" ID="{F46ADE24-9E58-4A9D-974B-0AB55D83478F}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="DrawSword" ID="{AFA8FE94-BB57-4EAC-94FF-F9B79037EEB6}">
+							<ChildrenList>
+								<Action Name="" ID="{5DAC5B7A-3806-4AB9-BAA7-B13FC03B98AE}" ShortID="413727889">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DrawSword" ID="{B80FD03C-B891-44AD-A3AE-7596D77CC973}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Chapter2" ID="{045C516B-74D0-48C2-8022-8FC308B1E9AD}" ShortID="448510055">
+					<ChildrenList>
+						<Event Name="Catapult" ID="{0C526229-5688-4112-AFDB-B4AC9F4C366D}">
+							<ChildrenList>
+								<Action Name="" ID="{55A97A7D-ACE7-45FE-9AF6-D74A4B38AA04}" ShortID="60825141">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catapult" ID="{BBB99CA6-B1AC-4D2B-965D-A3A9EF43A31F}" WorkUnitID="{BE48827F-5EA2-45FE-ABBF-EFEE8E6F0396}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

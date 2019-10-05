@@ -1,0 +1,73 @@
+{
+  "description": "青き大地計画 7日目",
+  "character-left": [
+    10
+  ],
+  "character-right": [],
+  "type": 1,
+  "content": [
+    {
+      "id": "85b0d5f0-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "古びたカードの中にデータが記されている。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "bab07cd0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "【青き大地計画 7日目】",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "b614fd20-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "アーミーギア、孤島全域の島民殲滅作戦を完了。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "c09bff00-b382-11e9-a592-19d7e33bb9f8",
+      "character": [
+        10
+      ],
+      "content": "青の粉塵から生まれた生物群は穏やかさを\n取り戻しつつも、島全体に生息域を拡大した。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d40048f0-b8e9-11e9-9aaa-df8f4d0688ff",
+      "character": [
+        10
+      ],
+      "content": "一連の騒動により\"青き大地計画\"の凍結が決定。\n政府はアーミーギアに孤島への駐留および\n生物群の監視を命じた。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "826abf50-b8eb-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "駐留および監視の命というが、\nそれは国に見捨てられたのと同義だ。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "8a5bd410-b8eb-11e9-9180-557648120c1e",
+      "character": [
+        10
+      ],
+      "content": "私に残されたのは、\nわずかな生き残りの仲間達と、\n人知を超えた生物群、ただそれだけである......。",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
