@@ -210,6 +210,24 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Basecamp" ID="{8B572540-881A-4770-8EA6-734EF022A91F}" ShortID="684729334">
+					<ChildrenList>
+						<Event Name="Basecamp" ID="{15CB0DE8-984E-4B8D-BC32-2EED5E9D11E5}">
+							<ChildrenList>
+								<Action Name="" ID="{5992B570-15C8-4042-836E-A5B55C138CAC}" ShortID="583439991">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Basecamp" ID="{CE764E6A-D5C0-4361-A146-E53625F010F0}" WorkUnitID="{E22902DE-7E7B-4FFA-842E-9AA62E9D0351}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
