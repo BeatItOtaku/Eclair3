@@ -11,165 +11,6 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1183684777" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Chapter1</ObjectPath>
-			<ShortName>Chapter1</ShortName>
-			<Path>Chapter1.bnk</Path>
-			<IncludedEvents>
-				<Event Id="112240412" Name="BeforeFrameThrower" ObjectPath="\Events\SE\Brioche\BeforeFrameThrower"/>
-				<Event Id="1560169506" Name="Boss" ObjectPath="\Events\Default Work Unit\Chapter1\Boss"/>
-				<Event Id="1877847629" Name="Door" ObjectPath="\Events\SE\Chapter1\Door"/>
-				<Event Id="560349346" Name="Door_Big" ObjectPath="\Events\SE\Chapter1\Door_Big"/>
-				<Event Id="2280510569" Name="Down" ObjectPath="\Events\SE\Brioche\Down"/>
-				<Event Id="2646605403" Name="Fade" ObjectPath="\Events\Default Work Unit\Chapter1\Fade"/>
-				<Event Id="514358619" Name="Field" ObjectPath="\Events\Default Work Unit\Chapter1\Field"/>
-				<Event Id="3748276840" Name="FlameGrenade" ObjectPath="\Events\SE\Brioche\FlameGrenade"/>
-				<Event Id="2691847895" Name="FlameThrower" ObjectPath="\Events\SE\Brioche\FlameThrower"/>
-				<Event Id="2009975021" Name="FootSteps_BB" ObjectPath="\Events\SE\Brioche\FootSteps_BB"/>
-				<Event Id="1324340420" Name="Piano" ObjectPath="\Events\Default Work Unit\Chapter1\Piano"/>
-				<Event Id="2901268394" Name="PillarOfFire" ObjectPath="\Events\SE\Brioche\PillarOfFire"/>
-				<Event Id="113682313" Name="PillarOfFire_Jiware" ObjectPath="\Events\SE\Brioche\PillarOfFire_Jiware"/>
-				<Event Id="645565787" Name="Punch" ObjectPath="\Events\SE\Brioche\Punch"/>
-				<Event Id="2275039111" Name="Rush" ObjectPath="\Events\SE\Brioche\Rush"/>
-				<Event Id="4277651895" Name="Rush2" ObjectPath="\Events\SE\Brioche\Rush2"/>
-				<Event Id="705685643" Name="StrikingGround" ObjectPath="\Events\SE\Brioche\StrikingGround"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="69387691" Language="SFX">
-					<ShortName>1-piano.wav</ShortName>
-					<Path>SFX\1-piano_2EB51506.wem</Path>
-				</File>
-				<File Id="77356971" Language="SFX">
-					<ShortName>1-haikou-1.wav</ShortName>
-					<Path>SFX\1-haikou-1_2EB51506.wem</Path>
-				</File>
-				<File Id="105590707" Language="SFX">
-					<ShortName>1-boss.wav</ShortName>
-					<Path>SFX\1-boss_2EB51506.wem</Path>
-				</File>
-				<File Id="150500008" Language="SFX">
-					<ShortName>Punch.wav</ShortName>
-					<Path>SFX\Punch_324331BC.wem</Path>
-				</File>
-				<File Id="182787609" Language="SFX">
-					<ShortName>StrikingGround.wav</ShortName>
-					<Path>SFX\StrikingGround_324331BC.wem</Path>
-				</File>
-				<File Id="220151601" Language="SFX">
-					<ShortName>BeforeFrameThrower.wav</ShortName>
-					<Path>SFX\BeforeFrameThrower_324331BC.wem</Path>
-				</File>
-				<File Id="238159724" Language="SFX">
-					<ShortName>Down.wav</ShortName>
-					<Path>SFX\Down_324331BC.wem</Path>
-				</File>
-				<File Id="263033532" Language="SFX">
-					<ShortName>PillarOfFire.wav</ShortName>
-					<Path>SFX\PillarOfFire_324331BC.wem</Path>
-				</File>
-				<File Id="347520258" Language="SFX">
-					<ShortName>1-default-1.wav</ShortName>
-					<Path>SFX\1-default-1_2EB51506.wem</Path>
-				</File>
-				<File Id="396469845" Language="SFX">
-					<ShortName>Rush2.wav</ShortName>
-					<Path>SFX\Rush2_324331BC.wem</Path>
-				</File>
-				<File Id="430322998" Language="SFX">
-					<ShortName>Rush.wav</ShortName>
-					<Path>SFX\Rush_324331BC.wem</Path>
-				</File>
-				<File Id="486635016" Language="SFX">
-					<ShortName>Empty.wav</ShortName>
-					<Path>SFX\Empty_2EB51506.wem</Path>
-				</File>
-				<File Id="706389692" Language="SFX">
-					<ShortName>FootSteps_BB.wav</ShortName>
-					<Path>SFX\FootSteps_BB_324331BC.wem</Path>
-				</File>
-				<File Id="817075413" Language="SFX">
-					<ShortName>Door-Big.wav</ShortName>
-					<Path>SFX\Door-Big_324331BC.wem</Path>
-				</File>
-				<File Id="889719873" Language="SFX">
-					<ShortName>Door.wav</ShortName>
-					<Path>SFX\Door_324331BC.wem</Path>
-				</File>
-				<File Id="902868209" Language="SFX">
-					<ShortName>FrameThrower.wav</ShortName>
-					<Path>SFX\FrameThrower_324331BC.wem</Path>
-				</File>
-				<File Id="993556319" Language="SFX">
-					<ShortName>PillarOfFire_Jiware.wav</ShortName>
-					<Path>SFX\PillarOfFire_Jiware_324331BC.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
-		<SoundBank Id="1183684778" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Chapter2</ObjectPath>
-			<ShortName>Chapter2</ShortName>
-			<Path>Chapter2.bnk</Path>
-			<IncludedEvents>
-				<Event Id="2253511092" Name="Boss2" ObjectPath="\Events\Default Work Unit\Chapter2\Boss2"/>
-				<Event Id="1990701021" Name="Catapult" ObjectPath="\Events\SE\Chapter2\Catapult"/>
-				<Event Id="2654819955" Name="Field2" ObjectPath="\Events\Default Work Unit\Chapter2\Field2"/>
-				<Event Id="126611646" Name="Piano2" ObjectPath="\Events\Default Work Unit\Chapter2\Piano2"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="20557333" Language="SFX">
-					<ShortName>2-Beginning.wav</ShortName>
-					<Path>SFX\2-Beginning_2EB51506.wem</Path>
-				</File>
-				<File Id="94529234" Language="SFX">
-					<ShortName>2-Fighting.wav</ShortName>
-					<Path>SFX\2-Fighting_2EB51506.wem</Path>
-				</File>
-				<File Id="116336102" Language="SFX">
-					<ShortName>2-BigTree.wav</ShortName>
-					<Path>SFX\2-BigTree_2EB51506.wem</Path>
-				</File>
-				<File Id="173695219" Language="SFX">
-					<ShortName>2-boss-end.wav</ShortName>
-					<Path>SFX\2-boss-end_2EB51506.wem</Path>
-				</File>
-				<File Id="236271485" Language="SFX">
-					<ShortName>2-boss-intro.wav</ShortName>
-					<Path>SFX\2-boss-intro_2EB51506.wem</Path>
-				</File>
-				<File Id="411093624" Language="SFX">
-					<ShortName>2-Main.wav</ShortName>
-					<Path>SFX\2-Main_2EB51506.wem</Path>
-				</File>
-				<File Id="458424964" Language="SFX">
-					<ShortName>2-Main-FirstTime.wav</ShortName>
-					<Path>SFX\2-Main-FirstTime_2EB51506.wem</Path>
-				</File>
-				<File Id="590896552" Language="SFX">
-					<ShortName>2-Normal.wav</ShortName>
-					<Path>SFX\2-Normal_2EB51506.wem</Path>
-				</File>
-				<File Id="599951383" Language="SFX">
-					<ShortName>Cymbal roll sound effect.wav</ShortName>
-					<Path>SFX\Cymbal roll sound effect_2EB51506.wem</Path>
-				</File>
-				<File Id="604434698" Language="SFX">
-					<ShortName>2-boss-intro-loop.wav</ShortName>
-					<Path>SFX\2-boss-intro-loop_2EB51506.wem</Path>
-				</File>
-				<File Id="751418782" Language="SFX">
-					<ShortName>2-boss-silent.wav</ShortName>
-					<Path>SFX\2-boss-silent_2EB51506.wem</Path>
-				</File>
-				<File Id="751420286" Language="SFX">
-					<ShortName>2-boss-normal.wav</ShortName>
-					<Path>SFX\2-boss-normal_2EB51506.wem</Path>
-				</File>
-				<File Id="762942166" Language="SFX">
-					<ShortName>Catapult.wav</ShortName>
-					<Path>SFX\Catapult_324331BC.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -183,6 +24,7 @@
 				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\SE\Eclair\Attack1"/>
 				<Event Id="3768540965" Name="Attack2" ObjectPath="\Events\SE\Eclair\Attack2"/>
 				<Event Id="3768540964" Name="Attack3" ObjectPath="\Events\SE\Eclair\Attack3"/>
+				<Event Id="2192253361" Name="Basecamp" ObjectPath="\Events\Default Work Unit\Basecamp\Basecamp"/>
 				<Event Id="1591411653" Name="BigDecide" ObjectPath="\Events\SE\System\BigDecide"/>
 				<Event Id="1544377644" Name="Bird" ObjectPath="\Events\Ambient\Bird"/>
 				<Event Id="2760337059" Name="Cancel" ObjectPath="\Events\SE\System\Cancel"/>
@@ -253,6 +95,10 @@
 				<File Id="109089291" Language="SFX">
 					<ShortName>Bird2.wav</ShortName>
 					<Path>SFX\Bird2_324331BC.wem</Path>
+				</File>
+				<File Id="111279555" Language="SFX">
+					<ShortName>Basecamp.wav</ShortName>
+					<Path>SFX\Basecamp_2EB51506.wem</Path>
 				</File>
 				<File Id="135831222" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>

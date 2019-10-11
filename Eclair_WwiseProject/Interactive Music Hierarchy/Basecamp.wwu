@@ -5,10 +5,11 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Basecamp" ID="{CE764E6A-D5C0-4361-A146-E53625F010F0}" ShortID="39295273">
 					<PropertyList>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="Tempo" Type="Real64" Value="85"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-7</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -257,7 +258,7 @@
 								<MusicCue Name="Exit Cue" ID="{289B5B50-8A55-4D5B-A08D-E077C8326841}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="8470.58823529412"/>
+										<Property Name="TimeMs" Type="Real64" Value="11294.1176470588"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
