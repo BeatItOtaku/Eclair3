@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1814275255	LowHPLoop			\SE\System\LowHPLoop	
 	1834271629	HittingBolt			\SE\Eclair\HittingBolt	
 	2023306206	WaterFlow			\Ambient\WaterFlow	
+	2074477625	Waterfall			\Ambient\Waterfall	
 	2151339297	Voice_Damaged			\SE\Eclair\Voice_Damaged	
 	2174908572	GrassAndBirds			\Ambient\GrassAndBirds	
 	2192253361	Basecamp			\Default Work Unit\Basecamp\Basecamp	
@@ -94,6 +95,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	626261930	Bird1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Bird1_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird1		199975
 	633214849	SteelFrame	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\SteelFrame_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		213065
 	648148738	Pico2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Pico2_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico2\Pico2		50834
+	672701678	Waterfall	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\Waterfall_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\Waterfall		711091
 	727930744	LowHP	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\LowHP_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		10603
 	728078664	FootSteps_Eclair_Default_10	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_10_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		13936
 	729731780	FootSteps_Eclair_Default_05	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Windows\SFX\FootSteps_Eclair_Default_05_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_05		11733
