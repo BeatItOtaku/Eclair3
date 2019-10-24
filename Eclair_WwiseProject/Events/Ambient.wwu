@@ -89,6 +89,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Waterfall" ID="{FF7B5333-97A8-4A50-BCE9-8BE6632957F7}">
+					<ChildrenList>
+						<Action Name="" ID="{20B32C1B-1E94-4EB7-B27B-1FC253FF7BEB}" ShortID="487146230">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Waterfall" ID="{C7C139B1-B71C-48F0-B663-81F76320E5F9}" WorkUnitID="{B818E305-C81A-4A92-B845-24BDDB4ABB28}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

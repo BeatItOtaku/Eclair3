@@ -13,8 +13,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1814275255	LowHPLoop			\SE\System\LowHPLoop	
 	1834271629	HittingBolt			\SE\Eclair\HittingBolt	
 	2023306206	WaterFlow			\Ambient\WaterFlow	
+	2074477625	Waterfall			\Ambient\Waterfall	
 	2151339297	Voice_Damaged			\SE\Eclair\Voice_Damaged	
 	2174908572	GrassAndBirds			\Ambient\GrassAndBirds	
+	2192253361	Basecamp			\Default Work Unit\Basecamp\Basecamp	
 	2255639613	SteelFrame			\Ambient\SteelFrame	
 	2385628198	FootSteps			\SE\Eclair\FootSteps	
 	2488446635	GetArchive			\SE\System\GetArchive	
@@ -69,6 +71,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	71549198	WaterFlow	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\WaterFlow_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\WaterFlow		856398
 	105108458	CannotUnlock	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\CannotUnlock_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\CannotUnlock		13558
 	109089291	Bird2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird2_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird2		266026
+	111279555	Basecamp	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Basecamp_2EB51506.wem		\Interactive Music Hierarchy\Basecamp\Basecamp\Main\Basecamp		1337682
 	135831222	FootSteps_Eclair_Default_03	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_03_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_03		12184
 	142300749	Voice_Damaged	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Voice_Damaged_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\Voice_Damaged		13554
 	154465229	Pico1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico1_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico1\Pico1		50812
@@ -92,6 +95,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	626261930	Bird1	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Bird1_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\Bird\Bird1		199975
 	633214849	SteelFrame	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\SteelFrame_324331BC.wem		\Actor-Mixer Hierarchy\Ambient\SteelFrame\SteelFrame		213065
 	648148738	Pico2	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Pico2_2EB51506.wem		\Interactive Music Hierarchy\Default Work Unit\ChallengeModePicoPico\Pico2\Pico2		50834
+	672701678	Waterfall	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\Waterfall_2EB51506.wem		\Actor-Mixer Hierarchy\Ambient\Waterfall		711091
 	727930744	LowHP	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\LowHP_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\System\LowHP		10603
 	728078664	FootSteps_Eclair_Default_10	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_10_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_10		13936
 	729731780	FootSteps_Eclair_Default_05	F:\Git\Eclair3\Eclair_WwiseProject\.cache\Mac\SFX\FootSteps_Eclair_Default_05_324331BC.wem		\Actor-Mixer Hierarchy\SoundEffects\Eclair\FootSteps\Default\FootSteps_Eclair_Default_05		11733

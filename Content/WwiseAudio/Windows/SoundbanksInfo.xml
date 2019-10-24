@@ -183,6 +183,7 @@
 				<Event Id="3768540966" Name="Attack1" ObjectPath="\Events\SE\Eclair\Attack1"/>
 				<Event Id="3768540965" Name="Attack2" ObjectPath="\Events\SE\Eclair\Attack2"/>
 				<Event Id="3768540964" Name="Attack3" ObjectPath="\Events\SE\Eclair\Attack3"/>
+				<Event Id="2192253361" Name="Basecamp" ObjectPath="\Events\Default Work Unit\Basecamp\Basecamp"/>
 				<Event Id="1591411653" Name="BigDecide" ObjectPath="\Events\SE\System\BigDecide"/>
 				<Event Id="1544377644" Name="Bird" ObjectPath="\Events\Ambient\Bird"/>
 				<Event Id="2760337059" Name="Cancel" ObjectPath="\Events\SE\System\Cancel"/>
@@ -210,6 +211,7 @@
 				<Event Id="3705726509" Name="Title" ObjectPath="\Events\Default Work Unit\Chapter1\Title"/>
 				<Event Id="370150497" Name="UnlockStage" ObjectPath="\Events\SE\System\UnlockStage"/>
 				<Event Id="2151339297" Name="Voice_Damaged" ObjectPath="\Events\SE\Eclair\Voice_Damaged"/>
+				<Event Id="2074477625" Name="Waterfall" ObjectPath="\Events\Ambient\Waterfall"/>
 				<Event Id="2023306206" Name="WaterFlow" ObjectPath="\Events\Ambient\WaterFlow"/>
 				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Ambient\Wind"/>
 			</IncludedEvents>
@@ -253,6 +255,10 @@
 				<File Id="109089291" Language="SFX">
 					<ShortName>Bird2.wav</ShortName>
 					<Path>SFX\Bird2_324331BC.wem</Path>
+				</File>
+				<File Id="111279555" Language="SFX">
+					<ShortName>Basecamp.wav</ShortName>
+					<Path>SFX\Basecamp_2EB51506.wem</Path>
 				</File>
 				<File Id="135831222" Language="SFX">
 					<ShortName>FootSteps_Eclair_Default_03.wav</ShortName>
@@ -345,6 +351,10 @@
 				<File Id="648148738" Language="SFX">
 					<ShortName>Pico2.wav</ShortName>
 					<Path>SFX\Pico2_2EB51506.wem</Path>
+				</File>
+				<File Id="672701678" Language="SFX">
+					<ShortName>Waterfall.wav</ShortName>
+					<Path>SFX\Waterfall_2EB51506.wem</Path>
 				</File>
 				<File Id="727930744" Language="SFX">
 					<ShortName>LowHP.wav</ShortName>
