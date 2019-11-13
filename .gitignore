@@ -80,3 +80,5 @@ DerivedDataCache/*
 Eclair_WwiseProject/.cache/
 Eclair_WwiseProject/Originals/
 Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap
+.vscode
+*.code-workspace
