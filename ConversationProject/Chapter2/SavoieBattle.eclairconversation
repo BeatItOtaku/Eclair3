@@ -1,0 +1,137 @@
+{
+  "description": "SavoieBattle",
+  "character-left": [
+    4,
+    1
+  ],
+  "character-right": [
+    0
+  ],
+  "type": 2,
+  "content": [
+    {
+      "id": 0,
+      "character": [
+        0
+      ],
+      "content": "オレイエット、大樹の頂上に来た。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "745767e0-5145-11ea-971e-55467d694c9d",
+      "character": [
+        1
+      ],
+      "content": "そこに時空のギアとサガナメ・サヴアがいるはずだ。\n気をつけろ。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "9dafaa30-5145-11ea-971e-55467d694c9d",
+      "character": [
+        0
+      ],
+      "content": "いたぞ…！サヴアだ！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ca2dbd90-5145-11ea-971e-55467d694c9d",
+      "character": [
+        4
+      ],
+      "content": "…誰だ！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "562f3f10-514d-11ea-971e-55467d694c9d",
+      "character": [
+        0
+      ],
+      "content": "まずい！気づかれた！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "5ca65e00-514d-11ea-971e-55467d694c9d",
+      "character": [
+        4
+      ],
+      "content": "！",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "cefd1ff0-5145-11ea-971e-55467d694c9d",
+      "character": [
+        4
+      ],
+      "content": "ギア…それはエレギアか！？\nなぜそれをお前が身に着けている！？",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "d4e4d020-5145-11ea-971e-55467d694c9d",
+      "character": [
+        0
+      ],
+      "content": "一体何の話だ？",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "da1d2d80-5145-11ea-971e-55467d694c9d",
+      "character": [
+        4
+      ],
+      "content": "そうか…お前がアーミーギアを襲撃した輩…。こんな子供に…。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "e2a18190-5145-11ea-971e-55467d694c9d",
+      "character": [
+        0
+      ],
+      "content": "子供だからって見くびるなよ。時空のギアを渡してもらおう。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "e98fcc50-5145-11ea-971e-55467d694c9d",
+      "character": [
+        4
+      ],
+      "content": "これを渡すわけには行かない。この剣に懸けて…。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "ecaa2bb0-5145-11ea-971e-55467d694c9d",
+      "character": [
+        1
+      ],
+      "content": "エクレア、あの剣の攻撃には気をつけろ。前回のブリオッシュのように簡単には行かないだろう。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "f48a7790-5145-11ea-971e-55467d694c9d",
+      "character": [
+        0
+      ],
+      "content": "ああ、だがこっちにも剣はある。",
+      "duration": 3,
+      "name-overwrite": ""
+    },
+    {
+      "id": "fbc2c3a0-5145-11ea-971e-55467d694c9d",
+      "character": [],
+      "content": "いざ、参る！！",
+      "duration": 3,
+      "name-overwrite": ""
+    }
+  ]
+}
