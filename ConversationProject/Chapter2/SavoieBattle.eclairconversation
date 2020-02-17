@@ -128,7 +128,9 @@
     },
     {
       "id": "fbc2c3a0-5145-11ea-971e-55467d694c9d",
-      "character": [],
+      "character": [
+        4
+      ],
       "content": "いざ、参る！！",
       "duration": 3,
       "name-overwrite": ""
